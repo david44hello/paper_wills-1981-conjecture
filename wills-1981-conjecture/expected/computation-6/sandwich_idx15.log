@@ -1,0 +1,1 @@
+RESULT #15 D=6 H=[[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [2, 2, 3, 6]] |Stab|=8 box=197: nodes 1302; leaves (classes, G >= 31) 38 per G {35: 5, 37: 14, 39: 14, 41: 5}; max g_1 6; max g_2 49/6; g_1 >= 8: []; vol 16: []; Case IV G >= 49: []; hulls 1264; rank M histogram {2: 38}; rank_prune True cut-at-rank>=3 (cuts 285); seconds 5

@@ -1,0 +1,9 @@
+{'label': 'gamma2/b4stab', 'G': 45, 'classes': 1, 'max_g1': '6', 'max_g2': '14', 'n_flagged': 0}
+{'label': 'gamma2/b4stab', 'G': 43, 'classes': 1, 'max_g1': '17/3', 'max_g2': '79/6', 'n_flagged': 0}
+{'label': 'gamma2/b4stab', 'G': 41, 'classes': 5, 'max_g1': '11/2', 'max_g2': '149/12', 'n_flagged': 0}
+{'label': 'gamma2/b4stab', 'G': 39, 'classes': 11, 'max_g1': '17/3', 'max_g2': '37/3', 'n_flagged': 0}
+{'label': 'gamma2/b4stab', 'G': 37, 'classes': 33, 'max_g1': '16/3', 'max_g2': '23/2', 'n_flagged': 0}
+{'label': 'gamma2/b4stab', 'G': 35, 'classes': 69, 'max_g1': '17/3', 'max_g2': '34/3', 'n_flagged': 0}
+{'label': 'gamma2/b4stab', 'G': 33, 'classes': 148, 'max_g1': '16/3', 'max_g2': '32/3', 'n_flagged': 0}
+{'label': 'gamma2/b4stab', 'G': 31, 'classes': 263, 'max_g1': '17/3', 'max_g2': '31/3', 'n_flagged': 0}
+DONE gamma2/b4stab down to G = 31

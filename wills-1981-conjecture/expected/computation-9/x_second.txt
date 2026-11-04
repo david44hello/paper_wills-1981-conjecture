@@ -1,0 +1,2 @@
+det 18 | frame points 417 | X points 33 | X interior 1
+outside pairs 192 | pairs keeping W_4 (should be 0): 0 []

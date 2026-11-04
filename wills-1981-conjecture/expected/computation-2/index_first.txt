@@ -1,0 +1,17 @@
+sublattices of index 2..16 examined: 40406
+index  2: max |Gamma cap cube| among full-rank = 45
+index  3: max |Gamma cap cube| among full-rank = 27
+index  4: max |Gamma cap cube| among full-rank = 27
+index  5: max |Gamma cap cube| among full-rank = 17
+index  6: max |Gamma cap cube| among full-rank = 15
+index  7: max |Gamma cap cube| among full-rank = 11
+index  8: max |Gamma cap cube| among full-rank = 17
+index  9: max |Gamma cap cube| among full-rank = 9
+index 10: max |Gamma cap cube| among full-rank = 9
+index 11: max |Gamma cap cube| among full-rank = 0
+index 12: max |Gamma cap cube| among full-rank = 9
+index 13: max |Gamma cap cube| among full-rank = 0
+index 14: max |Gamma cap cube| among full-rank = 0
+index 15: max |Gamma cap cube| among full-rank = 0
+index 16: max |Gamma cap cube| among full-rank = 9
+Gamma with >= 31 cube points: 11; (index, count) histogram: [((2, 39), 4), ((2, 41), 1), ((2, 45), 6)]

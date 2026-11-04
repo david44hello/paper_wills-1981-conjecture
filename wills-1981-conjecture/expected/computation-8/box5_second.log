@@ -1,0 +1,13 @@
+MODE box G37: symmetry ON (group order 16), rank-4 cut ON
+LEVEL box G37: G 37: rank-3 classes 1, rank-3 point sets 1, max g_1 16/3, max g_2 31/3, elapsed 0.0 s
+CUT box G37: G 37: rank-4 classes 0, rank-4 point sets 0
+LEVEL box G37: G 35: rank-3 classes 2, rank-3 point sets 6, max g_1 5, max g_2 59/6, elapsed 0.0 s
+CUT box G37: G 35: rank-4 classes 1, rank-4 point sets 4
+LEVEL box G37: G 33: rank-3 classes 6, rank-3 point sets 15, max g_1 5, max g_2 19/2, elapsed 0.0 s
+CUT box G37: G 33: rank-4 classes 3, rank-4 point sets 24
+LEVEL box G37: G 31: rank-3 classes 6, rank-3 point sets 20, max g_1 5, max g_2 9, elapsed 0.0 s
+CUT box G37: G 31: rank-4 classes 9, rank-4 point sets 60
+CLASSES box G37: rank-3 classes 15 per G {31: 6, 33: 6, 35: 2, 37: 1}
+CUT box G37: rank-4 classes cut 13 per G {31: 9, 33: 3, 35: 1}; rank-4 point sets cut 88 per G {31: 60, 33: 24, 35: 4}
+RANK-CUT MODE: the summary below counts RANK-3 point sets only; maxima are over rank-3 sets
+box G37: G = 37; point sets with G >= 31: 42 per G {31: 20, 33: 15, 35: 6, 37: 1}; max g_1 = 16/3, max g_2 = 31/3

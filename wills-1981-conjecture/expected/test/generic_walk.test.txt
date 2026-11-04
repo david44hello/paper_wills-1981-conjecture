@@ -1,0 +1,1 @@
+test passed: |Aut(cube)| = 384, cube walk G>=63 = 2853 classes; |Aut(T)| = 96, T walk = 30839 classes (cell24_walk used only B_4: 8863), max g1 = 8

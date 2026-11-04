@@ -1,0 +1,32 @@
+D= 1: W_4 cross-polytopes      1; max g1 = 8/3 (2.667), max g2 = 10/3; argmax ([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 0, 1]], 9, Fraction(2, 3), Fraction(10, 3))
+D= 2: W_4 cross-polytopes     11; max g1 = 10/3 (3.333), max g2 = 14/3; argmax ([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 0, 1, 2]], 13, Fraction(4, 3), Fraction(14, 3))
+D= 3: W_4 cross-polytopes     24; max g1 = 3 (3.000), max g2 = 3; argmax ([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [0, 1, 1, 3]], 11, Fraction(2, 1), Fraction(3, 1))
+D= 4: W_4 cross-polytopes     73; max g1 = 14/3 (4.667), max g2 = 22/3; argmax ([[1, 0, 0, 0], [0, 1, 0, 0], [0, 1, 2, 0], [0, 1, 0, 2]], 21, Fraction(8, 3), Fraction(22, 3))
+D= 5: W_4 cross-polytopes     56; max g1 = 3 (3.000), max g2 = 5/3; argmax ([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [1, 1, 2, 5]], 11, Fraction(10, 3), Fraction(5, 3))
+D= 6: W_4 cross-polytopes    160; max g1 = 3 (3.000), max g2 = 3; argmax ([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [1, 1, 3, 6]], 15, Fraction(4, 1), Fraction(3, 1))
+D= 7: W_4 cross-polytopes     96; max g1 = 8/3 (2.667), max g2 = 1/3; argmax ([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [1, 2, 3, 7]], 11, Fraction(14, 3), Fraction(1, 3))
+D= 8: W_4 cross-polytopes    229; max g1 = 16/3 (5.333), max g2 = 32/3; argmax ([[1, 0, 0, 0], [1, 2, 0, 0], [1, 0, 2, 0], [1, 0, 0, 2]], 33, Fraction(16, 3), Fraction(32, 3))
+D= 9: W_4 cross-polytopes     72; max g1 = 4 (4.000), max g2 = 2; argmax ([[1, 0, 0, 0], [0, 1, 0, 0], [1, 1, 3, 0], [1, 2, 0, 3]], 17, Fraction(6, 1), Fraction(2, 1))
+D=10: W_4 cross-polytopes     96; max g1 = 8/3 (2.667), max g2 = 4/3; argmax ([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [2, 3, 4, 10]], 17, Fraction(20, 3), Fraction(4, 3))
+D=11: W_4 cross-polytopes      0; max g1 = -99 (-99.000), max g2 = -99; argmax None
+D=12: W_4 cross-polytopes    128; max g1 = 11/3 (3.667), max g2 = 5; argmax ([[1, 0, 0, 0], [0, 1, 0, 0], [0, 0, 1, 0], [2, 4, 5, 12]], 23, Fraction(8, 1), Fraction(3, 1))
+D=13: W_4 cross-polytopes      0; max g1 = -99 (-99.000), max g2 = -99; argmax None
+D=14: W_4 cross-polytopes      0; max g1 = -99 (-99.000), max g2 = -99; argmax None
+D=15: W_4 cross-polytopes      0; max g1 = -99 (-99.000), max g2 = -99; argmax None
+D=16: W_4 cross-polytopes     86; max g1 = 14/3 (4.667), max g2 = 28/3; argmax ([[1, 0, 0, 0], [0, 1, 0, 0], [1, 2, 4, 0], [2, 1, 0, 4]], 37, Fraction(32, 3), Fraction(22, 3))
+D=17: W_4 cross-polytopes      0; max g1 = -99 (-99.000), max g2 = -99; argmax None
+  D=18 FLAG g1=8 g2=4 G=33 vol=12 case=('IV', 0) H=[[1, 0, 0, 0], [0, 1, 0, 0], [1, 1, 3, 0], [2, 4, 3, 6]]
+  D=18 FLAG g1=8 g2=4 G=33 vol=12 case=('IV', 0) H=[[1, 0, 0, 0], [0, 1, 0, 0], [1, 1, 3, 0], [4, 2, 3, 6]]
+  D=18 FLAG g1=8 g2=4 G=33 vol=12 case=('IV', 0) H=[[1, 0, 0, 0], [0, 1, 0, 0], [1, 2, 3, 0], [2, 5, 3, 6]]
+  D=18 FLAG g1=8 g2=4 G=33 vol=12 case=('IV', 0) H=[[1, 0, 0, 0], [0, 1, 0, 0], [1, 2, 3, 0], [4, 1, 3, 6]]
+  D=18 FLAG g1=8 g2=4 G=33 vol=12 case=('IV', 0) H=[[1, 0, 0, 0], [0, 1, 0, 0], [2, 1, 3, 0], [1, 4, 3, 6]]
+  D=18 FLAG g1=8 g2=4 G=33 vol=12 case=('IV', 0) H=[[1, 0, 0, 0], [0, 1, 0, 0], [2, 1, 3, 0], [5, 2, 3, 6]]
+  D=18 FLAG g1=8 g2=4 G=33 vol=12 case=('IV', 0) H=[[1, 0, 0, 0], [0, 1, 0, 0], [2, 2, 3, 0], [1, 5, 3, 6]]
+  D=18 FLAG g1=8 g2=4 G=33 vol=12 case=('IV', 0) H=[[1, 0, 0, 0], [0, 1, 0, 0], [2, 2, 3, 0], [5, 1, 3, 6]]
+D=18: W_4 cross-polytopes      8; max g1 = 8 (8.000), max g2 = 4; argmax ([[1, 0, 0, 0], [0, 1, 0, 0], [1, 1, 3, 0], [2, 4, 3, 6]], 33, Fraction(12, 1), Fraction(4, 1))
+D=19: W_4 cross-polytopes      0; max g1 = -99 (-99.000), max g2 = -99; argmax None
+D=20: W_4 cross-polytopes      0; max g1 = -99 (-99.000), max g2 = -99; argmax None
+D=21: W_4 cross-polytopes      0; max g1 = -99 (-99.000), max g2 = -99; argmax None
+D=22: W_4 cross-polytopes      0; max g1 = -99 (-99.000), max g2 = -99; argmax None
+D=23: W_4 cross-polytopes      0; max g1 = -99 (-99.000), max g2 = -99; argmax None
+D=24: W_4 cross-polytopes      0; max g1 = -99 (-99.000), max g2 = -99; argmax None

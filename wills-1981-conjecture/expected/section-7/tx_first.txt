@@ -1,0 +1,34 @@
+## W_5 (w5_vertices.txt)  (n = 5)
+- input points: 58; symmetric P = -P: True; vertices: 58
+- facets: 102 (exact re-verification: True; qhull count: 102); facet lattice heights: [1, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17]
+- L(k), k = 0..6: [1, 125, 1915, 11273, 41635, 117147, 275841]
+- Ehrhart coefficients g_0..g_5: (1, 301/30, 47/4, 53/2, 197/4, 397/15)
+- k = 6 matches the polynomial: True; interior lattice points of P: 1, of 2P: 243; reciprocity L(-1), L(-2): True
+
+## W (w_pairs.txt, 25 pairs, +- added)  (n = 5)
+- input points: 50; symmetric P = -P: True; vertices: 50
+- facets: 92 (exact re-verification: True; qhull count: 92); facet lattice heights: [1, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17]
+- L(k), k = 0..6: [1, 117, 1815, 10765, 39927, 112639, 265705]
+- Ehrhart coefficients g_0..g_5: (1, 101/10, 127/12, 139/6, 557/12, 386/15)
+- k = 6 matches the polynomial: True; interior lattice points of P: 1, of 2P: 243; reciprocity L(-1), L(-2): True
+
+## T (24-cell model, proof chain sec. 6)  (n = 4)
+- input points: 24; symmetric P = -P: True; vertices: 24
+- facets: 24 (exact re-verification: True; qhull count: 24); facet lattice heights: [2]
+- L(k), k = 0..5: [1, 49, 433, 1825, 5281, 12241]
+- Ehrhart coefficients g_0..g_4: (1, 8, 8, 16, 16)
+- k = 5 matches the polynomial: True; interior lattice points of P: 1, of 2P: 145; reciprocity L(-1), L(-2): True
+
+## X (det-18 cross-polytope, proof chain sec. 6)  (n = 4)
+- input points: 8; symmetric P = -P: True; vertices: 8
+- facets: 16 (exact re-verification: True; qhull count: 16); facet lattice heights: [3]
+- L(k), k = 0..5: [1, 33, 289, 1249, 3681, 8641]
+- Ehrhart coefficients g_0..g_4: (1, 8, 4, 8, 12)
+- k = 5 matches the polynomial: True; interior lattice points of P: 1, of 2P: 129; reciprocity L(-1), L(-2): True
+
+## W5 x [-1,1] (n = 6; facets = product rule, re-verified)  (n = 6)
+- input points: 116; symmetric P = -P: True; vertices: 116
+- facets: 104 (exact re-verification: True; qhull count: 104); facet lattice heights: [1, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17]
+- L(k), k = 0..7: [1, 375, 9575, 78911, 374715, 1288617, 3585933, 8592165]
+- Ehrhart coefficients g_0..g_6: (1, 361/30, 1909/60, 50, 409/4, 3749/30, 794/15)
+- k = 7 matches the polynomial: True; interior lattice points of P: 1, of 2P: 729; reciprocity L(-1), L(-2): True

@@ -1,0 +1,1 @@
+self-tests passed: cubes n=2..5, cross-polytopes n=2..5, Henze Q_5 g_1 = 134/15

@@ -1,0 +1,11 @@
+box 4 G 39: {'rank3': 1, 'visited_cut': 1, 'all': 1}
+box 4 G 37: {'rank3': 8, 'visited_cut': 8, 'all': 8}
+box 4 G 35: {'rank3': 28, 'visited_cut': 36, 'rank4': 8, 'all': 36}
+box 4 G 33: {'rank3': 64, 'visited_cut': 120, 'rank4': 56, 'all': 120}
+box 4 G 31: {'rank4': 210, 'visited_cut': 284, 'rank3': 108, 'all': 318}
+box 4 TOTAL: all 483, rank 3 209, rank 4 274, visited by the cut walk 449
+box 5 G 37: {'rank3': 1, 'visited_cut': 1, 'all': 1}
+box 5 G 35: {'rank3': 6, 'visited_cut': 10, 'rank4': 4, 'all': 10}
+box 5 G 33: {'rank4': 34, 'visited_cut': 39, 'rank3': 15, 'all': 49}
+box 5 G 31: {'rank3': 20, 'visited_cut': 80, 'rank4': 140, 'all': 160}
+box 5 TOTAL: all 220, rank 3 42, rank 4 178, visited by the cut walk 130

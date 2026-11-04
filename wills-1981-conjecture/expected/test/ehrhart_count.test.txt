@@ -1,0 +1,1 @@
+ALL SELF-TESTS PASSED: rank_of = Fraction oracle on 4000 matrices, cube/cross/simplex n=1..5, Henze Q_3..Q_6 g1, Henze-thesis T1xT2 (n=4)

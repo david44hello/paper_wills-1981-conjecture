@@ -1,0 +1,37 @@
+MODE box G61: symmetry ON (group order 8), rank-4 cut ON
+LEVEL box G61: G 61: rank-3 classes 1, rank-3 point sets 1, max g_1 6, max g_2 44/3, elapsed 0.0 s
+CUT box G61: G 61: rank-4 classes 0, rank-4 point sets 0
+LEVEL box G61: G 59: rank-3 classes 3, rank-3 point sets 8, max g_1 6, max g_2 44/3, elapsed 0.0 s
+CUT box G61: G 59: rank-4 classes 1, rank-4 point sets 2
+LEVEL box G61: G 57: rank-3 classes 13, rank-3 point sets 38, max g_1 6, max g_2 44/3, elapsed 0.0 s
+CUT box G61: G 57: rank-4 classes 5, rank-4 point sets 16
+LEVEL box G61: G 55: rank-3 classes 39, rank-3 point sets 135, max g_1 6, max g_2 14, elapsed 0.1 s
+CUT box G61: G 55: rank-4 classes 22, rank-4 point sets 76
+LEVEL box G61: G 53: rank-3 classes 112, rank-3 point sets 395, max g_1 6, max g_2 27/2, elapsed 0.4 s
+CUT box G61: G 53: rank-4 classes 75, rank-4 point sets 274
+LEVEL box G61: G 51: rank-3 classes 268, rank-3 point sets 993, max g_1 6, max g_2 13, elapsed 1.1 s
+CUT box G61: G 51: rank-4 classes 215, rank-4 point sets 818
+LEVEL box G61: G 49: rank-3 classes 571, rank-3 point sets 2148, max g_1 6, max g_2 149/12, elapsed 2.6 s
+CUT box G61: G 49: rank-4 classes 552, rank-4 point sets 2128
+LEVEL box G61: G 47: rank-3 classes 1040, rank-3 point sets 3975, max g_1 35/6, max g_2 25/2, elapsed 5.2 s
+CUT box G61: G 47: rank-4 classes 1240, rank-4 point sets 4858
+LEVEL box G61: G 45: rank-3 classes 1650, rank-3 point sets 6333, max g_1 35/6, max g_2 71/6, elapsed 10.5 s
+CUT box G61: G 45: rank-4 classes 2455, rank-4 point sets 9658
+LEVEL box G61: G 43: rank-3 classes 2288, rank-3 point sets 8832, max g_1 35/6, max g_2 35/3, elapsed 17.4 s
+CUT box G61: G 43: rank-4 classes 4230, rank-4 point sets 16727
+LEVEL box G61: G 41: rank-3 classes 2808, rank-3 point sets 10833, max g_1 6, max g_2 11, elapsed 26.7 s
+CUT box G61: G 41: rank-4 classes 6437, rank-4 point sets 25491
+LEVEL box G61: G 39: rank-3 classes 3014, rank-3 point sets 11620, max g_1 6, max g_2 43/4, elapsed 36.7 s
+CUT box G61: G 39: rank-4 classes 8600, rank-4 point sets 34113
+LEVEL box G61: G 37: rank-3 classes 2829, rank-3 point sets 10850, max g_1 6, max g_2 121/12, elapsed 46.9 s
+CUT box G61: G 37: rank-4 classes 10015, rank-4 point sets 39723
+LEVEL box G61: G 35: rank-3 classes 2334, rank-3 point sets 8872, max g_1 17/3, max g_2 59/6, elapsed 56.6 s
+CUT box G61: G 35: rank-4 classes 10103, rank-4 point sets 40047
+LEVEL box G61: G 33: rank-3 classes 1710, rank-3 point sets 6418, max g_1 16/3, max g_2 28/3, elapsed 63.9 s
+CUT box G61: G 33: rank-4 classes 8871, rank-4 point sets 35098
+LEVEL box G61: G 31: rank-3 classes 1124, rank-3 point sets 4152, max g_1 16/3, max g_2 9, elapsed 67.7 s
+CUT box G61: G 31: rank-4 classes 6834, rank-4 point sets 26987
+CLASSES box G61: rank-3 classes 19804 per G {31: 1124, 33: 1710, 35: 2334, 37: 2829, 39: 3014, 41: 2808, 43: 2288, 45: 1650, 47: 1040, 49: 571, 51: 268, 53: 112, 55: 39, 57: 13, 59: 3, 61: 1}
+CUT box G61: rank-4 classes cut 59655 per G {31: 6834, 33: 8871, 35: 10103, 37: 10015, 39: 8600, 41: 6437, 43: 4230, 45: 2455, 47: 1240, 49: 552, 51: 215, 53: 75, 55: 22, 57: 5, 59: 1}; rank-4 point sets cut 236016 per G {31: 26987, 33: 35098, 35: 40047, 37: 39723, 39: 34113, 41: 25491, 43: 16727, 45: 9658, 47: 4858, 49: 2128, 51: 818, 53: 274, 55: 76, 57: 16, 59: 2}
+RANK-CUT MODE: the summary below counts RANK-3 point sets only; maxima are over rank-3 sets
+box G61: G = 61; point sets with G >= 31: 75603 per G {31: 4152, 33: 6418, 35: 8872, 37: 10850, 39: 11620, 41: 10833, 43: 8832, 45: 6333, 47: 3975, 49: 2148, 51: 993, 53: 395, 55: 135, 57: 38, 59: 8, 61: 1}; max g_1 = 6, max g_2 = 44/3

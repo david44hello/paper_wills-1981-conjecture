@@ -1,0 +1,62 @@
+  [progress 13:06:06] level G 69 done: 1 classes (0 cut), max g_1 6; next level 1 classes
+  [progress 13:06:06] level G 67 done: 1 classes (0 cut), max g_1 6; next level 7 classes
+  [progress 13:06:06] level G 65 done: 7 classes (0 cut), max g_1 6; next level 19 classes
+  [progress 13:06:07] level G 63 done: 19 classes (1 cut), max g_1 6; next level 67 classes
+  [progress 13:06:08] level G 61 done: 67 classes (3 cut), max g_1 6; next level 195 classes
+  [progress 13:06:12] level G 59 done: 195 classes (17 cut), max g_1 6; next level 556 classes
+  [progress 13:06:22] level G 57 done: 556 classes (65 cut), max g_1 6; next level 1412 classes
+  [progress 13:06:45] level G 55 done: 1412 classes (246 cut), max g_1 6; next level 3312 classes
+  [progress 13:07:25] level G 53 done: 3312 classes (757 cut), max g_1 6; next level 6967 classes
+  [progress 13:08:55] level G 51 done: 6967 classes (2063 cut), max g_1 6; next level 13310 classes
+  [progress 13:11:13] level G 49 done: 13310 classes (4840 cut), max g_1 6; next level 22799 classes
+  [progress 13:14:38] level G 47 done: 22799 classes (9920 cut), max g_1 6; next level 35130 classes
+  [progress 13:19:38] level G 45 done: 35130 classes (17653 cut), max g_1 6; next level 48323 classes
+  [progress 13:24:43] level G 43 done: 48323 classes (27434 cut), max g_1 6; next level 59465 classes
+  [progress 13:29:30] level G 41 done: 59465 classes (37215 cut), max g_1 6; next level 65344 classes
+  [progress 13:33:11] level G 39 done: 65344 classes (44347 cut), max g_1 6; next level 64486 classes
+  [progress 13:36:34] level G 37 done: 64486 classes (46599 cut), max g_1 6; next level 57572 classes
+  [progress 13:39:36] level G 35 done: 57572 classes (43767 cut), max g_1 6; next level 47085 classes
+  [progress 13:41:26] level G 33 done: 47085 classes (37184 cut), max g_1 6; next level 35586 classes
+  [progress 13:42:45] level G 31 done: 35586 classes (29024 cut), max g_1 35/6; next level 0 classes
+box 0: G 69, |Aut| = 32, 2201.7s
+  mode: RANK-4 CUT - per-G lines = rank-3 sets only; rank-4 sets in the CUT lines
+  G  69: classes       1  point sets         1  max g_1 6  max g_2 18
+  G  67: classes       1  point sets         8  max g_1 6  max g_2 52/3
+  G  65: classes       7  point sets        44  max g_1 6  max g_2 50/3
+  G  63: classes      18  point sets       196  max g_1 6  max g_2 16
+  G  61: classes      64  point sets       750  max g_1 6  max g_2 46/3
+  G  59: classes     178  point sets      2442  max g_1 6  max g_2 91/6
+  G  57: classes     491  point sets      6926  max g_1 6  max g_2 44/3
+  G  55: classes    1166  point sets     17288  max g_1 6  max g_2 14
+  G  53: classes    2555  point sets     38303  max g_1 6  max g_2 85/6
+  G  51: classes    4904  point sets     75148  max g_1 6  max g_2 27/2
+  G  49: classes    8470  point sets    130421  max g_1 6  max g_2 40/3
+  G  47: classes   12879  point sets    200268  max g_1 6  max g_2 38/3
+  G  45: classes   17477  point sets    271977  max g_1 6  max g_2 12
+  G  43: classes   20889  point sets    326632  max g_1 6  max g_2 71/6
+  G  41: classes   22250  point sets    347325  max g_1 6  max g_2 67/6
+  G  39: classes   20997  point sets    328428  max g_1 6  max g_2 11
+  G  37: classes   17887  point sets    278689  max g_1 6  max g_2 31/3
+  G  35: classes   13805  point sets    215156  max g_1 6  max g_2 59/6
+  G  33: classes    9901  point sets    153329  max g_1 6  max g_2 19/2
+  G  31: classes    6562  point sets    101702  max g_1 35/6  max g_2 9
+  TOTAL classes 160502, point sets 2495033, max g_1 6, max g_2 18; flagged (g_1 >= 8): 0
+  CUT G  63: rank-4 classes       1  point sets         4
+  CUT G  61: rank-4 classes       3  point sets        32
+  CUT G  59: rank-4 classes      17  point sets       200
+  CUT G  57: rank-4 classes      65  point sets       944
+  CUT G  55: rank-4 classes     246  point sets      3640
+  CUT G  53: rank-4 classes     757  point sets     11644
+  CUT G  51: rank-4 classes    2063  point sets     31996
+  CUT G  49: rank-4 classes    4840  point sets     75976
+  CUT G  47: rank-4 classes    9920  point sets    156284
+  CUT G  45: rank-4 classes   17653  point sets    279320
+  CUT G  43: rank-4 classes   27434  point sets    434684
+  CUT G  41: rank-4 classes   37215  point sets    590810
+  CUT G  39: rank-4 classes   44347  point sets    704164
+  CUT G  37: rank-4 classes   46599  point sets    740688
+  CUT G  35: rank-4 classes   43767  point sets    695386
+  CUT G  33: rank-4 classes   37184  point sets    590972
+  CUT G  31: rank-4 classes   29024  point sets    460976
+  TOTAL CUT: rank-4 classes 301135, point sets 4777720 (Case I/II: closed by C1 + R2 and R4)
+RESULT box 0 G 69: PASS (no g_1 >= 8)

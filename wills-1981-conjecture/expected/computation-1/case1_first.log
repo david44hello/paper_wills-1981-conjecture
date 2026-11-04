@@ -1,0 +1,28 @@
+G=81: classes 1 (total 1); level max g1 8 = 8.0000, max g2 24 = 24.0000; next level 1; 12:10:28
+G=79: classes 1 (total 2); level max g1 15/2 = 7.5000, max g2 277/12 = 23.0833; next level 3; 12:10:28
+G=77: classes 3 (total 5); level max g1 7 = 7.0000, max g2 133/6 = 22.1667; next level 6; 12:10:28
+G=75: classes 6 (total 11); level max g1 22/3 = 7.3333, max g2 65/3 = 21.6667; next level 19; 12:10:29
+G=73: classes 19 (total 30); level max g1 41/6 = 6.8333, max g2 83/4 = 20.7500; next level 45; 12:10:29
+G=71: classes 45 (total 75); level max g1 7 = 7.0000, max g2 61/3 = 20.3333; next level 123; 12:10:29
+G=69: classes 123 (total 198); level max g1 41/6 = 6.8333, max g2 235/12 = 19.5833; next level 299; 12:10:30
+G=67: classes 299 (total 497); level max g1 20/3 = 6.6667, max g2 113/6 = 18.8333; next level 728; 12:10:32
+G=65: classes 728 (total 1225); level max g1 20/3 = 6.6667, max g2 217/12 = 18.0833; next level 1628; 12:10:38
+G=63: classes 1628 (total 2853); level max g1 7 = 7.0000, max g2 19 = 19.0000; next level 3517; 12:10:48
+G=61: classes 3517 (total 6370); level max g1 13/2 = 6.5000, max g2 217/12 = 18.0833; next level 7134; 12:11:17
+G=59: classes 7134 (total 13504); level max g1 13/2 = 6.5000, max g2 209/12 = 17.4167; next level 13760; 12:12:14
+G=57: classes 13760 (total 27264); level max g1 20/3 = 6.6667, max g2 52/3 = 17.3333; next level 24940; 12:13:57
+G=55: classes 24940 (total 52204); level max g1 19/3 = 6.3333, max g2 33/2 = 16.5000; next level 42740; 12:16:45
+G=53: classes 42740 (total 94944); level max g1 6 = 6.0000, max g2 47/3 = 15.6667; next level 68657; 12:22:53
+G=51: classes 68657 (total 163601); level max g1 19/3 = 6.3333, max g2 47/3 = 15.6667; next level 103684; 12:33:57
+G=49: classes 103684 (total 267285); level max g1 6 = 6.0000, max g2 15 = 15.0000; next level 146480; 12:49:11
+G=47: classes 146480 (total 413765); level max g1 35/6 = 5.8333, max g2 169/12 = 14.0833; next level 193898; 13:13:12
+G=45: classes 193898 (total 607663); level max g1 6 = 6.0000, max g2 14 = 14.0000; next level 239893; 13:38:46
+G=43: classes 239893 (total 847556); level max g1 6 = 6.0000, max g2 27/2 = 13.5000; next level 278087; 14:06:49
+G=41: classes 278087 (total 1125643); level max g1 35/6 = 5.8333, max g2 51/4 = 12.7500; next level 302042; 14:39:12
+G=39: classes 302042 (total 1427685); level max g1 17/3 = 5.6667, max g2 37/3 = 12.3333; next level 308825; 15:12:35
+G=37: classes 308825 (total 1736510); level max g1 6 = 6.0000, max g2 35/3 = 11.6667; next level 298228; 15:46:40
+G=35: classes 298228 (total 2034738); level max g1 35/6 = 5.8333, max g2 34/3 = 11.3333; next level 273637; 16:15:00
+G=33: classes 273637 (total 2308375); level max g1 17/3 = 5.6667, max g2 32/3 = 10.6667; next level 239319; 16:41:59
+G=31: classes 239319 (total 2547694); level max g1 17/3 = 5.6667, max g2 31/3 = 10.3333; next level 0; 16:51:07
+classes 2547694 complete=True (min G 31); max g1 = 8, max g2 = 24
+non-cube classes with g1 >= 8 or g2 >= 24: 0

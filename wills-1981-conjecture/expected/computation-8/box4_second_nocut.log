@@ -1,0 +1,8 @@
+MODE box G39: symmetry ON (group order 32), rank-4 cut OFF
+LEVEL box G39: G 39: all classes 1, all point sets 1, max g_1 5, max g_2 11, elapsed 0.0 s
+LEVEL box G39: G 37: all classes 1, all point sets 8, max g_1 5, max g_2 31/3, elapsed 0.0 s
+LEVEL box G39: G 35: all classes 6, all point sets 36, max g_1 5, max g_2 31/3, elapsed 0.0 s
+LEVEL box G39: G 33: all classes 12, all point sets 120, max g_1 5, max g_2 10, elapsed 0.0 s
+LEVEL box G39: G 31: all classes 32, all point sets 318, max g_1 5, max g_2 59/6, elapsed 0.1 s
+CLASSES box G39: all classes 52 per G {31: 32, 33: 12, 35: 6, 37: 1, 39: 1}
+box G39: G = 39; point sets with G >= 31: 483 per G {31: 318, 33: 120, 35: 36, 37: 8, 39: 1}; max g_1 = 5, max g_2 = 11

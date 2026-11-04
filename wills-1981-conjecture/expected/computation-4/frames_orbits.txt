@@ -1,0 +1,15 @@
+lattices with (ii): 1040; orbits under signed permutations: 39
+D =  1: lattices    1, orbits   1, |L cap [-1,1]^4| max 81, min 81; max g_1(cross) 8/3
+D =  2: lattices   11, orbits   3, |L cap [-1,1]^4| max 117, min 97; max g_1(cross) 8/3
+D =  3: lattices   24, orbits   2, |L cap [-1,1]^4| max 129, min 113; max g_1(cross) 5/3
+D =  4: lattices   73, orbits   7, |L cap [-1,1]^4| max 189, min 129; max g_1(cross) 8/3
+D =  5: lattices   56, orbits   2, |L cap [-1,1]^4| max 145, min 145; max g_1(cross) 4/3
+D =  6: lattices  160, orbits   4, |L cap [-1,1]^4| max 197, min 177; max g_1(cross) 7/3
+D =  7: lattices   96, orbits   1, |L cap [-1,1]^4| max 177, min 177; max g_1(cross) 8/3
+D =  8: lattices  229, orbits   9, |L cap [-1,1]^4| max 313, min 193; max g_1(cross) 8/3
+D =  9: lattices   72, orbits   2, |L cap [-1,1]^4| max 273, min 225; max g_1(cross) 4
+D = 10: lattices   96, orbits   1, |L cap [-1,1]^4| max 245, min 245; max g_1(cross) 8/3
+D = 12: lattices  128, orbits   2, |L cap [-1,1]^4| max 317, min 293; max g_1(cross) 11/3
+D = 16: lattices   86, orbits   4, |L cap [-1,1]^4| max 441, min 321; max g_1(cross) 7/3
+D = 18: lattices    8, orbits   1, |L cap [-1,1]^4| max 417, min 417; max g_1(cross) 8
+orbit list written: frame_lattices.json

@@ -1,0 +1,96 @@
+33 lattice points in polytope (Hilbert basis elements of degree 1)
+8 extreme rays
+16 support hyperplanes
+
+embedding dimension = 5
+rank = 5 (maximal)
+external index = 1
+internal index = 36
+
+size of triangulation   = 8
+resulting sum of |det|s = 288
+
+grading:
+0 0 0 0 1 
+
+degrees of extreme rays:
+1:8  
+
+multiplicity = 288
+
+Hilbert series:
+1 28 134 124 1 
+denominator with 5 factors:
+1:5  
+
+degree of Hilbert Series as rational function = -1
+
+Hilbert polynomial:
+1 8 4 8 12 
+with common denominator = 1
+
+***********************************************************************
+
+33 lattice points in polytope (Hilbert basis elements of degree 1):
+ -2 -4 -3 -6 1
+ -1 -2 -2 -3 1
+ -1 -2 -2 -2 1
+ -1 -2 -1 -3 1
+ -1 -1 -3  0 1
+ -1 -1 -2 -1 1
+ -1 -1 -1 -2 1
+ -1 -1 -1 -1 1
+ -1  0  0  0 1
+  0 -1 -1 -1 1
+  0 -1  0 -2 1
+  0 -1  0 -1 1
+  0 -1  0  0 1
+  0  0 -1  0 1
+  0  0 -1  1 1
+  0  0  0 -1 1
+  0  0  0  0 1
+  0  0  0  1 1
+  0  0  1 -1 1
+  0  0  1  0 1
+  0  1  0  0 1
+  0  1  0  1 1
+  0  1  0  2 1
+  0  1  1  1 1
+  1  0  0  0 1
+  1  1  1  1 1
+  1  1  1  2 1
+  1  1  2  1 1
+  1  1  3  0 1
+  1  2  1  3 1
+  1  2  2  2 1
+  1  2  2  3 1
+  2  4  3  6 1
+
+8 extreme rays:
+ -2 -4 -3 -6 1
+ -1 -1 -3  0 1
+ -1  0  0  0 1
+  0 -1  0  0 1
+  0  1  0  0 1
+  1  0  0  0 1
+  1  1  3  0 1
+  2  4  3  6 1
+
+16 support hyperplanes:
+ -3 -3  1  2 3
+ -3 -3  1  3 3
+ -3 -3  3  1 3
+ -3 -3  3  2 3
+ -3  3 -1 -1 3
+ -3  3 -1  0 3
+ -3  3  1 -2 3
+ -3  3  1 -1 3
+  3 -3 -1  1 3
+  3 -3 -1  2 3
+  3 -3  1  0 3
+  3 -3  1  1 3
+  3  3 -3 -2 3
+  3  3 -3 -1 3
+  3  3 -1 -3 3
+  3  3 -1 -2 3
+

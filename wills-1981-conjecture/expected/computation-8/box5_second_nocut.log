@@ -1,0 +1,7 @@
+MODE box G37: symmetry ON (group order 16), rank-4 cut OFF
+LEVEL box G37: G 37: all classes 1, all point sets 1, max g_1 16/3, max g_2 31/3, elapsed 0.0 s
+LEVEL box G37: G 35: all classes 3, all point sets 10, max g_1 5, max g_2 31/3, elapsed 0.0 s
+LEVEL box G37: G 33: all classes 13, all point sets 49, max g_1 5, max g_2 31/3, elapsed 0.0 s
+LEVEL box G37: G 31: all classes 31, all point sets 160, max g_1 5, max g_2 59/6, elapsed 0.1 s
+CLASSES box G37: all classes 48 per G {31: 31, 33: 13, 35: 3, 37: 1}
+box G37: G = 37; point sets with G >= 31: 220 per G {31: 160, 33: 49, 35: 10, 37: 1}; max g_1 = 16/3, max g_2 = 31/3

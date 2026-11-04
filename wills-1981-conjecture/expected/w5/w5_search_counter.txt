@@ -1,0 +1,6 @@
+points: 86  hull vertices: 58  facets(simplices): 726
+interior lattice points of P: 1
+g = ['1', '301/30', '47/4', '53/2', '197/4', '397/15']  cube: ['1', '10', '40', '80', '80', '32']
+float volume (qhull): 26.46666666666676  g_5 = 26.466666666666665
+L(1) = 125
+vertices written: witness_n5_vertices.txt

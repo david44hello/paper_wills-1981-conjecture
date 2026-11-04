@@ -1,0 +1,2 @@
+    nodes 2000, leaves 1, stack 3, hulls 1999
+RESULT #20 D=8 H=[[1, 0, 0, 0], [1, 2, 0, 0], [1, 0, 2, 0], [1, 0, 0, 2]] |Stab|=384 box=313: nodes 2494; leaves (classes, G >= 31) 1 per G {49: 1}; max g_1 8; max g_2 8; g_1 >= 8: [(49, ['1', '8', '8', '16', '16'])]; vol 16: [(49, ['1', '8', '8', '16', '16'])]; Case IV G >= 49: [(49, ['1', '8', '8', '16', '16'])]; hulls 2493; rank M histogram {0: 1}; rank_prune True cut-at-rank>=1 (cuts 656); seconds 24

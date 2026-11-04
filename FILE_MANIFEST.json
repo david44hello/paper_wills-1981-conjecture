@@ -1,0 +1,1833 @@
+{
+  "version": "1.00",
+  "author": "Dave Goel",
+  "created_utc": "2026-11-04T18:26:24.351440+00:00",
+  "scope": "Exact complete repository payload; excludes this manifest.",
+  "files": [
+    {
+      "file": ".gitignore",
+      "bytes": 41,
+      "sha256": "988fab10f08f6aeb8639c54c00c1ba92715f7160a3ee8c165eacdf7ac07efb40"
+    },
+    {
+      "file": "LICENSE",
+      "bytes": 56,
+      "sha256": "77edf2bbf032f4186ccda312f22f19d32ae029a03b1d2bff501ed8450903aca7"
+    },
+    {
+      "file": "README.md",
+      "bytes": 21,
+      "sha256": "a7ee1b41731bd0995441be37e54b27d08eca4ee306f1729c4dd71c7a5272da75"
+    },
+    {
+      "file": "wills-1981-conjecture/README.md",
+      "bytes": 4490,
+      "sha256": "b744c2d47527441e19e7b39ac691bb76d36e5e3d537ca1653471ffccd605ffb3"
+    },
+    {
+      "file": "wills-1981-conjecture/data/boxes.jsonl",
+      "bytes": 5916,
+      "sha256": "8376d161299fc890bcfdfddd71c9a8fcdeaabac66b04f3ff859bfde6700be13c"
+    },
+    {
+      "file": "wills-1981-conjecture/data/frame_lattices.json",
+      "bytes": 9216,
+      "sha256": "968cc6948907bee5429a57a2bd96300e21c1969f48a0556c8917e2bbf73374eb"
+    },
+    {
+      "file": "wills-1981-conjecture/data/latte/w.vrep",
+      "bytes": 694,
+      "sha256": "f4cc3316f53ec163c2f715c2225dbc10159a86123aace3ea17ab344031274df7"
+    },
+    {
+      "file": "wills-1981-conjecture/data/latte/w5.vrep",
+      "bytes": 802,
+      "sha256": "8add69a66438ae2c61745cdb0a5cf03500c2e5d49b59d74e395370ad028dacf1"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/c4.in",
+      "bytes": 254,
+      "sha256": "13c8b5c465360640a252c7470418a30695e449a789957190a904e54b737b804e"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d00.in",
+      "bytes": 604,
+      "sha256": "f633814bb602204b722047747606a3d017ef33050f2d1d7ae02a5d7585c954b2"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d01.in",
+      "bytes": 604,
+      "sha256": "da6e474cf57001e2d4eaa104ee36d82892abb652ae76b2ca7412da8f34a6bf1e"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d02.in",
+      "bytes": 605,
+      "sha256": "fc6ef04e4886f62d5cb29361c9e6e0b144319a8cb87226c207a86a3b47a65679"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d03.in",
+      "bytes": 604,
+      "sha256": "d32c128f9c40e470114691fc7af48167703f4ff2fe4255279ef8f194dec48bf0"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d04.in",
+      "bytes": 604,
+      "sha256": "a82e38d8fed25a8819d560cde897543871da392df8d3bf2fa8b5c3a348d779cc"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d05.in",
+      "bytes": 603,
+      "sha256": "9ec24f98c0cc3883cfbc6290b70418c55523fadab0691c4cb58aad91fb5eb16c"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d06.in",
+      "bytes": 604,
+      "sha256": "5f30cd9702c1ad49f1a5d1d6da85e611267d6451fb73a82af3a96f2354140106"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d07.in",
+      "bytes": 603,
+      "sha256": "db3e6858c3ff8cac726718dd53e2bb6d222caf756c6b346d55c75d8cdbabc8d3"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d08.in",
+      "bytes": 604,
+      "sha256": "e6d07c3c41bed8de437977442323a400e6fe773e6b3fd7c9d9128a880990126b"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d09.in",
+      "bytes": 603,
+      "sha256": "3d3f68928bfd8cd24ae8b7fccb7271228ae64dab4304303e2b0fc92282f8ee6e"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d10.in",
+      "bytes": 603,
+      "sha256": "eb0e30e6cfc0e4c5ecdfd9c70c8abb20cba4a5c1a74865019c7ae8013147171e"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d11.in",
+      "bytes": 604,
+      "sha256": "7057bbdead61ab60983531cba49eb5378586115c613e550064c2241a8a73f8e3"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d12.in",
+      "bytes": 603,
+      "sha256": "7d03d3847fac5b231e1daf409cf47f82ec9a26371bde490f5ad5fa8893315362"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d13.in",
+      "bytes": 603,
+      "sha256": "d100edbae667f1dd1aed4ad9dafc8de078777a5e2a72e744322a6484e091fd91"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d14.in",
+      "bytes": 604,
+      "sha256": "9014fc24423183bc9d54085f87774d989d6c164e059119ac67239154bf9cd4f8"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d15.in",
+      "bytes": 604,
+      "sha256": "655e441b3484133456e52375d9c3ceeb188446c6c65f037e75e88721ddc4f54b"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d16.in",
+      "bytes": 604,
+      "sha256": "1e71baa37165ad9a3446e66f90899cc3628ade587d6f154297a14efb56daa163"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d17.in",
+      "bytes": 603,
+      "sha256": "05faf7258f0948026af6148e0ae1d86650867471317bad9044ec6e996be9e909"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d18.in",
+      "bytes": 604,
+      "sha256": "7f0c7e1a26212ffacff3b5a2e442c29ee25d016809d43d0070db58cd105b794e"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d19.in",
+      "bytes": 602,
+      "sha256": "ef278c1e76e9151e0196aa866f6d847fb2cc359745a0fe5354a8fd20d67d54b7"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d20.in",
+      "bytes": 603,
+      "sha256": "4b9f57d5c5dde681bc0227f67e407c682c975a190c2b592ec2bdd7bada64e06e"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d21.in",
+      "bytes": 603,
+      "sha256": "fd9a0629caa9da5e67ad58a2a29fc598ac66802019f0a372877fd5aba710acc3"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d22.in",
+      "bytes": 603,
+      "sha256": "958619b386c3372a3fa2b1e403fd8fd80306b1471f5a5c5b8e642cd1ae3210d0"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d23.in",
+      "bytes": 602,
+      "sha256": "5fa95500b9e8a92d88421d2f98ddf05a8fa9420d64d6371ac148aaefac92e0b6"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/deletions/d24.in",
+      "bytes": 603,
+      "sha256": "338ae90a90b7b81d51a5ab3735f8ac7b3bdeefb2d04fbef3ecfcc5e420c55f3e"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/p5.in",
+      "bytes": 406,
+      "sha256": "989bf66e963930b98091f0b976101df59f8535cf192034cce5a2baef76314b2c"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/t.in",
+      "bytes": 319,
+      "sha256": "5ee86f5ce614e3b46d6fc7fa6b98174233cce8a1563bf6766dab1182cf808f8a"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/t_prime.in",
+      "bytes": 301,
+      "sha256": "0b5d0067606e5e849b767fb52c33ed31eb71d86d650978828abba0c2540c6dbe"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/two_t_prime.in",
+      "bytes": 264,
+      "sha256": "840a64d1ba5e9a926f5e0c0758196e4662ff302e3711055e36312f466d19dd59"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/w.in",
+      "bytes": 667,
+      "sha256": "d0920e56381c22739b773450234b42c6ad63ffcd72ee4349ab02bfc081c1eeaa"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/w5.in",
+      "bytes": 759,
+      "sha256": "6f8a8ac484691b5c7b4eee302937138f2b24b452bf3fcc71767290105dc72d6b"
+    },
+    {
+      "file": "wills-1981-conjecture/data/normaliz/x.in",
+      "bytes": 166,
+      "sha256": "ddf517fa1cb5a8f3c023460120c2d5c55bd9f3cd39541e11b67e4ad45c719a64"
+    },
+    {
+      "file": "wills-1981-conjecture/data/w5_vertices.txt",
+      "bytes": 681,
+      "sha256": "7e3dfca1add43db2555b93b1fba7db3cead00eb8e5e4a918037db11486c3e598"
+    },
+    {
+      "file": "wills-1981-conjecture/data/w_pairs.txt",
+      "bytes": 282,
+      "sha256": "bbe600fbddf39077b7e7c8ba80b9c504d17f7e676b066c3142ff7e98972b01ff"
+    },
+    {
+      "file": "wills-1981-conjecture/data/x_points.txt",
+      "bytes": 506,
+      "sha256": "4d6e01c74e78790dea3f17acb4a922bc125c02a62c05fcbb72ccad13cafb83b1"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-1/case1_compare.txt",
+      "bytes": 1929,
+      "sha256": "84388425e30f782d65369f409fa901247ea3cb89524e0951bd5ab1df9bacbb43"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-1/case1_first.log",
+      "bytes": 2975,
+      "sha256": "6abeef41127cec65602fc66e9d0a9d5f7fccc447593e666921fcb03b204e65db"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-1/case1_first_records.txt",
+      "bytes": 1469,
+      "sha256": "5588856aced6669ba7ae437fdc57abf3dc298b710a1694c90d0bd8e60eaa1e71"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-1/case1_second/flagged.jsonl",
+      "bytes": 1299,
+      "sha256": "2c759548c5579e6e9f9ed6e2a6cec834d55dfce99e552adc84586b69bac4d7dc"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-1/case1_second/rows.jsonl",
+      "bytes": 2558,
+      "sha256": "bbd4801f79bad817a08aa790b0328535f4983ad60a361b807d60921cb829130a"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-2/index_first.txt",
+      "bytes": 918,
+      "sha256": "09b25f6baf9f4ba8e00159d5049f8f9d5c72a92ccbcacec5a9aa709ab748d1dc"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-2/index_second.txt",
+      "bytes": 201,
+      "sha256": "69ea54fc375c441c00a8ccbed971d4b755aa6f7f14c4a744ee515f2696a160b2"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_first.txt",
+      "bytes": 1466,
+      "sha256": "5bc8c7bd1f16dbbad323fc90f924974a62b471378445f8ea6965be247e835dcb"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m2/flagged.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m2/frontier_31.npy",
+      "bytes": 11963,
+      "sha256": "ec0a27afec1bbb1f45df0f318bda4287e1aeabaa1f62247ee6c8897dc6b6a05e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m2/frontier_33.npy",
+      "bytes": 6788,
+      "sha256": "4010cc2afdc47820338dd5017569c28a1a523a5ffcd99465503b91a49f0cb9c1"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m2/frontier_35.npy",
+      "bytes": 3233,
+      "sha256": "745e2db12ac5ace007d20f65d66798e08648aada346315fd7357dec6733fb9ad"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m2/frontier_37.npy",
+      "bytes": 1613,
+      "sha256": "cf3575c589c191899b2ac8462ca838df1511257e31524b4186e92d859b790d37"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m2/frontier_39.npy",
+      "bytes": 623,
+      "sha256": "80346eaaf6ee17f570b02eccc12467402bcdb5d0d915f745fe2d90c9b11673f7"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m2/frontier_41.npy",
+      "bytes": 353,
+      "sha256": "81db95c7e00879be3bf5ddd573ce2c68c9107bf751e414aba179941485c17517"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m2/frontier_43.npy",
+      "bytes": 173,
+      "sha256": "f9424caa7daf9496b5df6a6f811e7f1f7d2e63ab86a29e2d1a6322cf4ae66f0c"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m2/rows.jsonl",
+      "bytes": 820,
+      "sha256": "2d904a36b70df1c5755b89103ef4bbea0522dcc872c6a0ec1ccc92a577f42035"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m2.txt",
+      "bytes": 854,
+      "sha256": "0adc4a1d8b22e5b409030d7469d0f71e28f1acc9bee5c6ea408ecb8ece9adbac"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m3/flagged.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m3/frontier_31.npy",
+      "bytes": 1610,
+      "sha256": "d21c6c4b6140944c2f86faa199286a836097842377c9b49aa164844ff6615c1c"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m3/frontier_33.npy",
+      "bytes": 635,
+      "sha256": "35909bd9b978a67e1041c51a7e000396d9c282086eabe9c344acebd867da22a0"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m3/frontier_35.npy",
+      "bytes": 323,
+      "sha256": "586af1044f78a8e1e3ff1bf5b1184d56437a769440c7eb1e7d9b868a59fdd9a6"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m3/frontier_37.npy",
+      "bytes": 167,
+      "sha256": "0b6997c63f1182c6242c0e6848864cddc653a24fd2ef28aa7f278d3511cce83d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m3/rows.jsonl",
+      "bytes": 509,
+      "sha256": "e3fc7bab6310d30ac02d723447df3b40097d37c4b589fce7a75d31af39a15bad"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m3.txt",
+      "bytes": 543,
+      "sha256": "e527229758bd613ec2e78a7cc1e3cf2d8bc434381fec8f1a71f992b919fa84bb"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m4/flagged.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m4/frontier_31.npy",
+      "bytes": 661,
+      "sha256": "9c644829c32a6d86c2809fa91d4445adab1f9cb8a5bf7b443c1ebb0570ffda7e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m4/frontier_33.npy",
+      "bytes": 415,
+      "sha256": "9fd11269450740458878cb932ed92ff146b13d242e9c51a9e78546cf7cf9f752"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m4/frontier_35.npy",
+      "bytes": 251,
+      "sha256": "280a9459323472aeee6f26826d96ba3a0242145850a7d2e872fc71a6c646aed4"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m4/frontier_37.npy",
+      "bytes": 210,
+      "sha256": "85e03703cdd5dc0082369a844d8ae5b6c6242b2434ec45ee3dfa01edb9a71f3e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m4/frontier_39.npy",
+      "bytes": 169,
+      "sha256": "ce30604fe6f91572b7247f9f89db97410a2255dd9a067a4edcbe2a63bda50adc"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m4/rows.jsonl",
+      "bytes": 598,
+      "sha256": "03b165f5be5a205239769719c53788c6622b615ead66c10976af60e99420ddc9"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-3/case2_second_m4.txt",
+      "bytes": 632,
+      "sha256": "a103acb912431643dc1380383f6ced51c67efc71c518bffbe6a7d22a9c509d4d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-4/frame_lattices.json",
+      "bytes": 9216,
+      "sha256": "968cc6948907bee5429a57a2bd96300e21c1969f48a0556c8917e2bbf73374eb"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-4/frames_first.txt",
+      "bytes": 4026,
+      "sha256": "8f3ef3fa3f14e5149cc562fbf28f318aba3caf265d44cb94d9c1def252578800"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-4/frames_orbits.txt",
+      "bytes": 1254,
+      "sha256": "65565949377ddf1be343e619ec9f35f85c5dc0edfb0df48c1ae3a487fa4e306d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-4/frames_second.json",
+      "bytes": 4164,
+      "sha256": "a2c865899dc555eaf24ffd8e3c352ed7d50d1013d8518f541d6dbf566e2f5a6f"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-4/frames_second.txt",
+      "bytes": 2347,
+      "sha256": "bdfb8270a6a9f880db37c86ddc0dcef52f96f7de5719f3f10c159fc95c7d8e55"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-5/case3_compare.txt",
+      "bytes": 2942,
+      "sha256": "dd33da24c237b4dbf0cfdee7effd5fcfc7686a1068fd85f5cf7ee4ab8827e546"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-5/case3_first_rank3.jsonl",
+      "bytes": 22603,
+      "sha256": "47009bad21f094405a2152483ff5c84ef60e568d98070ea9677f5cad52eb83f0"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-5/case3_second_rank3.txt",
+      "bytes": 15543,
+      "sha256": "70d0980d45d0f272550a95adca86e7be499eaf3ccfd83c4ccbd9ee5075436987"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/case3_first_rank0.jsonl",
+      "bytes": 21964,
+      "sha256": "07ab316941be212be41350b4e790f7e53d4a340b8dda04f015f0904a12126242"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/case3_first_rank1.jsonl",
+      "bytes": 22085,
+      "sha256": "5998340eb60988f79236be502ac5c259b3953d6d5e345f1fdcc31d4a06053623"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/case3_first_rank2.jsonl",
+      "bytes": 23216,
+      "sha256": "f262ab3344b45b87b65cdab06bde27e2d56577226e0da5f8fc88668881b202db"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/case3_second_rank0.txt",
+      "bytes": 11775,
+      "sha256": "e6eea08b0dc68ddf72806288ce661c110835ec7efbd7d76ed882d464696f700c"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/case3_second_rank1.txt",
+      "bytes": 11956,
+      "sha256": "07b08b494a06b9774226d86bd4a55366b9380ed1f5f53f81e9674a8cf011f461"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/case3_second_rank2.txt",
+      "bytes": 13334,
+      "sha256": "60db896e6024457ad44313dc2822742d5585d0e7e9f20d24b6be810d1e7eb98d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/r41_r39_points.jsonl",
+      "bytes": 1401,
+      "sha256": "a3a1956d41eaa70fbfa08a3f71a4c332a7c548fc8abee7dd30ac8db235d05fe2"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx0.log",
+      "bytes": 295,
+      "sha256": "12ae7ca886360f1dc491f5c318674985096c2df4480f74540bc2c71e69e5e152"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx1.log",
+      "bytes": 295,
+      "sha256": "9533d5725323635aaa9349b2ca93f602720e1443a5014031c7cbbca7b12a0a04"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx10.log",
+      "bytes": 305,
+      "sha256": "6c9a1b5984b5a24ea899a0bbd889f76872242f195f405093beb917d3cfac3ba5"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx11.log",
+      "bytes": 305,
+      "sha256": "e4ca03dca96feff7a38e2fa59092a4f0e155cd29fa3d0f7c5cb5f841cd8576dd"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx12.log",
+      "bytes": 299,
+      "sha256": "bb85a8df421e4eaf550bbf52f6f44fb1ecca6a4cf3a082b037b3e95fe80318e3"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx13.log",
+      "bytes": 301,
+      "sha256": "44d022e22edfc180088813d70c7e4461cf94acda5ce50042c964322ebe29e40c"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx14.log",
+      "bytes": 301,
+      "sha256": "0e5b38d042f60cbc4dfa98ebf9eef5f0438d13e7ea7f6c098242fc0a747339f5"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx15.log",
+      "bytes": 334,
+      "sha256": "7d5abf63ae9f99ffa958d664160690b8e6a573c2417415b12579be82f8a52b0d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx16.log",
+      "bytes": 329,
+      "sha256": "49d37bb0206e7896c00c2ffbe5bfb0d51bf64aca05263353a2f3b5c126b833df"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx17.log",
+      "bytes": 329,
+      "sha256": "89eb6a96c59bec77a937e73fbfb363cb2ed80d043c378710a9f8ba626d90c227"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx18.log",
+      "bytes": 326,
+      "sha256": "03ebb84320d6a772b952837e926bb4dcf2a5e3bfb9ca307ad3ea97b2e9a1f459"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx19.log",
+      "bytes": 300,
+      "sha256": "13cc96453c9f9331067a5d865d1a8206d73945b09d65b6ff44707db981aaa146"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx2.log",
+      "bytes": 298,
+      "sha256": "db08055993a668e68d575e3483173bcce857df1a399dcbcdb510b4e58a030b4a"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx20.log",
+      "bytes": 848,
+      "sha256": "9d8bc6dc9424318d58bacbe23f275d4cdcd5509516e515ccb322dd43963f81f6"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx21.log",
+      "bytes": 429,
+      "sha256": "9d220938b77cf367727db66bb1d653a14258fb0c5c18b91c9fd98b922a21a3fd"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx22.log",
+      "bytes": 415,
+      "sha256": "c9a05471b0723e211a727b3c830ed5e88c7e6d1551ff6dd962931f178228436d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx23.log",
+      "bytes": 448,
+      "sha256": "d1ceadbb3564737b069a3a2b35f55acf7606dc1d295c74a3dc7babc24652b527"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx24.log",
+      "bytes": 324,
+      "sha256": "7381905a9d4ed411cc7f2adc5a8bf51d5c91ea25708326e9f8975acb84575024"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx25.log",
+      "bytes": 351,
+      "sha256": "0a8464edaa8850c5b0923ebb579b6b3b07ef0fdb74e2617808d846d59ae7b627"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx26.log",
+      "bytes": 474,
+      "sha256": "e2ce9d517a6518f9cbc997e6d87d2ec0d9d1d8b4f5bf31479dcb37bcde522f7d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx27.log",
+      "bytes": 468,
+      "sha256": "823fa60b81acb2ff85b5f988a15b0a0f3b71878f19d12b449cf3cc85f5549d25"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx28.log",
+      "bytes": 350,
+      "sha256": "7fa2bf2c639d52756f990b3410c57ccfe29896bda64638bc21a1e5ca79702aa8"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx29.log",
+      "bytes": 298,
+      "sha256": "c77e631a320d9b726e84ab554711d8c492b9261ab608359f46f4e6d54e4ce0c6"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx3.log",
+      "bytes": 297,
+      "sha256": "6a4b73e4328700e4031e3ee62d9ff6936bf9933edfd8af09a84a58151fb6ca79"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx30.log",
+      "bytes": 386,
+      "sha256": "9dd8934388c21e363d3951b144e41b5e1f4e232df89a47f476ceb5bd7fb04489"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx31.log",
+      "bytes": 375,
+      "sha256": "a2dc59814389ea2117cfd65520fda09a8abe0c0cdd965afb729a0fb79fc668dd"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx32.log",
+      "bytes": 301,
+      "sha256": "a4daf3aec6c62729c15a8afa22dbd2b14867541b135ceea1a3104a7e5386a6a5"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx33.log",
+      "bytes": 412,
+      "sha256": "b17d7bd24df3855fe95260bd7c31096054e22210b3d2a1804bbf5cad718a5ec2"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx34.log",
+      "bytes": 302,
+      "sha256": "9be375a0fd7920284d8addfd2b6de435ef24317ebd0cdea6e79649ad52929e78"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx35.log",
+      "bytes": 445,
+      "sha256": "66989df32c51317f8507e4e597e732b2fda375955106ee382a5911d15b54611b"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx35_dump.log",
+      "bytes": 320,
+      "sha256": "c9de7977eca063f3096142425b52c59640c839689b865767df1656c5d9d3484e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx36.log",
+      "bytes": 301,
+      "sha256": "6d4e2300df47498ebb13e76b58f6d07119794c61883029c46790e45758223fff"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx37.log",
+      "bytes": 439,
+      "sha256": "d7a2a6168bfc864c3c5afb428fd546940c6b20b3430e1b28c4c26e1aff392f6b"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx38.log",
+      "bytes": 336,
+      "sha256": "fc435cbbede1d9b9a2fb59bea9766f583f35832487b1a435d1953e9c84b081bb"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx4.log",
+      "bytes": 298,
+      "sha256": "13223ab46f26c1bed4a05d8ef125fe08b25bf97e7aee0ca65ecdd52c7715802b"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx5.log",
+      "bytes": 298,
+      "sha256": "84d53a8572cd06053470f3c6e05842ec324808b45bec5c851690733456cadf61"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx6.log",
+      "bytes": 305,
+      "sha256": "dcf1083dad5442ca112db1e0ad042c62d3dbc85934b7981acf9b8f91690de2fb"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx7.log",
+      "bytes": 303,
+      "sha256": "de8993c48cd4e9fb6d98ac824b3cb7d7b2e0cab9741953680d5975aaa96eb2bf"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx8.log",
+      "bytes": 300,
+      "sha256": "42daf2c2c66041387cae918f797f5a41b940819c9e734ba303a98ad862223b04"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-6/sandwich_idx9.log",
+      "bytes": 305,
+      "sha256": "2d6ff267442b214ab0241790babe472e06cf77afc76575f3c7c53f2acb82b8e1"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-7/boxes.jsonl",
+      "bytes": 5916,
+      "sha256": "8376d161299fc890bcfdfddd71c9a8fcdeaabac66b04f3ff859bfde6700be13c"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-7/boxes_first.txt",
+      "bytes": 514,
+      "sha256": "ab08fcb397f3e288671300614868722c5c9442c7b833ff78b465131c370fd752"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-7/boxes_second.txt",
+      "bytes": 1206,
+      "sha256": "512c97e9fc4010d4a21c15ee9cacc2fb7d2fe3890ecfd128de299b8232f60f08"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box0_compare.txt",
+      "bytes": 2747,
+      "sha256": "b3ffdb1537bb4ba9425632321469f1ad428baeeab76eb086871dfb9c8ff1139c"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box0_first.log",
+      "bytes": 4711,
+      "sha256": "ef454b37facb2ff97fbfe1ceeccbab85bbdb042ae0e9f0c08f7e1f9dd5293ccb"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box0_second.log",
+      "bytes": 4486,
+      "sha256": "e68e7d7f86bdfdac0c241fb22bd7798c4d87e6b6b4c858869ea9d8ac56e4f2a9"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box1_compare.txt",
+      "bytes": 2173,
+      "sha256": "14ffafb1e1c37551021a6caa63412daf7e6aa76f2121f42570dd0a219f77c178"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box1_first.log",
+      "bytes": 3938,
+      "sha256": "8bc96fe1a0ba8031517285364005ddd98801d4902e3c6bbda437d78e6b16cc8a"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box1_second.log",
+      "bytes": 3617,
+      "sha256": "c6951fa21dab3abdd7eab3ef1694a45beb57d5dfac98dcc12b74cd9cf9dc7032"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box2_compare.txt",
+      "bytes": 2362,
+      "sha256": "1a69c25236cb5b79e9a9ad7a65983d0afb7d9ecdaf83ebec13b96faae6555825"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box2_first.log",
+      "bytes": 4180,
+      "sha256": "b4d6d27d9d7df28155592063edf367905b2ba0f1b00083471a0131ce75cefe00"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box2_second.log",
+      "bytes": 3891,
+      "sha256": "10b02b591c88905d9f087f6025804c48773278ca433bdcd2e15916ee38d83da3"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box3_compare.txt",
+      "bytes": 2708,
+      "sha256": "dadf47a19056b79ef4968fbb7371b0296f18f426f2b9ddc0ed55f719bf5bed80"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box3_first.log",
+      "bytes": 4499,
+      "sha256": "313462d26d8c6a245dcb65cbfcba4986ccdb132f352c5f116a39ecf2f1f0d84e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box3_second.log",
+      "bytes": 4327,
+      "sha256": "149bc4261903746a5bfcd2bebbec3e03a788c66af5cb978d98a3effb90cfe8a3"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box4_second.log",
+      "bytes": 1253,
+      "sha256": "e2bd6738adc5195914f47f49405216ef29fc98410627a0d693a2cb7ddf7faab3"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box4_second_nocut.log",
+      "bytes": 723,
+      "sha256": "f3ad78306e6705c57e261109e95f6c26a2a0813950d0945097adf367f9d90821"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box5_second.log",
+      "bytes": 1081,
+      "sha256": "6334a76b07faf0173dfd07faf9089e92b7bc7c9f25b86851a85e54ac901009dc"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/box5_second_nocut.log",
+      "bytes": 626,
+      "sha256": "73eeb0b29e8acf6606e3258549b74043c9d7bc4e465f685cfd6a58445112b89d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-8/boxes_small_third.txt",
+      "bytes": 725,
+      "sha256": "cb3995f92126285fb07be158165d9f6790e512ab8e37c140466c232ac2a1584c"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-9/x_first.txt",
+      "bytes": 242,
+      "sha256": "1b9f05b7527371fda99c292dba58e67dc05bcc3f754f1cd8c09b06e07bdb9212"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-9/x_points.txt",
+      "bytes": 506,
+      "sha256": "4d6e01c74e78790dea3f17acb4a922bc125c02a62c05fcbb72ccad13cafb83b1"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-9/x_points_bestg1.txt",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/computation-9/x_second.txt",
+      "bytes": 113,
+      "sha256": "50b979042bf2c5e4755000beeaa61869bfffd0d7885d61b4d8d687cb0d889e27"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d00.in",
+      "bytes": 604,
+      "sha256": "f633814bb602204b722047747606a3d017ef33050f2d1d7ae02a5d7585c954b2"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d00.out",
+      "bytes": 3444,
+      "sha256": "180e22523863aa50bfa57c633dd68de94f1ee1b8c9f1dfa294ea79f840bf4e23"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d01.in",
+      "bytes": 604,
+      "sha256": "da6e474cf57001e2d4eaa104ee36d82892abb652ae76b2ca7412da8f34a6bf1e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d01.out",
+      "bytes": 3269,
+      "sha256": "be90439d12e8108ed52b40328a3a9c4b14dbee859b3a21d69280d7599d29f388"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d02.in",
+      "bytes": 605,
+      "sha256": "fc6ef04e4886f62d5cb29361c9e6e0b144319a8cb87226c207a86a3b47a65679"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d02.out",
+      "bytes": 3316,
+      "sha256": "b12b8bc1ca523905c2afdf23620d2bcf5358785409fc3b88781d2af9af511a50"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d03.in",
+      "bytes": 604,
+      "sha256": "d32c128f9c40e470114691fc7af48167703f4ff2fe4255279ef8f194dec48bf0"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d03.out",
+      "bytes": 3066,
+      "sha256": "3113227bee4ca31e3aeea99a9411f50275f00450aeba7ba2843a47fd92cebc54"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d04.in",
+      "bytes": 604,
+      "sha256": "a82e38d8fed25a8819d560cde897543871da392df8d3bf2fa8b5c3a348d779cc"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d04.out",
+      "bytes": 3486,
+      "sha256": "f8b410a339232f1814bf778e4d32e5a5ba85c7070954ac2554359ac57825fba8"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d05.in",
+      "bytes": 603,
+      "sha256": "9ec24f98c0cc3883cfbc6290b70418c55523fadab0691c4cb58aad91fb5eb16c"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d05.out",
+      "bytes": 3442,
+      "sha256": "a6d4a6152cfc7d86bbd974b37f56c52dca99b140bf8b191b27798f5f411a2662"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d06.in",
+      "bytes": 604,
+      "sha256": "5f30cd9702c1ad49f1a5d1d6da85e611267d6451fb73a82af3a96f2354140106"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d06.out",
+      "bytes": 3442,
+      "sha256": "402c85b570dfd816a8b25e6b6398fe192d26d75e84a145462bc05cded46683b5"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d07.in",
+      "bytes": 603,
+      "sha256": "db3e6858c3ff8cac726718dd53e2bb6d222caf756c6b346d55c75d8cdbabc8d3"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d07.out",
+      "bytes": 3431,
+      "sha256": "0a6cbf502f45113fa639c7903c921172f65b4d53b4a342107b37cfa46b79a9e0"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d08.in",
+      "bytes": 604,
+      "sha256": "e6d07c3c41bed8de437977442323a400e6fe773e6b3fd7c9d9128a880990126b"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d08.out",
+      "bytes": 3486,
+      "sha256": "7dc44260a2dea6bf077346eac6357f8b3d8b99d086c746e144e4271fb67b19bd"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d09.in",
+      "bytes": 603,
+      "sha256": "3d3f68928bfd8cd24ae8b7fccb7271228ae64dab4304303e2b0fc92282f8ee6e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d09.out",
+      "bytes": 3402,
+      "sha256": "9337428786dd557ca8a4483873970ade538e64d482e6475258af978b059b282d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d10.in",
+      "bytes": 603,
+      "sha256": "eb0e30e6cfc0e4c5ecdfd9c70c8abb20cba4a5c1a74865019c7ae8013147171e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d10.out",
+      "bytes": 3614,
+      "sha256": "01eddd14187bfe65c1bb69b742626fac22b41dd1a5d133f34d0a027a3638ed52"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d11.in",
+      "bytes": 604,
+      "sha256": "7057bbdead61ab60983531cba49eb5378586115c613e550064c2241a8a73f8e3"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d11.out",
+      "bytes": 3477,
+      "sha256": "165716fd0987fba3a67f0847a8b943d818812b097164e99552af89ddb6a918e7"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d12.in",
+      "bytes": 603,
+      "sha256": "7d03d3847fac5b231e1daf409cf47f82ec9a26371bde490f5ad5fa8893315362"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d12.out",
+      "bytes": 3472,
+      "sha256": "6b2de32ecaeee44d7d6e66e7c9b1c9077d1447fc7169d9ebb2e88b5ac494d96a"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d13.in",
+      "bytes": 603,
+      "sha256": "d100edbae667f1dd1aed4ad9dafc8de078777a5e2a72e744322a6484e091fd91"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d13.out",
+      "bytes": 3272,
+      "sha256": "9435264895f0de67fa4079c18b15ff6748274ca88562787b02a70061527420f5"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d14.in",
+      "bytes": 604,
+      "sha256": "9014fc24423183bc9d54085f87774d989d6c164e059119ac67239154bf9cd4f8"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d14.out",
+      "bytes": 3400,
+      "sha256": "a24c95503083676943bebc07ec711252a37e96be146e5108dd00af4cb09869fc"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d15.in",
+      "bytes": 604,
+      "sha256": "655e441b3484133456e52375d9c3ceeb188446c6c65f037e75e88721ddc4f54b"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d15.out",
+      "bytes": 3477,
+      "sha256": "7e647a5e5520f5789778ee8efb4e8ffc52d110246271aae526a9677678695ba8"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d16.in",
+      "bytes": 604,
+      "sha256": "1e71baa37165ad9a3446e66f90899cc3628ade587d6f154297a14efb56daa163"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d16.out",
+      "bytes": 3444,
+      "sha256": "93689779ff5b64c00be1db5c52bb175d5a82e64cfea1505a622ac846d0bc401f"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d17.in",
+      "bytes": 603,
+      "sha256": "05faf7258f0948026af6148e0ae1d86650867471317bad9044ec6e996be9e909"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d17.out",
+      "bytes": 3487,
+      "sha256": "df85f958de224bd37fcbf41ef7e24a28ef5b5da818d3ad9b2109c099c2b55372"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d18.in",
+      "bytes": 604,
+      "sha256": "7f0c7e1a26212ffacff3b5a2e442c29ee25d016809d43d0070db58cd105b794e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d18.out",
+      "bytes": 3402,
+      "sha256": "0b83d44afb3ec435fd5dcd98a8d34be88b8f79cf4805e84cbc24e9cf40042dae"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d19.in",
+      "bytes": 602,
+      "sha256": "ef278c1e76e9151e0196aa866f6d847fb2cc359745a0fe5354a8fd20d67d54b7"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d19.out",
+      "bytes": 3230,
+      "sha256": "36147eee3e1e431c9e8e750cdd57531db13d95331ccf4e53017d8d6119f4ebbd"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d20.in",
+      "bytes": 603,
+      "sha256": "4b9f57d5c5dde681bc0227f67e407c682c975a190c2b592ec2bdd7bada64e06e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d20.out",
+      "bytes": 3389,
+      "sha256": "5539dc0ce8e751951271bf35c955b0c96bafc63d31df6c5a415b9b3916a7fc9e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d21.in",
+      "bytes": 603,
+      "sha256": "fd9a0629caa9da5e67ad58a2a29fc598ac66802019f0a372877fd5aba710acc3"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d21.out",
+      "bytes": 3402,
+      "sha256": "67b30541e82744065dff4fc1469e2616924aff2ad652c386c2153e4777cdbd59"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d22.in",
+      "bytes": 603,
+      "sha256": "958619b386c3372a3fa2b1e403fd8fd80306b1471f5a5c5b8e642cd1ae3210d0"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d22.out",
+      "bytes": 3484,
+      "sha256": "0a5e74dcbdbd67fb2d08af360a666b7963519c66b6a84d28611412e0baef9280"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d23.in",
+      "bytes": 602,
+      "sha256": "5fa95500b9e8a92d88421d2f98ddf05a8fa9420d64d6371ac148aaefac92e0b6"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d23.out",
+      "bytes": 3374,
+      "sha256": "019b4d4b1e3412b9c2915ff14af23d7c80aa00e1daaa3f19b1a1acda8d251dbf"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d24.in",
+      "bytes": 603,
+      "sha256": "338ae90a90b7b81d51a5ab3735f8ac7b3bdeefb2d04fbef3ecfcc5e420c55f3e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/d24.out",
+      "bytes": 3443,
+      "sha256": "76b4be7ec485631a357655757b8a4ebb21391d8beca949a885a3af741a422c7d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/deletions/deletions_first.txt",
+      "bytes": 1699,
+      "sha256": "91137da9e720c310131bd2622009072adda14905b686a5e2aaa4d00d71550214"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/case3_first_rank0.jsonl",
+      "bytes": 21964,
+      "sha256": "04ee211422bedfca02d9f02c6e31d6c964bb0fe6b25b4ab55495c625a4171902"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/case3_second_rank0.txt",
+      "bytes": 11775,
+      "sha256": "bf7b352dfd26e37cd0e285c923780d48a04ee05dc64c1d25ad4a2c41be3c5706"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx0.log",
+      "bytes": 295,
+      "sha256": "e8842b1bf704a54e92aaff5b99ae708c3ddbee86fa54b656cf28c6ee45a6ed56"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx1.log",
+      "bytes": 295,
+      "sha256": "5cdeace7a4c9525200819a2ce4c4d9af5493a8bb19b390d128639e0015c62e3c"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx10.log",
+      "bytes": 299,
+      "sha256": "f5f9229ce44baca781a147edce44e13a7d2defa19a77d01387c11dd297c03801"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx11.log",
+      "bytes": 299,
+      "sha256": "68eea390192ec93a26e8594ce4f476f51eb625c4882c37a2c2a0928f267eda9f"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx12.log",
+      "bytes": 298,
+      "sha256": "f62389a5e7238a7ce41cba9b964e83d7bed4e4246c5276106ae8b18b61491c48"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx13.log",
+      "bytes": 298,
+      "sha256": "eaf2dec953493e1ecc0bb9b62d9cd1bf3e7351148aa853e0a1ced7a7639b640f"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx14.log",
+      "bytes": 299,
+      "sha256": "8dd693d43f05a0b9d4abac05a97333c61cfe4857e924cb546dc2d432aa65ba92"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx15.log",
+      "bytes": 298,
+      "sha256": "7c1f541d86f25078af4eb4a3e1b45a90544d2e772c551639992ad4da67bdc528"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx16.log",
+      "bytes": 297,
+      "sha256": "0d68a32bd869ec72b140ee8d1353ad506a4e6a11646402bfd0cdcffc3dc55bc0"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx17.log",
+      "bytes": 298,
+      "sha256": "2bb5a3344e600499e6965b3958e881d7e346533bdb40add2eeeb088633d383d0"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx18.log",
+      "bytes": 298,
+      "sha256": "47e70901260cb39598c52069d989c2dd7a77279fdd9560f01e6f76689342458c"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx19.log",
+      "bytes": 297,
+      "sha256": "5878c05aca930de9bff984552f57034d1bbf3a31c80a0a3c54b6d1bf16db7fbf"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx2.log",
+      "bytes": 295,
+      "sha256": "58da13afd114d736f52cef58c86ac67e8d8f644632faf0e63e74c35bafa0bcb8"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx20.log",
+      "bytes": 454,
+      "sha256": "59d52352d2add6740b0a16b86388670fac1412b0b004bf060ce2e8493f5b1010"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx21.log",
+      "bytes": 302,
+      "sha256": "37c8ebf289baa0ead1ba9eb9ccd87e9af328754cd9711e33326edb0aff7edfda"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx22.log",
+      "bytes": 301,
+      "sha256": "ee99ef479f7a6f33151b1b7d2c813b3936b0570f43eba641938db17bf045af68"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx23.log",
+      "bytes": 298,
+      "sha256": "d76e310f00cd0d9f6a4bbfa3c6bd57a91b106499f486dae8473a7ece63bb2286"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx24.log",
+      "bytes": 299,
+      "sha256": "10c0ecd7df6e690b63a4bb6292b050620bf1a85290f297027e0349c1c51be964"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx25.log",
+      "bytes": 297,
+      "sha256": "3e05106eec592a3cd9377a05e50f4405026949e0170ca13f37838c019ac24493"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx26.log",
+      "bytes": 298,
+      "sha256": "8e547adc71a04ecbca0d088d7ed57a817e88d208d9e47ad069ec48964504cec2"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx27.log",
+      "bytes": 298,
+      "sha256": "a9668e5c27e32504fd7465a74000b61cfd9187d15a4352d79c45bd63c2756624"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx28.log",
+      "bytes": 298,
+      "sha256": "22d38cdc8ed7489e2a742a5dfaf86b093631cde6d08fd8a1c7f534818ad7ebc8"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx29.log",
+      "bytes": 298,
+      "sha256": "e8d9ea440d96a2735c1648a196e98620677b15134327d6d13c7a70cf77fb5fb5"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx3.log",
+      "bytes": 295,
+      "sha256": "2c9cf5fce356f23032db9a4a3dda140afd40d49d5a8ba158ed065d4b29860a9a"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx30.log",
+      "bytes": 297,
+      "sha256": "71f6adb7676991d5e0f89167e14bf860a37dbf490f729e4bb71ca9d2f1ca83d9"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx31.log",
+      "bytes": 299,
+      "sha256": "23c6a2a9de4f32478d7cc8f407f7832aeda543361ad187e45ff63e1865e1f05b"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx32.log",
+      "bytes": 301,
+      "sha256": "ac7a91f42cfe524a34f4f0a211bcc304326882b9a4c2f8198ffb633dddf30393"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx33.log",
+      "bytes": 299,
+      "sha256": "3108c48c968e63058963f78feabddb71581fe4d2a6b9657aa25f3cb92279fd20"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx34.log",
+      "bytes": 300,
+      "sha256": "0d9f063a2c356e83884c023030a1d96fd325d548fce4eb8b0730e62290ad968e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx35.log",
+      "bytes": 310,
+      "sha256": "03274011d5eddec680379e711eb975ae3b60c87cca077d18663664974441927b"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx36.log",
+      "bytes": 299,
+      "sha256": "e8391d71cf71bf5fcad9a4daf0d1a7f6327345a2b3591380d5cf65e66ea29af2"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx37.log",
+      "bytes": 299,
+      "sha256": "5f9759416ed0dd2cc0fe1967b55ce4c24538171b72d15617d4ba07ea695c1c8f"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx38.log",
+      "bytes": 336,
+      "sha256": "f0d276621bfe60f079b4b897ab21eab17d52049fc357ba89838b38a66daffdff"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx4.log",
+      "bytes": 295,
+      "sha256": "e37068d75de1a72fd5454f08a90a44342c3a2f6f3470dd677682891367c044d8"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx5.log",
+      "bytes": 297,
+      "sha256": "3058ba6d63e0e664a8db88aebce2be7eba062881ff700e04140756a631efb29d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx6.log",
+      "bytes": 295,
+      "sha256": "42402ea4604ba99d7368e536c73c51b350d93518089c8c9b98d8da5007eb6c5c"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx7.log",
+      "bytes": 298,
+      "sha256": "c172d8b9ab4f9deb21d4a918a52cf68d192601b1f6784dd1e2e4d905ec902d66"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx8.log",
+      "bytes": 295,
+      "sha256": "18fc9e51aa08f73fb7031193775fac61af73ffb53b51967778d365c8b6deeef5"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/sandwich_idx9.log",
+      "bytes": 297,
+      "sha256": "2686ffb42aa7ad3ddda14aab530ae7582ae147c89055865b0022bfc99eec977d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/t.in",
+      "bytes": 319,
+      "sha256": "5ee86f5ce614e3b46d6fc7fa6b98174233cce8a1563bf6766dab1182cf808f8a"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/t.out",
+      "bytes": 2144,
+      "sha256": "4dba9f6d71f0625201599b17821ec048ded3460090213de7b7d4e15e9c330aaf"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/tx_first.txt",
+      "bytes": 2291,
+      "sha256": "57768bf5ec10ff1f7ee96faaae38f7c014a703f7690cbad2e9cb54ed688c3687"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/x.in",
+      "bytes": 166,
+      "sha256": "ddf517fa1cb5a8f3c023460120c2d5c55bd9f3cd39541e11b67e4ad45c719a64"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/section-7/x.out",
+      "bytes": 1540,
+      "sha256": "a3245049d1254169c6edc76a469c9923fca6cd6c02b73536b7287385a7afba45"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/boxes_compare.test.txt",
+      "bytes": 12,
+      "sha256": "fbdc1c1cfd09e18d0824ab72ceb51fbde29c14709bb9769711ec9b6df7500184"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/boxes_list_first.test.txt",
+      "bytes": 55,
+      "sha256": "89ac242cf5761f75f2228dffbba8278ef57a30d5820cc8838a9f610881efb8b7"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/boxes_list_second.test.txt",
+      "bytes": 79,
+      "sha256": "8f52b687f07a9b8e6fcce27342ba7098ef418c2b68231932988260342eda5f9d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/boxes_walk_first.test.txt",
+      "bytes": 4466,
+      "sha256": "c424f7f0397c2785e833690456d1984e6dd0f56c559a138fc9c09e3b705178dc"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/boxes_walk_second.test.txt",
+      "bytes": 7064,
+      "sha256": "8ee42f2cebe1f7d5c49fd1481d02d2b0a49fd3095c57ca88368036e110f3efff"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/case1_compare.test.txt",
+      "bytes": 28,
+      "sha256": "f91053393db53ac20b1d56d249a7cecf93a87fa784f250bc6ab7fa197fb2c696"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/case1_walk.test.txt",
+      "bytes": 77,
+      "sha256": "020441479824e20947ac9a1762fdc36542529f9ecc2f4f2b3de5c8c15a9b1f36"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/case2_walk.test.txt",
+      "bytes": 117,
+      "sha256": "d9b7fa7da8e04c52daa168b137513c3f4f009cc37faa89399097a2c697219eea"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/case3_frame_search.test.txt",
+      "bytes": 532,
+      "sha256": "855288359e61045b17519a408ca99219c28ca9683ad2ef2e4eeb6935db82ea4c"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/ehrhart_count.test.txt",
+      "bytes": 138,
+      "sha256": "0ca480c307a215804f1f42d84f31aa840ded0cd1c8772c0a087b05fe7e1baed2"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/ehrhart_exact.test.txt",
+      "bytes": 80,
+      "sha256": "7648b7c1b81acbea9e9632af55bf1c7bee4789cf2f985af827af208133a1b8a7"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/ehrhart_probe.test.txt",
+      "bytes": 13,
+      "sha256": "c28282c3c9a689b6992037b4f3e3796de7e639bab186d4eea0bdd1e95c325a03"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/generic_walk.test.txt",
+      "bytes": 148,
+      "sha256": "33b733ea0fdb3caf4171b8bb6a12987a3976b56b1b77593bfd8438ce2e0a231f"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/index_bound_second.test.txt",
+      "bytes": 212,
+      "sha256": "22729de119359353d3e8b5ed7dc9741089970f17952cb0637d4524384047046d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/set_guard.test.txt",
+      "bytes": 1507,
+      "sha256": "2bd2c1ea89e962ad80849b4c0c6fe83137a0262fd9838ca9eb7bab2c474fca9a"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/test_exit_codes.txt",
+      "bytes": 299,
+      "sha256": "4f469625fb97751c905cef76942cb2f60d7ddfe8c5e4e4d2775f7a3edab3f156"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/w_deletions.test.txt",
+      "bytes": 15,
+      "sha256": "0c368cb0402642533ed4a97abad9725d59ad36a7737e4142f64a6e2c8dcf1f6e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/w_ehrhart_check.test.txt",
+      "bytes": 15,
+      "sha256": "0c368cb0402642533ed4a97abad9725d59ad36a7737e4142f64a6e2c8dcf1f6e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/test/walk_second.test.txt",
+      "bytes": 104,
+      "sha256": "5653612a0b03c157fb6ee5d4a2bb52c9d4cb60ca1b53fdc70fb53f502ecfc761"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/latte_cdd.ead",
+      "bytes": 468,
+      "sha256": "fff59902c281b5776a67855ea9586753d3b21e31e90ec2e6364ae7462fe570b6"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/latte_cdd.ecd",
+      "bytes": 461,
+      "sha256": "623e418c8d9317420e4bee351b3948946c2dd6b6041818d5580d3ea1ef972195"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/latte_cdd.ext",
+      "bytes": 705,
+      "sha256": "9444b8eefc29320c1cafe6d38e593824accf23c244043d987912a986d01803d4"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/latte_cdd.iad",
+      "bytes": 451,
+      "sha256": "759a08e36bbef1dff3326f614203247895f147ae0700c182afefb5e37af234d7"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/latte_cdd.icd",
+      "bytes": 479,
+      "sha256": "641341808db4632e3ed8d5a0cb4a89207b6b0d0008feb707180f1572fe96ed46"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/latte_cdd.ine",
+      "bytes": 297,
+      "sha256": "b03b24a29c880977f4e3714d98717ab54d94bac5c988bc24e0be0dd39052dd56"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/latte_cdd.out",
+      "bytes": 203,
+      "sha256": "3ef92757a9ffb508cb231d2c0af1596baa7fb17610bcb11bc5b4cfb77fec999e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/latte_stats",
+      "bytes": 454,
+      "sha256": "5f35586c1a27d6cfa0f96699d81357a3a58108fed69d13398baff53794193b0b"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/latte_w.txt",
+      "bytes": 55224,
+      "sha256": "f695b31a8cbc04ccf7eb1ef82440fa4edb574545f06313e0bc28a660fee78ff5"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/latte_w_recorded.log",
+      "bytes": 55273,
+      "sha256": "07fe1b9e79dcb64e4a39c29ac3647c16be9ba1b150e0c4b78a72ebff10e60fe5"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/totalTime",
+      "bytes": 38,
+      "sha256": "1464c8139cbbe06a81f9903c2034de1ddfc95d30c52ebe58d43ddb33c1573efe"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/tri.ead",
+      "bytes": 510,
+      "sha256": "e500110d45251bd7660ff20a8115348bd74ed5f660a62ffbfcacca113d55c411"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/tri.ecd",
+      "bytes": 1971,
+      "sha256": "0ca485c242d9333881b106e90c2cb2bf4be0ee745fe101fd4fc152c86ffb5f26"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/tri.ext",
+      "bytes": 477,
+      "sha256": "3a4afe613a7542c9f1cfe3409da8ba8ed9030869d0f0f80bedf16376689e78f1"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/tri.iad",
+      "bytes": 2957,
+      "sha256": "6822d92c041564c4dee2c782cedf86257b004542d9460369fb22f9b67c6b1662"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/tri.icd",
+      "bytes": 2511,
+      "sha256": "893794ede8dffb88660d43bd9e774d810461decc1b6f8690536b6c21205c21d1"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/tri.ine",
+      "bytes": 11479,
+      "sha256": "2b477a8f6a60257e3c3fbf115fa31b90cda9334e4944f14118753ae5fd06ba9b"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/w.in",
+      "bytes": 667,
+      "sha256": "d0920e56381c22739b773450234b42c6ad63ffcd72ee4349ab02bfc081c1eeaa"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/w.out",
+      "bytes": 5726,
+      "sha256": "82aa0b8a71bdb15b3806e89a099983f12e3d93355c159e64ff0af51bf43692ef"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/w.vrep",
+      "bytes": 694,
+      "sha256": "f4cc3316f53ec163c2f715c2225dbc10159a86123aace3ea17ab344031274df7"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/w_first.txt",
+      "bytes": 455,
+      "sha256": "67e20ef9ca8e97b96b6361488582f341192d614700875a10eb587b2c974cd8aa"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/w_pairs.txt",
+      "bytes": 282,
+      "sha256": "bbe600fbddf39077b7e7c8ba80b9c504d17f7e676b066c3142ff7e98972b01ff"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/w_reduction.txt",
+      "bytes": 841,
+      "sha256": "50e543d681508a17d2acb3a30bf4f8996b0e1d31fdb3ee5ec3f0d0c1691de430"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/witness_n5_min_pairs.txt",
+      "bytes": 282,
+      "sha256": "bbe600fbddf39077b7e7c8ba80b9c504d17f7e676b066c3142ff7e98972b01ff"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/theorem-1.3/witness_n5_vertices.txt",
+      "bytes": 681,
+      "sha256": "7e3dfca1add43db2555b93b1fba7db3cead00eb8e5e4a918037db11486c3e598"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/latte_cdd.ead",
+      "bytes": 533,
+      "sha256": "f01222a6ed0e329c27c117924e7e2fbfad322f0df6322f035ea3ed4d74af8d5a"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/latte_cdd.ecd",
+      "bytes": 523,
+      "sha256": "2f3f9ce363d13de7635f385d6b70bc6db408780271825db15c481b8fa4f3215d"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/latte_cdd.ext",
+      "bytes": 698,
+      "sha256": "7bc113288d091af14bfdb196d8c2ed99878f2e5544654bed549bc3fc60804215"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/latte_cdd.iad",
+      "bytes": 490,
+      "sha256": "9efccbadbe6ff835b05de8a2c96d817dd93ffe7a2ac07d19b0f1201c3cc36df2"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/latte_cdd.icd",
+      "bytes": 517,
+      "sha256": "ab1873123bda6bdd955e2008460c7f877e66e24eb741b6997023c5182eb616e1"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/latte_cdd.ine",
+      "bytes": 279,
+      "sha256": "da9db3d87430e6f20dc97eb9bec58822dec904b876d1af26fa128bc940c585cb"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/latte_cdd.out",
+      "bytes": 203,
+      "sha256": "3ef92757a9ffb508cb231d2c0af1596baa7fb17610bcb11bc5b4cfb77fec999e"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/latte_stats",
+      "bytes": 454,
+      "sha256": "d958f26e63c985734c66a1e999de13b553db6b9f4b766727b799ab49d2df1e75"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/latte_w5.txt",
+      "bytes": 63332,
+      "sha256": "989773a7fadedf3ad46233483f59663ceb3de44c8b171ef7a5c1a2f06a960254"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/totalTime",
+      "bytes": 38,
+      "sha256": "96a350dab7b0f5324ab24d85f526e6d636ab77303824ae068d1f700246b12769"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/tri.ead",
+      "bytes": 695,
+      "sha256": "0d821f7d0406d706167997d4bf403f8858f6856734662159672fae4fabf94734"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/tri.ecd",
+      "bytes": 2829,
+      "sha256": "80294b7ec1cca68419aed7f66b7863786f450d5b8472198860fd7d883faf47e9"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/tri.ext",
+      "bytes": 495,
+      "sha256": "34c91df9d80b94d9108d991dc384a3523524395ea53493d7b7db914348e53bcb"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/tri.iad",
+      "bytes": 4251,
+      "sha256": "36b00012a6963941561e0c4924f49b99fd12abc0dddddb7b0c73077a0a1208fc"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/tri.icd",
+      "bytes": 3442,
+      "sha256": "f01dc1af53ad196571f970777b2f7bb295cf60f9f97fe795e074afee7f029ac9"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/tri.ine",
+      "bytes": 15883,
+      "sha256": "8f60fa1c2d38cd2a73e3d6ee664b8bf6c5f2857dc45b40b18b67c382f3f44e53"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/w5.in",
+      "bytes": 759,
+      "sha256": "6f8a8ac484691b5c7b4eee302937138f2b24b452bf3fcc71767290105dc72d6b"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/w5.out",
+      "bytes": 6125,
+      "sha256": "64c03bf2ab79b8a853652eaacfa9014e43c78fbf559d9a37cb36c3fb39eff0a2"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/w5.vrep",
+      "bytes": 802,
+      "sha256": "8add69a66438ae2c61745cdb0a5cf03500c2e5d49b59d74e395370ad028dacf1"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/w5_first.txt",
+      "bytes": 457,
+      "sha256": "c3b74378de3bbbf94eb1e71c5f854b26c2555e2c380c715f44ec3d871d099bdd"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/w5_search_counter.txt",
+      "bytes": 303,
+      "sha256": "b17c5529a1dd55f87c2e66a53e8ccbee069f66ca86c6627170f5eccea432c2da"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/w5_vertices.txt",
+      "bytes": 681,
+      "sha256": "7e3dfca1add43db2555b93b1fba7db3cead00eb8e5e4a918037db11486c3e598"
+    },
+    {
+      "file": "wills-1981-conjecture/expected/w5/witness_n5_vertices.txt",
+      "bytes": 681,
+      "sha256": "7e3dfca1add43db2555b93b1fba7db3cead00eb8e5e4a918037db11486c3e598"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/boxes_compare.py",
+      "bytes": 4357,
+      "sha256": "b20c6ff0d0ed45fcaf0b5209cf5e17ba0fa28fef7ecb40028efaab3cbd5b6bb9"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/boxes_list_first.py",
+      "bytes": 8896,
+      "sha256": "2d89dbf832a5125f7181b78b8e374e9b329d16fb5552db232fa4c03ca9cce4f6"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/boxes_list_second.py",
+      "bytes": 9132,
+      "sha256": "b36d08c088fd3404d29be68b80d6dd79552e1c087d1e2469b232060e7c08e55b"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/boxes_small_third.py",
+      "bytes": 2998,
+      "sha256": "17bfd45885b17b5b42f31b53ea6dd3bd3e3cbd3a6403d969b3d5a6df92db785c"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/boxes_walk_first.py",
+      "bytes": 18521,
+      "sha256": "3c46fc43f2bb214190a9917b540cbe7652c1f49223f66a2cdf4b8446ff93e6e9"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/boxes_walk_second.py",
+      "bytes": 19027,
+      "sha256": "53c1b37e81dbe00f5d29d73b809899810c9f9b7875c80554a067c12729071376"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/case1_compare.py",
+      "bytes": 2243,
+      "sha256": "0a5307c00ba0951e32733614802de627170f967f1ec2d4f87c62a8cf1171ddbc"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/case1_walk.py",
+      "bytes": 7913,
+      "sha256": "8af3ed8efeed9c8f46900becedf62131f22fe657950563996968ce34e1e5b968"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/case2_walk.py",
+      "bytes": 6784,
+      "sha256": "e4a68a6a7c9d934cc55d9174ddf7b30d87d482a95def2cb80713874a0832eb63"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/case3_compare.py",
+      "bytes": 3962,
+      "sha256": "696cb6caba6ebb3fd707e66eae396358539b047b49eab85bf0353802a7d8d033"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/case3_frame_search.py",
+      "bytes": 11831,
+      "sha256": "dec3cb8235648080a8d698376fd697be7fff96c94d21a0222051cfdc540e855c"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/case3_frame_setup.py",
+      "bytes": 6215,
+      "sha256": "702b23e3835fb85dba6d0a3426bab332b12462432ba806b02965b8d241c11acb"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/case3_maximal_sets.py",
+      "bytes": 7979,
+      "sha256": "dd035ac22a1d1c4d3dc548ac93caeb651311582bfcd89e20278bcad896aeadb6"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/case3_reverse_search.py",
+      "bytes": 8048,
+      "sha256": "16e9e0084944f77c6c5c0a7dff3f639dc11163e327b02d2621927a38cfee9139"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/case3_run_all.py",
+      "bytes": 2555,
+      "sha256": "7a39159ba1f01876688bba57d61b665df03ce623b503cf3d1ed29c7e2436aa01"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/case3_sandwich.py",
+      "bytes": 39089,
+      "sha256": "ab76d4deef9de1a03de0cad4732c118dcf4c1f86bb2b8c6072305eda0d6c2140"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/cell24_coords.py",
+      "bytes": 1428,
+      "sha256": "440480c0a9e3d7e3cea8fb2a48ab692d8e9d1fde00e644e3f32a6989541c1e1e"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/cell24_walk.py",
+      "bytes": 3745,
+      "sha256": "6857fdc9e18c119b4b3c274bfa5bf5c08decab8459f65ea0c85e3ef483289233"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/certify_member.py",
+      "bytes": 3722,
+      "sha256": "a5f0176689d2f74c16a686f261abc15e3a5048c49018771eaab689717cd59228"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/check_claims.py",
+      "bytes": 27343,
+      "sha256": "a45df207f63ffb15b432ca6ba823e60206864473de28e6af3b14740c38833d62"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/dual_lattice_l1.py",
+      "bytes": 2124,
+      "sha256": "67e6735579838c72d675b8187b72f30d6641b77711d72767d57b8913b222316e"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/ehrhart_count.py",
+      "bytes": 19788,
+      "sha256": "66d45a89ca9357f8a650dc4d98df807c71c0bfb0da22c5b6773bd4bffb2df454"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/ehrhart_exact.py",
+      "bytes": 7904,
+      "sha256": "99944fa65290f20058926619af78ad6d662ccc9ffcc90d2f1c29f158f09fdf36"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/ehrhart_probe.py",
+      "bytes": 6153,
+      "sha256": "53180c54bec2f08ffbf2445af6cdb10ad24c1a5f3202626ce309a50c353377a2"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/frame_census.py",
+      "bytes": 2998,
+      "sha256": "7133d741477ccb8741fa722431482b91fdcb7abfaa96c716e69bc588d13a4222"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/frame_lattices_first.py",
+      "bytes": 1604,
+      "sha256": "56d0e4a1bcbdfc1073815566d6cf1751b91d08e6ed21cd71f538dcd7f3cde057"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/frame_lattices_orbits.py",
+      "bytes": 3795,
+      "sha256": "5a4478099d19350a304cbb5a4b7f02e39deb8ac3b9e58eb36a04b871355e9e4a"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/frame_lattices_second.py",
+      "bytes": 6661,
+      "sha256": "2c4376c12d58445526908547d324c0ca5799e02c016dcc1361dd993ea02242a7"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/generic_walk.py",
+      "bytes": 6721,
+      "sha256": "4754ecb253dc8e1f57222deb47f0694d6b8e65adbf0fe30fdffd2f8976726232"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/index_bound_first.py",
+      "bytes": 3013,
+      "sha256": "26dc251517dba18b213ded33d89857f9ab8b5cb94505855772271e37eb9e2618"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/index_bound_second.py",
+      "bytes": 3595,
+      "sha256": "789088a588939f8c109b6bf5de50401a2af81ac29848c9eed10fd7bac5c47b0e"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/maximal_members.py",
+      "bytes": 5985,
+      "sha256": "6eb99d879ee0d7614f3866c424e833ea6e84270d52cfd49eb964ff7a64a71f8b"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/maximality_check.py",
+      "bytes": 4083,
+      "sha256": "4e618896fbc5d51c110dcb6f35473d4c909b07d8efae30da80d5b46255ab322d"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/search_cube.py",
+      "bytes": 3920,
+      "sha256": "b4d7c70558c4db95fc767b07fdf8762ab993a10697f7bed8772a3e411d675fa2"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/search_layered.py",
+      "bytes": 3290,
+      "sha256": "bbcf1862160d7c328122c0a030d7c47b7a2c492bffd972b9814ea6966d7c52b4"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/set_guard.py",
+      "bytes": 3955,
+      "sha256": "8e7f0531c34611b80effceed8b7902a6b132124ea71dfbd960241cd628fa4a0a"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/w5_reduction.py",
+      "bytes": 1732,
+      "sha256": "3d7929314c4139d1ae9f58669b126dc4ac889637177842a116d9368806138be0"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/w5_vertices.py",
+      "bytes": 2187,
+      "sha256": "cad1f1944d5e82da2a3a9ec22da5cbf9b4b785247b3812f53bcd91ab0ef6b02b"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/w_deletions.py",
+      "bytes": 3633,
+      "sha256": "c08384b62d0eac1e041dc20754c049d3a9728773ae1b2e8beadcea9aaddf792e"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/w_ehrhart_check.py",
+      "bytes": 14408,
+      "sha256": "5fde879ff58bba1675d9912a67287b03027e0556fda0ab3adc7072e57200b7c6"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/walk_second.py",
+      "bytes": 11219,
+      "sha256": "2c3d735eb4b7760494b5984f37d9d2630cffb6a6457e18aa4f553f18f5d3689c"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/width2_survey.py",
+      "bytes": 3622,
+      "sha256": "e3dcbeaadd31177a1d6412ff13bfbed2d3b12b886e5c1fe2c4d861eefbc0f1b4"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/x_growth.py",
+      "bytes": 5257,
+      "sha256": "6595cdf96345e1df5fbe8d09c974ca7d17c332a6f944b3309979c03a0137c674"
+    },
+    {
+      "file": "wills-1981-conjecture/programs/x_maximal_check.py",
+      "bytes": 3400,
+      "sha256": "b7335f68100dab3b21db7371a724ceeccbbbab8a128cb5cdf56efc1263b2a45f"
+    },
+    {
+      "file": "wills-1981-conjecture/reproduce.sh",
+      "bytes": 7815,
+      "sha256": "3d98651f2cd30911528fb624d93b99943a618ae595e7501c308135a4ea97ce59"
+    }
+  ]
+}

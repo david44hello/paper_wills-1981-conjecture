@@ -1,0 +1,4 @@
+all sublattices of index 2..16: 40406
+of these, cube points span R^4: 827
+max #(Gamma cap {-1,0,1}^4) by d (spanning only): {2: 45, 3: 27, 4: 27, 5: 17, 6: 15, 7: 11, 8: 17, 9: 9, 10: 9, 12: 9, 16: 9}
+tests pass

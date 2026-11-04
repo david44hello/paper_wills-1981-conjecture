@@ -1,0 +1,4 @@
+start G=33 score=(33, Fraction(12, 1), Fraction(8, 1), Fraction(4, 1)); region bound/det 18: 192 candidates, 0 addable
+BEST g1 = -99 (-99.0000); BEST g2 = -99 (-99.0000)
+maximal end states (G, vol, g1, g2): count
+  ('33', '12', '8', '4'): 60

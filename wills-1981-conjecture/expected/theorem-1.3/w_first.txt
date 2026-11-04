@@ -1,0 +1,6 @@
+## w_pairs.txt  (n = 5)
+- input points: 50; symmetric P = -P: True; vertices: 50
+- facets: 92 (exact re-verification: True; qhull count: 92); facet lattice heights: [1, 3, 4, 5, 6, 7, 8, 9, 10, 12, 17]
+- L(k), k = 0..6: [1, 117, 1815, 10765, 39927, 112639, 265705]
+- Ehrhart coefficients g_0..g_5: (1, 101/10, 127/12, 139/6, 557/12, 386/15)
+- k = 6 matches the polynomial: True; interior lattice points of P: 1, of 2P: 243; reciprocity L(-1), L(-2): True

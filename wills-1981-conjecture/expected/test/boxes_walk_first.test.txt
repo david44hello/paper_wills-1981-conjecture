@@ -1,0 +1,61 @@
+  [progress 10:13:58] level G 39 done: 1 classes (0 cut), max g_1 5; next level 1 classes
+  [progress 10:13:58] level G 37 done: 1 classes (0 cut), max g_1 5; next level 6 classes
+  [progress 10:13:59] level G 35 done: 6 classes (1 cut), max g_1 5; next level 12 classes
+  [progress 10:13:59] level G 33 done: 12 classes (4 cut), max g_1 5; next level 26 classes
+  [progress 10:13:59] level G 31 done: 26 classes (12 cut), max g_1 5; next level 0 classes
+box 4: G 39, |Aut| = 32, 0.6s
+  mode: RANK-4 CUT - per-G lines = rank-3 sets only; rank-4 sets in the CUT lines
+  G  39: classes       1  point sets         1  max g_1 5  max g_2 11
+  G  37: classes       1  point sets         8  max g_1 5  max g_2 31/3
+  G  35: classes       5  point sets        28  max g_1 5  max g_2 59/6
+  G  33: classes       8  point sets        64  max g_1 5  max g_2 19/2
+  G  31: classes      14  point sets       108  max g_1 5  max g_2 9
+  TOTAL classes 29, point sets 209, max g_1 5, max g_2 11; flagged (g_1 >= 8): 0
+  CUT G  35: rank-4 classes       1  point sets         8
+  CUT G  33: rank-4 classes       4  point sets        56
+  CUT G  31: rank-4 classes      12  point sets       176
+  TOTAL CUT: rank-4 classes 17, point sets 240 (Case I/II: closed by C1 + R2 and R4)
+RESULT box 4 G 39: PASS (no g_1 >= 8)
+  [progress 10:13:59] level G 37 done: 1 classes (0 cut), max g_1 16/3; next level 3 classes
+  [progress 10:13:59] level G 35 done: 3 classes (1 cut), max g_1 5; next level 9 classes
+  [progress 10:13:59] level G 33 done: 9 classes (3 cut), max g_1 5; next level 15 classes
+  [progress 10:13:59] level G 31 done: 15 classes (9 cut), max g_1 5; next level 0 classes
+box 5: G 37, |Aut| = 16, 0.5s
+  mode: RANK-4 CUT - per-G lines = rank-3 sets only; rank-4 sets in the CUT lines
+  G  37: classes       1  point sets         1  max g_1 16/3  max g_2 31/3
+  G  35: classes       2  point sets         6  max g_1 5  max g_2 59/6
+  G  33: classes       6  point sets        15  max g_1 5  max g_2 19/2
+  G  31: classes       6  point sets        20  max g_1 5  max g_2 9
+  TOTAL classes 15, point sets 42, max g_1 16/3, max g_2 31/3; flagged (g_1 >= 8): 0
+  CUT G  35: rank-4 classes       1  point sets         4
+  CUT G  33: rank-4 classes       3  point sets        24
+  CUT G  31: rank-4 classes       9  point sets        60
+  TOTAL CUT: rank-4 classes 13, point sets 88 (Case I/II: closed by C1 + R2 and R4)
+RESULT box 5 G 37: PASS (no g_1 >= 8)
+  [progress 10:14:00] level G 39 done: 1 classes (0 cut), max g_1 5; next level 1 classes
+  [progress 10:14:00] level G 37 done: 1 classes (0 cut), max g_1 5; next level 6 classes
+  [progress 10:14:00] level G 35 done: 6 classes (0 cut), max g_1 5; next level 12 classes
+  [progress 10:14:00] level G 33 done: 12 classes (0 cut), max g_1 5; next level 32 classes
+  [progress 10:14:00] level G 31 done: 32 classes (0 cut), max g_1 5; next level 0 classes
+box 4: G 39, |Aut| = 32, 0.9s
+  mode: NO CUT - per-G lines = all sets
+  G  39: classes       1  point sets         1  max g_1 5  max g_2 11
+  G  37: classes       1  point sets         8  max g_1 5  max g_2 31/3
+  G  35: classes       6  point sets        36  max g_1 5  max g_2 31/3
+  G  33: classes      12  point sets       120  max g_1 5  max g_2 10
+  G  31: classes      32  point sets       318  max g_1 5  max g_2 59/6
+  TOTAL classes 52, point sets 483, max g_1 5, max g_2 11; flagged (g_1 >= 8): 0
+RESULT box 4 G 39: PASS (no g_1 >= 8)
+  [progress 10:14:00] level G 37 done: 1 classes (0 cut), max g_1 16/3; next level 3 classes
+  [progress 10:14:00] level G 35 done: 3 classes (0 cut), max g_1 5; next level 13 classes
+  [progress 10:14:01] level G 33 done: 13 classes (0 cut), max g_1 5; next level 31 classes
+  [progress 10:14:01] level G 31 done: 31 classes (0 cut), max g_1 5; next level 0 classes
+box 5: G 37, |Aut| = 16, 0.9s
+  mode: NO CUT - per-G lines = all sets
+  G  37: classes       1  point sets         1  max g_1 16/3  max g_2 31/3
+  G  35: classes       3  point sets        10  max g_1 5  max g_2 31/3
+  G  33: classes      13  point sets        49  max g_1 5  max g_2 31/3
+  G  31: classes      31  point sets       160  max g_1 5  max g_2 59/6
+  TOTAL classes 48, point sets 220, max g_1 16/3, max g_2 31/3; flagged (g_1 >= 8): 0
+RESULT box 5 G 37: PASS (no g_1 >= 8)
+TESTS PASS (guards; CUT: boxes 4, 5 rank-3 point sets 209 / 42 per G as the second and third programs, cut 240 / 88, max g_1 5 and 16/3; NO CUT: 483 and 220 point sets)

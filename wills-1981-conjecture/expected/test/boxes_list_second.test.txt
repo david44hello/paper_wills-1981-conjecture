@@ -1,0 +1,1 @@
+TEST PASS (HNF counts 1 7 13 35 31 91; known map found; G 69 vs G 67 rejected)

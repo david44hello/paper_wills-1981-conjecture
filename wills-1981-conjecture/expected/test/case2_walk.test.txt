@@ -1,0 +1,1 @@
+test passed: Gamma = Z^4 reproduces 2853 classes, max g1 = 8, max g2 = 24; basis change [[1, 1, 0, 0], [0, 0, 1, 0]]

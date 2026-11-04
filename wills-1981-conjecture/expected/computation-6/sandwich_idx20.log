@@ -1,0 +1,8 @@
+    nodes 4000, leaves 6, stack 3, hulls 3994
+    nodes 10000, leaves 326, stack 5, hulls 9674
+    nodes 18000, leaves 326, stack 10, hulls 17674
+    nodes 22000, leaves 326, stack 4, hulls 21674
+    nodes 24000, leaves 330, stack 10, hulls 23670
+    nodes 38000, leaves 330, stack 5, hulls 37670
+    nodes 40000, leaves 330, stack 4, hulls 39670
+RESULT #20 D=8 H=[[1, 0, 0, 0], [1, 2, 0, 0], [1, 0, 2, 0], [1, 0, 0, 2]] |Stab|=384 box=313: nodes 40637; leaves (classes, G >= 31) 330 per G {39: 2, 41: 11, 43: 38, 45: 79, 47: 87, 49: 67, 51: 31, 53: 12, 55: 2, 57: 1}; max g_1 8; max g_2 38/3; g_1 >= 8: [(49, ['1', '8', '8', '16', '16'])]; vol 16: [(49, ['1', '8', '8', '16', '16'])]; Case IV G >= 49: [(49, ['1', '8', '8', '16', '16'])]; hulls 40307; rank M histogram {0: 1, 1: 1, 2: 328}; rank_prune True cut-at-rank>=3 (cuts 2985); seconds 339

@@ -1,0 +1,1 @@
+walk4 self-tests PASSED: groups 384 / 384 / 1152; 24-cell L = 1+8k+8k^2+16k^3+16k^4 (24 vertices); cube

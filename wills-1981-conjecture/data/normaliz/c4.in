@@ -1,0 +1,22 @@
+amb_space 5
+polytope 16
+-1 -1 -1 -1
+-1 -1 -1 1
+-1 -1 1 -1
+-1 -1 1 1
+-1 1 -1 -1
+-1 1 -1 1
+-1 1 1 -1
+-1 1 1 1
+1 -1 -1 -1
+1 -1 -1 1
+1 -1 1 -1
+1 -1 1 1
+1 1 -1 -1
+1 1 -1 1
+1 1 1 -1
+1 1 1 1
+EhrhartSeries
+EhrhartQuasiPolynomial
+SupportHyperplanes
+LatticePoints

@@ -1,0 +1,43 @@
+MODE box G67: symmetry ON (group order 96), rank-4 cut ON
+LEVEL box G67: G 67: rank-3 classes 1, rank-3 point sets 1, max g_1 19/3, max g_2 52/3, elapsed 0.0 s
+CUT box G67: G 67: rank-4 classes 0, rank-4 point sets 0
+LEVEL box G67: G 65: rank-3 classes 2, rank-3 point sets 20, max g_1 37/6, max g_2 199/12, elapsed 0.0 s
+CUT box G67: G 65: rank-4 classes 0, rank-4 point sets 0
+LEVEL box G67: G 63: rank-3 classes 10, rank-3 point sets 190, max g_1 37/6, max g_2 191/12, elapsed 0.0 s
+CUT box G67: G 63: rank-4 classes 0, rank-4 point sets 0
+LEVEL box G67: G 61: rank-3 classes 37, rank-3 point sets 1140, max g_1 37/6, max g_2 185/12, elapsed 0.2 s
+CUT box G67: G 61: rank-4 classes 0, rank-4 point sets 0
+LEVEL box G67: G 59: rank-3 classes 137, rank-3 point sets 4873, max g_1 37/6, max g_2 91/6, elapsed 0.7 s
+CUT box G67: G 59: rank-4 classes 1, rank-4 point sets 8
+LEVEL box G67: G 57: rank-3 classes 386, rank-3 point sets 15952, max g_1 6, max g_2 29/2, elapsed 2.3 s
+CUT box G67: G 57: rank-4 classes 5, rank-4 point sets 128
+LEVEL box G67: G 55: rank-3 classes 982, rank-3 point sets 42120, max g_1 37/6, max g_2 83/6, elapsed 6.6 s
+CUT box G67: G 55: rank-4 classes 28, rank-4 point sets 1008
+LEVEL box G67: G 53: rank-3 classes 2083, rank-3 point sets 93314, max g_1 6, max g_2 85/6, elapsed 14.2 s
+CUT box G67: G 53: rank-4 classes 127, rank-4 point sets 5188
+LEVEL box G67: G 51: rank-3 classes 3928, rank-3 point sets 178458, max g_1 6, max g_2 27/2, elapsed 30.6 s
+CUT box G67: G 51: rank-4 classes 447, rank-4 point sets 19724
+LEVEL box G67: G 49: rank-3 classes 6496, rank-3 point sets 299858, max g_1 6, max g_2 77/6, elapsed 61.5 s
+CUT box G67: G 49: rank-4 classes 1299, rank-4 point sets 59328
+LEVEL box G67: G 47: rank-3 classes 9631, rank-3 point sets 446812, max g_1 6, max g_2 25/2, elapsed 107.4 s
+CUT box G67: G 47: rank-4 classes 3154, rank-4 point sets 146648
+LEVEL box G67: G 45: rank-3 classes 12725, rank-3 point sets 593850, max g_1 6, max g_2 71/6, elapsed 162.4 s
+CUT box G67: G 45: rank-4 classes 6480, rank-4 point sets 304352
+LEVEL box G67: G 43: rank-3 classes 15158, rank-3 point sets 707954, max g_1 6, max g_2 71/6, elapsed 223.0 s
+CUT box G67: G 43: rank-4 classes 11403, rank-4 point sets 539060
+LEVEL box G67: G 41: rank-3 classes 16252, rank-3 point sets 760402, max g_1 6, max g_2 67/6, elapsed 286.8 s
+CUT box G67: G 41: rank-4 classes 17410, rank-4 point sets 825561
+LEVEL box G67: G 39: rank-3 classes 15791, rank-3 point sets 737861, max g_1 35/6, max g_2 11, elapsed 347.7 s
+CUT box G67: G 39: rank-4 classes 23159, rank-4 point sets 1100772
+LEVEL box G67: G 37: rank-3 classes 13912, rank-3 point sets 649380, max g_1 6, max g_2 31/3, elapsed 403.7 s
+CUT box G67: G 37: rank-4 classes 26993, rank-4 point sets 1284164
+LEVEL box G67: G 35: rank-3 classes 11202, rank-3 point sets 520813, max g_1 35/6, max g_2 59/6, elapsed 442.9 s
+CUT box G67: G 35: rank-4 classes 27784, rank-4 point sets 1322504
+LEVEL box G67: G 33: rank-3 classes 8250, rank-3 point sets 381886, max g_1 17/3, max g_2 19/2, elapsed 473.7 s
+CUT box G67: G 33: rank-4 classes 25485, rank-4 point sets 1212476
+LEVEL box G67: G 31: rank-3 classes 5576, rank-3 point sets 256531, max g_1 17/3, max g_2 9, elapsed 491.5 s
+CUT box G67: G 31: rank-4 classes 20935, rank-4 point sets 995640
+CLASSES box G67: rank-3 classes 122559 per G {31: 5576, 33: 8250, 35: 11202, 37: 13912, 39: 15791, 41: 16252, 43: 15158, 45: 12725, 47: 9631, 49: 6496, 51: 3928, 53: 2083, 55: 982, 57: 386, 59: 137, 61: 37, 63: 10, 65: 2, 67: 1}
+CUT box G67: rank-4 classes cut 164710 per G {31: 20935, 33: 25485, 35: 27784, 37: 26993, 39: 23159, 41: 17410, 43: 11403, 45: 6480, 47: 3154, 49: 1299, 51: 447, 53: 127, 55: 28, 57: 5, 59: 1}; rank-4 point sets cut 7816561 per G {31: 995640, 33: 1212476, 35: 1322504, 37: 1284164, 39: 1100772, 41: 825561, 43: 539060, 45: 304352, 47: 146648, 49: 59328, 51: 19724, 53: 5188, 55: 1008, 57: 128, 59: 8}
+RANK-CUT MODE: the summary below counts RANK-3 point sets only; maxima are over rank-3 sets
+box G67: G = 67; point sets with G >= 31: 5691415 per G {31: 256531, 33: 381886, 35: 520813, 37: 649380, 39: 737861, 41: 760402, 43: 707954, 45: 593850, 47: 446812, 49: 299858, 51: 178458, 53: 93314, 55: 42120, 57: 15952, 59: 4873, 61: 1140, 63: 190, 65: 20, 67: 1}; max g_1 = 19/3, max g_2 = 52/3

@@ -1,0 +1,136 @@
+49 lattice points in polytope (Hilbert basis elements of degree 1)
+24 extreme rays
+24 support hyperplanes
+
+embedding dimension = 5
+rank = 5 (maximal)
+external index = 1
+internal index = 4
+
+size of triangulation   = 88
+resulting sum of |det|s = 384
+
+grading:
+0 0 0 0 1 
+
+degrees of extreme rays:
+1:24  
+
+multiplicity = 384
+
+Hilbert series:
+1 44 198 140 1 
+denominator with 5 factors:
+1:5  
+
+degree of Hilbert Series as rational function = -1
+
+Hilbert polynomial:
+1 8 8 16 16 
+with common denominator = 1
+
+***********************************************************************
+
+49 lattice points in polytope (Hilbert basis elements of degree 1):
+ -2 -1 -1  2 1
+ -1 -2 -1  2 1
+ -1 -1 -2  2 1
+ -1 -1 -1  1 1
+ -1 -1 -1  2 1
+ -1 -1  0  0 1
+ -1 -1  0  1 1
+ -1 -1  0  2 1
+ -1  0 -1  0 1
+ -1  0 -1  1 1
+ -1  0 -1  2 1
+ -1  0  0  0 1
+ -1  0  0  1 1
+ -1  0  1  0 1
+ -1  1  0  0 1
+  0 -1 -1  0 1
+  0 -1 -1  1 1
+  0 -1 -1  2 1
+  0 -1  0  0 1
+  0 -1  0  1 1
+  0 -1  1  0 1
+  0  0 -1  0 1
+  0  0 -1  1 1
+  0  0  0 -1 1
+  0  0  0  0 1
+  0  0  0  1 1
+  0  0  1 -1 1
+  0  0  1  0 1
+  0  1 -1  0 1
+  0  1  0 -1 1
+  0  1  0  0 1
+  0  1  1 -2 1
+  0  1  1 -1 1
+  0  1  1  0 1
+  1 -1  0  0 1
+  1  0 -1  0 1
+  1  0  0 -1 1
+  1  0  0  0 1
+  1  0  1 -2 1
+  1  0  1 -1 1
+  1  0  1  0 1
+  1  1  0 -2 1
+  1  1  0 -1 1
+  1  1  0  0 1
+  1  1  1 -2 1
+  1  1  1 -1 1
+  1  1  2 -2 1
+  1  2  1 -2 1
+  2  1  1 -2 1
+
+24 extreme rays:
+ -2 -1 -1  2 1
+ -1 -2 -1  2 1
+ -1 -1 -2  2 1
+ -1 -1  0  0 1
+ -1 -1  0  2 1
+ -1  0 -1  0 1
+ -1  0 -1  2 1
+ -1  0  1  0 1
+ -1  1  0  0 1
+  0 -1 -1  0 1
+  0 -1 -1  2 1
+  0 -1  1  0 1
+  0  1 -1  0 1
+  0  1  1 -2 1
+  0  1  1  0 1
+  1 -1  0  0 1
+  1  0 -1  0 1
+  1  0  1 -2 1
+  1  0  1  0 1
+  1  1  0 -2 1
+  1  1  0  0 1
+  1  1  2 -2 1
+  1  2  1 -2 1
+  2  1  1 -2 1
+
+24 support hyperplanes:
+ -2  0  0 -1 2
+ -1 -1 -1 -2 2
+ -1 -1 -1 -1 2
+ -1 -1  1 -1 2
+ -1 -1  1  0 2
+ -1  1 -1 -1 2
+ -1  1 -1  0 2
+ -1  1  1  0 2
+ -1  1  1  1 2
+  0 -2  0 -1 2
+  0  0 -2 -1 2
+  0  0  0 -1 2
+  0  0  0  1 2
+  0  0  2  1 2
+  0  2  0  1 2
+  1 -1 -1 -1 2
+  1 -1 -1  0 2
+  1 -1  1  0 2
+  1 -1  1  1 2
+  1  1 -1  0 2
+  1  1 -1  1 2
+  1  1  1  1 2
+  1  1  1  2 2
+  2  0  0  1 2
+
