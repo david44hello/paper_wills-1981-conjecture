@@ -1,0 +1,150 @@
+# CLAIM_MAP — Wills' (1981) conjecture: the claims of the paper's TeX source v1.90 (md5 0c30e1ff; its table file tab_witness.tex md5 1f8d76d0).
+# Columns (TAB, exactly 5 on every data line; "-" = an empty field, since editors strip trailing TABs):
+#   claim id | description (lines of v1.90) | REQUIRED rows | SUPPORT rows | KIND.
+# KIND "-" = proved rows: status = worst REQUIRED row, hypotheses united (PROVED > PROVED GIVEN <facts/checks> > not
+#   proved yet); every row carries, as explicit binders, every fact and check its proof uses.
+#   FACT <Prop> = a fact the paper USES from an area Mathlib lacks: an explicit hypothesis in
+#   Wills/Facts/Basic.lean, status "not formalized: no <area> in Lean's library".
+#   CHECK <Prop>,<Prop> = a computer check: an explicit hypothesis in Wills/Checks/Computations.lean,
+#   status "checked by computer, NOT proved in Lean" (log: ./reproduce.sh computation-N).
+#   NOT-FORMALIZED faces = a claim about faces of polytopes: "not formalized: no faces of polytopes in Lean's library";
+#   facets enter Lean only as the numbers of E3 (IsFacetData) and TRI.
+# Quantifier rule: each printed quantifier and exception is compared with the row's type; a row true WITH an exception
+#   does not cover a sentence WITHOUT it.
+# MODELLING (see AUDIT_NOTES.md, section 1): L_{P,Λ}(k) = #(kP ∩ Λ) (Set.ncard);
+#   g_i = coefficient i of the interpolating polynomial of degree <= n through k = 0..n (EHR: it agrees with L at every
+#   k >= 0); every sigma (or NVol) sentence is typed over E3's facet data, sigma = Σ relvol_j, NVol_j = 6 relvol_j, with
+#   the fact FacetFormula as a binder (the real facets' data satisfy E3's equations, so the row implies the printed
+#   sentence for the real sigma).
+# NOT COUNTED (no mathematical claim of this paper): history and attributions — abstract l.47 "In 1981 Wills
+#   conjectured", "Wills proved this for n <= 3, and Henze showed in 2014 that it fails for every n >= 7; the dimensions
+#   4, 5 and 6 remained open"; l.52 "Ehrhart [Ehr62] proved"; l.56 "may be negative [BR15]" (quoted, used by no proof);
+#   l.58 "Wills looked for a discrete analog", "Wills called these numbers the expected values", "known as Wills'
+#   conjecture; we use Henze's formulation"; l.67 "Wills proved the case i = n-1 in every dimension" (the attribution;
+#   the mathematics is claim I9c), "Wills also proved it for n = 3" (used: fact WIL3), the dimension-4 bounds of
+#   [Wil81 Thm (iii)], Betke-Henk-Wills, Henze's P_7 and 1534/105 > 14, Henze's root theorem, Henze's Remark 2.2 quote;
+#   Table 1 "before" column l.76-79; Figure 1 "Known before" row and caption l.140 first sentence; l.87 "Wills had
+#   proved g_1 < 21 and g_2 < 31"; l.89 "Henze's tests ... found no counterexample"; l.90 "and for n >= 7 by Henze's
+#   theorem as well" (Theorem 1.3 covers every n >= 5); l.151 "This is the method of [ABS21] and [AS24], who used it
+#   for other extremal problems"; l.225 (how W was found, the 58-vertex example); l.248 "this is Wills' argument for
+#   g_{n-1}"; l.163 "(Ehrhart, Macdonald)"; l.182 "cf. [Hen14, Prop 2.3]"; l.323 "(Minkowski [Min97]; see Venkov
+#   [Ven54] and McMullen [McM80])"; l.369 "as in [AS24, Algorithm 1]".
+#   Route, organization and pointers: abstract l.47 ("combines Ehrhart reciprocity, the lower bound theorem
+#   ... about three million sets": the sum of the printed counts 2,547,694 + 616 + 588,592 = 3,136,902); l.143 "is a
+#   computation", "that any program for counting lattice points can confirm"; l.151 "we enumerated all of them with two
+#   independent programs (Section 6)"; l.153; l.192; l.229 notation; l.266 "this is why the computations ... are
+#   needed"; l.271 "it remains to prove (star) for G >= 31" (covered by G_odd + lem_4_3); l.275 "Figure 2 shows";
+#   l.332 the walk-down description (its claim is W6b); l.367 and l.369 descriptions of the two programs except the
+#   claims C5b, C5c; l.387 "We first check". Descriptions of the computer runs (logs in the repository): l.220 "These
+#   numbers were computed by four independent programs, among them Normaliz 3.10.2 and LattE integrale 1.7.6; the data
+#   and the commands are in [Repo]"; l.330 "exhaustive, exact integer and rational arithmetic, two independently written
+#   programs; the two programs agree on every count and every maximum", and how each program computes the Ehrhart
+#   polynomial; l.353 "listed once as BZ^4 with B in Hermite normal form"; l.361 "it suffices to take V in Hermite
+#   normal form". Remark 4.4 first sentence l.266: a remark on another argument, given in [Goel26]; the dimension-3
+#   theorem enters Cor 1.4 as the fact WIL3. Definitions (no claim): l.52-55 L_P; l.58 W^n and C_n; Conjecture 1.1
+#   l.60-65 (WillsConj); l.158 isomorphic pairs, unimodular equivalence; l.170 W^n_Λ, G(P); l.251 NVol; l.272-273 M(P),
+#   r(P); l.291 saturated; l.307 frame; l.326 frame lattices, A(Λ); l.378-381 T, X.
+#   Remarks about this Lean folder (no mathematical claim): the abstract's last sentence l.47 "Theorems 1.2, 1.3 and 7.1
+#   and Corollary 1.4 are also proved in the Lean 4 proof assistant, with the computer computations and some published
+#   results as hypotheses" (AUDIT.md lists each row's hypotheses); the footnote l.38 "Lean 4 proof:" with its link.
+# ROUTE DIFFERENCES: Cor 1.4 prints "for n <= 3 this is Wills' theorem" and "g_3 <= 32 by [Wil81, Theorem (i)]"; Lean
+#   proves n = 1, 2 by conj_le_two (PROVED GIVEN E1, E3), uses the fact WIL3 for n = 3 only, and for n = 4 uses Prop
+#   4.2's g_3 <= 2 g_4 <= 32 (PROVED GIVEN E1, E3). Section 7's polynomials: Lean uses L(0), L(1), L(2), L(-1), L(-2)
+#   (counting + E2) instead of the facet distances (not formalized).
+AB1	Abstract l.47 + Table 1 l.76-77 + Results l.87 + Theorem 1.2 l.93-95: every P in W^4 has g_1(P) <= 8 and g_2(P) <= 24; hence Conjecture 1.1 holds for n = 4	thm_1_2,conj_n4	-	-
+AB2	Abstract l.47 + Results l.88 + Table 1 l.76 + Theorem 7.1 l.383-385: up to unimodular equivalence, g_1(P) = 8 (P in W^4) only for the cube C_4, one explicit 24-cell T and one explicit cross-polytope X	thm_7_1,T_iso	-	-
+AB3	Abstract l.47 + Results l.89 + Table 1 l.78: a polytope W in W^5 with 50 vertices in [-1,1]^5 has g_1(W) = 101/10 > 10	thm_1_3_mem,tab2_vertices,w_pts_cube,thm_1_3_g1	-	-
+AB4	Abstract l.47 + Results l.90 + Table 1 l.78-79 ("counterexamples in every dimension n >= 5") + Corollary 1.4 l.105-107 + Figure 1 (l.113-140, "This paper" row and the caption's second sentence): Wills' conjecture holds in R^n (n >= 1) iff n <= 4	cor_1_4	thm_1_3_prod	-
+I1	l.52-55 + l.158: Ehrhart's theorem — for a lattice Λ and a polytope P of dimension n with vertices in Λ, L_{P,Λ}(k) = #(kP ∩ Λ) is a polynomial in k >= 0 of degree n	-	-	FACT EhrhartThm
+I2a	l.56 + (E1) l.161: g_0(P) = 1	g0_eq_one	lat_one	-
+I2b	l.56 + (E1) l.161: the leading coefficient g_n(P) is the volume (vol(P)/det Λ)	-	-	FACT EhrhartLeading
+I4	l.58: Minkowski's first theorem — a convex body K symmetric about 0 with no lattice point but 0 in its interior has volume <= 2^n, the volume of C_n	minkowski_first,cube_vol	-	-
+I7	l.58: C_n belongs to W^n, L_{C_n}(k) = (2k+1)^n, so g_i(C_n) = 2^i binom(n,i)	cube_mem,cube_count,cube_g	-	-
+I9a	l.67: for i = 0 there is equality (g_0(P) = g_0(C_n) for P in W^n)	conj_i0	-	-
+I9b	l.67: for i = n the inequality is Minkowski's theorem (g_n(P) <= 2^n for P in W^n)	conj_in	-	-
+I9c	l.67: the case i = n-1 holds in every dimension; hence the conjecture holds for n <= 2	conj_in1,conj_le_two	-	-
+T12	Theorem 1.2 l.93-95 (= AB1) + proof l.372-374 + Figure 2 l.277-288 (caption: G <= 29 by Lemma 4.3; for the others the integer functionals bounded by 1 decide which finite enumeration of Section 6 contains P, up to isomorphism; boxes: Case I -> Comp 1, Case II -> Comps 2, 3, Case III -> 39 classes of frame lattices -> Comps 4, 5)	thm_1_2	thm_1_2_case_split,lem_4_3,case_I,case_II_index2,case_III_transfer,iso_g	-
+T12d	l.151 (d): "In each case only finitely many sets of lattice points remain"	finitely_many_sets	-	-
+T13a	Theorem 1.3 l.98: W belongs to W^5; proof l.216: the 50 points lie in {-1,0,1}^5, form a symmetric set and span R^5, so Lemma 2.1 applies	thm_1_3_mem,w_pts_cube,w_symm,w_span	-	-
+T13b	Theorem 1.3 l.99-101: L_W(k) = 1 + 101/10 k + 127/12 k^2 + 139/6 k^3 + 557/12 k^4 + 386/15 k^5 (k >= 0)	thm_1_3_poly	-	-
+T13c	Theorem 1.3 l.102: g_1(W) = 101/10 > 10 = g_1(C_5)	thm_1_3_g1	cube_g1	-
+T13d	Theorem 1.3 l.102 + proof l.222 + abstract l.47 "products with segments then give counterexamples in every dimension n >= 6" + l.143 "Products with segments carry the example to every higher dimension": for every n >= 6, W x C_{n-5} in W^n and g_1 = 101/10 + 2(n-5) = 2n + 1/10 > 2n = g_1(C_n), since g_1(C_m) = 2m	thm_1_3_prod	cube_g1,lem_2_2	-
+TW1	Table 2 caption l.196 + tab_witness.tex: W = conv of the 50 points ±p (p = the 25 listed points); all 50 points are vertices of W	tab2_vertices	-	-
+TW2	Table 2 caption l.196: W has 92 facets, i.e. 92 hyperplanes H, each with W on one side, a point of W off H and 5 affinely independent vertices of W on H, no two with the same face W ∩ H	W_facets	-	-
+TW2c	Table 2 caption l.196: these are all the facets of W (W has exactly 92)	-	-	NOT-FORMALIZED faces
+W3a	Proof of Theorem 1.3 l.218: G(W) = 117, #(2W ∩ Z^5) = 1815, #(int(2W) ∩ Z^5) = 243	w_G,w_L2,w_int2	-	-
+W3v	Proof of Theorem 1.3 l.218: vol(W) = 386/15	-	-	CHECK VolW
+W3b	l.220: A(W) = 1029 and g_1(W) = (4·118 + 24·386/15 - 1029)/6 = 101/10 by Prop 3.1	w_A,thm_1_3_g1	-	-
+W3c	l.220: int(2W) ⊂ (-2,2)^5, so the lattice points of int(2W) lie in {-1,0,1}^5, and since 243 = 3^5, int(2W) contains all of them	w_int2_all	-	-
+W3d	l.220: the polynomial is determined by L_W(0) = 1 and L_W(1..5) = 117, 1815, 10765, 39927, 112639; L_W(6) = 265705 agrees with it	w_L3456,interp_unique	-	-
+C14	Corollary 1.4 proof l.109-111 + Results l.87 "With Wills' bound g_3 <= 32 and Minkowski's bound g_4 <= 16, this proves Conjecture 1.1 for n = 4": n <= 3 Wills' theorem; n = 4: g_0 = 1 by (E1), g_3 <= 32, g_4 <= 16 by Minkowski, g_1, g_2 by Theorem 1.2; n >= 5: Theorem 1.3 gives a counterexample (route differences in the header)	cor_1_4,conj_n4	conj_le_two,prop_4_2_g3,prop_4_2_g4	-
+WIL3	Corollary 1.4 proof l.110 + l.67: Wills' theorem for n = 3 ([Wil81, Theorem (ii)]): g_i(P) <= 2^i binom(3,i) for every P in W^3	-	-	FACT WillsDim3
+S2a	l.158: if phi is a linear isomorphism with phi(P) = P', phi(Λ) = Λ', then phi(kP) ∩ Λ' = phi(kP ∩ Λ) for every k, so L_{P',Λ'} = L_{P,Λ}	iso_count	iso_g	-
+S2b	l.158: when Λ = Λ' = Z^n, the map phi lies in GL_n(Z)	iso_Zn_GL	-	-
+E2	(E2) l.162: reciprocity L_{P,Λ}(-k) = (-1)^n #(int(kP) ∩ Λ) for k >= 1	-	-	FACT EhrhartReciprocity
+E3	(E3) l.163 + l.167 + l.56 (g_{n-1} is half the lattice surface area): facets, primitive normals u_F, b_F integers (positive, the lattice distance, when 0 in int P), relvol; g_{n-1} = sigma/2 and vol/det Λ = (1/n) Σ b_F relvol(F) when 0 in int P	-	-	FACT FacetFormula
+E4	(E4) l.164: L_{PxQ} = L_P L_Q, since k(PxQ) ∩ Z^{p+q} = (kP ∩ Z^p) x (kQ ∩ Z^q)	e4_prod_count	-	-
+S2c	l.170: a polytope in W^n_Λ has dimension n, because 0 is an interior point	inW_full_dim	-	-
+S2d	l.170 + l.151: G(P) is odd (the points other than 0 come in pairs ±x)	G_odd	-	-
+L21	Lemma 2.1 l.172-178: Y ⊂ {-1,0,1}^n, Y = -Y, conv Y of dimension n ⇒ conv Y in W^n	lem_2_1	-	-
+L21s	l.180: the same for a sublattice Γ ⊆ Z^n: S ⊆ Γ ∩ C_n symmetric spanning R^n ⇒ conv S in W^n_Γ	lem_2_1_sub	-	-
+L22	Lemma 2.2 l.182-188: P in W^p, Q in W^q ⇒ PxQ in W^{p+q} and g_1(PxQ) = g_1(P) + g_1(Q); proof: PxQ symmetric lattice polytope, int(PxQ) = int P x int Q	lem_2_2	prod_interior,e4_prod_count	-
+P31	Prop 3.1 l.200-204 + l.143 ("its linear coefficient is determined by four numbers ... (Proposition 3.1)"): P in W^5 ⇒ g_1(P) = (4(G(P)+1) + 24 vol(P) - A(P))/6, A(P) = ½(#(2P ∩ Z^5) + #(int(2P) ∩ Z^5)); proof l.208-212	prop_3_1	-	-
+L41	Lemma 4.1 l.231-237: P in W^4_Λ ⇒ g_1 + g_3 = g_2 + g_4 = (G-1)/2	lem_4_1	-	-
+K0	l.145: since P in W^4 has exactly one interior lattice point, L_P(-1) = 1	recip_m1_dim4	-	-
+P42a	Prop 4.2 l.240 + proof l.248: g_4 = vol(P)/det Λ <= 16 (Minkowski in the coordinates of a basis of Λ)	prop_4_2_g4	-	-
+P42b	Prop 4.2 l.240 + proof l.248: g_3 <= 2 g_4 <= 32 (b_F >= 1 in (E3): 2g_3 = sigma <= Σ b_F relvol = 4 g_4)	prop_4_2_g3	-	-
+P42c	Prop 4.2 l.241-243 + l.145-148: g_1 <= 8 iff G <= sigma + 17 (sigma over E3's facet data)	prop_4_2_iff	-	-
+P42d	Prop 4.2 l.244 + l.149 "this inequality also gives g_2 <= 24": if g_1 <= 8 then g_2 <= g_4 + 8 <= 24	prop_4_2_g2	-	-
+K1	l.251: Theorem 1.2 is equivalent to the key inequality G <= sigma + 17 on W^4	key_equiv	-	-
+K2	l.251 + Lemma 4.3 proof l.262: a boundary triangulation using all G-1 boundary lattice points, every tetrahedron a lattice tetrahedron in a facet, of normalized volume a positive integer, Σ NVol >= f_3; a triangulated 3-sphere; Walkup's lower bound theorem f_1 >= 4f_0 - 10; the Dehn-Sommerville relations	-	-	FACT BoundaryTriangulation
+K3	l.251-254 (eq. star): the key inequality reads Σ_F NVol(F) >= 6G - 102 (NVol = 3! relvol; sigma, NVol over E3's facet data)	star_iff	-	-
+L43	Lemma 4.3 l.257-259 + l.149 + Figure 2 box "G <= 29: Lemma 4.3": P in W^4_Λ, G <= 29 ⇒ (star) holds strictly; hence g_1 < 8	lem_4_3	-	-
+L43p	Lemma 4.3 proof l.262, the deduction: f_3 = f_1 - f_0 (Dehn-Sommerville), hence Σ NVol >= 3f_0 - 10 = 3G - 13 > 6G - 102 because G <= 29	lem_4_3_arith,lem_4_3	-	-
+R44	Remark 4.4 l.266: in dimension 4 the lower bound theorem proves (star) only when G <= 29 (3G - 13 > 6G - 102 iff G <= 29)	rem_4_4_only	-	-
+M1	l.275: M(P) is finite (P contains a ball around 0) and symmetric; <u,x> in {-1,0,1} for u in M(P), x in P ∩ Z^4	M_finite,M_symm,M_values	-	-
+CI	Case I l.291 + l.151 (a) + Figure 2 box Case I: M(P) contains a basis u_1..u_4 of Z^4, U in GL_4(Z) with rows u_i ⇒ UP ⊂ C_4, UP = conv S, S = UP ∩ Z^4 ⊂ {-1,0,1}^4, S symmetric and saturated; P is unimodularly equivalent to a polytope in C_4	case_I	-	-
+CIIa	Case II l.294-296: d = |det U| >= 2 (else M(P) contains a basis); x -> Ux carries Z^4 onto Γ = UZ^4 of index d and P into C_4; (P,Z^4) ≅ (UP,Γ), UP in W^4_Γ, L_{UP,Γ} = L_P, UP = conv S, S = UP ∩ Γ Γ-saturated symmetric ⊂ Γ ∩ {-1,0,1}^4; 31 <= G(P) <= #(Γ ∩ {-1,0,1}^4)	case_II_transfer,case_II_d_ge_2	-	-
+CIIb	Case II l.298: d <= 16 (S spans R^4; 4 independent points of Γ ∩ {-1,0,1}^4 have determinant a nonzero multiple of d, at most 16 in absolute value by Hadamard)	case_II_d_le_16	det_cube_le_16	-
+CIIc	Case II l.300: the sublattices of index 2 are the Γ_I = {x : Σ_{i in I} x_i even}, I nonempty	index2_eq_gammaI	-	-
+CIId	Case II l.300-303: a point of {-1,0,1}^4 is in Γ_I iff an even number of its coordinates in I are nonzero; #(Γ_I ∩ {-1,0,1}^4) = 3^{4-m}(3^m + (-1)^m)/2 = 27, 45, 39, 41 (m = 1..4)	gammaI_mem_iff,gammaI_counts	-	-
+CIIe	Case II l.304 + l.151 (b) + Figure 2 box Case II: since 27 < 31, in Case II d = 2 and Γ = Γ_I with |I| in {2,3,4} (using Computation 2); a linear map carries P with its lattice onto a polytope in C_4 with vertices in an index-2 sublattice	case_II_index2,case_II_transfer	-	-
+CIIIa	Case III l.307: frame v_1..v_4 with D maximal; D >= 1 since P spans R^4; x -> V^{-1}x carries Z^4 onto Λ = V^{-1}Z^4 ⊇ Z^4 of index D and P ∩ Z^4 onto S	frame_D_pos,frame_lattice	-	-
+L51	Lemma 5.1 l.309-318 (i) S ⊂ Λ ∩ C_4, S = -S, ±e_i in S; (ii) |det(s_1..s_4)| <= 1; (iii) conv S ∩ Λ = S, int(conv S) ∩ Λ = {0}; (iv) no c ≠ 0 in Λ with Σ|c_i| < 1; (v) D <= 23	lem_5_1_i,lem_5_1_ii,lem_5_1_iii,lem_5_1_iv,lem_5_1_v	-	-
+L51p	Lemma 5.1 proof l.321-323: determinants divided by D; Cramer |c_i| <= 1; (iv) the open cross-polytope lies in int conv{±e_i}; (v) vol conv{±v_i} = (2^4/4!) D = 2D/3 <= vol P <= 16, so D <= 24; D = 24 ⇒ P = conv{±v_i}, vol P = 16; the translates P/2 + z have disjoint interiors and density 1, so they tile R^4	lem_5_1_v,crosspoly_vol,frame_D_le_24,half_translates_tile	-	-
+L51t	Lemma 5.1 proof l.323: a convex polytope that tiles space by translations has centrally symmetric facets, but the facets of a cross-polytope are tetrahedra	-	-	FACT CrossPolytopeNoTiling
+LF	l.326: a lattice of index D over Z^4 lies in (1/D)Z^4, so the set of frame lattices is finite; signed permutation matrices act on it	frameLat_finite,signedPerm_frameLat	-	-
+LM	l.326: u in M(P) iff V^T u in M(S), so r(P) = r(S)	frame_M_transfer	-	-
+CIIIb	l.326 + l.151 (c) + Figure 2 box Case III: in Case III, (P,Z^4) ≅ (conv S, Λ) for one of the 39 representatives Λ and S in A(Λ) with #S >= 31, r(S) <= 3 (V^{-1}, then a signed permutation); L_{conv S,Λ} = L_P (using Computation 4); in frame coordinates the lattice points of P lie in [-1,1]^4	case_III_transfer,lem_5_1_i	-	-
+L61	Lemma 6.1 l.334-344: Q ⊂ Λ finite symmetric saturated; (i) v vertex ⇒ Q \ {±v} symmetric saturated; (ii) S ⊊ Q symmetric saturated ⇒ some vertex v of conv Q not in S, S ⊆ Q \ {±v}	lem_6_1_i,lem_6_1_ii	-	-
+W6b	l.332 "By the next lemma, this reaches every set" + l.346: every saturated symmetric S ⊆ Q is reached from Q through saturated symmetric sets containing S; a search that stops at 31 points misses no set with >= 31 points	walk_reach	-	-
+C1a	Computation 1 l.349: each symmetric saturated S ⊆ {-1,0,1}^4 with #S >= 31 spans R^4 (a hyperplane through 0 contains at most 27 points of {-1,0,1}^4, since on it one coordinate is determined by the other three), so conv S in W^4 by Lemma 2.1	hyperplane_le_27,comp1_mem	-	-
+C1b	Computation 1 l.349: there are 2,547,694 classes (up to the 384 signed permutations); for all of them g_1(conv S) <= 8, with equality only for S = {-1,0,1}^4	-	-	CHECK Comp1,Comp1Count
+C2	Computation 2 l.353: the 40,406 sublattices of Z^4 of index 2 <= d <= 16; for those whose points in {-1,0,1}^4 span R^4 the maximum count is 45 for d = 2 and at most 27 for every d >= 3	-	-	CHECK Comp2,Comp2Count
+C2p	Computation 2 l.353 (and l.302): the maximum for d = 2 is 45	comp2_d2_max	-	-
+C3a	Computation 3 l.357: a permutation of coordinates carries Γ_I onto Γ_J when |I| = |J|, so Γ_m (m = 2,3,4) suffice; each conv S lies in W^4_{Γ_m}	gammaI_perm,comp3_mem	-	-
+C3b	Computation 3 l.357: 531, 58 and 27 classes (up to signed permutations preserving Γ_m) for m = 2, 3, 4; for all of them g_1(conv S) w.r.t. Γ_m is at most 6	-	-	CHECK Comp3,Comp3Count
+C4a	Computation 4 l.361: for U in GL_4(Z) the frame matrices V and UV give the same lattice V^{-1}Z^4	frame_lat_GL	-	-
+C4b	Computation 4 l.361 + l.326: 1,040 frame lattices, in 39 orbits under signed permutations (one representative fixed in each), indices D in {1..10, 12, 16, 18}	-	-	CHECK Comp4,Comp4Count
+C5a	Computation 5 l.365: for each of the 39 representatives Λ, the S in A(Λ) with #S >= 31 and r(S) <= 3 (up to signed permutations preserving Λ): 588,592 classes; g_1(conv S) w.r.t. Λ <= 8, with equality for exactly two sets, one with G = 49 and one with G = 33	-	-	CHECK Comp5,Comp5Count
+C5b	Computation 5 l.367: M reverses inclusion (Q ⊆ Q' ⇒ M(Q') ⊆ M(Q)), so a subset of a set Q' with r(Q') = 4 also has r = 4; every S with r(S) <= 3 lies in a maximal member Q of A(Λ) with r(Q) <= r(S) <= 3; every set between Q and S contains S, so has r <= 3	M_antitone,comp5_maximal	-	-
+C5c	Computation 5 l.369: every saturated set between S^- and S^+ lies in exactly one branch; an include branch with new S^- not in S^+, violating (ii), or with a nonzero point of Λ in int conv S^- contains no set satisfying (i)-(iii); points of S^+ that break (ii) with S^- are in no such set; a branch with #S^+ < 31 or r(S^+) = 4 contains no wanted set	sandwich_split,sandwich_prune	-	-
+T7a	l.378: T = conv{±f_a ± f_b} is the 24-cell conv{±e_a ± e_b} written in the basis e_1, e_2, e_3, ½(1,1,1,1) of the lattice Z^4 ∪ (Z^4 + ½(1,1,1,1)); (T,Z^4) ≅ (24-cell, that lattice)	T_iso	-	-
+T71	Theorem 7.1 l.383-385: P in W^4 has g_1(P) = 8 iff P is unimodularly equivalent to C_4, T or X	thm_7_1	-	-
+T7b	l.389: the 24-cell's points have |x_i| <= 1 and Σ|x_i| <= 2; its points in the lattice other than 0: the 24 vertices, the 8 points ±e_i, the 16 points (±½,±½,±½,±½); hence T in W^4 and G(T) = 49	cell24_points,cell24_lattice_points,T_mem,T_G	-	-
+T7b2	l.389: each of these 48 points lies on one of the facets {x_i = ±1} or {±x_1±x_2±x_3±x_4 = 2}: each point has a coordinate ±1 or all four ±½, so lies on one of these hyperplanes, and the 24-cell lies on one side of each, and each holds 4 affinely independent points of the 24-cell	cell24_hyperplanes,cell24_normals	-	-
+T7c	l.389: the dual lattice of Z^4 ∪ (Z^4 + ½(1,1,1,1)) is {y in Z^4 : Σ y_i even}	D4star_dual	-	-
+T7d	l.389: its primitive vectors normal to these facets are ±2e_i and (±1,±1,±1,±1), with value 2 on them, so the facets {x_i = ±1} and {±x_1±x_2±x_3±x_4 = 2} have lattice distance 2: these vectors are primitive in the dual lattice, normal to the hyperplanes, with value 2 on them; the 24-cell lies on one side and 4 affinely independent points of it lie on each hyperplane	cell24_normals	-	-
+T7dc	l.389: "every facet of T": these 24 hyperplanes give all the facets of T	-	-	NOT-FORMALIZED faces
+T7e	l.389: vol(T) = 16, since the 24-cell has volume 8 and the lattice has determinant ½	T_vol,cell24_vol	-	-
+X7a	l.391 + Results l.88 ("a cross-polytope X of volume 12"): 0 is the only interior lattice point of X, G(X) = 33; vol(X) = (2^4/4!)·18 = 12, the four vectors have determinant 18	X_mem,X_G,X_vol	-	-
+X7b	l.391: the 16 facets of X have lattice distance 3: for each of the 16 sign vectors, the hyperplane through 4 affinely independent vertices of X has a primitive normal in the dual lattice Z^4 with value 3 on it, and X lies on one side	X_hyperplanes	-	-
+X7bc	l.391: these 16 hyperplanes cut out 16 distinct facets, and these are all the facets of X	-	-	NOT-FORMALIZED faces
+E7a	l.393: if every facet of P in W^4 has lattice distance l, then (E3) gives g_3 = sigma/2 = 2g_4/l, and Lemma 4.1 gives g_1 = (G-1)/2 - g_3, g_2 = (G-1)/2 - g_4 (over E3's facet data with every b_j = l)	g3_of_dist	-	-
+E7b	l.393: C_4 has G = 81 and vol(C_4) = 16	cube4_G_vol	-	-
+E7b2	l.393: the facets {x_i = ±1} of C_4 have lattice distance 1: ±e_i is primitive in the dual lattice Z^4, the hyperplane with value 1 is {x_i = ±1}, C_4 lies on one side and 4 affinely independent points of C_4 lie on it	cube4_hyperplanes	-	-
+E7b2c	l.393: the hyperplanes {x_i = ±1} give all the facets of C_4 (used by "every facet of P has lattice distance l")	-	-	NOT-FORMALIZED faces
+E7c	l.395: L_{C_4} = 1+8k+24k^2+32k^3+16k^4, L_T = 1+8k+8k^2+16k^3+16k^4, L_X = 1+8k+4k^2+8k^3+12k^4	poly_C4,poly_T,poly_X	-	-
+M7	l.387 + l.397-399: M(T) = M(X) = {0} (the argument with w_a, and the nine triples)	M_T,M_X	-	-
+R2h	Results l.88: C_4 satisfies Henze's root condition (all Ehrhart roots have real part -1/2); T and X do not	henze_C4,henze_T_not,henze_X_not	-	-
+P71	Proof of Theorem 7.1 l.403: C_4, T, X have g_1 = 8 and are pairwise inequivalent (81, 49, 33 lattice points); conversely g_1(P) = 8 ⇒ G >= 31, and by Computations 1, 3, 5 and M(T) = M(X) = {0}, P is unimodularly equivalent to T or X (or C_4)	thm_7_1	G_unimod_inv,M_T,M_X,poly_T,poly_X,poly_C4	-

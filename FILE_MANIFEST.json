@@ -2,7 +2,7 @@
   "version": "1.00",
   "author": "Dave Goel",
   "created_utc": "2026-11-04T18:26:24.351440+00:00",
-  "scope": "Exact complete repository payload; excludes this manifest.",
+  "scope": "The computation materials: every file outside lean/ and .github/; excludes this manifest.",
   "files": [
     {
       "file": ".gitignore",

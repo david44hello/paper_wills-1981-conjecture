@@ -1,0 +1,15 @@
+# Lean project for the paper "Wills' (1981) conjecture is fully resolved" (Dave Goel). Lean 4 v4.35.0 + Mathlib.
+name = "WillsLean"
+version = "0.1.0"
+defaultTargets = ["Wills"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.35.0"
+
+[[lean_lib]]
+name = "Wills"
+globs = ["Wills", "Wills.+"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false }
+weakLeanArgs = ["-j1"]
