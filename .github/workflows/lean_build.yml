@@ -42,6 +42,30 @@ jobs:
           sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /opt/hostedtoolcache/CodeQL
           df -h /
 
+      - name: Swap space (a heavy proof can need more memory than this machine has)
+        # Without it, a run can die mid-build with "shutdown signal" (exit 143): out of memory on the small machine
+        # GitHub gives private repositories.
+        # 20 GB: two heavy files built at the same time can need about 24 GB of working memory (measured).
+        # The swap file goes on the second disk at /mnt when it has room (then it takes no space from the build),
+        # else on the disk freed above.
+        run: |
+          free -m
+          df -h / /mnt
+          root_gb=$(df --output=avail -BG / | tail -1 | tr -dc 0-9)
+          mnt_gb=$(df --output=avail -BG /mnt | tail -1 | tr -dc 0-9)
+          if [ "$(stat -c %d /mnt)" != "$(stat -c %d /)" ] && [ "$mnt_gb" -ge 21 ]; then
+            swap_file=/mnt/swapfile_build
+          else
+            [ "$root_gb" -ge 30 ] || { echo "only ${root_gb} GB free on / and too little on /mnt: a 20 GB swap file would leave too little for Mathlib"; exit 1; }
+            swap_file=/swapfile_build
+          fi
+          echo "swap file: $swap_file"
+          sudo fallocate -l 20G "$swap_file"
+          sudo chmod 600 "$swap_file"
+          sudo mkswap "$swap_file"
+          sudo swapon "$swap_file"
+          free -m
+
       - name: Build the proof (Mathlib from its cache, then lake build)
         uses: leanprover/lean-action@24581d74d674803a25a81b10b059c5c0cdd344c6  # v1.6.2
         with:

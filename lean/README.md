@@ -8,6 +8,10 @@ paper; AUDIT.md gives the status of every claim.
 
 ## Directions to Reproduce
 
+The full build needs about 32 GB of memory (RAM plus swap): `Wills/Proofs/Sec7Counts.lean` and
+`Wills/Proofs/CountW2.lean` need about 13 GB each, Mathlib's files about 6 GB more, and `lake build` may build the two
+files at the same time.
+
 Install Git, Lean (https://lean-lang.org/install/), Python 3 and ripgrep, then run:
 
 ```bash
