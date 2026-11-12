@@ -1,11 +1,15 @@
 /-
 Wills/Paper/Statements.lean — one Lean theorem (row) per claim of "Wills' (1981) conjecture is fully resolved".
-Pointers "l.N" are lines of the paper's TeX source, version 1.90. A row is proved iff its body is a proof term. A fact
-from Wills/Facts/ or a computation from Wills/Checks/ that a proof uses is an explicit hypothesis of the row (binders
-hEHR, hE1, hE2, hE3, hTRI, hTILE, hWIL3, hVolW, hC1 ... hC5). A row whose claim is about (E3)'s facet data takes hE3
-even when its proof does not use it (then named _hE3, Lean's mark of an unused hypothesis). The status of every row,
-as Lean reports it, is in AUDIT.md; CLAIM_MAP.tsv maps the printed claims to rows; AUDIT_NOTES.md explains the
-modelling choices.
+Pointers "l.N" are lines of the paper's TeX source, version 3.20 (md5 47e41917; lines 1-404 as in versions 1.50 to
+2.30; Corollary 7.2 and Remark 7.3 at l.406-416); Figure 3 is the file fig_maxg1.tex (md5 a9f75b6d), its caption on
+line 32. Rows fig3_bound_gt, fig3_lt_eight and comp5_maximal are RETIRED: their sentences were printed in earlier
+versions of the paper (last: text version 2.30 for the two Figure 3 rows, 2.80 for comp5_maximal) and are not printed
+in this version; they are kept, not counted. A row is proved iff its body is a proof term. A fact from Wills/Facts/ or
+a computation from Wills/Checks/ that a proof uses is an explicit hypothesis of the row (binders hEHR, hE1, hE2, hE3,
+hTRI, hTILE, hVolW, hC1, hC3, hC4, hC5; Computation 2's result is proved: comp2_result). A row whose claim is about
+(E3)'s facet data takes hE3 even when its proof does not use it (then named _hE3, Lean's mark of an unused
+hypothesis). The status of every row, as Lean reports it, is in AUDIT.md; CLAIM_MAP.tsv maps the printed claims to
+rows; AUDIT_NOTES.md explains the modelling choices.
 Author: Dave Goel.
 Copyright (C) Dave Goel 2026--now. All rights reserved.
 -/
@@ -25,6 +29,12 @@ import Wills.Proofs.Thm12
 import Wills.Proofs.Thm71
 import Wills.Proofs.WFacets
 import Wills.Proofs.Sec7Hyp
+import Wills.Proofs.Fig3
+import Wills.Proofs.Sandwich
+import Wills.Proofs.Dim3
+import Wills.Proofs.Comp2Proof
+import Wills.Proofs.Rows280
+import Wills.Proofs.Cell24Eq
 
 open MeasureTheory Pointwise
 
@@ -52,7 +62,7 @@ theorem minkowski_first (n : ℕ) (K : Set (Pt n)) (hconv : Convex ℝ K) (hcpt 
 theorem cube_vol (n : ℕ) : volume (cube n) = 2 ^ n :=
   Sec2.cube_vol n
 
-/-- l.58: the cube `C_n` belongs to `Wⁿ`. -/
+/-- l.58: the cube `C_n` belongs to `Oⁿ`. -/
 theorem cube_mem (n : ℕ) : InW (Zn n) (cube n) :=
   Sec2.cube_mem n
 
@@ -68,16 +78,16 @@ theorem cube_g (n i : ℕ) : g (Zn n) (cube n) i = (2 : ℝ) ^ i * (Nat.choose n
 theorem cube_g1 (m : ℕ) : g (Zn m) (cube m) 1 = 2 * m :=
   Sec2.cube_g1 m
 
-/-- l.67: for `i = 0` there is equality: `g_0(P) = g_0(C_n)` for `P ∈ Wⁿ`. -/
+/-- l.67: for `i = 0` there is equality: `g_0(P) = g_0(C_n)` for `P ∈ Oⁿ`. -/
 theorem conj_i0 (n : ℕ) (P : Set (Pt n)) (hP : InW (Zn n) P) : g (Zn n) P 0 = g (Zn n) (cube n) 0 :=
   Sec2.conj_i0 n P hP
 
-/-- l.67: for `i = n` the inequality is Minkowski's theorem: `g_n(P) ≤ 2ⁿ = 2ⁿ binom(n,n)` for `P ∈ Wⁿ`. -/
+/-- l.67: for `i = n` the inequality is Minkowski's theorem: `g_n(P) ≤ 2ⁿ = 2ⁿ binom(n,n)` for `P ∈ Oⁿ`. -/
 theorem conj_in (hE1 : EhrhartLeading) (n : ℕ) (P : Set (Pt n)) (hP : InW (Zn n) P) :
     g (Zn n) P n ≤ (2 : ℝ) ^ n * (Nat.choose n n : ℝ) :=
   Rows1.conj_in hE1 n P hP
 
-/-- l.67: the case `i = n-1`: `g_{n-1}(P) ≤ 2^{n-1} binom(n,n-1)` for `P ∈ Wⁿ` (`n ≥ 1`: l.158). -/
+/-- l.67: the case `i = n-1`: `g_{n-1}(P) ≤ 2^{n-1} binom(n,n-1)` for `P ∈ Oⁿ` (`n ≥ 1`: l.158). -/
 theorem conj_in1 (hE3 : FacetFormula) (n : ℕ) (hn : 1 ≤ n) (P : Set (Pt n))
     (hP : InW (Zn n) P) : g (Zn n) P (n - 1) ≤ (2 : ℝ) ^ (n - 1) * (Nat.choose n (n - 1) : ℝ) :=
   Rows1.conj_in1 hE3 n hn P hP
@@ -86,6 +96,11 @@ theorem conj_in1 (hE3 : FacetFormula) (n : ℕ) (hn : 1 ≤ n) (P : Set (Pt n))
 theorem conj_le_two (hE1 : EhrhartLeading) (hE3 : FacetFormula) (n : ℕ) (hn1 : 1 ≤ n) (hn2 : n ≤ 2) :
     WillsConj n :=
   Rows1.conj_le_two hE1 hE3 n hn1 hn2
+
+/-- Proof of Corollary 1.4, l.110 (and l.67): Wills' theorem for `n = 3` ([Wil81, Theorem (i), (ii)]), `g_i(P) ≤ 2^i
+binom(3,i)` for every `P ∈ O³`. The paper cites it; here it is proved from (E1), (E2), (E3). -/
+theorem wills_dim3 (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hE3 : FacetFormula) : WillsConj 3 :=
+  Dim3.wills_dim3_proof hE1 hE2 hE3
 
 /-- l.158: isomorphic pairs have the same lattice-point counts, `φ(kP) ∩ Λ' = φ(kP ∩ Λ)`, so
 `L_{P',Λ'} = L_{P,Λ}`; also for the interiors. -/
@@ -107,7 +122,7 @@ theorem e4_prod_count (p q : ℕ) (P : Set (Pt p)) (Q : Set (Pt q)) (k : ℕ) :
     latCount (Zn (p + q)) (prod P Q) k = latCount (Zn p) P k * latCount (Zn q) Q k :=
   Sec2.e4_prod_count p q P Q k
 
-/-- l.170: a polytope in `W^n_Λ` has dimension `n`, because `0` is an interior point. -/
+/-- l.170: a polytope in `O^n_Λ` has dimension `n`, because `0` is an interior point. -/
 theorem inW_full_dim (n : ℕ) (Λ P : Set (Pt n)) (hP : InW Λ P) :
     (0 : Pt n) ∈ interior P ∧ affineSpan ℝ P = ⊤ :=
   Sec2.inW_full_dim n Λ P hP
@@ -117,13 +132,13 @@ theorem G_odd (n : ℕ) (B : Matrix (Fin n) (Fin n) ℝ) (hB : B.det ≠ 0) (P :
     Odd (G (lat B) P) :=
   Sec2.G_odd n B hB P hP
 
-/-- Lemma 2.1, l.172-178: if `Y ⊆ {-1,0,1}ⁿ`, `Y = -Y`, and `conv Y` has dimension `n`, then `conv Y ∈ Wⁿ`. -/
+/-- Lemma 2.1, l.172-178: if `Y ⊆ {-1,0,1}ⁿ`, `Y = -Y`, and `conv Y` has dimension `n`, then `conv Y ∈ Oⁿ`. -/
 theorem lem_2_1 (n : ℕ) (Y : Set (Pt n)) (hY : Y ⊆ cubePts n) (hsymm : -Y = Y)
     (hdim : affineSpan ℝ (convexHull ℝ Y) = ⊤) : InW (Zn n) (convexHull ℝ Y) :=
   Sec2.lem_2_1 n Y hY hsymm hdim
 
 /-- l.180: the same for a sublattice `Γ ⊆ ℤⁿ` (here: any `Γ ⊆ ℤⁿ` containing `0`): if `S ⊆ Γ ∩ C_n` is symmetric
-and spans `ℝⁿ`, then `conv S ∈ W^n_Γ` (`n ≥ 1`: l.158). -/
+and spans `ℝⁿ`, then `conv S ∈ O^n_Γ` (`n ≥ 1`: l.158). -/
 theorem lem_2_1_sub (n : ℕ) (hn : 1 ≤ n) (Γ : Set (Pt n)) (hΓ : Γ ⊆ Zn n) (h0 : (0 : Pt n) ∈ Γ) (S : Set (Pt n))
     (hS : S ⊆ Γ ∩ cube n) (hsymm : -S = S) (hspan : Spans S) : InW Γ (convexHull ℝ S) :=
   Sec2.lem_2_1_sub n hn Γ hΓ h0 S hS hsymm hspan
@@ -133,7 +148,7 @@ theorem prod_interior (p q : ℕ) (P : Set (Pt p)) (Q : Set (Pt q)) :
     interior (prod P Q) = prod (interior P) (interior Q) :=
   Sec2.prod_interior p q P Q
 
-/-- Lemma 2.2, l.182-188: `P ∈ Wᵖ`, `Q ∈ W^q` ⇒ `P × Q ∈ W^{p+q}` and `g_1(P×Q) = g_1(P) + g_1(Q)`. -/
+/-- Lemma 2.2, l.182-188: `P ∈ Oᵖ`, `Q ∈ O^q` ⇒ `P × Q ∈ O^{p+q}` and `g_1(P×Q) = g_1(P) + g_1(Q)`. -/
 theorem lem_2_2 (hEHR : EhrhartThm) (p q : ℕ) (P : Set (Pt p)) (Q : Set (Pt q)) (hP : InW (Zn p) P)
     (hQ : InW (Zn q) Q) :
     InW (Zn (p + q)) (prod P Q) ∧ g (Zn (p + q)) (prod P Q) 1 = g (Zn p) P 1 + g (Zn q) Q 1 :=
@@ -141,7 +156,7 @@ theorem lem_2_2 (hEHR : EhrhartThm) (p q : ℕ) (P : Set (Pt p)) (Q : Set (Pt q)
 
 /-! ## Section 3: the counterexample in dimension five (Theorem 1.3) -/
 
-/-- Proposition 3.1, l.200-213 (and l.143): for `P ∈ W⁵`,
+/-- Proposition 3.1, l.200-213 (and l.143): for `P ∈ O⁵`,
 `g_1(P) = (4(G(P)+1) + 24 vol(P) - A(P))/6` with `A(P) = ½(#(2P ∩ ℤ⁵) + #(int(2P) ∩ ℤ⁵))`. -/
 theorem prop_3_1 (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (P : Set (Pt 5))
     (hP : InW (Zn 5) P) :
@@ -161,11 +176,11 @@ theorem w_symm : -wPts = wPts :=
 theorem w_span : Spans wPts :=
   Rows1.w_span
 
-/-- Theorem 1.3, l.98, l.216: `W ∈ W⁵`. -/
+/-- Theorem 1.3, l.98, l.216: `W ∈ O⁵`. -/
 theorem thm_1_3_mem : InW (Zn 5) W :=
   Rows1.thm_1_3_mem
 
-/-- Table 2 caption, l.196 (and Results, l.89): the 50 points `±p` are distinct and all 50 are vertices of `W`. -/
+/-- Table 2 caption, l.196 (and abstract, Table 1 l.78): the 50 points `±p` are distinct and all 50 are vertices of `W`. -/
 theorem tab2_vertices : wPts.ncard = 50 ∧ Set.extremePoints ℝ W = wPts :=
   Rows1.tab2_vertices
 
@@ -194,7 +209,7 @@ theorem w_int2 : intCount (Zn 5) W 2 = 243 :=
 theorem w_A : (1 / 2 : ℝ) * ((latCount (Zn 5) W 2 : ℝ) + (intCount (Zn 5) W 2 : ℝ)) = 1029 :=
   Rows1.w_A
 
-/-- l.220: `int(2W) ⊂ (-2,2)⁵`, so the lattice points of `int(2W)` lie in `{-1,0,1}⁵`, and `int(2W)` contains all
+/-- Text versions up to 2.30, l.220 (no longer printed since 2.40; SUPPORT of the claim at l.220): `int(2W) ⊂ (-2,2)⁵`, so the lattice points of `int(2W)` lie in `{-1,0,1}⁵`, and `int(2W)` contains all
 of them. -/
 theorem w_int2_all : interior ((2 : ℝ) • W) ∩ Zn 5 = cubePts 5 :=
   Rows1.w_int2_all
@@ -205,7 +220,7 @@ theorem thm_1_3_poly (hEHR : EhrhartThm) (hE1 : EhrhartLeading) (hE2 : EhrhartRe
     ehrhartPoly (Zn 5) W = polyW ∧ ∀ k : ℕ, (latCount (Zn 5) W k : ℝ) = polyW.eval (k : ℝ) :=
   Rows1.thm_1_3_poly hEHR hE1 hE2 hVolW
 
-/-- Theorem 1.3, l.102 (and l.220, abstract, Table 1, l.89): `g_1(W) = 101/10 > 10 = g_1(C_5)`. -/
+/-- Theorem 1.3, l.102 (and l.220, abstract, Table 1 l.78): `g_1(W) = 101/10 > 10 = g_1(C_5)`. -/
 theorem thm_1_3_g1 (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hVolW : VolW) :
     g (Zn 5) W 1 = 101 / 10 ∧ (101 / 10 : ℝ) > 10 ∧ g (Zn 5) (cube 5) 1 = 10 :=
   Rows1.thm_1_3_g1 hE1 hE2 hVolW
@@ -215,14 +230,15 @@ theorem interp_unique (n : ℕ) (p q : Polynomial ℝ) (hp : p.natDegree ≤ n) 
     (h : ∀ k ≤ n, p.eval (k : ℝ) = q.eval (k : ℝ)) : p = q :=
   Rows1.interp_unique n p q hp hq h
 
-/-- l.220: `L_W(0) = 1`, `L_W(1..5) = 117, 1815, 10765, 39927, 112639`, and `L_W(6) = 265705`. -/
+/-- l.220: `L_W(0) = 1`, `L_W(1..5) = 117, 1815, 10765, 39927, 112639`, and `L_W(6) = 265705` (the value
+`L_W(6)` is no longer printed since text version 2.70; the row keeps it). -/
 theorem w_L3456 (hEHR : EhrhartThm) (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hVolW : VolW) :
     latCount (Zn 5) W 0 = 1 ∧ latCount (Zn 5) W 1 = 117 ∧ latCount (Zn 5) W 2 = 1815 ∧
       latCount (Zn 5) W 3 = 10765 ∧ latCount (Zn 5) W 4 = 39927 ∧ latCount (Zn 5) W 5 = 112639 ∧
       latCount (Zn 5) W 6 = 265705 :=
   Rows1.w_L3456 hEHR hE1 hE2 hVolW
 
-/-- Theorem 1.3, l.102, l.222 (and abstract, Table 1 l.78, l.143): for every `n = 5 + m ≥ 6`, `W × C_{n-5} ∈ Wⁿ`
+/-- Theorem 1.3, l.102, l.222 (and abstract, Table 1 l.78, l.143): for every `n = 5 + m ≥ 6`, `W × C_{n-5} ∈ Oⁿ`
 and `g_1(W × C_{n-5}) = 101/10 + 2(n-5) = 2n + 1/10 > 2n = g_1(C_n)`. -/
 theorem thm_1_3_prod (hEHR : EhrhartThm) (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hVolW : VolW) (m : ℕ)
     (hm : 1 ≤ m) :
@@ -235,14 +251,14 @@ theorem thm_1_3_prod (hEHR : EhrhartThm) (hE1 : EhrhartLeading) (hE2 : EhrhartRe
 
 /-! ## Section 4: dimension four, the key inequality and few lattice points -/
 
-/-- Lemma 4.1, l.231-237: for `P ∈ W^4_Λ`, `g_1 + g_3 = g_2 + g_4 = (G-1)/2`. -/
+/-- Lemma 4.1, l.231-237: for `P ∈ O^4_Λ`, `g_1 + g_3 = g_2 + g_4 = (G-1)/2`. -/
 theorem lem_4_1 (hE2 : EhrhartReciprocity) (B : Matrix (Fin 4) (Fin 4) ℝ) (hB : B.det ≠ 0) (P : Set (Pt 4))
     (hP : InW (lat B) P) :
     g (lat B) P 1 + g (lat B) P 3 = ((G (lat B) P : ℝ) - 1) / 2 ∧
       g (lat B) P 2 + g (lat B) P 4 = ((G (lat B) P : ℝ) - 1) / 2 :=
   Rows1.lem_4_1 hE2 B hB P hP
 
-/-- l.145: since `P ∈ W⁴` has exactly one interior lattice point, `L_P(-1) = 1`. -/
+/-- l.145: since `P ∈ O⁴` has exactly one interior lattice point, `L_P(-1) = 1`. -/
 theorem recip_m1_dim4 (hE2 : EhrhartReciprocity) (B : Matrix (Fin 4) (Fin 4) ℝ) (hB : B.det ≠ 0)
     (P : Set (Pt 4)) (hP : InW (lat B) P) : (ehrhartPoly (lat B) P).eval (-1) = 1 :=
   Rows1.recip_m1_dim4 hE2 B hB P hP
@@ -274,7 +290,7 @@ theorem prop_4_2_g2 (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hE3 : Fac
     (h1 : g (lat B) P 1 ≤ 8) : g (lat B) P 2 ≤ g (lat B) P 4 + 8 ∧ g (lat B) P 4 + 8 ≤ 24 :=
   Rows1.prop_4_2_g2 hE1 hE2 hE3 B hB P hP h1
 
-/-- l.251: Theorem 1.2 is equivalent to the key inequality `G ≤ σ + 17` on `W⁴` (σ from (E3)'s facet data). -/
+/-- l.251: Theorem 1.2 is equivalent to the key inequality `G ≤ σ + 17` on `O⁴` (σ from (E3)'s facet data). -/
 theorem key_equiv (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hE3 : FacetFormula) :
     (∀ P : Set (Pt 4), InW (Zn 4) P → g (Zn 4) P 1 ≤ 8 ∧ g (Zn 4) P 2 ≤ 24) ↔
       ∀ P : Set (Pt 4), InW (Zn 4) P → ∀ (m : ℕ) (relvol : Fin m → ℝ) (b : Fin m → ℤ),
@@ -296,7 +312,7 @@ theorem lem_4_3_arith (f : Fin 4 → ℕ) (hW : (f 1 : ℤ) ≥ 4 * (f 0 : ℤ) 
     (f 3 : ℤ) = f 1 - f 0 ∧ (f 3 : ℤ) ≥ 3 * (f 0 : ℤ) - 10 ∧ ∀ Gc : ℤ, Gc ≤ 29 → 3 * Gc - 13 > 6 * Gc - 102 :=
   Rows1.lem_4_3_arith f hW hDS1 hDS2
 
-/-- Lemma 4.3, l.257-259 (and l.149): if `P ∈ W^4_Λ` and `G ≤ 29`, then (star) holds with strict inequality;
+/-- Lemma 4.3, l.257-259 (and l.149): if `P ∈ O^4_Λ` and `G ≤ 29`, then (star) holds with strict inequality;
 hence `g_1 < 8`. -/
 theorem lem_4_3 (hE2 : EhrhartReciprocity) (hE3 : FacetFormula) (hTRI : BoundaryTriangulation)
     (B : Matrix (Fin 4) (Fin 4) ℝ) (hB : B.det ≠ 0) (P : Set (Pt 4)) (hP : InW (lat B) P)
@@ -325,7 +341,7 @@ theorem M_values (P : Set (Pt 4)) (u : Pt 4) (hu : u ∈ MP P) (x : Pt 4) (hx : 
     u ⬝ᵥ x = -1 ∨ u ⬝ᵥ x = 0 ∨ u ⬝ᵥ x = 1 :=
   Sec5.M_values P u hu x hx
 
-/-- The case split (l.275, Figure 2 l.277-288, l.373): every `P ∈ W⁴` is in Case I, Case II (`r(P) = 4`, no basis)
+/-- The case split (l.275, Figure 2 l.277-288, l.373): every `P ∈ O⁴` is in Case I, Case II (`r(P) = 4`, no basis)
 or Case III (`r(P) ≤ 3`). -/
 theorem thm_1_2_case_split (P : Set (Pt 4)) (hP : InW (Zn 4) P) :
     CaseI P ∨ (rP P = 4 ∧ ¬ CaseI P) ∨ rP P ≤ 3 :=
@@ -351,7 +367,7 @@ theorem case_II_d_ge_2 (P : Set (Pt 4)) (hP : InW (Zn 4) P) (hno : ¬ CaseI P) (
   Sec5.case_II_d_ge_2 P hP hno U hrows hdet
 
 /-- Case II, l.294-296: `x ↦ Ux` carries `ℤ⁴` onto `Γ = U ℤ⁴` and `P` into `C_4`; `(P, ℤ⁴) ≅ (UP, Γ)`,
-`UP ∈ W^4_Γ`, `L_{UP,Γ} = L_P`, `UP = conv S` for the `Γ`-saturated symmetric `S = UP ∩ Γ ⊂ Γ ∩ {-1,0,1}⁴`, and
+`UP ∈ O^4_Γ`, `L_{UP,Γ} = L_P`, `UP = conv S` for the `Γ`-saturated symmetric `S = UP ∩ Γ ⊂ Γ ∩ {-1,0,1}⁴`, and
 `G(P) ≤ #(Γ ∩ {-1,0,1}⁴)`. -/
 theorem case_II_transfer (P : Set (Pt 4)) (hP : InW (Zn 4) P) (U : Matrix (Fin 4) (Fin 4) ℤ)
     (hrows : ∀ i, ofInt (U i) ∈ MP P) (hdet : U.det ≠ 0) :
@@ -397,12 +413,12 @@ theorem gammaI_counts (I : Finset (Fin 4)) (hI : I.Nonempty) :
 
 /-- Case II, l.304 (and l.151 (b), Figure 2): since `27 < 31`, in Case II `d = 2` and `Γ = Γ_I` with
 `|I| ∈ {2, 3, 4}` (using Computation 2). -/
-theorem case_II_index2 (hC2 : Comp2) (P : Set (Pt 4)) (hP : InW (Zn 4) P) (hG : 31 ≤ G (Zn 4) P)
+theorem case_II_index2 (P : Set (Pt 4)) (hP : InW (Zn 4) P) (hG : 31 ≤ G (Zn 4) P)
     (U : Matrix (Fin 4) (Fin 4) ℤ) (hrows : ∀ i, ofInt (U i) ∈ MP P) (hdet : U.det ≠ 0) (hno : ¬ CaseI P) :
     |U.det| = 2 ∧ ∃ I : Finset (Fin 4), 2 ≤ I.card ∧ subLat U = gammaI I :=
-  Sec5.case_II_index2 hC2 P hP hG U hrows hdet hno
+  Sec5.case_II_index2 C2P.comp2_proof P hP hG U hrows hdet hno
 
-/-- Case III, l.307: `P ∈ W⁴` has a frame, and `D ≥ 1` since `P` spans `ℝ⁴`. -/
+/-- Case III, l.307: `P ∈ O⁴` has a frame, and `D ≥ 1` since `P` spans `ℝ⁴`. -/
 theorem frame_D_pos (P : Set (Pt 4)) (hP : InW (Zn 4) P) :
     (∃ v, IsFrame P v) ∧ ∀ v, IsFrame P v → 1 ≤ |(colMat v).det| :=
   Sec5.frame_D_pos P hP
@@ -446,7 +462,7 @@ theorem frame_D_le_24 (P : Set (Pt 4)) (hP : InW (Zn 4) P) (v : Fin 4 → Pt 4) 
       P = convexHull ℝ (Set.range v ∪ Set.range (fun i => -v i)) ∧ volume P = 16) :=
   Sec5.frame_D_le_24 P hP v hv
 
-/-- Lemma 5.1 (v) proof, l.323: if `P ∈ W⁴` has volume 16, the translates `½P + z`, `z ∈ ℤ⁴`, tile `ℝ⁴` (disjoint
+/-- Lemma 5.1 (v) proof, l.323: if `P ∈ O⁴` has volume 16, the translates `½P + z`, `z ∈ ℤ⁴`, tile `ℝ⁴` (disjoint
 interiors and total density 1). -/
 theorem half_translates_tile (P : Set (Pt 4)) (hP : InW (Zn 4) P) (hvol : volume P = 16) :
     TilesByZ4 ((1 / 2 : ℝ) • P) :=
@@ -468,6 +484,13 @@ theorem signedPerm_frameLat (σ : Equiv.Perm (Fin 4) × (Fin 4 → Bool)) (Λ : 
     (hΛ : IsFrameLattice Λ) : IsFrameLattice (signedPerm σ '' Λ) :=
   Sec5.signedPerm_frameLat σ Λ hΛ
 
+/-- l.326, the reasons of the transfer: `⟨u, Vs⟩ = ⟨Vᵀu, s⟩`, and `Vᵀℤ⁴ = Λ*`, the dual lattice of the frame lattice
+`Λ = V⁻¹ℤ⁴` (here `V = colMat v`). -/
+theorem frame_dual (P : Set (Pt 4)) (hP : InW (Zn 4) P) (v : Fin 4 → Pt 4) (hv : IsFrame P v) :
+    (∀ u s : Pt 4, u ⬝ᵥ (colMat v).mulVec s = ((colMat v).transpose.mulVec u) ⬝ᵥ s) ∧
+      (fun u => (colMat v).transpose.mulVec u) '' Zn 4 = dualLat (frameLat v) :=
+  R280.frame_dual_proof P hP v hv
+
 /-- l.326: `u ∈ M(P)` iff `Vᵀu ∈ M(S)`, so `r(P) = r(S)`. -/
 theorem frame_M_transfer (P : Set (Pt 4)) (hP : InW (Zn 4) P) (v : Fin 4 → Pt 4) (hv : IsFrame P v) :
     (∀ u, u ∈ MP P ↔ (Matrix.transpose (colMat v)).mulVec u ∈ MS (frameLat v) (frameSet P v)) ∧
@@ -475,7 +498,7 @@ theorem frame_M_transfer (P : Set (Pt 4)) (hP : InW (Zn 4) P) (v : Fin 4 → Pt 
   Sec5.frame_M_transfer P hP v hv
 
 /-- l.326 (and l.151 (c), Figure 2): in Case III, `(P, ℤ⁴) ≅ (conv S, Λ)` for one of the 39 representatives `Λ`
-and a set `S ∈ A(Λ)` with `#S ≥ 31` and `r(S) ≤ 3`; in particular `L_{conv S, Λ} = L_P` (using Computation 4). -/
+and a set `S ∈ S(Λ)` (Lean: `InA`) with `#S ≥ 31` and `r(S) ≤ 3`; in particular `L_{conv S, Λ} = L_P` (using Computation 4). -/
 theorem case_III_transfer (hTILE : CrossPolytopeNoTiling) (hC4 : Comp4) (P : Set (Pt 4)) (hP : InW (Zn 4) P)
     (hG : 31 ≤ G (Zn 4) P) (hr : rP P ≤ 3) :
     ∃ j S, Comp5Input j S ∧ IsoPair P (Zn 4) (convexHull ℝ S) (frameRep j) ∧
@@ -497,7 +520,8 @@ theorem lem_6_1_ii (n : ℕ) (Λ Q : Set (Pt n)) (hQΛ : Q ⊆ Λ) (hfin : Q.Fin
     ∃ v ∈ Set.extremePoints ℝ (convexHull ℝ Q), v ∉ S ∧ S ⊆ Q \ {v, -v} :=
   S6E.lem_6_1_ii n Λ Q hQΛ hfin hsymm hsat S hSQ hSsymm hSsat
 
-/-- l.332, l.346: every saturated symmetric `S ⊆ Q` is reached from `Q` by deleting pairs of opposite vertices
+/-- l.332, l.346: "such a walk reaches every saturated symmetric subset of the full set": every saturated symmetric
+`S ⊆ Q` is reached from `Q` by deleting pairs of opposite vertices
 through saturated symmetric sets that contain `S` (so a search that stops at 31 points misses no set with at least
 31 points). -/
 theorem walk_reach (n : ℕ) (Λ Q : Set (Pt n)) (hQΛ : Q ⊆ Λ) (hfin : Q.Finite) (hsymm : -Q = Q)
@@ -506,11 +530,22 @@ theorem walk_reach (n : ℕ) (Λ Q : Set (Pt n)) (hQΛ : Q ⊆ Λ) (hfin : Q.Fin
       ∃ v ∈ Set.extremePoints ℝ (convexHull ℝ A), A' = A \ {v, -v}) Q S :=
   S6E.walk_reach n Λ Q hQΛ hfin hsymm hsat S hSQ hSsymm hSsat
 
+/-- l.332: "This loses no class": a symmetry `σ` (a signed permutation that preserves the lattice `Λ`) maps saturated
+symmetric sets to saturated symmetric sets and the vertices of `conv Q` to those of `conv σQ`, so the sets obtained
+from `σQ` by deleting a pair of opposite vertices are the images under `σ` of those obtained from `Q`. -/
+theorem walk_symm (σ : Equiv.Perm (Fin 4) × (Fin 4 → Bool)) (Λ Q : Set (Pt 4)) (hσ : Preserves Λ σ) :
+    (Saturated Λ Q → Saturated Λ (signedPerm σ '' Q)) ∧ (-Q = Q → -(signedPerm σ '' Q) = signedPerm σ '' Q) ∧
+      signedPerm σ '' Set.extremePoints ℝ (convexHull ℝ Q) =
+        Set.extremePoints ℝ (convexHull ℝ (signedPerm σ '' Q)) ∧
+      {A | ∃ w ∈ Set.extremePoints ℝ (convexHull ℝ (signedPerm σ '' Q)), A = signedPerm σ '' Q \ {w, -w}} =
+        {A | ∃ v ∈ Set.extremePoints ℝ (convexHull ℝ Q), A = signedPerm σ '' (Q \ {v, -v})} :=
+  R280.walk_symm_proof σ Λ Q hσ
+
 /-- Computation 1, l.349: a hyperplane through `0` contains at most 27 points of `{-1,0,1}⁴`. -/
 theorem hyperplane_le_27 (w : Pt 4) (hw : w ≠ 0) : {x | x ∈ cubePts 4 ∧ w ⬝ᵥ x = 0}.ncard ≤ 27 :=
   S6F.hyperplane_le_27 w hw
 
-/-- Computation 1, l.349: each input set spans `ℝ⁴`, so `conv S ∈ W⁴` by Lemma 2.1. -/
+/-- Computation 1, l.349: each input set spans `ℝ⁴`, so `conv S ∈ O⁴` by Lemma 2.1. -/
 theorem comp1_mem (S : Set (Pt 4)) (hS : Comp1Input S) : Spans S ∧ InW (Zn 4) (convexHull ℝ S) :=
   S6F.comp1_mem S hS
 
@@ -526,12 +561,18 @@ theorem comp2_d2_max :
         (subLat B ∩ cubePts 4).ncard = 45 :=
   S6F.comp2_d2_max
 
+/-- Computation 2, l.353 (used at l.304), its result: for every sublattice `B ℤ⁴` of index `d`, `2 ≤ d ≤ 16`, whose points
+in `{-1,0,1}⁴` span `ℝ⁴`, the number of these points is at most `45` if `d = 2` and at most `27` if `d ≥ 3`, and `45`
+is attained. Proved (the count of the 40,406 sublattices stays a computer check). -/
+theorem comp2_result : Comp2 :=
+  C2P.comp2_proof
+
 /-- Computation 3, l.357: a permutation of coordinates carries `Γ_I` onto `Γ_J` when `|I| = |J|`. -/
 theorem gammaI_perm (I J : Finset (Fin 4)) (h : I.card = J.card) :
     ∃ π : Equiv.Perm (Fin 4), signedPerm (π, fun _ => false) '' gammaI I = gammaI J :=
   S6F.gammaI_perm I J h
 
-/-- Computation 3, l.357: each input `conv S` lies in `W^4_{Γ_m}`. -/
+/-- Computation 3, l.357: each input `conv S` lies in `O^4_{Γ_m}`. -/
 theorem comp3_mem (m : ℕ) (S : Set (Pt 4)) (hS : Comp3Input m S) : InW (gammaM m) (convexHull ℝ S) :=
   S6F.comp3_mem m S hS
 
@@ -540,12 +581,13 @@ theorem frame_lat_GL (V U : Matrix (Fin 4) (Fin 4) ℤ) (hV : V.det ≠ 0) (hU :
     lat (toReal (U * V))⁻¹ = lat (toReal V)⁻¹ :=
   S6F.frame_lat_GL V U hV hU
 
-/-- Computation 5, l.367: `M` reverses inclusion, so a subset of a set `Q'` with `r(Q') = 4` also has `r = 4`. -/
+/-- Computation 5, l.369: `M` reverses inclusion, so a subset of a set `Q'` with `r(Q') = 4` also has `r = 4`. -/
 theorem M_antitone (Λ Q Q' : Set (Pt 4)) (h : Q ⊆ Q') :
     MS Λ Q' ⊆ MS Λ Q ∧ rS Λ Q' ≤ rS Λ Q ∧ (rS Λ Q' = 4 → rS Λ Q = 4) :=
   S6E.M_antitone Λ Q Q' h
 
-/-- Computation 5, l.367: every `S ∈ A(Λ)` with `r(S) ≤ 3` lies in a maximal member `Q` of `A(Λ)` with `r(Q) ≤ 3`,
+/-- RETIRED (Computation 5's walk; printed in earlier versions of the paper, last: text version 2.80; not printed in
+this version): every `S ∈ S(Λ)` with `r(S) ≤ 3` lies in a maximal member `Q` of `S(Λ)` with `r(Q) ≤ 3`,
 and `r(Q) ≤ r(S)`. -/
 theorem comp5_maximal (j : Fin 39) (S : Set (Pt 4)) (hS : InA (frameRep j) S) (hr : rS (frameRep j) S ≤ 3) :
     ∃ Q, InA (frameRep j) Q ∧ S ⊆ Q ∧ rS (frameRep j) Q ≤ rS (frameRep j) S ∧
@@ -559,9 +601,10 @@ theorem sandwich_split (Λ Sm Sp S : Set (Pt 4)) (v : Pt 4) (hSm : Sm ⊆ S) (hS
     (v ∉ S ∧ S ⊆ Sp \ {v, -v}) ∨ (v ∈ S ∧ convexHull ℝ (Sm ∪ {v, -v}) ∩ Λ ⊆ S) :=
   S6E.sandwich_split Λ Sm Sp S v hSm hSp hsat hsymm hv
 
-/-- Computation 5, l.369: the pruning of the sandwich search is sound: no `S ∈ A(Λ)` contains a set `T` that violates
+/-- Computation 5, l.369: the pruning of the sandwich search is sound ("A pair `±y` in `S⁺` for which `S⁻ ∪ {±y}`
+violates (ii) is removed from `S⁺`, since no member contains it together with `S⁻`"): no `S ∈ S(Λ)` contains a set `T` that violates
 (ii) or has a nonzero point of `Λ` in the interior of its convex hull; a point `x` that breaks (ii) together with
-`T` is in no `S ∈ A(Λ)` containing `T`; and a set `S ⊆ S⁺` has `#S < 31` if `#S⁺ < 31` and `r(S) = 4` if
+`T` is in no `S ∈ S(Λ)` containing `T`; and a set `S ⊆ S⁺` has `#S < 31` if `#S⁺ < 31` and `r(S) = 4` if
 `r(S⁺) = 4`. -/
 theorem sandwich_prune (Λ T S Sp : Set (Pt 4)) (hS : InA Λ S) (hTS : T ⊆ S) :
     (∀ s : Fin 4 → Pt 4, (∀ i, s i ∈ T) → |(colMat s).det| ≤ 1) ∧
@@ -570,31 +613,82 @@ theorem sandwich_prune (Λ T S Sp : Set (Pt 4)) (hS : InA Λ S) (hTS : T ⊆ S) 
       (S ⊆ Sp → Sp.Finite → Sp.ncard < 31 → S.ncard < 31) ∧ (S ⊆ Sp → rS Λ Sp = 4 → rS Λ S = 4) :=
   S6E.sandwich_prune Λ T S Sp hS hTS
 
+/-- Computation 5, l.367: the two start sets of the sandwich search. For a frame
+lattice `Λ`, the set `S⁻ = conv{±e_1, …, ±e_4} ∩ Λ` is in `S(Λ)` and lies in every member of `S(Λ)`, and every member
+of `S(Λ)` lies in
+the upper set `S⁺ = Λ ∩ C_4`. -/
+theorem sandwich_start (Λ : Set (Pt 4)) (hΛ : IsFrameLattice Λ) :
+    InA Λ (convexHull ℝ (Set.range unitVec ∪ Set.range (fun i => -unitVec i)) ∩ Λ) ∧
+      convexHull ℝ (Set.range unitVec ∪ Set.range (fun i => -unitVec i)) ∩ Λ ⊆ Λ ∩ cube 4 ∧
+      ∀ S : Set (Pt 4), InA Λ S →
+        convexHull ℝ (Set.range unitVec ∪ Set.range (fun i => -unitVec i)) ∩ Λ ⊆ S ∧ S ⊆ Λ ∩ cube 4 :=
+  Sandwich.sandwich_start_proof Λ hΛ
+
+/-- Computation 5, l.369: "Each include step keeps" `S⁻` in the family `S(Λ)` (printed `A(Λ)`), "so these sets are
+members": if `S⁻ ∈ S(Λ)` and the pair `±v` is taken from `S⁺ ⊆ Λ ∩ C_4`, and the new lower set `conv(S⁻ ∪ {±v}) ∩ Λ`
+satisfies (ii) and has no nonzero point of `Λ` in the interior of its convex hull, then the new lower set is in
+`S(Λ)`. With `sandwich_start`, the lower sets of the search are members. -/
+theorem sandwich_include_member (Λ Sm : Set (Pt 4)) (hΛ : IsFrameLattice Λ) (hSm : InA Λ Sm) (v : Pt 4)
+    (hv : v ∈ Λ ∩ cube 4)
+    (h2 : ∀ s : Fin 4 → Pt 4, (∀ i, s i ∈ convexHull ℝ (Sm ∪ {v, -v}) ∩ Λ) → |(colMat s).det| ≤ 1)
+    (h3 : interior (convexHull ℝ (convexHull ℝ (Sm ∪ {v, -v}) ∩ Λ)) ∩ Λ ⊆ {0}) :
+    InA Λ (convexHull ℝ (Sm ∪ {v, -v}) ∩ Λ) :=
+  R280.sandwich_include_member_proof Λ Sm hΛ hSm v hv h2 h3
+
+/-- Computation 5, l.369: a pair `(S⁻, S⁺)` that a signed permutation `σ` preserving `Λ` "carries onto a pair met
+earlier in the search is discarded, since the permutation carries the sets between the two pairs onto each other":
+`σ` carries the saturated symmetric sets, and the members of `S(Λ)`, between `S⁻` and `S⁺` onto those between `σS⁻`
+and `σS⁺`. -/
+theorem sandwich_symm (Λ Sm Sp : Set (Pt 4)) (σ : Equiv.Perm (Fin 4) × (Fin 4 → Bool)) (hσ : Preserves Λ σ) :
+    (fun S => signedPerm σ '' S) '' {S | Saturated Λ S ∧ -S = S ∧ Sm ⊆ S ∧ S ⊆ Sp} =
+        {S | Saturated Λ S ∧ -S = S ∧ signedPerm σ '' Sm ⊆ S ∧ S ⊆ signedPerm σ '' Sp} ∧
+      (fun S => signedPerm σ '' S) '' {S | InA Λ S ∧ Sm ⊆ S ∧ S ⊆ Sp} =
+        {S | InA Λ S ∧ signedPerm σ '' Sm ⊆ S ∧ S ⊆ signedPerm σ '' Sp} :=
+  R280.sandwich_symm_proof Λ Sm Sp σ hσ
+
+/-- l.330, Computation 5: for each set `S` that Computation 5 lists, the numbers of lattice points of `k conv S`
+(`k = 1, 2, 3`) and of the interior of `k conv S` (`k = 1, 2`) "give its values at `k = -2, …, 3` by (E1) and (E2)
+and so determine it": with respect to the frame lattice, the polynomial is `1` at `0`, `L(k)` at `k = 1, 2, 3`, and
+`#(int(k conv S) ∩ Λ)` at `-k` for `k = 1, 2` ((E2) with `n = 4`; the value at `0` holds by counting, without (E1));
+a polynomial of degree at most `4` with these six values is the Ehrhart polynomial. -/
+theorem poly_six_values (hE2 : EhrhartReciprocity) (j : Fin 39) (S : Set (Pt 4)) (hS : Comp5Input j S) :
+    (ehrhartPoly (frameRep j) (convexHull ℝ S)).eval 0 = 1 ∧
+      (∀ k : ℕ, 1 ≤ k → k ≤ 3 →
+        (ehrhartPoly (frameRep j) (convexHull ℝ S)).eval (k : ℝ) = latCount (frameRep j) (convexHull ℝ S) k) ∧
+      (∀ k : ℕ, 1 ≤ k → k ≤ 2 →
+        (ehrhartPoly (frameRep j) (convexHull ℝ S)).eval (-(k : ℝ)) = intCount (frameRep j) (convexHull ℝ S) k) ∧
+      ∀ p : Polynomial ℝ, p.natDegree ≤ 4 → p.eval 0 = 1 →
+        (∀ k : ℕ, 1 ≤ k → k ≤ 3 → p.eval (k : ℝ) = latCount (frameRep j) (convexHull ℝ S) k) →
+        (∀ k : ℕ, 1 ≤ k → k ≤ 2 → p.eval (-(k : ℝ)) = intCount (frameRep j) (convexHull ℝ S) k) →
+        p = ehrhartPoly (frameRep j) (convexHull ℝ S) :=
+  R280.poly_six_values_proof hE2 j S hS
+
 /-! ## Theorem 1.2 and Corollary 1.4 -/
 
-/-- Theorem 1.2, l.93-95, proof l.372-374 (and abstract, Table 1, l.87): every `P ∈ W⁴` has `g_1(P) ≤ 8` and
+/-- Theorem 1.2, l.93-95, proof l.372-374 (and abstract, Table 1 l.76-77): every `P ∈ O⁴` has `g_1(P) ≤ 8` and
 `g_2(P) ≤ 24`. -/
 theorem thm_1_2 (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hE3 : FacetFormula)
-    (hTRI : BoundaryTriangulation) (hTILE : CrossPolytopeNoTiling) (hC1 : Comp1) (hC2 : Comp2) (hC3 : Comp3)
+    (hTRI : BoundaryTriangulation) (hTILE : CrossPolytopeNoTiling) (hC1 : Comp1) (hC3 : Comp3)
     (hC4 : Comp4) (hC5 : Comp5) (P : Set (Pt 4)) (hP : InW (Zn 4) P) :
     g (Zn 4) P 1 ≤ 8 ∧ g (Zn 4) P 2 ≤ 24 :=
-  S12.thm_1_2_of hE1 hE2 hE3 hTRI hC1 hC2 hC3 hC5
+  S12.thm_1_2_of hE1 hE2 hE3 hTRI hC1 C2P.comp2_proof hC3 hC5
     (fun P hP hG hr => Sec5.case_III_transfer hTILE hC4 P hP hG hr) P hP
 
-/-- Theorem 1.2, l.94 (and l.87, l.110): hence Conjecture 1.1 holds for `n = 4`. -/
+/-- Abstract l.47, proof of Corollary 1.4 l.110, Figure 1's caption l.140: Conjecture 1.1 holds for `n = 4`
+(Theorem 1.2 states the two bounds only, since text version 2.40). -/
 theorem conj_n4 (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hE3 : FacetFormula)
-    (hTRI : BoundaryTriangulation) (hTILE : CrossPolytopeNoTiling) (hC1 : Comp1) (hC2 : Comp2) (hC3 : Comp3)
+    (hTRI : BoundaryTriangulation) (hTILE : CrossPolytopeNoTiling) (hC1 : Comp1) (hC3 : Comp3)
     (hC4 : Comp4) (hC5 : Comp5) : WillsConj 4 :=
-  S12.conj_n4_of hE1 hE2 hE3 hTRI hC1 hC2 hC3 hC5
+  S12.conj_n4_of hE1 hE2 hE3 hTRI hC1 C2P.comp2_proof hC3 hC5
     (fun P hP hG hr => Sec5.case_III_transfer hTILE hC4 P hP hG hr)
 
-/-- Corollary 1.4, l.105-111 (and abstract, Table 1 l.79, l.90, Figure 1): Wills' conjecture holds in `ℝⁿ`
+/-- Corollary 1.4, l.105-111 (and abstract, Table 1 l.79, Figure 1 l.140): Wills' conjecture holds in `ℝⁿ`
 (`n ≥ 1`: l.158) if and only if `n ≤ 4`. -/
 theorem cor_1_4 (hEHR : EhrhartThm) (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hE3 : FacetFormula)
-    (hTRI : BoundaryTriangulation) (hTILE : CrossPolytopeNoTiling) (hWIL3 : WillsDim3) (hVolW : VolW)
-    (hC1 : Comp1) (hC2 : Comp2) (hC3 : Comp3) (hC4 : Comp4) (hC5 : Comp5) (n : ℕ) (hn : 1 ≤ n) :
+    (hTRI : BoundaryTriangulation) (hTILE : CrossPolytopeNoTiling) (hVolW : VolW)
+    (hC1 : Comp1) (hC3 : Comp3) (hC4 : Comp4) (hC5 : Comp5) (n : ℕ) (hn : 1 ≤ n) :
     WillsConj n ↔ n ≤ 4 :=
-  S12.cor_1_4_of hEHR hE1 hE2 hE3 hTRI hWIL3 hVolW hC1 hC2 hC3 hC5
+  S12.cor_1_4_of hEHR hE1 hE2 hE3 hTRI hVolW hC1 C2P.comp2_proof hC3 hC5
     (fun P hP hG hr => Sec5.case_III_transfer hTILE hC4 P hP hG hr) n hn
 
 /-! ## Section 7: the equality cases -/
@@ -612,6 +706,11 @@ theorem cell24_points :
     (∀ x ∈ cell24, (∀ i, |x i| ≤ 1) ∧ ∑ i, |x i| ≤ 2) ∧ (cell24 ∩ latD4star).ncard = 49 ∧
       interior cell24 ∩ latD4star = {0} :=
   Rows7.cell24_points
+
+/-- l.389: the polytope `conv{±e_a ± e_b}` is the set of points `x` with `|x_i| ≤ 1` for all `i` and
+`|x_1| + ⋯ + |x_4| ≤ 2`. -/
+theorem cell24_eq_box : cell24 = {x : Pt 4 | (∀ i, |x i| ≤ 1) ∧ ∑ i, |x i| ≤ 2} :=
+  C24.cell24_eq_box_proof
 
 /-- l.389: the lattice points of the 24-cell in `ℤ⁴ ∪ (ℤ⁴ + ½(1,1,1,1))` are `0`, the 24 vertices `±e_a ± e_b`,
 the 8 points `±e_i` and the 16 points `(±½, ±½, ±½, ±½)` (with `cell24_points`: 49 points in all). -/
@@ -634,7 +733,7 @@ theorem cell24_hyperplanes :
     ∀ x ∈ cell24, (∀ i, |x i| ≤ 1) ∧ ∀ s : Pt 4, (∀ i, s i = 1 ∨ s i = -1) → s ⬝ᵥ x ≤ 2 :=
   Sec7H.cell24_hyperplanes
 
-/-- l.389: `T ∈ W⁴`. -/
+/-- l.389: `T ∈ O⁴`. -/
 theorem T_mem : InW (Zn 4) T :=
   Rows7.T_mem
 
@@ -671,7 +770,7 @@ theorem cell24_vol (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) : volume ce
 theorem T_vol (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) : volume T = 16 :=
   Rows7.T_vol hE1 hE2
 
-/-- l.391: `0` is the only interior lattice point of `X`, so `X ∈ W⁴`. -/
+/-- l.391: `0` is the only interior lattice point of `X`, so `X ∈ O⁴`. -/
 theorem X_mem : InW (Zn 4) X :=
   Rows7.X_mem
 
@@ -679,7 +778,7 @@ theorem X_mem : InW (Zn 4) X :=
 theorem X_G : G (Zn 4) X = 33 :=
   Rows7.X_G
 
-/-- l.391 (and l.88): `vol(X) = (2⁴/4!) · 18 = 12`; the four vectors have determinant 18. -/
+/-- l.391: `vol(X) = (2⁴/4!) · 18 = 12`; the four vectors have determinant 18. -/
 theorem X_vol : (colMat (fun i => ofInt (xVec i))).det = 18 ∧ volume X = 12 :=
   Rows7.X_vol
 
@@ -694,7 +793,7 @@ theorem X_hyperplanes : ∀ ε : Fin 4 → Bool, ∃ u : Pt 4,
     AffineIndependent ℝ (fun i => (if ε i then -1 else 1 : ℝ) • ofInt (xVec i)) :=
   Sec7H.X_hyperplanes
 
-/-- l.393: if every facet of `P ∈ W⁴` has lattice distance `l` (in (E3)'s facet data), then `g_3 = σ/2 = 2g_4/l`;
+/-- l.393: if every facet of `P ∈ O⁴` has lattice distance `l` (in (E3)'s facet data), then `g_3 = σ/2 = 2g_4/l`;
 and Lemma 4.1 gives `g_1 = (G-1)/2 - g_3`, `g_2 = (G-1)/2 - g_4`. -/
 theorem g3_of_dist (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (_hE3 : FacetFormula) (P : Set (Pt 4))
     (hP : InW (Zn 4) P)
@@ -741,30 +840,115 @@ theorem M_T : MP T = {0} :=
 theorem M_X : MP X = {0} :=
   Rows7.M_X
 
-/-- Results l.88: the cube satisfies Henze's root condition. -/
+/-- Remark 7.3, l.415 (and l.85): the cube satisfies Henze's root condition. -/
 theorem henze_C4 : HenzeRoots (ehrhartPoly (Zn 4) (cube 4)) :=
   Rows7.henze_C4
 
-/-- Results l.88: `T` does not satisfy Henze's root condition. -/
+/-- Remark 7.3, l.415 (and l.85): `T` does not satisfy Henze's root condition. -/
 theorem henze_T_not (hE2 : EhrhartReciprocity) : ¬ HenzeRoots (ehrhartPoly (Zn 4) T) :=
   Rows7.henze_T_not hE2
 
-/-- Results l.88: `X` does not satisfy Henze's root condition. -/
+/-- Remark 7.3, l.415 (and l.85): `X` does not satisfy Henze's root condition. -/
 theorem henze_X_not (hE2 : EhrhartReciprocity) : ¬ HenzeRoots (ehrhartPoly (Zn 4) X) :=
   Rows7.henze_X_not hE2
+
+/-- Remark 7.3, l.415: if all four roots of `L_P`, for `P ∈ O⁴`, have real part `-1/2`, they sum to `-2`, so
+`g_3(P) = 2 g_4(P)` by Vieta's formulas. -/
+theorem henze_vieta (hE1 : EhrhartLeading) (P : Set (Pt 4)) (hP : InW (Zn 4) P)
+    (hH : HenzeRoots (ehrhartPoly (Zn 4) P)) : g (Zn 4) P 3 = 2 * g (Zn 4) P 4 :=
+  Fig3.henze_vieta_proof hE1 P hP hH
+
+/-- Remark 7.3, l.415: `L_T` has `g_3 = 16 ≠ 2 · 16` and `L_X` has `g_3 = 8 ≠ 2 · 12`. -/
+theorem henze_coeffs (hE2 : EhrhartReciprocity) :
+    g (Zn 4) T 3 = 16 ∧ g (Zn 4) T 4 = 16 ∧ g (Zn 4) X 3 = 8 ∧ g (Zn 4) X 4 = 12 ∧
+      (16 : ℝ) ≠ 2 * 16 ∧ (8 : ℝ) ≠ 2 * 12 :=
+  Fig3.henze_coeffs_proof hE2
 
 /-- Proof of Theorem 7.1, l.403: unimodular maps preserve `G`. -/
 theorem G_unimod_inv (P P' : Set (Pt 4)) (h : UnimodEquiv P P') : G (Zn 4) P' = G (Zn 4) P :=
   Rows7.G_unimod_inv P P' h
 
-/-- Theorem 7.1, l.383-385, proof l.403 (and abstract, Table 1 l.76, l.88): `P ∈ W⁴` has `g_1(P) = 8` if and only if
+/-- Theorem 7.1, l.383-385, proof l.403 (and abstract, Table 1 l.76, l.85): `P ∈ O⁴` has `g_1(P) = 8` if and only if
 it is unimodularly equivalent to `C_4`, `T` or `X`; and these three are pairwise inequivalent. -/
 theorem thm_7_1 (hE2 : EhrhartReciprocity) (hE3 : FacetFormula)
-    (hTRI : BoundaryTriangulation) (hTILE : CrossPolytopeNoTiling) (hC1 : Comp1) (hC2 : Comp2) (hC3 : Comp3)
+    (hTRI : BoundaryTriangulation) (hTILE : CrossPolytopeNoTiling) (hC1 : Comp1) (hC3 : Comp3)
     (hC4 : Comp4) (hC5 : Comp5) :
     (∀ P : Set (Pt 4), InW (Zn 4) P →
       (g (Zn 4) P 1 = 8 ↔ UnimodEquiv (cube 4) P ∨ UnimodEquiv T P ∨ UnimodEquiv X P)) ∧
       ¬ UnimodEquiv (cube 4) T ∧ ¬ UnimodEquiv (cube 4) X ∧ ¬ UnimodEquiv T X :=
-  S71.thm_7_1_of hE2 hE3 hTRI hC1 hC2 hC3 hC5 (fun P hP hG hr => Sec5.case_III_transfer hTILE hC4 P hP hG hr)
+  S71.thm_7_1_of hE2 hE3 hTRI hC1 C2P.comp2_proof hC3 hC5 (fun P hP hG hr => Sec5.case_III_transfer hTILE hC4 P hP hG hr)
+
+/-- Corollary 7.2, l.406-408, proof l.410-412 (and Table 1 l.77): `P ∈ O⁴` has `g_2(P) = 24` if and only if it is
+unimodularly equivalent to `C_4`. The proof is the printed one, from the rows of Theorems 1.2 and 7.1, Proposition 4.2
+and Lemma 4.1: `g_1 ≤ 8`, so `24 = g_2 ≤ g_4 + 8 ≤ 24` and `g_4 = 16`; then `G = 81` and `g_1 + g_3 = 40`; `g_3 ≤ 32`
+forces `g_1 = 8`; of `C_4`, `T`, `X` only `C_4` has 81 lattice points. -/
+theorem cor_7_2 (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hE3 : FacetFormula)
+    (hTRI : BoundaryTriangulation) (hTILE : CrossPolytopeNoTiling) (hC1 : Comp1) (hC3 : Comp3)
+    (hC4 : Comp4) (hC5 : Comp5) :
+    ∀ P : Set (Pt 4), InW (Zn 4) P → (g (Zn 4) P 2 = 24 ↔ UnimodEquiv (cube 4) P) := by
+  intro P hP
+  constructor
+  · intro h2
+    have h12 := thm_1_2 hE1 hE2 hE3 hTRI hTILE hC1 hC3 hC4 hC5 P hP
+    have hB : (1 : Matrix (Fin 4) (Fin 4) ℝ).det ≠ 0 := by simp
+    have hP1 : InW (lat 1) P := by rw [lat_one]; exact hP
+    have h1 : g (lat 1) P 1 ≤ 8 := by rw [lat_one]; exact h12.1
+    have hg2 := prop_4_2_g2 hE1 hE2 hE3 1 hB P hP1 h1
+    have hid := lem_4_1 hE2 1 hB P hP1
+    have hg3 := prop_4_2_g3 hE1 hE3 1 hB P hP1
+    rw [lat_one] at hg2 hid hg3
+    have hg4 : g (Zn 4) P 4 = 16 := by linarith [hg2.1, hg2.2]
+    have hG : (G (Zn 4) P : ℝ) = 81 := by linarith [hid.2]
+    have hg1 : g (Zn 4) P 1 = 8 := by linarith [hid.1, hg3.1, h12.1]
+    rcases ((thm_7_1 hE2 hE3 hTRI hTILE hC1 hC3 hC4 hC5).1 P hP).1 hg1 with hc | hT | hX
+    · exact hc
+    · rw [G_unimod_inv T P hT, T_G] at hG
+      norm_num at hG
+    · rw [G_unimod_inv X P hX, X_G] at hG
+      norm_num at hG
+  · intro hc
+    rw [iso_g 4 (cube 4) (Zn 4) P (Zn 4) (S71.iso_of_unimod hc) 2, cube_g 4 2]
+    norm_num [Nat.choose]
+
+/-! ## Figure 3 (Section 6, l.330; its caption is line 32 of fig_maxg1.tex) -/
+
+/-- l.263 (after the proof of Lemma 4.3) and Figure 3, caption: the bound `g_1 ≤ (3G+7)/12` follows from the inequality `Σ_F NVol(F) ≥ 3G - 13` in the
+proof of Lemma 4.3, since `g_1 = (G-1)/2 - σ/2` (Lemma 4.1 and (E3)) and `σ = (1/6) Σ_F NVol(F)`. Over (E3)'s facet
+data, `σ = Σ relvol_j` and `NVol(F_j) = 6 relvol_j`; the bound is proved for every `P ∈ O⁴_Λ` (the figure draws it
+for `G ≤ 29`). -/
+theorem fig3_g1_bound (hE2 : EhrhartReciprocity) (hE3 : FacetFormula) (hTRI : BoundaryTriangulation)
+    (B : Matrix (Fin 4) (Fin 4) ℝ) (hB : B.det ≠ 0) (P : Set (Pt 4)) (hP : InW (lat B) P) :
+    g (lat B) P 1 ≤ (3 * (G (lat B) P : ℝ) + 7) / 12 ∧
+      (∃ (m : ℕ) (relvol : Fin m → ℝ) (b : Fin m → ℤ), IsFacetData B P m relvol b) ∧
+      ∀ (m : ℕ) (relvol : Fin m → ℝ) (b : Fin m → ℤ), IsFacetData B P m relvol b →
+        ∑ j, 6 * relvol j ≥ 3 * (G (lat B) P : ℝ) - 13 ∧
+          g (lat B) P 1 = ((G (lat B) P : ℝ) - 1) / 2 - (∑ j, relvol j) / 2 :=
+  ⟨(Fig3.fig3_g1_bound_proof hE2 hTRI B hB P hP).1, hE3 4 (by norm_num) B hB P hP,
+    (Fig3.fig3_g1_bound_proof hE2 hTRI B hB P hP).2⟩
+
+/-- RETIRED (Figure 3's caption up to text version 2.30; no longer printed): for `G ≥ 31` the bound `(3G+7)/12`
+exceeds `8`. -/
+theorem fig3_bound_gt (Gc : ℝ) (hG : 31 ≤ Gc) : 8 < (3 * Gc + 7) / 12 :=
+  Fig3.fig3_bound_gt_proof Gc hG
+
+/-- RETIRED (Figure 3's caption up to text version 2.30; no longer printed): by Theorems 1.2 and 7.1, every
+polytope in `O⁴` that is not unimodularly equivalent to `C_4`,
+`T` or `X` has `g_1 < 8`. -/
+theorem fig3_lt_eight (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hE3 : FacetFormula)
+    (hTRI : BoundaryTriangulation) (hTILE : CrossPolytopeNoTiling) (hC1 : Comp1) (hC3 : Comp3)
+    (hC4 : Comp4) (hC5 : Comp5) (P : Set (Pt 4)) (hP : InW (Zn 4) P)
+    (hne : ¬ (UnimodEquiv (cube 4) P ∨ UnimodEquiv T P ∨ UnimodEquiv X P)) : g (Zn 4) P 1 < 8 :=
+  lt_of_le_of_ne (thm_1_2 hE1 hE2 hE3 hTRI hTILE hC1 hC3 hC4 hC5 P hP).1
+    (fun h => hne (((thm_7_1 hE2 hE3 hTRI hTILE hC1 hC3 hC4 hC5).1 P hP).1 h))
+
+/-- Figure 3, caption: `T` and `X` belong to Case III (`r(P) ≤ 3`, as in the case split), since
+`M(T) = M(X) = {0}` (rows `M_T`, `M_X`). -/
+theorem fig3_T_X_case_III : rP T ≤ 3 ∧ rP X ≤ 3 :=
+  ⟨S71.T_caseIII.2, S71.X_caseIII.2⟩
+
+/-- Figure 3, caption (fig_maxg1.tex l.32): `C_4` belongs to Case I: `M(C_4)` contains the basis `e_1, …, e_4` of
+`ℤ⁴` (the rows of the identity matrix). -/
+theorem cube4_case_I : CaseI (cube 4) :=
+  R280.cube4_case_I_proof
 
 end Wills

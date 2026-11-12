@@ -1,9 +1,8 @@
 /-
 Wills/Facts/Basic.lean — Facts the paper uses from areas that Lean's library (Mathlib) does not cover: Ehrhart theory,
-facets of polytopes, triangulations of spheres, translation tilings, and Wills' 1981 results. Each fact is a `Prop`;
-every theorem that uses one takes it as an explicit hypothesis (nothing is assumed globally). A theorem proved from
-these hypotheses has the status PROVED GIVEN <facts>; the facts themselves are "not formalized: no <area> in Lean's
-library".
+facets of polytopes, triangulations of spheres and translation tilings. Each fact is a `Prop`; every theorem that uses
+one takes it as an explicit hypothesis (nothing is assumed globally). A theorem proved from these hypotheses has the
+status PROVED GIVEN <facts>; the facts themselves are "not formalized: no <area> in Lean's library".
 Author: Dave Goel.
 Copyright (C) Dave Goel 2026--now. All rights reserved.
 -/
@@ -47,7 +46,8 @@ def IsFacetData {n : ℕ} (B : Matrix (Fin n) (Fin n) ℝ) (P : Set (Pt n)) (m :
     (volume P).toReal / |B.det| = (1 / (n : ℝ)) * ∑ j, (b j : ℝ) * relvol j
 
 /-- (E3) [BR15, Chapters 3-5] for `P ∈ W^n_Λ`, `Λ = B ℤⁿ`, `n ≥ 1`: `P` has finitely many facets `F_1, …, F_m`; let
-`relvol j ≥ 0` be the `(n-1)`-dimensional volume of `F_j` normalized by the lattice `Λ ∩ aff(F_j - F_j)`, and
+`relvol j ≥ 0` be the `(n-1)`-dimensional volume of `F_j`, measured so that a fundamental domain of the lattice
+`Λ ∩ aff(F_j - F_j)` has volume 1 (l.163), and
 `b j` the integer with `F_j ⊂ {x : ⟨u_j, x⟩ = b j}` for the primitive outer normal `u_j` in the dual lattice;
 `b j ≥ 1` since `0 ∈ int P` (the lattice distance of `F_j` from the origin). Then
 `g_{n-1}(P) = ½ σ(P)` with `σ(P) = Σ_j relvol j` (the lattice surface area), and
@@ -59,7 +59,10 @@ def FacetFormula : Prop :=
 
 /-- The facts used in the proof of Lemma 4.3, for `P ∈ W^4_Λ`, `Λ = B ℤ⁴`: there is a triangulation `Δ` of the
 boundary of `P` whose vertex set is the set of all `G(P) - 1` boundary lattice points and whose tetrahedra lie in
-facets (regular subdivision by lifting to a paraboloid, then pulling); `Δ` is a triangulated 3-sphere. Its f-vector
+facets: take a triangulation of `P` whose vertices are exactly the points of `P ∩ Λ` (one exists, for example by
+strong pulling: [HPPS21, Lemma 2.1(2)], as numbered in arXiv:1405.1687v3, applied in the coordinates of a basis of
+`Λ`; its words: AUDIT_NOTES.md, section 2); its faces in the boundary of `P` form `Δ` (l.262); `Δ` is a triangulated
+3-sphere. Its f-vector
 `(f 0, f 1, f 2, f 3)` satisfies:
 * `f 0 = G(P) - 1`;
 * `f 3 ≤ Σ_F NVol(F) = 12 g_3(P)`: each tetrahedron is a lattice tetrahedron in the affine hull of a facet, of
@@ -78,17 +81,12 @@ def TilesByZ4 (K : Set (Pt 4)) : Prop :=
     ∀ z ∈ Zn 4, ∀ z' ∈ Zn 4, z ≠ z' → Disjoint (interior (z +ᵥ K)) (interior (z' +ᵥ K))
 
 /-- The tile theorem (Minkowski [Min97]; see Venkov [Ven54] and McMullen [McM80]) in the form used in the proof of
-Lemma 5.1 (v): a convex polytope that tiles space by translations has centrally symmetric facets, and the facets of
-a cross-polytope `conv{±v_1, …, ±v_4}` (`v_i` linearly independent) are tetrahedra, which are not centrally
+Lemma 5.1 (v): a convex polytope that tiles space by lattice translations has centrally symmetric facets, and the
+facets of a cross-polytope `conv{±v_1, …, ±v_4}` (`v_i` linearly independent) are tetrahedra, which are not centrally
 symmetric; so such a cross-polytope does not tile `ℝ⁴` by its translates by `ℤ⁴`.
 Not formalized: no tilings and no facets of polytopes in Lean's library. -/
 def CrossPolytopeNoTiling : Prop :=
   ∀ v : Fin 4 → Pt 4, LinearIndependent ℝ v →
     ¬ TilesByZ4 (convexHull ℝ (Set.range v ∪ Set.range (fun i => -v i)))
-
-/-- Wills' theorem in dimension 3 [Wil81, Theorem (ii)]: `g_i(P) ≤ 2^i binom(3,i)` for every `P ∈ W³`, `i ≤ 3`.
-Not formalized: no Ehrhart theory in Lean's library. -/
-def WillsDim3 : Prop :=
-  ∀ P : Set (Pt 3), InW (Zn 3) P → ∀ i ≤ 3, g (Zn 3) P i ≤ (2 : ℝ) ^ i * (Nat.choose 3 i : ℝ)
 
 end Wills

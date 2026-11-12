@@ -1,6 +1,6 @@
 # Wills' (1981) conjecture is fully resolved
 
-Supporting materials for the paper "Wills' (1981) conjecture is fully resolved" by Dave Goel. Paper: https://doi.org/10.5281/zenodo.23956181
+Supporting materials for the paper "Wills' (1981) conjecture is fully resolved" by Dave Goel.
 
 Copyright (C) Dave Goel 2026--now. All rights reserved.
 

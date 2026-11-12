@@ -17,6 +17,7 @@ import Wills.Proofs.Sec2
 import Wills.Proofs.Thm13
 import Wills.Proofs.Sec5
 import Wills.Proofs.Rows1
+import Wills.Proofs.Dim3
 
 open MeasureTheory Pointwise
 
@@ -301,7 +302,7 @@ theorem conj_n4_of (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hE3 : Face
 /-- Corollary 1.4, l.105-111, conditional on the Case III transfer: Wills' conjecture holds in `ℝⁿ` (`n ≥ 1`) if and
 only if `n ≤ 4`. -/
 theorem cor_1_4_of (hEHR : EhrhartThm) (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hE3 : FacetFormula)
-    (hTRI : BoundaryTriangulation) (hWIL3 : WillsDim3) (hVolW : VolW) (hC1 : Comp1) (hC2 : Comp2) (hC3 : Comp3)
+    (hTRI : BoundaryTriangulation) (hVolW : VolW) (hC1 : Comp1) (hC2 : Comp2) (hC3 : Comp3)
     (hC5 : Comp5) (hIII : CaseIIITransfer) (n : ℕ) (hn : 1 ≤ n) : WillsConj n ↔ n ≤ 4 := by
   constructor
   · intro h
@@ -323,7 +324,7 @@ theorem cor_1_4_of (hEHR : EhrhartThm) (hE1 : EhrhartLeading) (hE2 : EhrhartReci
     interval_cases n
     · exact Rows1.conj_le_two hE1 hE3 1 le_rfl (by norm_num)
     · exact Rows1.conj_le_two hE1 hE3 2 (by norm_num) le_rfl
-    · exact hWIL3
+    · exact Dim3.wills_dim3_proof hE1 hE2 hE3
     · exact conj_n4_of hE1 hE2 hE3 hTRI hC1 hC2 hC3 hC5 hIII
 
 end Wills.S12

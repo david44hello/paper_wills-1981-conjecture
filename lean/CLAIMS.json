@@ -1,11 +1,11 @@
 {
-  "version": "0.41",
+  "version": "0.71",
   "paper": "Wills' (1981) conjecture is fully resolved",
   "namespace": "Wills",
   "statements": "Wills/Paper/Statements.lean",
   "counts": {
-    "PROVED": 89,
-    "PROVED GIVEN": 32,
+    "PROVED": 100,
+    "PROVED GIVEN": 38,
     "OPEN": 0,
     "VIOLATION": 0,
     "CHECKED BY COMPUTER": 0,
@@ -14,7 +14,7 @@
   "claims": [
     {
       "name": "lat_one",
-      "line": 37,
+      "line": 47,
       "claim": "`ℤⁿ` is the lattice of the identity matrix (so the facts, stated for `lat B`, apply to `ℤⁿ` with `B = 1`,",
       "qualified_name": "Wills.lat_one",
       "axioms": [
@@ -30,7 +30,7 @@
     },
     {
       "name": "g0_eq_one",
-      "line": 41,
+      "line": 51,
       "claim": "(E1), first half, l.56, l.161: `g_0(P) = 1`.",
       "qualified_name": "Wills.g0_eq_one",
       "axioms": [
@@ -51,7 +51,7 @@
     },
     {
       "name": "minkowski_first",
-      "line": 47,
+      "line": 57,
       "claim": "l.58: Minkowski's first theorem — a convex body `K` symmetric about the origin with no lattice point other than",
       "qualified_name": "Wills.minkowski_first",
       "axioms": [
@@ -72,7 +72,7 @@
     },
     {
       "name": "cube_vol",
-      "line": 52,
+      "line": 62,
       "claim": "l.58: the volume of the cube `C_n` is `2ⁿ`.",
       "qualified_name": "Wills.cube_vol",
       "axioms": [
@@ -88,8 +88,8 @@
     },
     {
       "name": "cube_mem",
-      "line": 56,
-      "claim": "l.58: the cube `C_n` belongs to `Wⁿ`.",
+      "line": 66,
+      "claim": "l.58: the cube `C_n` belongs to `Oⁿ`.",
       "qualified_name": "Wills.cube_mem",
       "axioms": [
         "Classical.choice",
@@ -104,7 +104,7 @@
     },
     {
       "name": "cube_count",
-      "line": 60,
+      "line": 70,
       "claim": "l.58: `L_{C_n}(k) = (2k+1)ⁿ`.",
       "qualified_name": "Wills.cube_count",
       "axioms": [
@@ -121,7 +121,7 @@
     },
     {
       "name": "cube_g",
-      "line": 64,
+      "line": 74,
       "claim": "l.58: `g_i(C_n) = 2^i binom(n,i)`.",
       "qualified_name": "Wills.cube_g",
       "axioms": [
@@ -138,7 +138,7 @@
     },
     {
       "name": "cube_g1",
-      "line": 68,
+      "line": 78,
       "claim": "l.222: `g_1(C_m) = 2m`.",
       "qualified_name": "Wills.cube_g1",
       "axioms": [
@@ -154,8 +154,8 @@
     },
     {
       "name": "conj_i0",
-      "line": 72,
-      "claim": "l.67: for `i = 0` there is equality: `g_0(P) = g_0(C_n)` for `P ∈ Wⁿ`.",
+      "line": 82,
+      "claim": "l.67: for `i = 0` there is equality: `g_0(P) = g_0(C_n)` for `P ∈ Oⁿ`.",
       "qualified_name": "Wills.conj_i0",
       "axioms": [
         "Classical.choice",
@@ -172,8 +172,8 @@
     },
     {
       "name": "conj_in",
-      "line": 76,
-      "claim": "l.67: for `i = n` the inequality is Minkowski's theorem: `g_n(P) ≤ 2ⁿ = 2ⁿ binom(n,n)` for `P ∈ Wⁿ`.",
+      "line": 86,
+      "claim": "l.67: for `i = n` the inequality is Minkowski's theorem: `g_n(P) ≤ 2ⁿ = 2ⁿ binom(n,n)` for `P ∈ Oⁿ`.",
       "qualified_name": "Wills.conj_in",
       "axioms": [
         "Classical.choice",
@@ -193,8 +193,8 @@
     },
     {
       "name": "conj_in1",
-      "line": 81,
-      "claim": "l.67: the case `i = n-1`: `g_{n-1}(P) ≤ 2^{n-1} binom(n,n-1)` for `P ∈ Wⁿ` (`n ≥ 1`: l.158).",
+      "line": 91,
+      "claim": "l.67: the case `i = n-1`: `g_{n-1}(P) ≤ 2^{n-1} binom(n,n-1)` for `P ∈ Oⁿ` (`n ≥ 1`: l.158).",
       "qualified_name": "Wills.conj_in1",
       "axioms": [
         "Classical.choice",
@@ -215,7 +215,7 @@
     },
     {
       "name": "conj_le_two",
-      "line": 86,
+      "line": 96,
       "claim": "l.67: hence the conjecture holds for `n ≤ 2` (`n ≥ 1`: l.158).",
       "qualified_name": "Wills.conj_le_two",
       "axioms": [
@@ -237,8 +237,30 @@
       "status": "PROVED GIVEN E1, E3"
     },
     {
+      "name": "wills_dim3",
+      "line": 102,
+      "claim": "Proof of Corollary 1.4, l.110 (and l.67): Wills' theorem for `n = 3` ([Wil81, Theorem (i), (ii)]), `g_i(P) ≤ 2^i",
+      "qualified_name": "Wills.wills_dim3",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [
+        "E1",
+        "E2",
+        "E3"
+      ],
+      "binders": [
+        "hE1 : Wills.EhrhartLeading",
+        "hE2 : Wills.EhrhartReciprocity",
+        "hE3 : Wills.FacetFormula"
+      ],
+      "status": "PROVED GIVEN E1, E2, E3"
+    },
+    {
       "name": "iso_count",
-      "line": 92,
+      "line": 107,
       "claim": "l.158: isomorphic pairs have the same lattice-point counts, `φ(kP) ∩ Λ' = φ(kP ∩ Λ)`, so",
       "qualified_name": "Wills.iso_count",
       "axioms": [
@@ -260,7 +282,7 @@
     },
     {
       "name": "iso_g",
-      "line": 97,
+      "line": 112,
       "claim": "l.158: isomorphic pairs have the same Ehrhart coefficients.",
       "qualified_name": "Wills.iso_g",
       "axioms": [
@@ -282,7 +304,7 @@
     },
     {
       "name": "iso_Zn_GL",
-      "line": 101,
+      "line": 116,
       "claim": "l.158: a linear isomorphism of `ℝⁿ` that carries `ℤⁿ` onto `ℤⁿ` is given by a matrix in `GL_n(ℤ)`.",
       "qualified_name": "Wills.iso_Zn_GL",
       "axioms": [
@@ -300,7 +322,7 @@
     },
     {
       "name": "e4_prod_count",
-      "line": 106,
+      "line": 121,
       "claim": "(E4), l.164: `L_{P×Q} = L_P L_Q`, since `k(P×Q) ∩ ℤ^{p+q} = (kP ∩ ℤᵖ) × (kQ ∩ ℤ^q)`.",
       "qualified_name": "Wills.e4_prod_count",
       "axioms": [
@@ -320,8 +342,8 @@
     },
     {
       "name": "inW_full_dim",
-      "line": 111,
-      "claim": "l.170: a polytope in `W^n_Λ` has dimension `n`, because `0` is an interior point.",
+      "line": 126,
+      "claim": "l.170: a polytope in `O^n_Λ` has dimension `n`, because `0` is an interior point.",
       "qualified_name": "Wills.inW_full_dim",
       "axioms": [
         "Classical.choice",
@@ -339,7 +361,7 @@
     },
     {
       "name": "G_odd",
-      "line": 116,
+      "line": 131,
       "claim": "l.170, l.151: `G(P)` is odd (the lattice points other than `0` come in pairs `±x`).",
       "qualified_name": "Wills.G_odd",
       "axioms": [
@@ -359,8 +381,8 @@
     },
     {
       "name": "lem_2_1",
-      "line": 121,
-      "claim": "Lemma 2.1, l.172-178: if `Y ⊆ {-1,0,1}ⁿ`, `Y = -Y`, and `conv Y` has dimension `n`, then `conv Y ∈ Wⁿ`.",
+      "line": 136,
+      "claim": "Lemma 2.1, l.172-178: if `Y ⊆ {-1,0,1}ⁿ`, `Y = -Y`, and `conv Y` has dimension `n`, then `conv Y ∈ Oⁿ`.",
       "qualified_name": "Wills.lem_2_1",
       "axioms": [
         "Classical.choice",
@@ -379,7 +401,7 @@
     },
     {
       "name": "lem_2_1_sub",
-      "line": 127,
+      "line": 142,
       "claim": "l.180: the same for a sublattice `Γ ⊆ ℤⁿ` (here: any `Γ ⊆ ℤⁿ` containing `0`): if `S ⊆ Γ ∩ C_n` is symmetric",
       "qualified_name": "Wills.lem_2_1_sub",
       "axioms": [
@@ -403,7 +425,7 @@
     },
     {
       "name": "prod_interior",
-      "line": 132,
+      "line": 147,
       "claim": "Lemma 2.2, l.182-188, proof: `int(P×Q) = int P × int Q`.",
       "qualified_name": "Wills.prod_interior",
       "axioms": [
@@ -422,8 +444,8 @@
     },
     {
       "name": "lem_2_2",
-      "line": 137,
-      "claim": "Lemma 2.2, l.182-188: `P ∈ Wᵖ`, `Q ∈ W^q` ⇒ `P × Q ∈ W^{p+q}` and `g_1(P×Q) = g_1(P) + g_1(Q)`.",
+      "line": 152,
+      "claim": "Lemma 2.2, l.182-188: `P ∈ Oᵖ`, `Q ∈ O^q` ⇒ `P × Q ∈ O^{p+q}` and `g_1(P×Q) = g_1(P) + g_1(Q)`.",
       "qualified_name": "Wills.lem_2_2",
       "axioms": [
         "Classical.choice",
@@ -446,8 +468,8 @@
     },
     {
       "name": "prop_3_1",
-      "line": 146,
-      "claim": "Proposition 3.1, l.200-213 (and l.143): for `P ∈ W⁵`,",
+      "line": 161,
+      "claim": "Proposition 3.1, l.200-213 (and l.143): for `P ∈ O⁵`,",
       "qualified_name": "Wills.prop_3_1",
       "axioms": [
         "Classical.choice",
@@ -468,7 +490,7 @@
     },
     {
       "name": "w_pts_cube",
-      "line": 153,
+      "line": 168,
       "claim": "l.216: the 50 points of Table 2 lie in `{-1,0,1}⁵`.",
       "qualified_name": "Wills.w_pts_cube",
       "axioms": [
@@ -482,7 +504,7 @@
     },
     {
       "name": "w_symm",
-      "line": 157,
+      "line": 172,
       "claim": "l.216: the 50 points form a symmetric set.",
       "qualified_name": "Wills.w_symm",
       "axioms": [
@@ -496,7 +518,7 @@
     },
     {
       "name": "w_span",
-      "line": 161,
+      "line": 176,
       "claim": "l.216: the 50 points span `ℝ⁵`.",
       "qualified_name": "Wills.w_span",
       "axioms": [
@@ -510,8 +532,8 @@
     },
     {
       "name": "thm_1_3_mem",
-      "line": 165,
-      "claim": "Theorem 1.3, l.98, l.216: `W ∈ W⁵`.",
+      "line": 180,
+      "claim": "Theorem 1.3, l.98, l.216: `W ∈ O⁵`.",
       "qualified_name": "Wills.thm_1_3_mem",
       "axioms": [
         "Classical.choice",
@@ -524,8 +546,8 @@
     },
     {
       "name": "tab2_vertices",
-      "line": 169,
-      "claim": "Table 2 caption, l.196 (and Results, l.89): the 50 points `±p` are distinct and all 50 are vertices of `W`.",
+      "line": 184,
+      "claim": "Table 2 caption, l.196 (and abstract, Table 1 l.78): the 50 points `±p` are distinct and all 50 are vertices of `W`.",
       "qualified_name": "Wills.tab2_vertices",
       "axioms": [
         "Classical.choice",
@@ -538,7 +560,7 @@
     },
     {
       "name": "W_facets",
-      "line": 175,
+      "line": 190,
       "claim": "Table 2 caption, l.196: `W` has (at least) 92 facets — 92 hyperplanes `{⟨u_j, x⟩ = b_j}`, each with `W` on one",
       "qualified_name": "Wills.W_facets",
       "axioms": [
@@ -552,7 +574,7 @@
     },
     {
       "name": "w_G",
-      "line": 182,
+      "line": 197,
       "claim": "l.218: `G(W) = 117`.",
       "qualified_name": "Wills.w_G",
       "axioms": [
@@ -566,7 +588,7 @@
     },
     {
       "name": "w_L2",
-      "line": 186,
+      "line": 201,
       "claim": "l.218: `#(2W ∩ ℤ⁵) = 1815`.",
       "qualified_name": "Wills.w_L2",
       "axioms": [
@@ -580,7 +602,7 @@
     },
     {
       "name": "w_int2",
-      "line": 190,
+      "line": 205,
       "claim": "l.218: `#(int(2W) ∩ ℤ⁵) = 243`.",
       "qualified_name": "Wills.w_int2",
       "axioms": [
@@ -594,7 +616,7 @@
     },
     {
       "name": "w_A",
-      "line": 194,
+      "line": 209,
       "claim": "l.220: `A(W) = 1029`.",
       "qualified_name": "Wills.w_A",
       "axioms": [
@@ -608,8 +630,8 @@
     },
     {
       "name": "w_int2_all",
-      "line": 199,
-      "claim": "l.220: `int(2W) ⊂ (-2,2)⁵`, so the lattice points of `int(2W)` lie in `{-1,0,1}⁵`, and `int(2W)` contains all",
+      "line": 214,
+      "claim": "Text versions up to 2.30, l.220 (no longer printed since 2.40; SUPPORT of the claim at l.220): `int(2W) ⊂ (-2,2)⁵`, so the lattice points of `int(2W)` lie in `{-1,0,1}⁵`, and `int(2W)` contains all",
       "qualified_name": "Wills.w_int2_all",
       "axioms": [
         "Classical.choice",
@@ -622,7 +644,7 @@
     },
     {
       "name": "thm_1_3_poly",
-      "line": 204,
+      "line": 219,
       "claim": "Theorem 1.3, l.99-101: the Ehrhart polynomial of `W` is",
       "qualified_name": "Wills.thm_1_3_poly",
       "axioms": [
@@ -646,8 +668,8 @@
     },
     {
       "name": "thm_1_3_g1",
-      "line": 209,
-      "claim": "Theorem 1.3, l.102 (and l.220, abstract, Table 1, l.89): `g_1(W) = 101/10 > 10 = g_1(C_5)`.",
+      "line": 224,
+      "claim": "Theorem 1.3, l.102 (and l.220, abstract, Table 1 l.78): `g_1(W) = 101/10 > 10 = g_1(C_5)`.",
       "qualified_name": "Wills.thm_1_3_g1",
       "axioms": [
         "Classical.choice",
@@ -668,7 +690,7 @@
     },
     {
       "name": "interp_unique",
-      "line": 214,
+      "line": 229,
       "claim": "l.220: the polynomial is determined by its values at `k = 0, …, n` (degree at most `n`).",
       "qualified_name": "Wills.interp_unique",
       "axioms": [
@@ -689,8 +711,8 @@
     },
     {
       "name": "w_L3456",
-      "line": 219,
-      "claim": "l.220: `L_W(0) = 1`, `L_W(1..5) = 117, 1815, 10765, 39927, 112639`, and `L_W(6) = 265705`.",
+      "line": 235,
+      "claim": "l.220: `L_W(0) = 1`, `L_W(1..5) = 117, 1815, 10765, 39927, 112639`, and `L_W(6) = 265705` (the value",
       "qualified_name": "Wills.w_L3456",
       "axioms": [
         "Classical.choice",
@@ -713,8 +735,8 @@
     },
     {
       "name": "thm_1_3_prod",
-      "line": 227,
-      "claim": "Theorem 1.3, l.102, l.222 (and abstract, Table 1 l.78, l.143): for every `n = 5 + m ≥ 6`, `W × C_{n-5} ∈ Wⁿ`",
+      "line": 243,
+      "claim": "Theorem 1.3, l.102, l.222 (and abstract, Table 1 l.78, l.143): for every `n = 5 + m ≥ 6`, `W × C_{n-5} ∈ Oⁿ`",
       "qualified_name": "Wills.thm_1_3_prod",
       "axioms": [
         "Classical.choice",
@@ -739,8 +761,8 @@
     },
     {
       "name": "lem_4_1",
-      "line": 239,
-      "claim": "Lemma 4.1, l.231-237: for `P ∈ W^4_Λ`, `g_1 + g_3 = g_2 + g_4 = (G-1)/2`.",
+      "line": 255,
+      "claim": "Lemma 4.1, l.231-237: for `P ∈ O^4_Λ`, `g_1 + g_3 = g_2 + g_4 = (G-1)/2`.",
       "qualified_name": "Wills.lem_4_1",
       "axioms": [
         "Classical.choice",
@@ -761,8 +783,8 @@
     },
     {
       "name": "recip_m1_dim4",
-      "line": 246,
-      "claim": "l.145: since `P ∈ W⁴` has exactly one interior lattice point, `L_P(-1) = 1`.",
+      "line": 262,
+      "claim": "l.145: since `P ∈ O⁴` has exactly one interior lattice point, `L_P(-1) = 1`.",
       "qualified_name": "Wills.recip_m1_dim4",
       "axioms": [
         "Classical.choice",
@@ -783,7 +805,7 @@
     },
     {
       "name": "prop_4_2_g4",
-      "line": 252,
+      "line": 268,
       "claim": "Proposition 4.2, l.240, l.248: `g_4 = vol(P)/det Λ ≤ 16` (Minkowski's theorem in the coordinates of a basis of",
       "qualified_name": "Wills.prop_4_2_g4",
       "axioms": [
@@ -805,7 +827,7 @@
     },
     {
       "name": "prop_4_2_g3",
-      "line": 257,
+      "line": 273,
       "claim": "Proposition 4.2, l.240, l.248: `g_3 ≤ 2 g_4 ≤ 32`.",
       "qualified_name": "Wills.prop_4_2_g3",
       "axioms": [
@@ -829,7 +851,7 @@
     },
     {
       "name": "prop_4_2_iff",
-      "line": 264,
+      "line": 280,
       "claim": "Proposition 4.2, l.241-243 (and l.145-148): `g_1 ≤ 8 ⇔ G ≤ σ + 17`, for the lattice surface area",
       "qualified_name": "Wills.prop_4_2_iff",
       "axioms": [
@@ -853,7 +875,7 @@
     },
     {
       "name": "prop_4_2_g2",
-      "line": 272,
+      "line": 288,
       "claim": "Proposition 4.2, l.244 (and l.149): if `g_1 ≤ 8` then `g_2 ≤ g_4 + 8 ≤ 24`.",
       "qualified_name": "Wills.prop_4_2_g2",
       "axioms": [
@@ -880,8 +902,8 @@
     },
     {
       "name": "key_equiv",
-      "line": 278,
-      "claim": "l.251: Theorem 1.2 is equivalent to the key inequality `G ≤ σ + 17` on `W⁴` (σ from (E3)'s facet data).",
+      "line": 294,
+      "claim": "l.251: Theorem 1.2 is equivalent to the key inequality `G ≤ σ + 17` on `O⁴` (σ from (E3)'s facet data).",
       "qualified_name": "Wills.key_equiv",
       "axioms": [
         "Classical.choice",
@@ -902,7 +924,7 @@
     },
     {
       "name": "star_iff",
-      "line": 285,
+      "line": 301,
       "claim": "l.251-254, inequality (star): the key inequality reads `Σ_F NVol(F) ≥ 6G - 102`, `NVol(F) = 3! relvol(F)`.",
       "qualified_name": "Wills.star_iff",
       "axioms": [
@@ -924,7 +946,7 @@
     },
     {
       "name": "lem_4_3_arith",
-      "line": 294,
+      "line": 310,
       "claim": "Lemma 4.3 proof, l.262, the arithmetic: a 3-sphere f-vector with `f_1 ≥ 4f_0 - 10` and the Dehn-Sommerville",
       "qualified_name": "Wills.lem_4_3_arith",
       "axioms": [
@@ -943,8 +965,8 @@
     },
     {
       "name": "lem_4_3",
-      "line": 301,
-      "claim": "Lemma 4.3, l.257-259 (and l.149): if `P ∈ W^4_Λ` and `G ≤ 29`, then (star) holds with strict inequality;",
+      "line": 317,
+      "claim": "Lemma 4.3, l.257-259 (and l.149): if `P ∈ O^4_Λ` and `G ≤ 29`, then (star) holds with strict inequality;",
       "qualified_name": "Wills.lem_4_3",
       "axioms": [
         "Classical.choice",
@@ -970,7 +992,7 @@
     },
     {
       "name": "rem_4_4_only",
-      "line": 310,
+      "line": 326,
       "claim": "Remark 4.4, l.266: the lower bound theorem's bound `3G - 13` proves (star) (`> 6G - 102`) exactly when `G ≤ 29`.",
       "qualified_name": "Wills.rem_4_4_only",
       "axioms": [
@@ -985,7 +1007,7 @@
     },
     {
       "name": "M_finite",
-      "line": 316,
+      "line": 332,
       "claim": "l.275: `M(P)` is finite (`P` contains a ball around `0`).",
       "qualified_name": "Wills.M_finite",
       "axioms": [
@@ -1002,7 +1024,7 @@
     },
     {
       "name": "M_symm",
-      "line": 320,
+      "line": 336,
       "claim": "l.275: `M(P)` is symmetric.",
       "qualified_name": "Wills.M_symm",
       "axioms": [
@@ -1020,7 +1042,7 @@
     },
     {
       "name": "M_values",
-      "line": 324,
+      "line": 340,
       "claim": "l.275: `⟨u, x⟩ ∈ {-1, 0, 1}` for `u ∈ M(P)` and `x ∈ P ∩ ℤ⁴`.",
       "qualified_name": "Wills.M_values",
       "axioms": [
@@ -1040,8 +1062,8 @@
     },
     {
       "name": "thm_1_2_case_split",
-      "line": 330,
-      "claim": "The case split (l.275, Figure 2 l.277-288, l.373): every `P ∈ W⁴` is in Case I, Case II (`r(P) = 4`, no basis)",
+      "line": 346,
+      "claim": "The case split (l.275, Figure 2 l.277-288, l.373): every `P ∈ O⁴` is in Case I, Case II (`r(P) = 4`, no basis)",
       "qualified_name": "Wills.thm_1_2_case_split",
       "axioms": [
         "Classical.choice",
@@ -1057,7 +1079,7 @@
     },
     {
       "name": "case_I",
-      "line": 337,
+      "line": 353,
       "claim": "Case I, l.291 (and l.151 (a), Figure 2): if the rows of `U ∈ GL_4(ℤ)` lie in `M(P)`, then `UP ⊂ C_4`,",
       "qualified_name": "Wills.case_I",
       "axioms": [
@@ -1077,7 +1099,7 @@
     },
     {
       "name": "case_II_d_ge_2",
-      "line": 349,
+      "line": 365,
       "claim": "Case II, l.294: if the rows of `U` lie in `M(P)` and are linearly independent but `M(P)` contains no basis, then",
       "qualified_name": "Wills.case_II_d_ge_2",
       "axioms": [
@@ -1098,7 +1120,7 @@
     },
     {
       "name": "case_II_transfer",
-      "line": 356,
+      "line": 372,
       "claim": "Case II, l.294-296: `x ↦ Ux` carries `ℤ⁴` onto `Γ = U ℤ⁴` and `P` into `C_4`; `(P, ℤ⁴) ≅ (UP, Γ)`,",
       "qualified_name": "Wills.case_II_transfer",
       "axioms": [
@@ -1118,7 +1140,7 @@
     },
     {
       "name": "det_cube_le_16",
-      "line": 371,
+      "line": 387,
       "claim": "Hadamard's inequality for `{-1,0,1}` matrices of size 4 (used at l.298): `|det| ≤ 16`.",
       "qualified_name": "Wills.det_cube_le_16",
       "axioms": [
@@ -1135,7 +1157,7 @@
     },
     {
       "name": "case_II_d_le_16",
-      "line": 375,
+      "line": 391,
       "claim": "Case II, l.298: `d ≤ 16`.",
       "qualified_name": "Wills.case_II_d_le_16",
       "axioms": [
@@ -1155,7 +1177,7 @@
     },
     {
       "name": "index2_eq_gammaI",
-      "line": 380,
+      "line": 396,
       "claim": "Case II, l.300: the sublattices of `ℤ⁴` of index 2 are exactly the `Γ_I`, `I` nonempty.",
       "qualified_name": "Wills.index2_eq_gammaI",
       "axioms": [
@@ -1169,7 +1191,7 @@
     },
     {
       "name": "gammaI_mem_iff",
-      "line": 387,
+      "line": 403,
       "claim": "Case II, l.300: a point of `{-1,0,1}⁴` lies in `Γ_I` exactly when an even number of its coordinates in `I` are",
       "qualified_name": "Wills.gammaI_mem_iff",
       "axioms": [
@@ -1187,7 +1209,7 @@
     },
     {
       "name": "gammaI_counts",
-      "line": 392,
+      "line": 408,
       "claim": "Case II, l.302: `#(Γ_I ∩ {-1,0,1}⁴) = 3^{4-m} (3^m + (-1)^m)/2 = 27, 45, 39, 41` for `m = |I| = 1, 2, 3, 4`.",
       "qualified_name": "Wills.gammaI_counts",
       "axioms": [
@@ -1204,7 +1226,7 @@
     },
     {
       "name": "case_II_index2",
-      "line": 400,
+      "line": 416,
       "claim": "Case II, l.304 (and l.151 (b), Figure 2): since `27 < 31`, in Case II `d = 2` and `Γ = Γ_I` with",
       "qualified_name": "Wills.case_II_index2",
       "axioms": [
@@ -1212,11 +1234,8 @@
         "Quot.sound",
         "propext"
       ],
-      "hypotheses": [
-        "Comp2"
-      ],
+      "hypotheses": [],
       "binders": [
-        "hC2 : Wills.Comp2",
         "P : _",
         "hP : _",
         "hG : _",
@@ -1225,12 +1244,12 @@
         "hdet : _",
         "hno : _"
       ],
-      "status": "PROVED GIVEN Comp2"
+      "status": "PROVED"
     },
     {
       "name": "frame_D_pos",
-      "line": 406,
-      "claim": "Case III, l.307: `P ∈ W⁴` has a frame, and `D ≥ 1` since `P` spans `ℝ⁴`.",
+      "line": 422,
+      "claim": "Case III, l.307: `P ∈ O⁴` has a frame, and `D ≥ 1` since `P` spans `ℝ⁴`.",
       "qualified_name": "Wills.frame_D_pos",
       "axioms": [
         "Classical.choice",
@@ -1246,7 +1265,7 @@
     },
     {
       "name": "frame_lattice",
-      "line": 411,
+      "line": 427,
       "claim": "Case III, l.307: `x ↦ V⁻¹x` carries `ℤ⁴` onto `Λ = V⁻¹ℤ⁴ ⊇ ℤ⁴`, of index `D` over `ℤ⁴`.",
       "qualified_name": "Wills.frame_lattice",
       "axioms": [
@@ -1265,7 +1284,7 @@
     },
     {
       "name": "lem_5_1_i",
-      "line": 417,
+      "line": 433,
       "claim": "Lemma 5.1 (i), l.312: `S ⊂ Λ ∩ C_4`, `S = -S`, and `S` contains the unit vectors `±e_i`.",
       "qualified_name": "Wills.lem_5_1_i",
       "axioms": [
@@ -1284,7 +1303,7 @@
     },
     {
       "name": "lem_5_1_ii",
-      "line": 423,
+      "line": 439,
       "claim": "Lemma 5.1 (ii), l.313: `|det(s_1, …, s_4)| ≤ 1` for all `s_i ∈ S`.",
       "qualified_name": "Wills.lem_5_1_ii",
       "axioms": [
@@ -1305,7 +1324,7 @@
     },
     {
       "name": "lem_5_1_iii",
-      "line": 428,
+      "line": 444,
       "claim": "Lemma 5.1 (iii), l.314: `conv S ∩ Λ = S` and `int(conv S) ∩ Λ = {0}`.",
       "qualified_name": "Wills.lem_5_1_iii",
       "axioms": [
@@ -1324,7 +1343,7 @@
     },
     {
       "name": "lem_5_1_iv",
-      "line": 433,
+      "line": 449,
       "claim": "Lemma 5.1 (iv), l.315: `Λ` contains no point `c ≠ 0` with `|c_1| + ⋯ + |c_4| < 1`.",
       "qualified_name": "Wills.lem_5_1_iv",
       "axioms": [
@@ -1343,7 +1362,7 @@
     },
     {
       "name": "crosspoly_vol",
-      "line": 438,
+      "line": 454,
       "claim": "Lemma 5.1 (v) proof, l.323: the cross-polytope `conv{±v_i}` has volume `(2⁴/4!) D`.",
       "qualified_name": "Wills.crosspoly_vol",
       "axioms": [
@@ -1359,7 +1378,7 @@
     },
     {
       "name": "frame_D_le_24",
-      "line": 444,
+      "line": 460,
       "claim": "Lemma 5.1 (v) proof, l.323: `D ≤ 24`; if `D = 24` then `P = conv{±v_i}` and `vol P = 16`.",
       "qualified_name": "Wills.frame_D_le_24",
       "axioms": [
@@ -1378,8 +1397,8 @@
     },
     {
       "name": "half_translates_tile",
-      "line": 451,
-      "claim": "Lemma 5.1 (v) proof, l.323: if `P ∈ W⁴` has volume 16, the translates `½P + z`, `z ∈ ℤ⁴`, tile `ℝ⁴` (disjoint",
+      "line": 467,
+      "claim": "Lemma 5.1 (v) proof, l.323: if `P ∈ O⁴` has volume 16, the translates `½P + z`, `z ∈ ℤ⁴`, tile `ℝ⁴` (disjoint",
       "qualified_name": "Wills.half_translates_tile",
       "axioms": [
         "Classical.choice",
@@ -1396,7 +1415,7 @@
     },
     {
       "name": "lem_5_1_v",
-      "line": 456,
+      "line": 472,
       "claim": "Lemma 5.1 (v), l.316: `D ≤ 23`.",
       "qualified_name": "Wills.lem_5_1_v",
       "axioms": [
@@ -1418,7 +1437,7 @@
     },
     {
       "name": "frameLat_finite",
-      "line": 461,
+      "line": 477,
       "claim": "l.326: a lattice of index `D` over `ℤ⁴` lies in `(1/D)ℤ⁴`, so the set of frame lattices is finite.",
       "qualified_name": "Wills.frameLat_finite",
       "axioms": [
@@ -1432,7 +1451,7 @@
     },
     {
       "name": "signedPerm_frameLat",
-      "line": 467,
+      "line": 483,
       "claim": "l.326: the signed permutations act on the frame lattices.",
       "qualified_name": "Wills.signedPerm_frameLat",
       "axioms": [
@@ -1449,8 +1468,27 @@
       "status": "PROVED"
     },
     {
+      "name": "frame_dual",
+      "line": 489,
+      "claim": "l.326, the reasons of the transfer: `⟨u, Vs⟩ = ⟨Vᵀu, s⟩`, and `Vᵀℤ⁴ = Λ*`, the dual lattice of the frame lattice",
+      "qualified_name": "Wills.frame_dual",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [],
+      "binders": [
+        "P : _",
+        "hP : _",
+        "v : _",
+        "hv : _"
+      ],
+      "status": "PROVED"
+    },
+    {
       "name": "frame_M_transfer",
-      "line": 472,
+      "line": 495,
       "claim": "l.326: `u ∈ M(P)` iff `Vᵀu ∈ M(S)`, so `r(P) = r(S)`.",
       "qualified_name": "Wills.frame_M_transfer",
       "axioms": [
@@ -1469,7 +1507,7 @@
     },
     {
       "name": "case_III_transfer",
-      "line": 479,
+      "line": 502,
       "claim": "l.326 (and l.151 (c), Figure 2): in Case III, `(P, ℤ⁴) ≅ (conv S, Λ)` for one of the 39 representatives `Λ`",
       "qualified_name": "Wills.case_III_transfer",
       "axioms": [
@@ -1493,7 +1531,7 @@
     },
     {
       "name": "lem_6_1_i",
-      "line": 488,
+      "line": 511,
       "claim": "Lemma 6.1 (i), l.337: if `v` is a vertex of `conv Q`, then `Q' = Q \\ {v, -v}` is symmetric and saturated.",
       "qualified_name": "Wills.lem_6_1_i",
       "axioms": [
@@ -1517,7 +1555,7 @@
     },
     {
       "name": "lem_6_1_ii",
-      "line": 495,
+      "line": 518,
       "claim": "Lemma 6.1 (ii), l.338: if `S ⊊ Q` is symmetric and saturated, then some vertex `v` of `conv Q` is not in `S`,",
       "qualified_name": "Wills.lem_6_1_ii",
       "axioms": [
@@ -1543,8 +1581,8 @@
     },
     {
       "name": "walk_reach",
-      "line": 503,
-      "claim": "l.332, l.346: every saturated symmetric `S ⊆ Q` is reached from `Q` by deleting pairs of opposite vertices",
+      "line": 527,
+      "claim": "l.332, l.346: \"such a walk reaches every saturated symmetric subset of the full set\": every saturated symmetric",
       "qualified_name": "Wills.walk_reach",
       "axioms": [
         "Classical.choice",
@@ -1568,8 +1606,27 @@
       "status": "PROVED"
     },
     {
+      "name": "walk_symm",
+      "line": 536,
+      "claim": "l.332: \"This loses no class\": a symmetry `σ` (a signed permutation that preserves the lattice `Λ`) maps saturated",
+      "qualified_name": "Wills.walk_symm",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [],
+      "binders": [
+        "σ : _",
+        "Λ : _",
+        "Q : _",
+        "hσ : _"
+      ],
+      "status": "PROVED"
+    },
+    {
       "name": "hyperplane_le_27",
-      "line": 510,
+      "line": 545,
       "claim": "Computation 1, l.349: a hyperplane through `0` contains at most 27 points of `{-1,0,1}⁴`.",
       "qualified_name": "Wills.hyperplane_le_27",
       "axioms": [
@@ -1586,8 +1643,8 @@
     },
     {
       "name": "comp1_mem",
-      "line": 514,
-      "claim": "Computation 1, l.349: each input set spans `ℝ⁴`, so `conv S ∈ W⁴` by Lemma 2.1.",
+      "line": 549,
+      "claim": "Computation 1, l.349: each input set spans `ℝ⁴`, so `conv S ∈ O⁴` by Lemma 2.1.",
       "qualified_name": "Wills.comp1_mem",
       "axioms": [
         "Classical.choice",
@@ -1603,7 +1660,7 @@
     },
     {
       "name": "finitely_many_sets",
-      "line": 518,
+      "line": 553,
       "claim": "l.151 (d): in each case only finitely many sets of lattice points remain.",
       "qualified_name": "Wills.finitely_many_sets",
       "axioms": [
@@ -1617,7 +1674,7 @@
     },
     {
       "name": "comp2_d2_max",
-      "line": 523,
+      "line": 558,
       "claim": "Computation 2, l.353 (and l.302): the maximum for `d = 2` is `45`.",
       "qualified_name": "Wills.comp2_d2_max",
       "axioms": [
@@ -1630,8 +1687,22 @@
       "status": "PROVED"
     },
     {
+      "name": "comp2_result",
+      "line": 567,
+      "claim": "Computation 2, l.353 (used at l.304), its result: for every sublattice `B ℤ⁴` of index `d`, `2 ≤ d ≤ 16`, whose points",
+      "qualified_name": "Wills.comp2_result",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [],
+      "binders": [],
+      "status": "PROVED"
+    },
+    {
       "name": "gammaI_perm",
-      "line": 530,
+      "line": 571,
       "claim": "Computation 3, l.357: a permutation of coordinates carries `Γ_I` onto `Γ_J` when `|I| = |J|`.",
       "qualified_name": "Wills.gammaI_perm",
       "axioms": [
@@ -1649,8 +1720,8 @@
     },
     {
       "name": "comp3_mem",
-      "line": 535,
-      "claim": "Computation 3, l.357: each input `conv S` lies in `W^4_{Γ_m}`.",
+      "line": 576,
+      "claim": "Computation 3, l.357: each input `conv S` lies in `O^4_{Γ_m}`.",
       "qualified_name": "Wills.comp3_mem",
       "axioms": [
         "Classical.choice",
@@ -1667,7 +1738,7 @@
     },
     {
       "name": "frame_lat_GL",
-      "line": 539,
+      "line": 580,
       "claim": "Computation 4, l.361: for `U ∈ GL_4(ℤ)` the frame matrices `V` and `UV` give the same lattice `V⁻¹ℤ⁴`.",
       "qualified_name": "Wills.frame_lat_GL",
       "axioms": [
@@ -1686,8 +1757,8 @@
     },
     {
       "name": "M_antitone",
-      "line": 544,
-      "claim": "Computation 5, l.367: `M` reverses inclusion, so a subset of a set `Q'` with `r(Q') = 4` also has `r = 4`.",
+      "line": 585,
+      "claim": "Computation 5, l.369: `M` reverses inclusion, so a subset of a set `Q'` with `r(Q') = 4` also has `r = 4`.",
       "qualified_name": "Wills.M_antitone",
       "axioms": [
         "Classical.choice",
@@ -1705,8 +1776,8 @@
     },
     {
       "name": "comp5_maximal",
-      "line": 550,
-      "claim": "Computation 5, l.367: every `S ∈ A(Λ)` with `r(S) ≤ 3` lies in a maximal member `Q` of `A(Λ)` with `r(Q) ≤ 3`,",
+      "line": 592,
+      "claim": "RETIRED (Computation 5's walk; printed in earlier versions of the paper, last: text version 2.80; not printed in",
       "qualified_name": "Wills.comp5_maximal",
       "axioms": [
         "Classical.choice",
@@ -1724,7 +1795,7 @@
     },
     {
       "name": "sandwich_split",
-      "line": 557,
+      "line": 599,
       "claim": "Computation 5, l.369: every saturated symmetric set between `S⁻` and `S⁺` lies in exactly one branch: it",
       "qualified_name": "Wills.sandwich_split",
       "axioms": [
@@ -1749,8 +1820,8 @@
     },
     {
       "name": "sandwich_prune",
-      "line": 566,
-      "claim": "Computation 5, l.369: the pruning of the sandwich search is sound: no `S ∈ A(Λ)` contains a set `T` that violates",
+      "line": 609,
+      "claim": "Computation 5, l.369: the pruning of the sandwich search is sound (\"A pair `±y` in `S⁺` for which `S⁻ ∪ {±y}`",
       "qualified_name": "Wills.sandwich_prune",
       "axioms": [
         "Classical.choice",
@@ -1769,9 +1840,90 @@
       "status": "PROVED"
     },
     {
+      "name": "sandwich_start",
+      "line": 620,
+      "claim": "Computation 5, l.367: the two start sets of the sandwich search. For a frame",
+      "qualified_name": "Wills.sandwich_start",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [],
+      "binders": [
+        "Λ : _",
+        "hΛ : _"
+      ],
+      "status": "PROVED"
+    },
+    {
+      "name": "sandwich_include_member",
+      "line": 631,
+      "claim": "Computation 5, l.369: \"Each include step keeps\" `S⁻` in the family `S(Λ)` (printed `A(Λ)`), \"so these sets are",
+      "qualified_name": "Wills.sandwich_include_member",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [],
+      "binders": [
+        "Λ : _",
+        "Sm : _",
+        "hΛ : _",
+        "hSm : _",
+        "v : _",
+        "hv : _",
+        "h2 : _",
+        "h3 : _"
+      ],
+      "status": "PROVED"
+    },
+    {
+      "name": "sandwich_symm",
+      "line": 642,
+      "claim": "Computation 5, l.369: a pair `(S⁻, S⁺)` that a signed permutation `σ` preserving `Λ` \"carries onto a pair met",
+      "qualified_name": "Wills.sandwich_symm",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [],
+      "binders": [
+        "Λ : _",
+        "Sm : _",
+        "Sp : _",
+        "σ : _",
+        "hσ : _"
+      ],
+      "status": "PROVED"
+    },
+    {
+      "name": "poly_six_values",
+      "line": 654,
+      "claim": "l.330, Computation 5: for each set `S` that Computation 5 lists, the numbers of lattice points of `k conv S`",
+      "qualified_name": "Wills.poly_six_values",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [
+        "E2"
+      ],
+      "binders": [
+        "hE2 : Wills.EhrhartReciprocity",
+        "j : _",
+        "S : _",
+        "hS : _"
+      ],
+      "status": "PROVED GIVEN E2"
+    },
+    {
       "name": "thm_1_2",
-      "line": 577,
-      "claim": "Theorem 1.2, l.93-95, proof l.372-374 (and abstract, Table 1, l.87): every `P ∈ W⁴` has `g_1(P) ≤ 8` and",
+      "line": 670,
+      "claim": "Theorem 1.2, l.93-95, proof l.372-374 (and abstract, Table 1 l.76-77): every `P ∈ O⁴` has `g_1(P) ≤ 8` and",
       "qualified_name": "Wills.thm_1_2",
       "axioms": [
         "Classical.choice",
@@ -1785,7 +1937,6 @@
         "TRI",
         "TILE",
         "Comp1",
-        "Comp2",
         "Comp3",
         "Comp4",
         "Comp5"
@@ -1797,19 +1948,18 @@
         "hTRI : Wills.BoundaryTriangulation",
         "hTILE : Wills.CrossPolytopeNoTiling",
         "hC1 : Wills.Comp1",
-        "hC2 : Wills.Comp2",
         "hC3 : Wills.Comp3",
         "hC4 : Wills.Comp4",
         "hC5 : Wills.Comp5",
         "P : _",
         "hP : _"
       ],
-      "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp2, Comp3, Comp4, Comp5"
+      "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5"
     },
     {
       "name": "conj_n4",
-      "line": 585,
-      "claim": "Theorem 1.2, l.94 (and l.87, l.110): hence Conjecture 1.1 holds for `n = 4`.",
+      "line": 679,
+      "claim": "Abstract l.47, proof of Corollary 1.4 l.110, Figure 1's caption l.140: Conjecture 1.1 holds for `n = 4`",
       "qualified_name": "Wills.conj_n4",
       "axioms": [
         "Classical.choice",
@@ -1823,7 +1973,6 @@
         "TRI",
         "TILE",
         "Comp1",
-        "Comp2",
         "Comp3",
         "Comp4",
         "Comp5"
@@ -1835,17 +1984,16 @@
         "hTRI : Wills.BoundaryTriangulation",
         "hTILE : Wills.CrossPolytopeNoTiling",
         "hC1 : Wills.Comp1",
-        "hC2 : Wills.Comp2",
         "hC3 : Wills.Comp3",
         "hC4 : Wills.Comp4",
         "hC5 : Wills.Comp5"
       ],
-      "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp2, Comp3, Comp4, Comp5"
+      "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5"
     },
     {
       "name": "cor_1_4",
-      "line": 593,
-      "claim": "Corollary 1.4, l.105-111 (and abstract, Table 1 l.79, l.90, Figure 1): Wills' conjecture holds in `ℝⁿ`",
+      "line": 687,
+      "claim": "Corollary 1.4, l.105-111 (and abstract, Table 1 l.79, Figure 1 l.140): Wills' conjecture holds in `ℝⁿ`",
       "qualified_name": "Wills.cor_1_4",
       "axioms": [
         "Classical.choice",
@@ -1859,10 +2007,8 @@
         "E3",
         "TRI",
         "TILE",
-        "WIL3",
         "VolW",
         "Comp1",
-        "Comp2",
         "Comp3",
         "Comp4",
         "Comp5"
@@ -1874,21 +2020,19 @@
         "hE3 : Wills.FacetFormula",
         "hTRI : Wills.BoundaryTriangulation",
         "hTILE : Wills.CrossPolytopeNoTiling",
-        "hWIL3 : Wills.WillsDim3",
         "hVolW : Wills.VolW",
         "hC1 : Wills.Comp1",
-        "hC2 : Wills.Comp2",
         "hC3 : Wills.Comp3",
         "hC4 : Wills.Comp4",
         "hC5 : Wills.Comp5",
         "n : Nat",
         "hn : _"
       ],
-      "status": "PROVED GIVEN EHR, E1, E2, E3, TRI, TILE, WIL3, VolW, Comp1, Comp2, Comp3, Comp4, Comp5"
+      "status": "PROVED GIVEN EHR, E1, E2, E3, TRI, TILE, VolW, Comp1, Comp3, Comp4, Comp5"
     },
     {
       "name": "T_iso",
-      "line": 604,
+      "line": 698,
       "claim": "l.378: `T` is the 24-cell `conv{±e_a ± e_b}` written in the basis `e_1, e_2, e_3, ½(1,1,1,1)` of the lattice",
       "qualified_name": "Wills.T_iso",
       "axioms": [
@@ -1902,7 +2046,7 @@
     },
     {
       "name": "cell24_points",
-      "line": 611,
+      "line": 705,
       "claim": "l.389: every point of the 24-cell has `|x_i| ≤ 1` and `Σ|x_i| ≤ 2`; its lattice points other than `0` are the",
       "qualified_name": "Wills.cell24_points",
       "axioms": [
@@ -1915,8 +2059,22 @@
       "status": "PROVED"
     },
     {
+      "name": "cell24_eq_box",
+      "line": 712,
+      "claim": "l.389: the polytope `conv{±e_a ± e_b}` is the set of points `x` with `|x_i| ≤ 1` for all `i` and",
+      "qualified_name": "Wills.cell24_eq_box",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [],
+      "binders": [],
+      "status": "PROVED"
+    },
+    {
       "name": "cell24_lattice_points",
-      "line": 618,
+      "line": 717,
       "claim": "l.389: the lattice points of the 24-cell in `ℤ⁴ ∪ (ℤ⁴ + ½(1,1,1,1))` are `0`, the 24 vertices `±e_a ± e_b`,",
       "qualified_name": "Wills.cell24_lattice_points",
       "axioms": [
@@ -1930,7 +2088,7 @@
     },
     {
       "name": "cell24_hyperplanes",
-      "line": 630,
+      "line": 729,
       "claim": "l.389: each of the 48 nonzero points of `conv{±e_a ± e_b} ∩ (ℤ⁴ ∪ (ℤ⁴ + ½(1,1,1,1)))` has a coordinate `±1` or",
       "qualified_name": "Wills.cell24_hyperplanes",
       "axioms": [
@@ -1944,8 +2102,8 @@
     },
     {
       "name": "T_mem",
-      "line": 638,
-      "claim": "l.389: `T ∈ W⁴`.",
+      "line": 737,
+      "claim": "l.389: `T ∈ O⁴`.",
       "qualified_name": "Wills.T_mem",
       "axioms": [
         "Classical.choice",
@@ -1958,7 +2116,7 @@
     },
     {
       "name": "T_G",
-      "line": 642,
+      "line": 741,
       "claim": "l.389: `G(T) = 49`.",
       "qualified_name": "Wills.T_G",
       "axioms": [
@@ -1972,7 +2130,7 @@
     },
     {
       "name": "D4star_dual",
-      "line": 646,
+      "line": 745,
       "claim": "l.389: the dual lattice of `ℤ⁴ ∪ (ℤ⁴ + ½(1,1,1,1))` is `{y ∈ ℤ⁴ : y_1 + ⋯ + y_4 even}`.",
       "qualified_name": "Wills.D4star_dual",
       "axioms": [
@@ -1986,7 +2144,7 @@
     },
     {
       "name": "cell24_normals",
-      "line": 653,
+      "line": 752,
       "claim": "l.389: the vectors `±2e_i` and `(±1,±1,±1,±1)` lie in the dual lattice of `ℤ⁴ ∪ (ℤ⁴ + ½(1,1,1,1))` and are",
       "qualified_name": "Wills.cell24_normals",
       "axioms": [
@@ -2000,7 +2158,7 @@
     },
     {
       "name": "cell24_vol",
-      "line": 667,
+      "line": 766,
       "claim": "l.389: the 24-cell `conv{±e_a ± e_b}` has volume 8.",
       "qualified_name": "Wills.cell24_vol",
       "axioms": [
@@ -2020,7 +2178,7 @@
     },
     {
       "name": "T_vol",
-      "line": 671,
+      "line": 770,
       "claim": "l.389: `vol(T) = 16`.",
       "qualified_name": "Wills.T_vol",
       "axioms": [
@@ -2040,8 +2198,8 @@
     },
     {
       "name": "X_mem",
-      "line": 675,
-      "claim": "l.391: `0` is the only interior lattice point of `X`, so `X ∈ W⁴`.",
+      "line": 774,
+      "claim": "l.391: `0` is the only interior lattice point of `X`, so `X ∈ O⁴`.",
       "qualified_name": "Wills.X_mem",
       "axioms": [
         "Classical.choice",
@@ -2054,7 +2212,7 @@
     },
     {
       "name": "X_G",
-      "line": 679,
+      "line": 778,
       "claim": "l.391: `G(X) = 33`.",
       "qualified_name": "Wills.X_G",
       "axioms": [
@@ -2068,8 +2226,8 @@
     },
     {
       "name": "X_vol",
-      "line": 683,
-      "claim": "l.391 (and l.88): `vol(X) = (2⁴/4!) · 18 = 12`; the four vectors have determinant 18.",
+      "line": 782,
+      "claim": "l.391: `vol(X) = (2⁴/4!) · 18 = 12`; the four vectors have determinant 18.",
       "qualified_name": "Wills.X_vol",
       "axioms": [
         "Classical.choice",
@@ -2082,7 +2240,7 @@
     },
     {
       "name": "X_hyperplanes",
-      "line": 690,
+      "line": 789,
       "claim": "l.391: for each of the 16 sign vectors `ε`, the hyperplane through the four vertices `ε_i xVec i` of `X` is",
       "qualified_name": "Wills.X_hyperplanes",
       "axioms": [
@@ -2098,8 +2256,8 @@
     },
     {
       "name": "g3_of_dist",
-      "line": 699,
-      "claim": "l.393: if every facet of `P ∈ W⁴` has lattice distance `l` (in (E3)'s facet data), then `g_3 = σ/2 = 2g_4/l`;",
+      "line": 798,
+      "claim": "l.393: if every facet of `P ∈ O⁴` has lattice distance `l` (in (E3)'s facet data), then `g_3 = σ/2 = 2g_4/l`;",
       "qualified_name": "Wills.g3_of_dist",
       "axioms": [
         "Classical.choice",
@@ -2124,7 +2282,7 @@
     },
     {
       "name": "cube4_G_vol",
-      "line": 709,
+      "line": 808,
       "claim": "l.393: `C_4` has `G = 81` and volume 16.",
       "qualified_name": "Wills.cube4_G_vol",
       "axioms": [
@@ -2138,7 +2296,7 @@
     },
     {
       "name": "cube4_hyperplanes",
-      "line": 715,
+      "line": 814,
       "claim": "l.393: `±e_i` lies in the dual lattice `ℤ⁴` of `ℤ⁴` and is primitive there; the hyperplane `{±e_i ⬝ x = 1}` is",
       "qualified_name": "Wills.cube4_hyperplanes",
       "axioms": [
@@ -2156,7 +2314,7 @@
     },
     {
       "name": "poly_C4",
-      "line": 722,
+      "line": 821,
       "claim": "l.395: `L_{C_4} = 1 + 8k + 24k² + 32k³ + 16k⁴`.",
       "qualified_name": "Wills.poly_C4",
       "axioms": [
@@ -2170,7 +2328,7 @@
     },
     {
       "name": "poly_T",
-      "line": 727,
+      "line": 826,
       "claim": "l.395: `L_T = 1 + 8k + 8k² + 16k³ + 16k⁴`.",
       "qualified_name": "Wills.poly_T",
       "axioms": [
@@ -2190,7 +2348,7 @@
     },
     {
       "name": "poly_X",
-      "line": 732,
+      "line": 831,
       "claim": "l.395: `L_X = 1 + 8k + 4k² + 8k³ + 12k⁴`.",
       "qualified_name": "Wills.poly_X",
       "axioms": [
@@ -2210,7 +2368,7 @@
     },
     {
       "name": "M_T",
-      "line": 737,
+      "line": 836,
       "claim": "l.397: `M(T) = {0}`.",
       "qualified_name": "Wills.M_T",
       "axioms": [
@@ -2224,7 +2382,7 @@
     },
     {
       "name": "M_X",
-      "line": 741,
+      "line": 840,
       "claim": "l.399: `M(X) = {0}`.",
       "qualified_name": "Wills.M_X",
       "axioms": [
@@ -2238,8 +2396,8 @@
     },
     {
       "name": "henze_C4",
-      "line": 745,
-      "claim": "Results l.88: the cube satisfies Henze's root condition.",
+      "line": 844,
+      "claim": "Remark 7.3, l.415 (and l.85): the cube satisfies Henze's root condition.",
       "qualified_name": "Wills.henze_C4",
       "axioms": [
         "Classical.choice",
@@ -2252,8 +2410,8 @@
     },
     {
       "name": "henze_T_not",
-      "line": 749,
-      "claim": "Results l.88: `T` does not satisfy Henze's root condition.",
+      "line": 848,
+      "claim": "Remark 7.3, l.415 (and l.85): `T` does not satisfy Henze's root condition.",
       "qualified_name": "Wills.henze_T_not",
       "axioms": [
         "Classical.choice",
@@ -2270,8 +2428,8 @@
     },
     {
       "name": "henze_X_not",
-      "line": 753,
-      "claim": "Results l.88: `X` does not satisfy Henze's root condition.",
+      "line": 852,
+      "claim": "Remark 7.3, l.415 (and l.85): `X` does not satisfy Henze's root condition.",
       "qualified_name": "Wills.henze_X_not",
       "axioms": [
         "Classical.choice",
@@ -2287,8 +2445,47 @@
       "status": "PROVED GIVEN E2"
     },
     {
+      "name": "henze_vieta",
+      "line": 857,
+      "claim": "Remark 7.3, l.415: if all four roots of `L_P`, for `P ∈ O⁴`, have real part `-1/2`, they sum to `-2`, so",
+      "qualified_name": "Wills.henze_vieta",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [
+        "E1"
+      ],
+      "binders": [
+        "hE1 : Wills.EhrhartLeading",
+        "P : _",
+        "hP : _",
+        "hH : _"
+      ],
+      "status": "PROVED GIVEN E1"
+    },
+    {
+      "name": "henze_coeffs",
+      "line": 862,
+      "claim": "Remark 7.3, l.415: `L_T` has `g_3 = 16 ≠ 2 · 16` and `L_X` has `g_3 = 8 ≠ 2 · 12`.",
+      "qualified_name": "Wills.henze_coeffs",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [
+        "E2"
+      ],
+      "binders": [
+        "hE2 : Wills.EhrhartReciprocity"
+      ],
+      "status": "PROVED GIVEN E2"
+    },
+    {
       "name": "G_unimod_inv",
-      "line": 757,
+      "line": 868,
       "claim": "Proof of Theorem 7.1, l.403: unimodular maps preserve `G`.",
       "qualified_name": "Wills.G_unimod_inv",
       "axioms": [
@@ -2306,8 +2503,8 @@
     },
     {
       "name": "thm_7_1",
-      "line": 762,
-      "claim": "Theorem 7.1, l.383-385, proof l.403 (and abstract, Table 1 l.76, l.88): `P ∈ W⁴` has `g_1(P) = 8` if and only if",
+      "line": 873,
+      "claim": "Theorem 7.1, l.383-385, proof l.403 (and abstract, Table 1 l.76, l.85): `P ∈ O⁴` has `g_1(P) = 8` if and only if",
       "qualified_name": "Wills.thm_7_1",
       "axioms": [
         "Classical.choice",
@@ -2320,7 +2517,6 @@
         "TRI",
         "TILE",
         "Comp1",
-        "Comp2",
         "Comp3",
         "Comp4",
         "Comp5"
@@ -2331,27 +2527,170 @@
         "hTRI : Wills.BoundaryTriangulation",
         "hTILE : Wills.CrossPolytopeNoTiling",
         "hC1 : Wills.Comp1",
-        "hC2 : Wills.Comp2",
         "hC3 : Wills.Comp3",
         "hC4 : Wills.Comp4",
         "hC5 : Wills.Comp5"
       ],
-      "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp2, Comp3, Comp4, Comp5"
+      "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5"
+    },
+    {
+      "name": "cor_7_2",
+      "line": 885,
+      "claim": "Corollary 7.2, l.406-408, proof l.410-412 (and Table 1 l.77): `P ∈ O⁴` has `g_2(P) = 24` if and only if it is",
+      "qualified_name": "Wills.cor_7_2",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [
+        "E1",
+        "E2",
+        "E3",
+        "TRI",
+        "TILE",
+        "Comp1",
+        "Comp3",
+        "Comp4",
+        "Comp5"
+      ],
+      "binders": [
+        "hE1 : Wills.EhrhartLeading",
+        "hE2 : Wills.EhrhartReciprocity",
+        "hE3 : Wills.FacetFormula",
+        "hTRI : Wills.BoundaryTriangulation",
+        "hTILE : Wills.CrossPolytopeNoTiling",
+        "hC1 : Wills.Comp1",
+        "hC3 : Wills.Comp3",
+        "hC4 : Wills.Comp4",
+        "hC5 : Wills.Comp5",
+        "P : _",
+        "a : _"
+      ],
+      "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5"
+    },
+    {
+      "name": "fig3_g1_bound",
+      "line": 919,
+      "claim": "l.263 (after the proof of Lemma 4.3) and Figure 3, caption: the bound `g_1 ≤ (3G+7)/12` follows from the inequality `Σ_F NVol(F) ≥ 3G - 13` in the",
+      "qualified_name": "Wills.fig3_g1_bound",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [
+        "E2",
+        "E3",
+        "TRI"
+      ],
+      "binders": [
+        "hE2 : Wills.EhrhartReciprocity",
+        "hE3 : Wills.FacetFormula",
+        "hTRI : Wills.BoundaryTriangulation",
+        "B : _",
+        "hB : _",
+        "P : _",
+        "hP : _"
+      ],
+      "status": "PROVED GIVEN E2, E3, TRI"
+    },
+    {
+      "name": "fig3_bound_gt",
+      "line": 931,
+      "claim": "RETIRED (Figure 3's caption up to text version 2.30; no longer printed): for `G ≥ 31` the bound `(3G+7)/12`",
+      "qualified_name": "Wills.fig3_bound_gt",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [],
+      "binders": [
+        "Gc : Real",
+        "hG : _"
+      ],
+      "status": "PROVED"
+    },
+    {
+      "name": "fig3_lt_eight",
+      "line": 937,
+      "claim": "RETIRED (Figure 3's caption up to text version 2.30; no longer printed): by Theorems 1.2 and 7.1, every",
+      "qualified_name": "Wills.fig3_lt_eight",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [
+        "E1",
+        "E2",
+        "E3",
+        "TRI",
+        "TILE",
+        "Comp1",
+        "Comp3",
+        "Comp4",
+        "Comp5"
+      ],
+      "binders": [
+        "hE1 : Wills.EhrhartLeading",
+        "hE2 : Wills.EhrhartReciprocity",
+        "hE3 : Wills.FacetFormula",
+        "hTRI : Wills.BoundaryTriangulation",
+        "hTILE : Wills.CrossPolytopeNoTiling",
+        "hC1 : Wills.Comp1",
+        "hC3 : Wills.Comp3",
+        "hC4 : Wills.Comp4",
+        "hC5 : Wills.Comp5",
+        "P : _",
+        "hP : _",
+        "hne : _"
+      ],
+      "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5"
+    },
+    {
+      "name": "fig3_T_X_case_III",
+      "line": 946,
+      "claim": "Figure 3, caption: `T` and `X` belong to Case III (`r(P) ≤ 3`, as in the case split), since",
+      "qualified_name": "Wills.fig3_T_X_case_III",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [],
+      "binders": [],
+      "status": "PROVED"
+    },
+    {
+      "name": "cube4_case_I",
+      "line": 951,
+      "claim": "Figure 3, caption (fig_maxg1.tex l.32): `C_4` belongs to Case I: `M(C_4)` contains the basis `e_1, …, e_4` of",
+      "qualified_name": "Wills.cube4_case_I",
+      "axioms": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "hypotheses": [],
+      "binders": [],
+      "status": "PROVED"
     }
   ],
   "claim_map": "CLAIM_MAP.tsv",
   "printed_claim_counts": {
-    "PROVED": 45,
-    "PROVED GIVEN": 35,
+    "PROVED": 53,
+    "PROVED GIVEN": 42,
     "OPEN": 0,
     "VIOLATION": 0,
-    "CHECKED BY COMPUTER": 6,
-    "NOT FORMALIZED": 11
+    "CHECKED BY COMPUTER": 8,
+    "NOT FORMALIZED": 10
   },
   "printed_claims": [
     {
       "id": "AB1",
-      "description": "Abstract l.47 + Table 1 l.76-77 + Results l.87 + Theorem 1.2 l.93-95: every P in W^4 has g_1(P) <= 8 and g_2(P) <= 24; hence Conjecture 1.1 holds for n = 4",
+      "description": "Abstract l.47 (\"In dimension 4 the conjecture holds\") + Table 1 l.76-77 + Theorem 1.2 l.93-95: every P in O^4 has g_1(P) <= 8 and g_2(P) <= 24; the abstract: Conjecture 1.1 holds for n = 4",
       "required": [
         [
           "thm_1_2",
@@ -2362,8 +2701,8 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 54,
-      "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp2, Comp3, Comp4, Comp5",
+      "line": 78,
+      "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "thm_1_2",
         "conj_n4"
@@ -2371,7 +2710,7 @@
     },
     {
       "id": "AB2",
-      "description": "Abstract l.47 + Results l.88 + Table 1 l.76 + Theorem 7.1 l.383-385: up to unimodular equivalence, g_1(P) = 8 (P in W^4) only for the cube C_4, one explicit 24-cell T and one explicit cross-polytope X",
+      "description": "Abstract l.47 + l.85 (Theorem 7.1 \"determines the polytopes\" P in O^4 with g_1(P) = 8) + Table 1 l.76 (\"with equality exactly for C_4, a 24-cell T and a cross-polytope X, up to unimodular equivalence\") + Theorem 7.1 l.383-385: up to unimodular equivalence, g_1(P) = 8 (P in O^4) only for the cube C_4, one explicit 24-cell T and one explicit cross-polytope X",
       "required": [
         [
           "thm_7_1",
@@ -2382,8 +2721,8 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 55,
-      "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp2, Comp3, Comp4, Comp5",
+      "line": 79,
+      "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "thm_7_1",
         "T_iso"
@@ -2391,7 +2730,7 @@
     },
     {
       "id": "AB3",
-      "description": "Abstract l.47 + Results l.89 + Table 1 l.78: a polytope W in W^5 with 50 vertices in [-1,1]^5 has g_1(W) = 101/10 > 10",
+      "description": "Abstract l.47 + Table 1 l.78: a polytope W in O^5 with 50 vertices in [-1,1]^5 has g_1(W) = 101/10 > 10",
       "required": [
         [
           "thm_1_3_mem",
@@ -2404,7 +2743,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 56,
+      "line": 80,
       "status": "PROVED GIVEN E1, E2, VolW",
       "best_alternative": [
         "thm_1_3_mem",
@@ -2415,10 +2754,11 @@
     },
     {
       "id": "AB4",
-      "description": "Abstract l.47 + Results l.90 + Table 1 l.78-79 (\"counterexamples in every dimension n >= 5\") + Corollary 1.4 l.105-107 + Figure 1 (l.113-140, \"This paper\" row and the caption's second sentence): Wills' conjecture holds in R^n (n >= 1) iff n <= 4",
+      "description": "Abstract l.47 + Table 1 l.78-79 (\"counterexamples in every dimension n >= 5\") + Corollary 1.4 l.105-107 + Figure 1 (l.113-140, \"After this paper\" row and the caption's second sentence: \"This paper proves it for n = 4 (Theorem 1.2 and Corollary 1.4)\" and disproves it for every n >= 5): Wills' conjecture holds in R^n (n >= 1) iff n <= 4",
       "required": [
         [
-          "cor_1_4"
+          "cor_1_4",
+          "conj_n4"
         ]
       ],
       "pending": false,
@@ -2427,10 +2767,11 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 57,
-      "status": "PROVED GIVEN EHR, E1, E2, E3, TRI, TILE, WIL3, VolW, Comp1, Comp2, Comp3, Comp4, Comp5",
+      "line": 81,
+      "status": "PROVED GIVEN EHR, E1, E2, E3, TRI, TILE, VolW, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
-        "cor_1_4"
+        "cor_1_4",
+        "conj_n4"
       ]
     },
     {
@@ -2441,7 +2782,7 @@
       "support": [],
       "kind": "FACT EhrhartThm",
       "kind_status": "NOT FORMALIZED (fact EhrhartThm: no Ehrhart theory in Lean's library)",
-      "line": 58,
+      "line": 82,
       "status": "NOT FORMALIZED (fact EhrhartThm: no Ehrhart theory in Lean's library)",
       "best_alternative": []
     },
@@ -2459,7 +2800,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 59,
+      "line": 83,
       "status": "PROVED",
       "best_alternative": [
         "g0_eq_one"
@@ -2473,7 +2814,7 @@
       "support": [],
       "kind": "FACT EhrhartLeading",
       "kind_status": "NOT FORMALIZED (fact EhrhartLeading: no Ehrhart theory in Lean's library)",
-      "line": 60,
+      "line": 84,
       "status": "NOT FORMALIZED (fact EhrhartLeading: no Ehrhart theory in Lean's library)",
       "best_alternative": []
     },
@@ -2490,7 +2831,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 61,
+      "line": 85,
       "status": "PROVED",
       "best_alternative": [
         "minkowski_first",
@@ -2499,7 +2840,7 @@
     },
     {
       "id": "I7",
-      "description": "l.58: C_n belongs to W^n, L_{C_n}(k) = (2k+1)^n, so g_i(C_n) = 2^i binom(n,i)",
+      "description": "l.58: C_n belongs to O^n, L_{C_n}(k) = (2k+1)^n, so g_i(C_n) = 2^i binom(n,i)",
       "required": [
         [
           "cube_mem",
@@ -2511,7 +2852,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 62,
+      "line": 86,
       "status": "PROVED",
       "best_alternative": [
         "cube_mem",
@@ -2521,7 +2862,7 @@
     },
     {
       "id": "I9a",
-      "description": "l.67: for i = 0 there is equality (g_0(P) = g_0(C_n) for P in W^n)",
+      "description": "l.67: for i = 0 there is equality (g_0(P) = g_0(C_n) for P in O^n)",
       "required": [
         [
           "conj_i0"
@@ -2531,7 +2872,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 63,
+      "line": 87,
       "status": "PROVED",
       "best_alternative": [
         "conj_i0"
@@ -2539,7 +2880,7 @@
     },
     {
       "id": "I9b",
-      "description": "l.67: for i = n the inequality is Minkowski's theorem (g_n(P) <= 2^n for P in W^n)",
+      "description": "l.67: for i = n the inequality is Minkowski's theorem (g_n(P) <= 2^n for P in O^n)",
       "required": [
         [
           "conj_in"
@@ -2549,7 +2890,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 64,
+      "line": 88,
       "status": "PROVED GIVEN E1",
       "best_alternative": [
         "conj_in"
@@ -2568,7 +2909,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 65,
+      "line": 89,
       "status": "PROVED GIVEN E1, E3",
       "best_alternative": [
         "conj_in1",
@@ -2594,8 +2935,8 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 66,
-      "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp2, Comp3, Comp4, Comp5",
+      "line": 90,
+      "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "thm_1_2"
       ]
@@ -2612,7 +2953,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 67,
+      "line": 91,
       "status": "PROVED",
       "best_alternative": [
         "finitely_many_sets"
@@ -2620,7 +2961,7 @@
     },
     {
       "id": "T13a",
-      "description": "Theorem 1.3 l.98: W belongs to W^5; proof l.216: the 50 points lie in {-1,0,1}^5, form a symmetric set and span R^5, so Lemma 2.1 applies",
+      "description": "Theorem 1.3 l.98: W belongs to O^5; proof l.216: the 50 points lie in {-1,0,1}^5, form a symmetric set and span R^5, so Lemma 2.1 applies",
       "required": [
         [
           "thm_1_3_mem",
@@ -2633,7 +2974,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 68,
+      "line": 92,
       "status": "PROVED",
       "best_alternative": [
         "thm_1_3_mem",
@@ -2654,7 +2995,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 69,
+      "line": 93,
       "status": "PROVED GIVEN EHR, E1, E2, VolW",
       "best_alternative": [
         "thm_1_3_poly"
@@ -2674,7 +3015,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 70,
+      "line": 94,
       "status": "PROVED GIVEN E1, E2, VolW",
       "best_alternative": [
         "thm_1_3_g1"
@@ -2682,7 +3023,7 @@
     },
     {
       "id": "T13d",
-      "description": "Theorem 1.3 l.102 + proof l.222 + abstract l.47 \"products with segments then give counterexamples in every dimension n >= 6\" + l.143 \"Products with segments carry the example to every higher dimension\": for every n >= 6, W x C_{n-5} in W^n and g_1 = 101/10 + 2(n-5) = 2n + 1/10 > 2n = g_1(C_n), since g_1(C_m) = 2m",
+      "description": "Theorem 1.3 l.102 + proof l.222 + abstract l.47 \"products with segments then give counterexamples in every dimension n >= 6\" + l.143 \"Products with segments carry the example to every higher dimension\": for every n >= 6, W x C_{n-5} in O^n and g_1 = 101/10 + 2(n-5) = 2n + 1/10 > 2n = g_1(C_n), since g_1(C_m) = 2m",
       "required": [
         [
           "thm_1_3_prod"
@@ -2695,7 +3036,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 71,
+      "line": 95,
       "status": "PROVED GIVEN EHR, E1, E2, VolW",
       "best_alternative": [
         "thm_1_3_prod"
@@ -2713,7 +3054,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 72,
+      "line": 96,
       "status": "PROVED",
       "best_alternative": [
         "tab2_vertices"
@@ -2731,7 +3072,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 73,
+      "line": 97,
       "status": "PROVED",
       "best_alternative": [
         "W_facets"
@@ -2745,7 +3086,7 @@
       "support": [],
       "kind": "NOT-FORMALIZED faces",
       "kind_status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
-      "line": 74,
+      "line": 98,
       "status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -2763,7 +3104,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 75,
+      "line": 99,
       "status": "PROVED",
       "best_alternative": [
         "w_G",
@@ -2779,7 +3120,7 @@
       "support": [],
       "kind": "CHECK VolW",
       "kind_status": "CHECKED BY COMPUTER (VolW), NOT proved in Lean: ./reproduce.sh theorem-1.3",
-      "line": 76,
+      "line": 100,
       "status": "CHECKED BY COMPUTER (VolW), NOT proved in Lean: ./reproduce.sh theorem-1.3",
       "best_alternative": []
     },
@@ -2793,10 +3134,12 @@
         ]
       ],
       "pending": false,
-      "support": [],
+      "support": [
+        "w_int2_all"
+      ],
       "kind": null,
       "kind_status": null,
-      "line": 77,
+      "line": 101,
       "status": "PROVED GIVEN E1, E2, VolW",
       "best_alternative": [
         "w_A",
@@ -2804,26 +3147,8 @@
       ]
     },
     {
-      "id": "W3c",
-      "description": "l.220: int(2W) ⊂ (-2,2)^5, so the lattice points of int(2W) lie in {-1,0,1}^5, and since 243 = 3^5, int(2W) contains all of them",
-      "required": [
-        [
-          "w_int2_all"
-        ]
-      ],
-      "pending": false,
-      "support": [],
-      "kind": null,
-      "kind_status": null,
-      "line": 78,
-      "status": "PROVED",
-      "best_alternative": [
-        "w_int2_all"
-      ]
-    },
-    {
       "id": "W3d",
-      "description": "l.220: the polynomial is determined by L_W(0) = 1 and L_W(1..5) = 117, 1815, 10765, 39927, 112639; L_W(6) = 265705 agrees with it",
+      "description": "l.220: the polynomial is determined by L_W(0) = 1 and L_W(1..5) = 117, 1815, 10765, 39927, 112639 (the row also states L_W(6) = 265705, which v2.80 no longer prints)",
       "required": [
         [
           "w_L3456",
@@ -2834,7 +3159,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 79,
+      "line": 102,
       "status": "PROVED GIVEN EHR, E1, E2, VolW",
       "best_alternative": [
         "w_L3456",
@@ -2843,7 +3168,7 @@
     },
     {
       "id": "C14",
-      "description": "Corollary 1.4 proof l.109-111 + Results l.87 \"With Wills' bound g_3 <= 32 and Minkowski's bound g_4 <= 16, this proves Conjecture 1.1 for n = 4\": n <= 3 Wills' theorem; n = 4: g_0 = 1 by (E1), g_3 <= 32, g_4 <= 16 by Minkowski, g_1, g_2 by Theorem 1.2; n >= 5: Theorem 1.3 gives a counterexample (route differences in the header)",
+      "description": "Corollary 1.4 proof l.109-111: n <= 3 Wills' theorem; n = 4: g_0 = 1 by (E1), g_3 <= 32, g_4 <= 16 by Minkowski, g_1, g_2 by Theorem 1.2; n >= 5: Theorem 1.3 gives a counterexample (route differences in the header)",
       "required": [
         [
           "cor_1_4",
@@ -2853,13 +3178,14 @@
       "pending": false,
       "support": [
         "conj_le_two",
+        "wills_dim3",
         "prop_4_2_g3",
         "prop_4_2_g4"
       ],
       "kind": null,
       "kind_status": null,
-      "line": 80,
-      "status": "PROVED GIVEN EHR, E1, E2, E3, TRI, TILE, WIL3, VolW, Comp1, Comp2, Comp3, Comp4, Comp5",
+      "line": 103,
+      "status": "PROVED GIVEN EHR, E1, E2, E3, TRI, TILE, VolW, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "cor_1_4",
         "conj_n4"
@@ -2867,15 +3193,21 @@
     },
     {
       "id": "WIL3",
-      "description": "Corollary 1.4 proof l.110 + l.67: Wills' theorem for n = 3 ([Wil81, Theorem (ii)]): g_i(P) <= 2^i binom(3,i) for every P in W^3",
-      "required": [],
+      "description": "Corollary 1.4 proof l.110 + l.67: Wills' theorem for n = 3 ([Wil81, Theorem (i), (ii)]): g_i(P) <= 2^i binom(3,i) for every P in O^3; the paper cites it, Lean proves it from the facts E1, E2, E3 (g_1 <= 6 from L(-1) = -1, 2 g_2 <= 3 g_3 and g_3 <= 8)",
+      "required": [
+        [
+          "wills_dim3"
+        ]
+      ],
       "pending": false,
       "support": [],
-      "kind": "FACT WillsDim3",
-      "kind_status": "NOT FORMALIZED (fact WillsDim3: no Ehrhart theory in Lean's library)",
-      "line": 81,
-      "status": "NOT FORMALIZED (fact WillsDim3: no Ehrhart theory in Lean's library)",
-      "best_alternative": []
+      "kind": null,
+      "kind_status": null,
+      "line": 104,
+      "status": "PROVED GIVEN E1, E2, E3",
+      "best_alternative": [
+        "wills_dim3"
+      ]
     },
     {
       "id": "S2a",
@@ -2891,7 +3223,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 82,
+      "line": 105,
       "status": "PROVED",
       "best_alternative": [
         "iso_count"
@@ -2909,7 +3241,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 83,
+      "line": 106,
       "status": "PROVED",
       "best_alternative": [
         "iso_Zn_GL"
@@ -2923,19 +3255,19 @@
       "support": [],
       "kind": "FACT EhrhartReciprocity",
       "kind_status": "NOT FORMALIZED (fact EhrhartReciprocity: no Ehrhart theory in Lean's library)",
-      "line": 84,
+      "line": 107,
       "status": "NOT FORMALIZED (fact EhrhartReciprocity: no Ehrhart theory in Lean's library)",
       "best_alternative": []
     },
     {
       "id": "E3",
-      "description": "(E3) l.163 + l.167 + l.56 (g_{n-1} is half the lattice surface area): facets, primitive normals u_F, b_F integers (positive, the lattice distance, when 0 in int P), relvol; g_{n-1} = sigma/2 and vol/det Λ = (1/n) Σ b_F relvol(F) when 0 in int P",
+      "description": "(E3) l.163 + l.167 + l.56 (g_{n-1} is half the lattice surface area): facets, primitive normals u_F, b_F integers (positive, the lattice distance, when 0 in int P), relvol(F) the (n-1)-dimensional volume of F \"measured so that a fundamental domain of the lattice\" Λ ∩ aff(F-F) \"has volume 1\"; g_{n-1} = sigma/2 and vol/det Λ = (1/n) Σ b_F relvol(F) when 0 in int P",
       "required": [],
       "pending": false,
       "support": [],
       "kind": "FACT FacetFormula",
       "kind_status": "NOT FORMALIZED (fact FacetFormula: no facets of polytopes in Lean's library)",
-      "line": 85,
+      "line": 108,
       "status": "NOT FORMALIZED (fact FacetFormula: no facets of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -2951,7 +3283,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 86,
+      "line": 109,
       "status": "PROVED",
       "best_alternative": [
         "e4_prod_count"
@@ -2959,7 +3291,7 @@
     },
     {
       "id": "S2c",
-      "description": "l.170: a polytope in W^n_Λ has dimension n, because 0 is an interior point",
+      "description": "l.170: a polytope in O^n_Λ has dimension n, because 0 is an interior point",
       "required": [
         [
           "inW_full_dim"
@@ -2969,7 +3301,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 87,
+      "line": 110,
       "status": "PROVED",
       "best_alternative": [
         "inW_full_dim"
@@ -2987,7 +3319,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 88,
+      "line": 111,
       "status": "PROVED",
       "best_alternative": [
         "G_odd"
@@ -2995,7 +3327,7 @@
     },
     {
       "id": "L21",
-      "description": "Lemma 2.1 l.172-178: Y ⊂ {-1,0,1}^n, Y = -Y, conv Y of dimension n ⇒ conv Y in W^n",
+      "description": "Lemma 2.1 l.172-178: Y ⊂ {-1,0,1}^n, Y = -Y, conv Y of dimension n ⇒ conv Y in O^n",
       "required": [
         [
           "lem_2_1"
@@ -3005,7 +3337,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 89,
+      "line": 112,
       "status": "PROVED",
       "best_alternative": [
         "lem_2_1"
@@ -3013,7 +3345,7 @@
     },
     {
       "id": "L21s",
-      "description": "l.180: the same for a sublattice Γ ⊆ Z^n: S ⊆ Γ ∩ C_n symmetric spanning R^n ⇒ conv S in W^n_Γ",
+      "description": "l.180: the same for a sublattice Γ ⊆ Z^n: S ⊆ Γ ∩ C_n symmetric spanning R^n ⇒ conv S in O^n_Γ",
       "required": [
         [
           "lem_2_1_sub"
@@ -3023,7 +3355,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 90,
+      "line": 113,
       "status": "PROVED",
       "best_alternative": [
         "lem_2_1_sub"
@@ -3031,7 +3363,7 @@
     },
     {
       "id": "L22",
-      "description": "Lemma 2.2 l.182-188: P in W^p, Q in W^q ⇒ PxQ in W^{p+q} and g_1(PxQ) = g_1(P) + g_1(Q); proof: PxQ symmetric lattice polytope, int(PxQ) = int P x int Q",
+      "description": "Lemma 2.2 l.182-188: P in O^p, Q in O^q ⇒ PxQ in O^{p+q} and g_1(PxQ) = g_1(P) + g_1(Q); proof: PxQ symmetric lattice polytope, int(PxQ) = int P x int Q",
       "required": [
         [
           "lem_2_2"
@@ -3044,7 +3376,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 91,
+      "line": 114,
       "status": "PROVED GIVEN EHR",
       "best_alternative": [
         "lem_2_2"
@@ -3052,7 +3384,7 @@
     },
     {
       "id": "P31",
-      "description": "Prop 3.1 l.200-204 + l.143 (\"its linear coefficient is determined by four numbers ... (Proposition 3.1)\"): P in W^5 ⇒ g_1(P) = (4(G(P)+1) + 24 vol(P) - A(P))/6, A(P) = ½(#(2P ∩ Z^5) + #(int(2P) ∩ Z^5)); proof l.208-212",
+      "description": "Prop 3.1 l.200-204 + l.143 (\"its linear coefficient is determined by four numbers ... (Proposition 3.1)\"): P in O^5 ⇒ g_1(P) = (4(G(P)+1) + 24 vol(P) - A(P))/6, A(P) = ½(#(2P ∩ Z^5) + #(int(2P) ∩ Z^5)); proof l.208-212",
       "required": [
         [
           "prop_3_1"
@@ -3062,7 +3394,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 92,
+      "line": 115,
       "status": "PROVED GIVEN E1, E2",
       "best_alternative": [
         "prop_3_1"
@@ -3070,7 +3402,7 @@
     },
     {
       "id": "L41",
-      "description": "Lemma 4.1 l.231-237: P in W^4_Λ ⇒ g_1 + g_3 = g_2 + g_4 = (G-1)/2",
+      "description": "Lemma 4.1 l.231-237: P in O^4_Λ ⇒ g_1 + g_3 = g_2 + g_4 = (G-1)/2",
       "required": [
         [
           "lem_4_1"
@@ -3080,7 +3412,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 93,
+      "line": 116,
       "status": "PROVED GIVEN E2",
       "best_alternative": [
         "lem_4_1"
@@ -3088,7 +3420,7 @@
     },
     {
       "id": "K0",
-      "description": "l.145: since P in W^4 has exactly one interior lattice point, L_P(-1) = 1",
+      "description": "l.145: since P in O^4 has exactly one interior lattice point, L_P(-1) = 1",
       "required": [
         [
           "recip_m1_dim4"
@@ -3098,7 +3430,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 94,
+      "line": 117,
       "status": "PROVED GIVEN E2",
       "best_alternative": [
         "recip_m1_dim4"
@@ -3116,7 +3448,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 95,
+      "line": 118,
       "status": "PROVED GIVEN E1",
       "best_alternative": [
         "prop_4_2_g4"
@@ -3134,7 +3466,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 96,
+      "line": 119,
       "status": "PROVED GIVEN E1, E3",
       "best_alternative": [
         "prop_4_2_g3"
@@ -3152,7 +3484,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 97,
+      "line": 120,
       "status": "PROVED GIVEN E2, E3",
       "best_alternative": [
         "prop_4_2_iff"
@@ -3160,7 +3492,7 @@
     },
     {
       "id": "P42d",
-      "description": "Prop 4.2 l.244 + l.149 \"this inequality also gives g_2 <= 24\": if g_1 <= 8 then g_2 <= g_4 + 8 <= 24",
+      "description": "Prop 4.2 l.244 + l.149 \"this inequality also gives g_2(P) <= 24\": if g_1 <= 8 then g_2 <= g_4 + 8 <= 24",
       "required": [
         [
           "prop_4_2_g2"
@@ -3170,7 +3502,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 98,
+      "line": 121,
       "status": "PROVED GIVEN E1, E2, E3",
       "best_alternative": [
         "prop_4_2_g2"
@@ -3178,7 +3510,7 @@
     },
     {
       "id": "K1",
-      "description": "l.251: Theorem 1.2 is equivalent to the key inequality G <= sigma + 17 on W^4",
+      "description": "l.251: Theorem 1.2 is equivalent to the key inequality G <= sigma + 17 on O^4",
       "required": [
         [
           "key_equiv"
@@ -3188,7 +3520,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 99,
+      "line": 122,
       "status": "PROVED GIVEN E1, E2, E3",
       "best_alternative": [
         "key_equiv"
@@ -3196,13 +3528,13 @@
     },
     {
       "id": "K2",
-      "description": "l.251 + Lemma 4.3 proof l.262: a boundary triangulation using all G-1 boundary lattice points, every tetrahedron a lattice tetrahedron in a facet, of normalized volume a positive integer, Σ NVol >= f_3; a triangulated 3-sphere; Walkup's lower bound theorem f_1 >= 4f_0 - 10; the Dehn-Sommerville relations",
+      "description": "l.251 + Lemma 4.3 proof l.262: a boundary triangulation using all G-1 boundary lattice points, every tetrahedron a lattice tetrahedron in a facet, of normalized volume a positive integer, Σ NVol >= f_3; from \"a triangulation of\" P \"whose vertices are exactly the points of\" P ∩ Λ, which exists, \"for example by strong pulling\" ([HPPS21, Lemma 2.1(2)], \"applied in the coordinates of a basis of\" Λ; its words in AUDIT_NOTES.md section 2); \"Its faces that lie in the boundary of\" P form Δ, a triangulated 3-sphere; Walkup's lower bound theorem f_1 >= 4f_0 - 10; the Dehn-Sommerville relations",
       "required": [],
       "pending": false,
       "support": [],
       "kind": "FACT BoundaryTriangulation",
       "kind_status": "NOT FORMALIZED (fact BoundaryTriangulation: no triangulations of spheres, f-vectors and facets of polytopes in Lean's library)",
-      "line": 100,
+      "line": 123,
       "status": "NOT FORMALIZED (fact BoundaryTriangulation: no triangulations of spheres, f-vectors and facets of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -3218,7 +3550,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 101,
+      "line": 124,
       "status": "PROVED GIVEN E3",
       "best_alternative": [
         "star_iff"
@@ -3226,7 +3558,7 @@
     },
     {
       "id": "L43",
-      "description": "Lemma 4.3 l.257-259 + l.149 + Figure 2 box \"G <= 29: Lemma 4.3\": P in W^4_Λ, G <= 29 ⇒ (star) holds strictly; hence g_1 < 8",
+      "description": "Lemma 4.3 l.257-259 + l.149 + Figure 2 box \"G <= 29: Lemma 4.3\": P in O^4_Λ, G <= 29 ⇒ (star) holds strictly; hence g_1 < 8",
       "required": [
         [
           "lem_4_3"
@@ -3236,7 +3568,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 102,
+      "line": 125,
       "status": "PROVED GIVEN E2, E3, TRI",
       "best_alternative": [
         "lem_4_3"
@@ -3255,7 +3587,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 103,
+      "line": 126,
       "status": "PROVED GIVEN E2, E3, TRI",
       "best_alternative": [
         "lem_4_3_arith",
@@ -3274,7 +3606,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 104,
+      "line": 127,
       "status": "PROVED",
       "best_alternative": [
         "rem_4_4_only"
@@ -3294,7 +3626,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 105,
+      "line": 128,
       "status": "PROVED",
       "best_alternative": [
         "M_finite",
@@ -3314,7 +3646,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 106,
+      "line": 129,
       "status": "PROVED",
       "best_alternative": [
         "case_I"
@@ -3322,7 +3654,7 @@
     },
     {
       "id": "CIIa",
-      "description": "Case II l.294-296: d = |det U| >= 2 (else M(P) contains a basis); x -> Ux carries Z^4 onto Γ = UZ^4 of index d and P into C_4; (P,Z^4) ≅ (UP,Γ), UP in W^4_Γ, L_{UP,Γ} = L_P, UP = conv S, S = UP ∩ Γ Γ-saturated symmetric ⊂ Γ ∩ {-1,0,1}^4; 31 <= G(P) <= #(Γ ∩ {-1,0,1}^4)",
+      "description": "Case II l.294-296: d = |det U| >= 2 (else M(P) contains a basis); x -> Ux carries Z^4 onto Γ = UZ^4 of index d and P into C_4; (P,Z^4) ≅ (UP,Γ), UP in O^4_Γ, L_{UP,Γ} = L_P, UP = conv S, S = UP ∩ Γ Γ-saturated symmetric ⊂ Γ ∩ {-1,0,1}^4; 31 <= G(P) <= #(Γ ∩ {-1,0,1}^4)",
       "required": [
         [
           "case_II_transfer",
@@ -3333,7 +3665,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 107,
+      "line": 130,
       "status": "PROVED",
       "best_alternative": [
         "case_II_transfer",
@@ -3354,7 +3686,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 108,
+      "line": 131,
       "status": "PROVED",
       "best_alternative": [
         "case_II_d_le_16"
@@ -3372,7 +3704,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 109,
+      "line": 132,
       "status": "PROVED",
       "best_alternative": [
         "index2_eq_gammaI"
@@ -3391,7 +3723,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 110,
+      "line": 133,
       "status": "PROVED",
       "best_alternative": [
         "gammaI_mem_iff",
@@ -3411,8 +3743,8 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 111,
-      "status": "PROVED GIVEN Comp2",
+      "line": 134,
+      "status": "PROVED",
       "best_alternative": [
         "case_II_index2",
         "case_II_transfer"
@@ -3431,7 +3763,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 112,
+      "line": 135,
       "status": "PROVED",
       "best_alternative": [
         "frame_D_pos",
@@ -3454,7 +3786,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 113,
+      "line": 136,
       "status": "PROVED GIVEN TILE",
       "best_alternative": [
         "lem_5_1_i",
@@ -3466,9 +3798,13 @@
     },
     {
       "id": "L51p",
-      "description": "Lemma 5.1 proof l.321-323: determinants divided by D; Cramer |c_i| <= 1; (iv) the open cross-polytope lies in int conv{±e_i}; (v) vol conv{±v_i} = (2^4/4!) D = 2D/3 <= vol P <= 16, so D <= 24; D = 24 ⇒ P = conv{±v_i}, vol P = 16; the translates P/2 + z have disjoint interiors and density 1, so they tile R^4",
+      "description": "Lemma 5.1 proof l.321-323: (ii) for x_1..x_4 in P ∩ Z^4, |det(V^{-1}x_1, ..., V^{-1}x_4)| = |det(x_1, ..., x_4)|/D <= 1 by the choice of v_1..v_4 (the route of the proof of lem_5_1_ii); (i) Cramer |c_i| <= 1; (iii) x -> V^{-1}x carries the statements on P ∩ Z^4 to S and Λ; (iv) the open cross-polytope lies in int conv{±e_i}; (v) vol conv{±v_i} = (2^4/4!) D = 2D/3 <= vol P <= 16, so D <= 24; D = 24 ⇒ P = conv{±v_i}, vol P = 16; the translates P/2 + z have disjoint interiors and density 1, so they tile R^4",
       "required": [
         [
+          "lem_5_1_i",
+          "lem_5_1_ii",
+          "lem_5_1_iii",
+          "lem_5_1_iv",
           "lem_5_1_v",
           "crosspoly_vol",
           "frame_D_le_24",
@@ -3479,9 +3815,13 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 114,
+      "line": 137,
       "status": "PROVED GIVEN TILE",
       "best_alternative": [
+        "lem_5_1_i",
+        "lem_5_1_ii",
+        "lem_5_1_iii",
+        "lem_5_1_iv",
         "lem_5_1_v",
         "crosspoly_vol",
         "frame_D_le_24",
@@ -3490,13 +3830,13 @@
     },
     {
       "id": "L51t",
-      "description": "Lemma 5.1 proof l.323: a convex polytope that tiles space by translations has centrally symmetric facets, but the facets of a cross-polytope are tetrahedra",
+      "description": "Lemma 5.1 proof l.323: \"a convex polytope that tiles space by lattice translations has centrally symmetric facets\" (the fact is stated for the tiling by Z^4 only), but the facets of a cross-polytope are tetrahedra",
       "required": [],
       "pending": false,
       "support": [],
       "kind": "FACT CrossPolytopeNoTiling",
       "kind_status": "NOT FORMALIZED (fact CrossPolytopeNoTiling: no tilings and facets of polytopes in Lean's library)",
-      "line": 115,
+      "line": 138,
       "status": "NOT FORMALIZED (fact CrossPolytopeNoTiling: no tilings and facets of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -3513,7 +3853,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 116,
+      "line": 139,
       "status": "PROVED",
       "best_alternative": [
         "frameLat_finite",
@@ -3522,7 +3862,7 @@
     },
     {
       "id": "LM",
-      "description": "l.326: u in M(P) iff V^T u in M(S), so r(P) = r(S)",
+      "description": "l.326: \"a vector\" u in Z^4 \"lies in\" M(P) \"if and only if\" V^T u \"lies in\" M(S); \"so\" r(P) = r(S)",
       "required": [
         [
           "frame_M_transfer"
@@ -3532,15 +3872,61 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 117,
+      "line": 140,
       "status": "PROVED",
       "best_alternative": [
         "frame_M_transfer"
       ]
     },
     {
+      "id": "LMd",
+      "description": "l.326: the two reasons of claim LM (\"Since\"): <u,Vs> = <V^T u,s>, \"and\" V^T Z^4 = Λ*, the dual lattice of the frame lattice Λ = V^{-1}Z^4 (V = colMat v)",
+      "required": [
+        [
+          "frame_dual"
+        ]
+      ],
+      "pending": false,
+      "support": [],
+      "kind": null,
+      "kind_status": null,
+      "line": 141,
+      "status": "PROVED",
+      "best_alternative": [
+        "frame_dual"
+      ]
+    },
+    {
+      "id": "L51r",
+      "description": "l.326: \"Lemma 5.1 does not use\" r(P) <= 3, \"so this reduction applies to every\" P in O^4: the rows of Lemma 5.1 and of the transfer of M have no hypothesis on r(P) (the rest of the sentence is route: NOT COUNTED)",
+      "required": [
+        [
+          "lem_5_1_i",
+          "lem_5_1_ii",
+          "lem_5_1_iii",
+          "lem_5_1_iv",
+          "lem_5_1_v",
+          "frame_M_transfer"
+        ]
+      ],
+      "pending": false,
+      "support": [],
+      "kind": null,
+      "kind_status": null,
+      "line": 142,
+      "status": "PROVED GIVEN TILE",
+      "best_alternative": [
+        "lem_5_1_i",
+        "lem_5_1_ii",
+        "lem_5_1_iii",
+        "lem_5_1_iv",
+        "lem_5_1_v",
+        "frame_M_transfer"
+      ]
+    },
+    {
       "id": "CIIIb",
-      "description": "l.326 + l.151 (c) + Figure 2 box Case III: in Case III, (P,Z^4) ≅ (conv S, Λ) for one of the 39 representatives Λ and S in A(Λ) with #S >= 31, r(S) <= 3 (V^{-1}, then a signed permutation); L_{conv S,Λ} = L_P (using Computation 4); in frame coordinates the lattice points of P lie in [-1,1]^4",
+      "description": "l.326 + l.151 (c) + Figure 2 box Case III: in Case III, (P,Z^4) ≅ (conv S, Λ) for one of the 39 representatives Λ and S in S(Λ) with #S >= 31, r(S) <= 3 (V^{-1}, then a signed permutation); L_{conv S,Λ} = L_P (using Computation 4); in frame coordinates the lattice points of P lie in [-1,1]^4",
       "required": [
         [
           "case_III_transfer",
@@ -3551,12 +3937,111 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 118,
+      "line": 143,
       "status": "PROVED GIVEN TILE, Comp4",
       "best_alternative": [
         "case_III_transfer",
         "lem_5_1_i"
       ]
+    },
+    {
+      "id": "F3a",
+      "description": "l.263 (after the proof of Lemma 4.3) + Figure 3 caption (fig_maxg1.tex l.32: the solid line is the bound g_1 <= (3G+7)/12 \"stated after the proof of Lemma 4.3\") + l.330 (\"the bound on g_1 stated after the proof of Lemma 4.3\"): for every P in O^4_Λ, g_1 = (G-1)/2 - sigma/2 (Lemma 4.1 and (E3)) and sigma = (1/6) Σ_F NVol(F) >= (3G-13)/6, so g_1 <= (3G+7)/12 (sigma, NVol over E3's facet data); the figure draws it in the shaded region G <= 29. SUPPORT fig3_bound_gt: RETIRED (v2.30's caption sentence, For G >= 31 this bound exceeds 8, is gone)",
+      "required": [
+        [
+          "fig3_g1_bound"
+        ]
+      ],
+      "pending": false,
+      "support": [
+        "fig3_bound_gt"
+      ],
+      "kind": null,
+      "kind_status": null,
+      "line": 144,
+      "status": "PROVED GIVEN E2, E3, TRI",
+      "best_alternative": [
+        "fig3_g1_bound"
+      ]
+    },
+    {
+      "id": "F3c",
+      "description": "Figure 3 caption (fig_maxg1.tex l.32) + its 26 grey dots (fig_maxg1.tex l.27) + l.330: the grey dots show, for each odd G >= 31, the largest value of g_1 in Case I (Computation 1) (G is odd: claim S2d)",
+      "required": [],
+      "pending": false,
+      "support": [
+        "G_odd"
+      ],
+      "kind": "CHECK Comp1Max",
+      "kind_status": "CHECKED BY COMPUTER (Comp1Max), NOT proved in Lean: ./reproduce.sh computation-1",
+      "line": 145,
+      "status": "CHECKED BY COMPUTER (Comp1Max), NOT proved in Lean: ./reproduce.sh computation-1",
+      "best_alternative": []
+    },
+    {
+      "id": "F3d",
+      "description": "Figure 3 caption (fig_maxg1.tex l.32): \"C_4 belongs to Case I\" (M(C_4) contains the basis e_1, ..., e_4 of Z^4); C_4 is the green dot at G = 81, g_1 = 8 (fig_maxg1.tex l.30; G(C_4) = 81 and g_1(C_4) = 8)",
+      "required": [
+        [
+          "cube4_case_I",
+          "cube4_G_vol",
+          "cube_g"
+        ]
+      ],
+      "pending": false,
+      "support": [],
+      "kind": null,
+      "kind_status": null,
+      "line": 146,
+      "status": "PROVED",
+      "best_alternative": [
+        "cube4_case_I",
+        "cube4_G_vol",
+        "cube_g"
+      ]
+    },
+    {
+      "id": "F3e",
+      "description": "Figure 3 caption (fig_maxg1.tex l.32, its first sentence and \"The three larger green dots mark the polytopes\" C_4, T and X of Theorem 7.1) + l.330 (\"the three equality cases of Theorem 7.1\") + the green dots (fig_maxg1.tex l.28-30, at G = 49, 33, 81 and g_1 = 8): C_4, T, X are the equality cases of Theorem 7.1, with G = 81, 49, 33; T and X \"belong to Case III\"",
+      "required": [
+        [
+          "thm_7_1",
+          "cube4_G_vol",
+          "T_G",
+          "X_G",
+          "fig3_T_X_case_III"
+        ]
+      ],
+      "pending": false,
+      "support": [],
+      "kind": null,
+      "kind_status": null,
+      "line": 147,
+      "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
+      "best_alternative": [
+        "thm_7_1",
+        "cube4_G_vol",
+        "T_G",
+        "X_G",
+        "fig3_T_X_case_III"
+      ]
+    },
+    {
+      "id": "F3g",
+      "description": "Figure 3 caption (fig_maxg1.tex l.32): \"For Cases II and III only the largest value of\" g_1 \"over all\" G \"is recorded\": at most 6 in Case II (Computation 3), and at most 8 in Case III, attained only by T and X (Computation 5: equality for exactly two classes, with G = 49 and G = 33; T and X lie in Case III and have these G; Theorem 7.1)",
+      "required": [],
+      "pending": false,
+      "support": [
+        "thm_7_1",
+        "fig3_T_X_case_III",
+        "T_G",
+        "X_G"
+      ],
+      "kind": "CHECK Comp3,Comp5",
+      "kind_status": "CHECKED BY COMPUTER (Comp3, Comp5), NOT proved in Lean: ./reproduce.sh computation-3 computation-5",
+      "line": 148,
+      "status": "CHECKED BY COMPUTER (Comp3, Comp5), NOT proved in Lean: ./reproduce.sh computation-3 computation-5",
+      "best_alternative": []
     },
     {
       "id": "L61",
@@ -3571,7 +4056,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 119,
+      "line": 149,
       "status": "PROVED",
       "best_alternative": [
         "lem_6_1_i",
@@ -3580,7 +4065,7 @@
     },
     {
       "id": "W6b",
-      "description": "l.332 \"By the next lemma, this reaches every set\" + l.346: every saturated symmetric S ⊆ Q is reached from Q through saturated symmetric sets containing S; a search that stops at 31 points misses no set with >= 31 points",
+      "description": "l.332 \"By the next lemma, such a walk reaches every saturated symmetric subset of the full set\" + l.346: every saturated symmetric S ⊆ Q is reached from Q through saturated symmetric sets containing S; a search that stops at 31 points misses no set with >= 31 points",
       "required": [
         [
           "walk_reach"
@@ -3590,15 +4075,33 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 120,
+      "line": 150,
       "status": "PROVED",
       "best_alternative": [
         "walk_reach"
       ]
     },
     {
+      "id": "W6c",
+      "description": "l.332: \"This loses no class\": a symmetry g (a signed permutation that preserves the lattice) maps saturated symmetric sets to saturated symmetric sets and the vertices of conv Q to those of conv gQ, \"so the sets obtained from\" gQ \"by deleting a pair of opposite vertices are the images under\" g \"of those obtained from\" Q",
+      "required": [
+        [
+          "walk_symm"
+        ]
+      ],
+      "pending": false,
+      "support": [],
+      "kind": null,
+      "kind_status": null,
+      "line": 151,
+      "status": "PROVED",
+      "best_alternative": [
+        "walk_symm"
+      ]
+    },
+    {
       "id": "C1a",
-      "description": "Computation 1 l.349: each symmetric saturated S ⊆ {-1,0,1}^4 with #S >= 31 spans R^4 (a hyperplane through 0 contains at most 27 points of {-1,0,1}^4, since on it one coordinate is determined by the other three), so conv S in W^4 by Lemma 2.1",
+      "description": "Computation 1 l.349: each symmetric saturated S ⊆ {-1,0,1}^4 with #S >= 31 spans R^4 (a hyperplane through 0 contains at most 27 points of {-1,0,1}^4, since on it one coordinate is determined by the other three), so conv S in O^4 by Lemma 2.1",
       "required": [
         [
           "hyperplane_le_27",
@@ -3609,7 +4112,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 121,
+      "line": 152,
       "status": "PROVED",
       "best_alternative": [
         "hyperplane_le_27",
@@ -3624,20 +4127,40 @@
       "support": [],
       "kind": "CHECK Comp1,Comp1Count",
       "kind_status": "CHECKED BY COMPUTER (Comp1, Comp1Count), NOT proved in Lean: ./reproduce.sh computation-1",
-      "line": 122,
+      "line": 153,
       "status": "CHECKED BY COMPUTER (Comp1, Comp1Count), NOT proved in Lean: ./reproduce.sh computation-1",
       "best_alternative": []
     },
     {
       "id": "C2",
-      "description": "Computation 2 l.353: the 40,406 sublattices of Z^4 of index 2 <= d <= 16; for those whose points in {-1,0,1}^4 span R^4 the maximum count is 45 for d = 2 and at most 27 for every d >= 3",
+      "description": "Computation 2 l.353, its result: for the sublattices of Z^4 of index 2 <= d <= 16 whose points in {-1,0,1}^4 span R^4, \"The maximum is 45 for d = 2, and it is at most 27 for every d >= 3\" (proved in Lean: an odd prime p dividing d gives a nonzero functional mod p on the lattice, so at most 27 points; d = 2^a, a >= 2, puts the lattice inside an index-4 lattice M_I Γ_J, at most 27 points by a kernel count)",
+      "required": [
+        [
+          "comp2_result"
+        ]
+      ],
+      "pending": false,
+      "support": [
+        "comp2_d2_max"
+      ],
+      "kind": null,
+      "kind_status": null,
+      "line": 154,
+      "status": "PROVED",
+      "best_alternative": [
+        "comp2_result"
+      ]
+    },
+    {
+      "id": "C2n",
+      "description": "Computation 2 l.353, its count: \"there are 40,406 of them\" (the sublattices of Z^4 of index 2 <= d <= 16)",
       "required": [],
       "pending": false,
       "support": [],
-      "kind": "CHECK Comp2,Comp2Count",
-      "kind_status": "CHECKED BY COMPUTER (Comp2, Comp2Count), NOT proved in Lean: ./reproduce.sh computation-2",
-      "line": 123,
-      "status": "CHECKED BY COMPUTER (Comp2, Comp2Count), NOT proved in Lean: ./reproduce.sh computation-2",
+      "kind": "CHECK Comp2Count",
+      "kind_status": "CHECKED BY COMPUTER (Comp2Count), NOT proved in Lean: ./reproduce.sh computation-2",
+      "line": 155,
+      "status": "CHECKED BY COMPUTER (Comp2Count), NOT proved in Lean: ./reproduce.sh computation-2",
       "best_alternative": []
     },
     {
@@ -3652,7 +4175,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 124,
+      "line": 156,
       "status": "PROVED",
       "best_alternative": [
         "comp2_d2_max"
@@ -3660,7 +4183,7 @@
     },
     {
       "id": "C3a",
-      "description": "Computation 3 l.357: a permutation of coordinates carries Γ_I onto Γ_J when |I| = |J|, so Γ_m (m = 2,3,4) suffice; each conv S lies in W^4_{Γ_m}",
+      "description": "Computation 3 l.357: a permutation of coordinates carries Γ_I onto Γ_J when |I| = |J|, so Γ_m (m = 2,3,4) suffice; each conv S lies in O^4_{Γ_m}",
       "required": [
         [
           "gammaI_perm",
@@ -3671,7 +4194,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 125,
+      "line": 157,
       "status": "PROVED",
       "best_alternative": [
         "gammaI_perm",
@@ -3686,7 +4209,7 @@
       "support": [],
       "kind": "CHECK Comp3,Comp3Count",
       "kind_status": "CHECKED BY COMPUTER (Comp3, Comp3Count), NOT proved in Lean: ./reproduce.sh computation-3",
-      "line": 126,
+      "line": 158,
       "status": "CHECKED BY COMPUTER (Comp3, Comp3Count), NOT proved in Lean: ./reproduce.sh computation-3",
       "best_alternative": []
     },
@@ -3702,7 +4225,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 127,
+      "line": 159,
       "status": "PROVED",
       "best_alternative": [
         "frame_lat_GL"
@@ -3716,45 +4239,45 @@
       "support": [],
       "kind": "CHECK Comp4,Comp4Count",
       "kind_status": "CHECKED BY COMPUTER (Comp4, Comp4Count), NOT proved in Lean: ./reproduce.sh computation-4",
-      "line": 128,
+      "line": 160,
       "status": "CHECKED BY COMPUTER (Comp4, Comp4Count), NOT proved in Lean: ./reproduce.sh computation-4",
       "best_alternative": []
     },
     {
       "id": "C5a",
-      "description": "Computation 5 l.365: for each of the 39 representatives Λ, the S in A(Λ) with #S >= 31 and r(S) <= 3 (up to signed permutations preserving Λ): 588,592 classes; g_1(conv S) w.r.t. Λ <= 8, with equality for exactly two sets, one with G = 49 and one with G = 33",
+      "description": "Computation 5 l.365: for each of the 39 representatives Λ, the S in S(Λ) with #S >= 31 and r(S) <= 3 (up to signed permutations preserving Λ): 588,592 classes; g_1(conv S) w.r.t. Λ <= 8, \"with equality for exactly two of them\", one with G = 49 and one with G = 33",
       "required": [],
       "pending": false,
       "support": [],
       "kind": "CHECK Comp5,Comp5Count",
       "kind_status": "CHECKED BY COMPUTER (Comp5, Comp5Count), NOT proved in Lean: ./reproduce.sh computation-5",
-      "line": 129,
+      "line": 161,
       "status": "CHECKED BY COMPUTER (Comp5, Comp5Count), NOT proved in Lean: ./reproduce.sh computation-5",
       "best_alternative": []
     },
     {
       "id": "C5b",
-      "description": "Computation 5 l.367: M reverses inclusion (Q ⊆ Q' ⇒ M(Q') ⊆ M(Q)), so a subset of a set Q' with r(Q') = 4 also has r = 4; every S with r(S) <= 3 lies in a maximal member Q of A(Λ) with r(Q) <= r(S) <= 3; every set between Q and S contains S, so has r <= 3",
+      "description": "Computation 5 l.369: the rule r(S^+) = 4 \"uses that M reverses inclusion\": M(Q') ⊆ M(Q) whenever Q ⊆ Q', \"so that every subset of a set\" Q' with r(Q') = 4 also has r = 4. SUPPORT comp5_maximal: RETIRED (the walk's maximal members; printed in earlier versions, last: v2.80)",
       "required": [
         [
-          "M_antitone",
-          "comp5_maximal"
+          "M_antitone"
         ]
       ],
       "pending": false,
-      "support": [],
+      "support": [
+        "comp5_maximal"
+      ],
       "kind": null,
       "kind_status": null,
-      "line": 130,
+      "line": 162,
       "status": "PROVED",
       "best_alternative": [
-        "M_antitone",
-        "comp5_maximal"
+        "M_antitone"
       ]
     },
     {
       "id": "C5c",
-      "description": "Computation 5 l.369: every saturated set between S^- and S^+ lies in exactly one branch; an include branch with new S^- not in S^+, violating (ii), or with a nonzero point of Λ in int conv S^- contains no set satisfying (i)-(iii); points of S^+ that break (ii) with S^- are in no such set; a branch with #S^+ < 31 or r(S^+) = 4 contains no wanted set",
+      "description": "Computation 5 l.369: every saturated set between S^- and S^+ lies in exactly one branch; an include branch with new S^- not in S^+, violating (ii), or with a nonzero point of Λ in int conv S^- contains no set satisfying (i)-(iii); a pair ±y in S^+ for which S^- ∪ {±y} \"violates (ii) is removed from\" S^+, \"since no member contains it together with\" S^-; a branch with #S^+ < 31 or r(S^+) = 4 contains no wanted set",
       "required": [
         [
           "sandwich_split",
@@ -3765,11 +4288,85 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 131,
+      "line": 163,
       "status": "PROVED",
       "best_alternative": [
         "sandwich_split",
         "sandwich_prune"
+      ]
+    },
+    {
+      "id": "C5d",
+      "description": "Computation 5 l.367: the search \"keeps a lower set\" S^- in S(Λ) and an upper set S^+, starting from S^- = conv{±e_1, ..., ±e_4} ∩ Λ and S^+ = Λ ∩ C_4; \"Every member of\" S(Λ) \"lies between these two sets\" (in S^+ by (i); it contains S^- by (i) and (iii)); S^- \"is itself a member\" ((ii) by Hadamard's inequality, (iii) by (iv))",
+      "required": [
+        [
+          "sandwich_start"
+        ]
+      ],
+      "pending": false,
+      "support": [],
+      "kind": null,
+      "kind_status": null,
+      "line": 164,
+      "status": "PROVED",
+      "best_alternative": [
+        "sandwich_start"
+      ]
+    },
+    {
+      "id": "C5p",
+      "description": "l.330, Computation 5: the numbers of lattice points of k conv S (k = 1, 2, 3) and of the interior of k conv S (k = 1, 2) \"give its values at\" k = -2, ..., 3 \"by (E1) and (E2) and so determine it\": the value at 0 is 1, at -k the interior count ((E2) with n = 4), and a polynomial of degree at most 4 is fixed by these six values (what the program reads: NOT COUNTED)",
+      "required": [
+        [
+          "poly_six_values"
+        ]
+      ],
+      "pending": false,
+      "support": [],
+      "kind": null,
+      "kind_status": null,
+      "line": 165,
+      "status": "PROVED GIVEN E2",
+      "best_alternative": [
+        "poly_six_values"
+      ]
+    },
+    {
+      "id": "C5m",
+      "description": "Computation 5 l.369: \"Each include step keeps\" S^- in S(Λ) (printed A(Λ)), \"so these sets are members\": an include step that is kept (the new S^- = conv(S^- ∪ {±v}) ∩ Λ, ±v from S^+ ⊆ Λ ∩ C_4, satisfies (ii) and has no nonzero point of Λ in the interior of its convex hull) gives a member of S(Λ); with the start set S^- (claim C5d) every lower set of the search is a member",
+      "required": [
+        [
+          "sandwich_include_member",
+          "sandwich_start"
+        ]
+      ],
+      "pending": false,
+      "support": [],
+      "kind": null,
+      "kind_status": null,
+      "line": 166,
+      "status": "PROVED",
+      "best_alternative": [
+        "sandwich_include_member",
+        "sandwich_start"
+      ]
+    },
+    {
+      "id": "C5j",
+      "description": "Computation 5 l.369: \"A pair\" (S^-, S^+) \"that a signed permutation preserving\" Λ \"carries onto a pair met earlier in the search is discarded, since the permutation carries the sets between the two pairs onto each other\": such a σ carries the saturated symmetric sets, and the members of S(Λ), between S^- and S^+ onto those between σS^- and σS^+",
+      "required": [
+        [
+          "sandwich_symm"
+        ]
+      ],
+      "pending": false,
+      "support": [],
+      "kind": null,
+      "kind_status": null,
+      "line": 167,
+      "status": "PROVED",
+      "best_alternative": [
+        "sandwich_symm"
       ]
     },
     {
@@ -3784,7 +4381,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 132,
+      "line": 168,
       "status": "PROVED",
       "best_alternative": [
         "T_iso"
@@ -3792,25 +4389,27 @@
     },
     {
       "id": "T71",
-      "description": "Theorem 7.1 l.383-385: P in W^4 has g_1(P) = 8 iff P is unimodularly equivalent to C_4, T or X",
+      "description": "Theorem 7.1 l.383-385: P in O^4 has g_1(P) = 8 iff P is unimodularly equivalent to C_4, T or X. SUPPORT fig3_lt_eight: RETIRED (v2.30's Figure 3 sentence, By Theorems 1.2 and 7.1 every polytope ... has g_1 < 8, is gone)",
       "required": [
         [
           "thm_7_1"
         ]
       ],
       "pending": false,
-      "support": [],
+      "support": [
+        "fig3_lt_eight"
+      ],
       "kind": null,
       "kind_status": null,
-      "line": 133,
-      "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp2, Comp3, Comp4, Comp5",
+      "line": 169,
+      "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "thm_7_1"
       ]
     },
     {
       "id": "T7b",
-      "description": "l.389: the 24-cell's points have |x_i| <= 1 and Σ|x_i| <= 2; its points in the lattice other than 0: the 24 vertices, the 8 points ±e_i, the 16 points (±½,±½,±½,±½); hence T in W^4 and G(T) = 49",
+      "description": "l.389: \"The polytope\" conv{±e_a ± e_b} \"is the set of points\" x with |x_i| <= 1 for all i and Σ|x_i| <= 2 (here: every point of the polytope satisfies both bounds, and every lattice point that satisfies them is in the polytope; the equality for real points: claim T7bq); its points in the lattice other than 0: the 24 vertices, the 8 points ±e_i, the 16 points (±½,±½,±½,±½); hence T in O^4 and G(T) = 49",
       "required": [
         [
           "cell24_points",
@@ -3823,13 +4422,33 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 134,
+      "line": 170,
       "status": "PROVED",
       "best_alternative": [
         "cell24_points",
         "cell24_lattice_points",
         "T_mem",
         "T_G"
+      ]
+    },
+    {
+      "id": "T7bq",
+      "description": "l.389: \"The polytope\" conv{±e_a ± e_b} \"is the set of points\" x with |x_i| <= 1 for all i and Σ|x_i| <= 2 (the set equality for real points)",
+      "required": [
+        [
+          "cell24_eq_box"
+        ]
+      ],
+      "pending": false,
+      "support": [
+        "cell24_points"
+      ],
+      "kind": null,
+      "kind_status": null,
+      "line": 171,
+      "status": "PROVED",
+      "best_alternative": [
+        "cell24_eq_box"
       ]
     },
     {
@@ -3845,7 +4464,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 135,
+      "line": 172,
       "status": "PROVED",
       "best_alternative": [
         "cell24_hyperplanes",
@@ -3864,7 +4483,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 136,
+      "line": 173,
       "status": "PROVED",
       "best_alternative": [
         "D4star_dual"
@@ -3872,7 +4491,7 @@
     },
     {
       "id": "T7d",
-      "description": "l.389: its primitive vectors normal to these facets are ±2e_i and (±1,±1,±1,±1), with value 2 on them, so the facets {x_i = ±1} and {±x_1±x_2±x_3±x_4 = 2} have lattice distance 2: these vectors are primitive in the dual lattice, normal to the hyperplanes, with value 2 on them; the 24-cell lies on one side and 4 affinely independent points of it lie on each hyperplane",
+      "description": "l.389 + Remark 7.3 l.415 (the facets of T have lattice distance 2): its primitive vectors normal to these facets are ±2e_i and (±1,±1,±1,±1), with value 2 on them, so the facets {x_i = ±1} and {±x_1±x_2±x_3±x_4 = 2} have lattice distance 2: these vectors are primitive in the dual lattice, normal to the hyperplanes, with value 2 on them; the 24-cell lies on one side and 4 affinely independent points of it lie on each hyperplane",
       "required": [
         [
           "cell24_normals"
@@ -3882,7 +4501,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 137,
+      "line": 174,
       "status": "PROVED",
       "best_alternative": [
         "cell24_normals"
@@ -3896,7 +4515,7 @@
       "support": [],
       "kind": "NOT-FORMALIZED faces",
       "kind_status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
-      "line": 138,
+      "line": 175,
       "status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -3913,7 +4532,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 139,
+      "line": 176,
       "status": "PROVED GIVEN E1, E2",
       "best_alternative": [
         "T_vol",
@@ -3922,7 +4541,7 @@
     },
     {
       "id": "X7a",
-      "description": "l.391 + Results l.88 (\"a cross-polytope X of volume 12\"): 0 is the only interior lattice point of X, G(X) = 33; vol(X) = (2^4/4!)·18 = 12, the four vectors have determinant 18",
+      "description": "l.391 (and Table 1 l.76, \"a cross-polytope X\"): 0 is the only interior lattice point of X, G(X) = 33; vol(X) = (2^4/4!)·18 = 12, the four vectors have determinant 18",
       "required": [
         [
           "X_mem",
@@ -3934,7 +4553,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 140,
+      "line": 177,
       "status": "PROVED",
       "best_alternative": [
         "X_mem",
@@ -3944,7 +4563,7 @@
     },
     {
       "id": "X7b",
-      "description": "l.391: the 16 facets of X have lattice distance 3: for each of the 16 sign vectors, the hyperplane through 4 affinely independent vertices of X has a primitive normal in the dual lattice Z^4 with value 3 on it, and X lies on one side",
+      "description": "l.391 + Remark 7.3 l.415 (the facets of X have lattice distance 3): the 16 facets of X have lattice distance 3: for each of the 16 sign vectors, the hyperplane through 4 affinely independent vertices of X has a primitive normal in the dual lattice Z^4 with value 3 on it, and X lies on one side",
       "required": [
         [
           "X_hyperplanes"
@@ -3954,7 +4573,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 141,
+      "line": 178,
       "status": "PROVED",
       "best_alternative": [
         "X_hyperplanes"
@@ -3968,13 +4587,13 @@
       "support": [],
       "kind": "NOT-FORMALIZED faces",
       "kind_status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
-      "line": 142,
+      "line": 179,
       "status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
       "best_alternative": []
     },
     {
       "id": "E7a",
-      "description": "l.393: if every facet of P in W^4 has lattice distance l, then (E3) gives g_3 = sigma/2 = 2g_4/l, and Lemma 4.1 gives g_1 = (G-1)/2 - g_3, g_2 = (G-1)/2 - g_4 (over E3's facet data with every b_j = l)",
+      "description": "l.393: if every facet of P in O^4 has lattice distance l, then (E3) gives g_3 = sigma/2 = 2g_4/l, and Lemma 4.1 gives g_1 = (G-1)/2 - g_3, g_2 = (G-1)/2 - g_4 (over E3's facet data with every b_j = l)",
       "required": [
         [
           "g3_of_dist"
@@ -3984,7 +4603,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 143,
+      "line": 180,
       "status": "PROVED GIVEN E1, E2, E3",
       "best_alternative": [
         "g3_of_dist"
@@ -4002,7 +4621,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 144,
+      "line": 181,
       "status": "PROVED",
       "best_alternative": [
         "cube4_G_vol"
@@ -4020,7 +4639,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 145,
+      "line": 182,
       "status": "PROVED",
       "best_alternative": [
         "cube4_hyperplanes"
@@ -4028,13 +4647,13 @@
     },
     {
       "id": "E7b2c",
-      "description": "l.393: the hyperplanes {x_i = ±1} give all the facets of C_4 (used by \"every facet of P has lattice distance l\")",
+      "description": "l.393: the hyperplanes {x_i = ±1} give all the facets of C_4 (used by \"every facet of P ∈ O^4 has lattice distance ℓ\")",
       "required": [],
       "pending": false,
       "support": [],
       "kind": "NOT-FORMALIZED faces",
       "kind_status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
-      "line": 146,
+      "line": 183,
       "status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -4052,7 +4671,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 147,
+      "line": 184,
       "status": "PROVED GIVEN EHR, E2",
       "best_alternative": [
         "poly_C4",
@@ -4073,7 +4692,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 148,
+      "line": 185,
       "status": "PROVED",
       "best_alternative": [
         "M_T",
@@ -4082,24 +4701,46 @@
     },
     {
       "id": "R2h",
-      "description": "Results l.88: C_4 satisfies Henze's root condition (all Ehrhart roots have real part -1/2); T and X do not",
+      "description": "l.85 (\"Two of the three polytopes with\" g_1(P) = 8 \"have Ehrhart roots off the line\" Re z = -1/2, \"so Henze's theorem does not cover them\") + Remark 7.3 l.415 (Henze's theorem covers C_4 \"but neither\" T \"nor\" X; all roots of L_{C_4} = (1+2k)^4 have real part -1/2, but those of L_T and L_X do not): C_4 satisfies Henze's root condition (all Ehrhart roots have real part -1/2); T and X do not",
       "required": [
         [
           "henze_C4",
           "henze_T_not",
-          "henze_X_not"
+          "henze_X_not",
+          "cube_count"
         ]
       ],
       "pending": false,
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 149,
+      "line": 186,
       "status": "PROVED GIVEN E2",
       "best_alternative": [
         "henze_C4",
         "henze_T_not",
-        "henze_X_not"
+        "henze_X_not",
+        "cube_count"
+      ]
+    },
+    {
+      "id": "R2v",
+      "description": "Remark 7.3 l.415: if all four roots of L_P, for P in O^4, have real part -1/2, they sum to -2, so g_3(P) = 2 g_4(P) by Vieta's formulas; but L_T has g_3 = 16 ≠ 2·16 and L_X has g_3 = 8 ≠ 2·12",
+      "required": [
+        [
+          "henze_vieta",
+          "henze_coeffs"
+        ]
+      ],
+      "pending": false,
+      "support": [],
+      "kind": null,
+      "kind_status": null,
+      "line": 187,
+      "status": "PROVED GIVEN E1, E2",
+      "best_alternative": [
+        "henze_vieta",
+        "henze_coeffs"
       ]
     },
     {
@@ -4121,10 +4762,58 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 150,
-      "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp2, Comp3, Comp4, Comp5",
+      "line": 188,
+      "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "thm_7_1"
+      ]
+    },
+    {
+      "id": "COR72",
+      "description": "Corollary 7.2 l.406-408 + Table 1 l.77 (\"with equality exactly for\" C_4, \"up to unimodular equivalence (Theorem 1.2 and Corollary 7.2)\"): P in O^4 has g_2(P) = 24 iff P is unimodularly equivalent to C_4",
+      "required": [
+        [
+          "cor_7_2"
+        ]
+      ],
+      "pending": false,
+      "support": [],
+      "kind": null,
+      "kind_status": null,
+      "line": 189,
+      "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
+      "best_alternative": [
+        "cor_7_2"
+      ]
+    },
+    {
+      "id": "COR72p",
+      "description": "Proof of Corollary 7.2 l.410-412: g_2(C_4) = 24; conversely, g_2(P) = 24 and g_1(P) <= 8 (Theorem 1.2) give 24 = g_2 <= g_4 + 8 <= 24 (Proposition 4.2), so g_4 = 16; G = 2(g_2 + g_4) + 1 = 81 and g_1 + g_3 = 40 (Lemma 4.1); g_1 <= 8 and g_3 <= 32 force g_1 = 8; by Theorem 7.1, P is unimodularly equivalent to C_4, T or X, \"and of these only\" C_4 \"has 81 lattice points\" (the route of the row's proof)",
+      "required": [
+        [
+          "cor_7_2"
+        ]
+      ],
+      "pending": false,
+      "support": [
+        "thm_1_2",
+        "prop_4_2_g2",
+        "lem_4_1",
+        "prop_4_2_g3",
+        "thm_7_1",
+        "G_unimod_inv",
+        "T_G",
+        "X_G",
+        "cube4_G_vol",
+        "cube_g",
+        "iso_g"
+      ],
+      "kind": null,
+      "kind_status": null,
+      "line": 190,
+      "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
+      "best_alternative": [
+        "cor_7_2"
       ]
     }
   ],

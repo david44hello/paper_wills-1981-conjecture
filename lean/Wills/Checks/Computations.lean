@@ -1,8 +1,9 @@
 /-
 Wills/Checks/Computations.lean — Computations 1-5 of Section 6 of "Wills' (1981) conjecture is fully resolved", each
 stated exactly as printed (input set, property checked, result). Each is a `Prop`; every theorem that uses one takes
-it as an explicit hypothesis. Each is checked by computer, NOT proved in Lean; the programs, their outputs and one
-command per claim are in the repository folder wills-1981-conjecture/ (`./reproduce.sh computation-N`).
+it as an explicit hypothesis. Each is checked by computer, NOT proved in Lean, except `Comp2`, which the row
+`comp2_result` proves (Wills/Proofs/Comp2Proof.lean); the programs, their outputs and one command per claim are in the
+repository folder wills-1981-conjecture/ (`./reproduce.sh computation-N`).
 Author: Dave Goel.
 Copyright (C) Dave Goel 2026--now. All rights reserved.
 -/
@@ -36,12 +37,29 @@ def Comp1 : Prop :=
 Checked by computer, NOT proved in Lean: `./reproduce.sh computation-1` (repository folder wills-1981-conjecture/). -/
 def Comp1Count : Prop := numClasses {S | Comp1Input S} (fun _ => True) = 2547694
 
+/-- Figure 3 (the dots), from the output of Computation 1: pairs `(G, m)` with `m` the largest `g_1(conv S)` over
+the sets `S` of Computation 1 with `#S = G`, for each odd `G` from `81` down to `31`. -/
+def comp1MaxTable : List (ℕ × ℚ) :=
+  [(81, 8), (79, 15/2), (77, 7), (75, 22/3), (73, 41/6), (71, 7), (69, 41/6), (67, 20/3), (65, 20/3), (63, 7),
+   (61, 13/2), (59, 13/2), (57, 20/3), (55, 19/3), (53, 6), (51, 19/3), (49, 6), (47, 35/6), (45, 6), (43, 6),
+   (41, 35/6), (39, 17/3), (37, 6), (35, 35/6), (33, 17/3), (31, 17/3)]
+
+/-- Figure 3, the dots: for each pair `(G, m)` of `comp1MaxTable`, some set of Computation 1 with `#S = G` has
+`g_1(conv S) = m`, and every such set has `g_1(conv S) ≤ m`.
+Checked by computer, NOT proved in Lean: `./reproduce.sh computation-1` (repository folder wills-1981-conjecture/;
+both programs' maxima: expected/computation-1/case1_compare.txt). -/
+def Comp1Max : Prop :=
+  ∀ e ∈ comp1MaxTable,
+    (∃ S : Set (Pt 4), Comp1Input S ∧ S.ncard = e.1 ∧ g (Zn 4) (convexHull ℝ S) 1 = (e.2 : ℝ)) ∧
+      ∀ S : Set (Pt 4), Comp1Input S → S.ncard = e.1 → g (Zn 4) (convexHull ℝ S) 1 ≤ (e.2 : ℝ)
+
 /-! ### Computation 2 (index bound) -/
 
 /-- Computation 2, result: for every sublattice `Γ = B ℤ⁴ ⊂ ℤ⁴` of index `d = |det B|`, `2 ≤ d ≤ 16`, whose points
 in `{-1,0,1}⁴` span `ℝ⁴`, the number of these points is at most `45` if `d = 2` and at most `27` if `d ≥ 3`; the
 maximum `45` for `d = 2` is attained.
-Checked by computer, NOT proved in Lean: `./reproduce.sh computation-2` (repository folder wills-1981-conjecture/). -/
+PROVED in Lean: row `comp2_result` (Wills/Proofs/Comp2Proof.lean), a hypothesis of no row. The computer run is
+`./reproduce.sh computation-2` (repository folder wills-1981-conjecture/). -/
 def Comp2 : Prop :=
   (∀ B : Matrix (Fin 4) (Fin 4) ℤ, 2 ≤ |B.det| → |B.det| ≤ 16 → Spans (subLat B ∩ cubePts 4) →
       (subLat B ∩ cubePts 4).ncard ≤ (if |B.det| = 2 then 45 else 27)) ∧
@@ -141,13 +159,13 @@ def Comp4Count : Prop :=
 
 /-! ### Computation 5 (Case III) -/
 
-/-- The input of Computation 5 for the representative `j`: `S ∈ A(Λ)` with `#S ≥ 31` and `r(S) ≤ 3`. -/
+/-- The input of Computation 5 for the representative `j`: `S ∈ S(Λ)` with `#S ≥ 31` and `r(S) ≤ 3`. -/
 def Comp5Input (j : Fin 39) (S : Set (Pt 4)) : Prop :=
   InA (frameRep j) S ∧ 31 ≤ S.ncard ∧ rS (frameRep j) S ≤ 3
 
-/-- Computation 5, result: for all of these sets the linear coefficient `g_1` of `conv S` with respect to `Λ` is at
-most `8`, with equality for exactly two sets (up to the signed permutations that preserve `Λ`), one with `G = 49`
-and one with `G = 33`.
+/-- Computation 5, result (l.365): for all of these sets the linear coefficient `g_1` of `conv S` with respect to `Λ`
+is at most `8`, with equality for exactly two of them (classes: up to the signed permutations that preserve `Λ`), one
+with `G = 49` and one with `G = 33`.
 Checked by computer, NOT proved in Lean: `./reproduce.sh computation-5` (repository folder wills-1981-conjecture/). -/
 def Comp5 : Prop :=
   (∀ j S, Comp5Input j S → g (frameRep j) (convexHull ℝ S) 1 ≤ 8) ∧

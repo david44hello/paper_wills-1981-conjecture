@@ -1,7 +1,7 @@
 {
-  "version": "1.00",
+  "version": "1.20",
   "author": "Dave Goel",
-  "created_utc": "2026-11-04T18:26:24.351440+00:00",
+  "created_utc": "2026-11-12T00:32:15.941925+00:00",
   "scope": "The computation materials: every file outside lean/ and .github/; excludes this manifest.",
   "files": [
     {
@@ -16,13 +16,13 @@
     },
     {
       "file": "README.md",
-      "bytes": 21,
-      "sha256": "a7ee1b41731bd0995441be37e54b27d08eca4ee306f1729c4dd71c7a5272da75"
+      "bytes": 504,
+      "sha256": "18c9b34d4e0551ef9b4286a7b2e5743eb584142a7375846d8f8c41fa1d2309fa"
     },
     {
       "file": "wills-1981-conjecture/README.md",
-      "bytes": 4490,
-      "sha256": "b744c2d47527441e19e7b39ac691bb76d36e5e3d537ca1653471ffccd605ffb3"
+      "bytes": 4443,
+      "sha256": "c907bcc8ad3c41ffd52c4c8327041984b18f61856bc795f295dbbfc64bc88322"
     },
     {
       "file": "wills-1981-conjecture/data/boxes.jsonl",
@@ -426,8 +426,8 @@
     },
     {
       "file": "wills-1981-conjecture/expected/computation-5/case3_second_rank3.txt",
-      "bytes": 15543,
-      "sha256": "70d0980d45d0f272550a95adca86e7be499eaf3ccfd83c4ccbd9ee5075436987"
+      "bytes": 15677,
+      "sha256": "fdf6692b1bfa6903eb2ff1658724dff96bc8e7f475ec1738a68411d21f4a1009"
     },
     {
       "file": "wills-1981-conjecture/expected/computation-6/case3_first_rank0.jsonl",

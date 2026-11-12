@@ -12,7 +12,7 @@ open MeasureTheory Pointwise
 
 namespace Wills.Count4
 
-open Wills.Count (dotL rng mem_rng forall_zip nodup_of_chain)
+open Wills.Count (dotL rng mem_rng forall_zip)
 
 /-! ### Integer lists as points of `ℝ⁴` -/
 
@@ -170,6 +170,31 @@ lemma mem_box4_length {B : List ℕ} {k : ℕ} {z : List ℤ} (hz : z ∈ box4 B
   obtain ⟨_, _, _, _, _, _, _, _, rfl⟩ := hz
   rfl
 
+lemma rng_nodup (m : ℕ) : (rng m).Nodup :=
+  (List.nodup_range).map fun i j h => by simpa using h
+
+/-- A `flatMap` has no repeated element if each block has none and every element of the block of `a` is tagged `a`. -/
+lemma nodup_flatMap_of_tag {α β : Type} {l : List α} {f : α → List β} (t : β → α) (hl : l.Nodup)
+    (hf : ∀ a ∈ l, (f a).Nodup) (ht : ∀ a ∈ l, ∀ z ∈ f a, t z = a) : (l.flatMap f).Nodup :=
+  List.nodup_flatMap.2 ⟨hf, hl.imp_of_mem fun ha hb hab z hza hzb => hab ((ht _ ha z hza).symm.trans (ht _ hb z hzb))⟩
+
+/-- The box has no repeated point (each point is determined by its four coordinates). -/
+lemma box4_nodup (B : List ℕ) (k : ℕ) : (box4 B k).Nodup := by
+  unfold box4
+  refine nodup_flatMap_of_tag (fun z => z.getD 0 0) (rng_nodup _) (fun a _ => ?_) (fun a _ z hz => ?_)
+  · refine nodup_flatMap_of_tag (fun z => z.getD 1 0) (rng_nodup _) (fun b _ => ?_) (fun b _ z hz => ?_)
+    · refine nodup_flatMap_of_tag (fun z => z.getD 2 0) (rng_nodup _) (fun c _ => ?_) (fun c _ z hz => ?_)
+      · exact (rng_nodup _).map fun d d' h => by simpa using h
+      · obtain ⟨d, _, rfl⟩ := List.mem_map.1 hz
+        rfl
+    · obtain ⟨c, _, hz⟩ := List.mem_flatMap.1 hz
+      obtain ⟨d, _, rfl⟩ := List.mem_map.1 hz
+      rfl
+  · obtain ⟨b, _, hz⟩ := List.mem_flatMap.1 hz
+    obtain ⟨c, _, hz⟩ := List.mem_flatMap.1 hz
+    obtain ⟨d, _, rfl⟩ := List.mem_map.1 hz
+    rfl
+
 lemma box_of_mem {V : List (List ℤ)} {F : List (List ℤ × ℤ)} {B : List ℕ} (hv : dataValid V F B = true)
     {k : ℕ} {p : Fin 4 → ℤ} (hx : ofInt p ∈ (k : ℝ) • polyL V) :
     ∀ i : Fin 4, -((k * B.getD i.val 0 : ℕ) : ℤ) ≤ p i ∧ p i ≤ ((k * B.getD i.val 0 : ℕ) : ℤ) := by
@@ -268,8 +293,8 @@ lemma smul_inter_eq {V : List (List ℤ)} {F : List (List ℤ × ℤ)} {B : List
 
 /-- The count `L_P(k) = #(kP ∩ ℤ⁴)` from the certificates. -/
 theorem latCount_eq {V : List (List ℤ)} {F : List (List ℤ × ℤ)} {B : List ℕ} (hv : dataValid V F B = true)
-    (hne : V ≠ []) (k : ℕ) (C : List (List (ℕ × ℕ) × ℕ)) (hmem : memAll V F B k C = true)
-    (hchain : (box4 B k).IsChain (· < ·)) : latCount (Zn 4) (polyL V) k = C.length := by
+    (hne : V ≠ []) (k : ℕ) (C : List (List (ℕ × ℕ) × ℕ)) (hmem : memAll V F B k C = true) :
+    latCount (Zn 4) (polyL V) k = C.length := by
   unfold memAll at hmem
   simp only [Bool.and_eq_true, beq_iff_eq] at hmem
   have hall := forall_zip (ok := fun z c => certOk V k z c) hmem.1 hmem.2
@@ -278,7 +303,7 @@ theorem latCount_eq {V : List (List ℤ)} {F : List (List ℤ × ℤ)} {B : List
     exact (certOk_sound hv hne hc).2)
   unfold latCount
   rw [h, ncard_toPt4_image _ (fun z hz => mem_box4_length (mem_insideF.1 hz).1)
-    ((nodup_of_chain hchain).filter _), hmem.1]
+    ((box4_nodup B k).filter _), hmem.1]
 
 /-! ### Interior points -/
 
@@ -422,7 +447,7 @@ lemma interior_inter_eq {V : List (List ℤ)} {F : List (List ℤ × ℤ)} {B : 
 /-- The count `#(int(kP) ∩ ℤ⁴)` from the certificates. -/
 theorem intCount_eq {V : List (List ℤ)} {F : List (List ℤ × ℤ)} {B : List ℕ} (hv : dataValid V F B = true)
     (hne : V ≠ []) (k d : ℕ) (hd : 0 < d) (C : List (List (List (ℕ × ℕ) × ℕ)))
-    (hint : intAll V F B k d C = true) (hchain : (box4 B k).IsChain (· < ·)) :
+    (hint : intAll V F B k d C = true) :
     intCount (Zn 4) (polyL V) k = C.length := by
   have hlen : (strictF F B k).length = C.length := by
     unfold intAll at hint
@@ -430,7 +455,7 @@ theorem intCount_eq {V : List (List ℤ)} {F : List (List ℤ × ℤ)} {B : List
     exact hint.1
   unfold intCount
   rw [interior_inter_eq hv hne k d hd C hint, ncard_toPt4_image _ (fun z hz => mem_box4_length
-    (mem_strictF.1 hz).1) ((nodup_of_chain hchain).filter _), hlen]
+    (mem_strictF.1 hz).1) ((box4_nodup B k).filter _), hlen]
 
 /-! ### Membership in `W⁴` -/
 

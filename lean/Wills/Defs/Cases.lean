@@ -1,7 +1,7 @@
 /-
 Wills/Defs/Cases.lean — Definitions for Sections 2 and 5-7 of "Wills' (1981) conjecture is fully resolved": isomorphic
-pairs, saturated sets, the sublattices Γ_I, the dual lattice, M and r, frame lattices, the families A(Λ), signed
-permutations, and Wills' conjecture.
+pairs, saturated sets, the sublattices Γ_I, the dual lattice, M and r, frame lattices, the families S(Λ) (Lean:
+`InA`), signed permutations, and Wills' conjecture.
 Author: Dave Goel.
 Copyright (C) Dave Goel 2026--now. All rights reserved.
 -/
@@ -89,7 +89,7 @@ def NoShortL1 (Λ : Set (Pt 4)) : Prop := ∀ c ∈ Λ, c ≠ 0 → 1 ≤ ∑ i,
 def IsFrameLattice (Λ : Set (Pt 4)) : Prop :=
   ∃ V : Matrix (Fin 4) (Fin 4) ℤ, V.det ≠ 0 ∧ |V.det| ≤ 23 ∧ Λ = lat (toReal V)⁻¹ ∧ NoShortL1 Λ
 
-/-- The family `A(Λ)`: the sets `S` with Lemma 5.1 (i)-(iii):
+/-- The family `S(Λ)` (printed `A(Λ)` up to text version 2.30): the sets `S` with Lemma 5.1 (i)-(iii):
 (i) `S ⊂ Λ ∩ C_4`, `S = -S`, `±e_i ∈ S`; (ii) `|det(s_1, …, s_4)| ≤ 1` for `s_i ∈ S`;
 (iii) `conv S ∩ Λ = S` and `int(conv S) ∩ Λ = {0}`. -/
 def InA (Λ S : Set (Pt 4)) : Prop :=

@@ -6,13 +6,14 @@ Author: Dave Goel.
 Copyright (C) Dave Goel 2026--now. All rights reserved.
 -/
 import Wills.Proofs.CountW
+import Wills.Proofs.Slices.W2C
 
 open MeasureTheory Pointwise
 
 namespace Wills.Count
 
-set_option maxRecDepth 100000 in
-lemma cert2All_true : cert2All = true := by decide +kernel
+/-- In slices: `Slices/W2A.lean` to `Slices/W2C.lean`. -/
+lemma cert2All_true : cert2All = true := cert2All_sliced
 
 lemma cert2_length : WData.cert2.length = 1815 := by decide +kernel
 

@@ -53,9 +53,9 @@ LEAN_ENV = ["env", "LEAN_NUM_THREADS=1"]
 LEAN_OPTIONS = ["-j1", "-DautoImplicit=false", "-DrelaxedAutoImplicit=false"]
 STANDARD = {"propext", "Classical.choice", "Quot.sound"}
 OPEN_AXIOM = "sorryAx"
-VERSION = "0.41"
+VERSION = "0.71"
 PAPER = "Wills' (1981) conjecture is fully resolved"
-TEXT_LINE = ("Paper text: the paper's TeX source, version 1.90 (md5 0c30e1ff); the pointers l.N in the rows "
+TEXT_LINE = ("Paper text: the paper's TeX source, version 3.20 (md5 47e41917); the pointers l.N in the rows "
              "are its lines.")
 # Facts the paper uses from areas Lean's library lacks: binder type -> (short name, binder name, area).
 FACTS = {
@@ -65,7 +65,6 @@ FACTS = {
     "Wills.FacetFormula": ("E3", "hE3", "facets of polytopes"),
     "Wills.BoundaryTriangulation": ("TRI", "hTRI", "triangulations of spheres, f-vectors and facets of polytopes"),
     "Wills.CrossPolytopeNoTiling": ("TILE", "hTILE", "tilings and facets of polytopes"),
-    "Wills.WillsDim3": ("WIL3", "hWIL3", "Ehrhart theory"),
 }
 # Computer checks (checked by computer, NOT proved in Lean): binder type -> (short name, binder name).
 CHECKS = {"Wills.VolW": ("VolW", "hVolW"), **{f"Wills.Comp{n}": (f"Comp{n}", f"hC{n}") for n in range(1, 6)}}
@@ -74,7 +73,7 @@ ORDER = [short for short, _ in HYPOTHESES.values()]                       # fact
 RESERVED = {binder: type_name for type_name, (_, binder) in HYPOTHESES.items()}
 HYPOTHESIS_MODULES = (LIB + ".Facts", LIB + ".Checks")
 # The claim map's CHECK names -> the keys of ./reproduce.sh that rerun them.
-REPRODUCE_KEYS = {"VolW": "theorem-1.3",
+REPRODUCE_KEYS = {"VolW": "theorem-1.3", "Comp1Max": "computation-1",
                   **{f"Comp{n}{suffix}": f"computation-{n}" for n in range(1, 6) for suffix in ("", "Count")}}
 NOT_FORMALIZED = {"faces": "NOT FORMALIZED (no faces of polytopes in Lean's library)"}
 WORDS = ("PROVED", "PROVED GIVEN", "OPEN", "VIOLATION", "CHECKED BY COMPUTER", "NOT FORMALIZED")  # totals order
