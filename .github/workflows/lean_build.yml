@@ -45,7 +45,8 @@ jobs:
       - name: Swap space (a heavy proof can need more memory than this machine has)
         # Without it, a run can die mid-build with "shutdown signal" (exit 143): out of memory on the small machine
         # GitHub gives private repositories.
-        # 20 GB: two heavy files built at the same time can need about 24 GB of working memory (measured).
+        # 10 GB: in one-thread runs of each file of this proof, the largest sampled working memory was about 2 GiB,
+        # plus about 5 GiB of file-backed compiled code that processes can share (measured); the swap is a margin.
         # The swap file goes on the second disk at /mnt when it has room (then it takes no space from the build),
         # else on the disk freed above.
         run: |
@@ -53,14 +54,14 @@ jobs:
           df -h / /mnt
           root_gb=$(df --output=avail -BG / | tail -1 | tr -dc 0-9)
           mnt_gb=$(df --output=avail -BG /mnt | tail -1 | tr -dc 0-9)
-          if [ "$(stat -c %d /mnt)" != "$(stat -c %d /)" ] && [ "$mnt_gb" -ge 21 ]; then
+          if [ "$(stat -c %d /mnt)" != "$(stat -c %d /)" ] && [ "$mnt_gb" -ge 11 ]; then
             swap_file=/mnt/swapfile_build
           else
-            [ "$root_gb" -ge 30 ] || { echo "only ${root_gb} GB free on / and too little on /mnt: a 20 GB swap file would leave too little for Mathlib"; exit 1; }
+            [ "$root_gb" -ge 30 ] || { echo "only ${root_gb} GB free on / and too little on /mnt: a 10 GB swap file would leave too little for Mathlib"; exit 1; }
             swap_file=/swapfile_build
           fi
           echo "swap file: $swap_file"
-          sudo fallocate -l 20G "$swap_file"
+          sudo fallocate -l 10G "$swap_file"
           sudo chmod 600 "$swap_file"
           sudo mkswap "$swap_file"
           sudo swapon "$swap_file"
@@ -72,6 +73,7 @@ jobs:
           lake-package-directory: ${{ matrix.project }}
           auto-config: false
           use-mathlib-cache: true
+          use-github-cache: false
           build: true
           test: false
           lint: false
