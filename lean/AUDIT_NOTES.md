@@ -1,13 +1,13 @@
-# AUDIT_NOTES — the Lean formalization of "Wills' (1981) conjecture is fully resolved"
+# AUDIT_NOTES — the Lean formalization of "Wills' (1981) conjecture holds if and only if the dimension is at most 4"
 
 Author: Dave Goel. Copyright (C) Dave Goel 2026--now.
 
 These notes are for a reader of the Lean tree. AUDIT.md (made by `scripts/audit.py`) gives the status of every row and
 every printed claim; these notes explain the modelling choices and every place where the Lean route differs from the
-printed proof. Line numbers "l.N" refer to the paper's source, version 3.20 (TeX source md5 47e41917); Figure 3 is the
-file fig_maxg1.tex (md5 a9f75b6d), input at the end of l.330, its caption on its line 32. The abstract's
-last sentence (l.47) and the footnote "Lean 4 formalization:" (l.38) are remarks about this Lean folder, not mathematical
-claims: CLAIM_MAP.tsv lists them as NOT COUNTED.
+printed proof. Line numbers "l.N" refer to the paper's source, version 3.32 (TeX source md5 b19355cc); Figure 3 is the
+file fig_maxg1.tex (md5 b1fe6de9), input at the end of l.330, its caption on its line 35. The title's footnote
+(l.38), which names the hypotheses and `lake comparator`, is a remark about this Lean folder, not a mathematical
+claim: CLAIM_MAP.tsv lists it as NOT COUNTED.
 
 The Lean sources declare no axioms (`scripts/check.sh` fails on any). Two kinds of input enter only as explicit
 hypotheses of the rows that use them, so nothing is assumed globally: the facts of section 2 (NOT formalized) and the

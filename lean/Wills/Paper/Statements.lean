@@ -1,8 +1,8 @@
 /-
-Wills/Paper/Statements.lean — one Lean theorem (row) per claim of "Wills' (1981) conjecture is fully resolved".
-Pointers "l.N" are lines of the paper's TeX source, version 3.20 (md5 47e41917; lines 1-404 as in versions 1.50 to
-2.30; Corollary 7.2 and Remark 7.3 at l.406-416); Figure 3 is the file fig_maxg1.tex (md5 a9f75b6d), its caption on
-line 32. Rows fig3_bound_gt, fig3_lt_eight and comp5_maximal are RETIRED: their sentences were printed in earlier
+Wills/Paper/Statements.lean — one Lean theorem (row) per claim of "Wills' (1981) conjecture holds if and only if the dimension is at most 4".
+Pointers "l.N" are lines of the paper's TeX source; AUDIT_NOTES.md names its version and md5. Figure 3 is the file
+fig_maxg1.tex, its caption on its line 35. Rows fig3_bound_gt, fig3_lt_eight and comp5_maximal are RETIRED: their
+sentences were printed in earlier
 versions of the paper (last: text version 2.30 for the two Figure 3 rows, 2.80 for comp5_maximal) and are not printed
 in this version; they are kept, not counted. A row is proved iff its body is a proof term. A fact from Wills/Facts/ or
 a computation from Wills/Checks/ that a proof uses is an explicit hypothesis of the row (binders hEHR, hE1, hE2, hE3,
@@ -910,7 +910,7 @@ theorem cor_7_2 (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hE3 : FacetFo
     rw [iso_g 4 (cube 4) (Zn 4) P (Zn 4) (S71.iso_of_unimod hc) 2, cube_g 4 2]
     norm_num [Nat.choose]
 
-/-! ## Figure 3 (Section 6, l.330; its caption is line 32 of fig_maxg1.tex) -/
+/-! ## Figure 3 (Section 6, l.330; its caption is line 35 of fig_maxg1.tex) -/
 
 /-- l.263 (after the proof of Lemma 4.3) and Figure 3, caption: the bound `g_1 ≤ (3G+7)/12` follows from the inequality `Σ_F NVol(F) ≥ 3G - 13` in the
 proof of Lemma 4.3, since `g_1 = (G-1)/2 - σ/2` (Lemma 4.1 and (E3)) and `σ = (1/6) Σ_F NVol(F)`. Over (E3)'s facet
@@ -946,7 +946,7 @@ theorem fig3_lt_eight (hE1 : EhrhartLeading) (hE2 : EhrhartReciprocity) (hE3 : F
 theorem fig3_T_X_case_III : rP T ≤ 3 ∧ rP X ≤ 3 :=
   ⟨S71.T_caseIII.2, S71.X_caseIII.2⟩
 
-/-- Figure 3, caption (fig_maxg1.tex l.32): `C_4` belongs to Case I: `M(C_4)` contains the basis `e_1, …, e_4` of
+/-- Figure 3, caption (fig_maxg1.tex l.35): `C_4` belongs to Case I: `M(C_4)` contains the basis `e_1, …, e_4` of
 `ℤ⁴` (the rows of the identity matrix). -/
 theorem cube4_case_I : CaseI (cube 4) :=
   R280.cube4_case_I_proof

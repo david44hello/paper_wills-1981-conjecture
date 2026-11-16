@@ -1,6 +1,6 @@
 /-
-Wills/Proofs/Sec7Hyp.lean — the computable part of the facet sentences of Section 7 of "Wills' (1981) conjecture is
-fully resolved": the hyperplanes of the 24-cell, of X and of C_4, their primitive normals in the dual lattice, their
+Wills/Proofs/Sec7Hyp.lean — the computable part of the facet sentences of Section 7 of "Wills' (1981) conjecture holds if
+and only if the dimension is at most 4": the hyperplanes of the 24-cell, of X and of C_4, their primitive normals in the dual lattice, their
 values (the lattice distances), and four affinely independent points of the polytope on each hyperplane.
 Author: Dave Goel.
 Copyright (C) Dave Goel 2026--now. All rights reserved.

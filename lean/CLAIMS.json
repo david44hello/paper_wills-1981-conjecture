@@ -1,6 +1,6 @@
 {
   "version": "0.71",
-  "paper": "Wills' (1981) conjecture is fully resolved",
+  "paper": "Wills' (1981) conjecture holds if and only if the dimension is at most 4",
   "namespace": "Wills",
   "statements": "Wills/Paper/Statements.lean",
   "counts": {
@@ -2666,7 +2666,7 @@
     {
       "name": "cube4_case_I",
       "line": 951,
-      "claim": "Figure 3, caption (fig_maxg1.tex l.32): `C_4` belongs to Case I: `M(C_4)` contains the basis `e_1, …, e_4` of",
+      "claim": "Figure 3, caption (fig_maxg1.tex l.35): `C_4` belongs to Case I: `M(C_4)` contains the basis `e_1, …, e_4` of",
       "qualified_name": "Wills.cube4_case_I",
       "axioms": [
         "Classical.choice",
@@ -2701,7 +2701,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 78,
+      "line": 79,
       "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "thm_1_2",
@@ -2721,7 +2721,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 79,
+      "line": 80,
       "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "thm_7_1",
@@ -2743,7 +2743,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 80,
+      "line": 81,
       "status": "PROVED GIVEN E1, E2, VolW",
       "best_alternative": [
         "thm_1_3_mem",
@@ -2754,7 +2754,7 @@
     },
     {
       "id": "AB4",
-      "description": "Abstract l.47 + Table 1 l.78-79 (\"counterexamples in every dimension n >= 5\") + Corollary 1.4 l.105-107 + Figure 1 (l.113-140, \"After this paper\" row and the caption's second sentence: \"This paper proves it for n = 4 (Theorem 1.2 and Corollary 1.4)\" and disproves it for every n >= 5): Wills' conjecture holds in R^n (n >= 1) iff n <= 4",
+      "description": "Title l.38 (\"Wills' (1981) conjecture holds if and only if the dimension is at most 4\") + Abstract l.47 + Table 1 l.78-79 (\"counterexamples in every dimension n >= 5\") + Corollary 1.4 l.105-107 + Figure 1 (l.113-140, \"After this paper\" row and the caption's second sentence: \"This paper proves it for n = 4 (Theorem 1.2 and Corollary 1.4)\" and disproves it for every n >= 5): Wills' conjecture holds in R^n (n >= 1) iff n <= 4",
       "required": [
         [
           "cor_1_4",
@@ -2767,7 +2767,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 81,
+      "line": 82,
       "status": "PROVED GIVEN EHR, E1, E2, E3, TRI, TILE, VolW, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "cor_1_4",
@@ -2782,7 +2782,7 @@
       "support": [],
       "kind": "FACT EhrhartThm",
       "kind_status": "NOT FORMALIZED (fact EhrhartThm: no Ehrhart theory in Lean's library)",
-      "line": 82,
+      "line": 83,
       "status": "NOT FORMALIZED (fact EhrhartThm: no Ehrhart theory in Lean's library)",
       "best_alternative": []
     },
@@ -2800,7 +2800,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 83,
+      "line": 84,
       "status": "PROVED",
       "best_alternative": [
         "g0_eq_one"
@@ -2814,7 +2814,7 @@
       "support": [],
       "kind": "FACT EhrhartLeading",
       "kind_status": "NOT FORMALIZED (fact EhrhartLeading: no Ehrhart theory in Lean's library)",
-      "line": 84,
+      "line": 85,
       "status": "NOT FORMALIZED (fact EhrhartLeading: no Ehrhart theory in Lean's library)",
       "best_alternative": []
     },
@@ -2831,7 +2831,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 85,
+      "line": 86,
       "status": "PROVED",
       "best_alternative": [
         "minkowski_first",
@@ -2852,7 +2852,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 86,
+      "line": 87,
       "status": "PROVED",
       "best_alternative": [
         "cube_mem",
@@ -2872,7 +2872,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 87,
+      "line": 88,
       "status": "PROVED",
       "best_alternative": [
         "conj_i0"
@@ -2890,7 +2890,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 88,
+      "line": 89,
       "status": "PROVED GIVEN E1",
       "best_alternative": [
         "conj_in"
@@ -2909,7 +2909,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 89,
+      "line": 90,
       "status": "PROVED GIVEN E1, E3",
       "best_alternative": [
         "conj_in1",
@@ -2935,7 +2935,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 90,
+      "line": 91,
       "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "thm_1_2"
@@ -2953,7 +2953,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 91,
+      "line": 92,
       "status": "PROVED",
       "best_alternative": [
         "finitely_many_sets"
@@ -2974,7 +2974,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 92,
+      "line": 93,
       "status": "PROVED",
       "best_alternative": [
         "thm_1_3_mem",
@@ -2995,7 +2995,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 93,
+      "line": 94,
       "status": "PROVED GIVEN EHR, E1, E2, VolW",
       "best_alternative": [
         "thm_1_3_poly"
@@ -3015,7 +3015,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 94,
+      "line": 95,
       "status": "PROVED GIVEN E1, E2, VolW",
       "best_alternative": [
         "thm_1_3_g1"
@@ -3036,7 +3036,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 95,
+      "line": 96,
       "status": "PROVED GIVEN EHR, E1, E2, VolW",
       "best_alternative": [
         "thm_1_3_prod"
@@ -3054,7 +3054,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 96,
+      "line": 97,
       "status": "PROVED",
       "best_alternative": [
         "tab2_vertices"
@@ -3072,7 +3072,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 97,
+      "line": 98,
       "status": "PROVED",
       "best_alternative": [
         "W_facets"
@@ -3086,7 +3086,7 @@
       "support": [],
       "kind": "NOT-FORMALIZED faces",
       "kind_status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
-      "line": 98,
+      "line": 99,
       "status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -3104,7 +3104,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 99,
+      "line": 100,
       "status": "PROVED",
       "best_alternative": [
         "w_G",
@@ -3120,7 +3120,7 @@
       "support": [],
       "kind": "CHECK VolW",
       "kind_status": "CHECKED BY COMPUTER (VolW), NOT proved in Lean: ./reproduce.sh theorem-1.3",
-      "line": 100,
+      "line": 101,
       "status": "CHECKED BY COMPUTER (VolW), NOT proved in Lean: ./reproduce.sh theorem-1.3",
       "best_alternative": []
     },
@@ -3139,7 +3139,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 101,
+      "line": 102,
       "status": "PROVED GIVEN E1, E2, VolW",
       "best_alternative": [
         "w_A",
@@ -3159,7 +3159,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 102,
+      "line": 103,
       "status": "PROVED GIVEN EHR, E1, E2, VolW",
       "best_alternative": [
         "w_L3456",
@@ -3184,7 +3184,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 103,
+      "line": 104,
       "status": "PROVED GIVEN EHR, E1, E2, E3, TRI, TILE, VolW, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "cor_1_4",
@@ -3203,7 +3203,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 104,
+      "line": 105,
       "status": "PROVED GIVEN E1, E2, E3",
       "best_alternative": [
         "wills_dim3"
@@ -3223,7 +3223,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 105,
+      "line": 106,
       "status": "PROVED",
       "best_alternative": [
         "iso_count"
@@ -3241,7 +3241,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 106,
+      "line": 107,
       "status": "PROVED",
       "best_alternative": [
         "iso_Zn_GL"
@@ -3255,7 +3255,7 @@
       "support": [],
       "kind": "FACT EhrhartReciprocity",
       "kind_status": "NOT FORMALIZED (fact EhrhartReciprocity: no Ehrhart theory in Lean's library)",
-      "line": 107,
+      "line": 108,
       "status": "NOT FORMALIZED (fact EhrhartReciprocity: no Ehrhart theory in Lean's library)",
       "best_alternative": []
     },
@@ -3267,7 +3267,7 @@
       "support": [],
       "kind": "FACT FacetFormula",
       "kind_status": "NOT FORMALIZED (fact FacetFormula: no facets of polytopes in Lean's library)",
-      "line": 108,
+      "line": 109,
       "status": "NOT FORMALIZED (fact FacetFormula: no facets of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -3283,7 +3283,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 109,
+      "line": 110,
       "status": "PROVED",
       "best_alternative": [
         "e4_prod_count"
@@ -3301,7 +3301,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 110,
+      "line": 111,
       "status": "PROVED",
       "best_alternative": [
         "inW_full_dim"
@@ -3319,7 +3319,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 111,
+      "line": 112,
       "status": "PROVED",
       "best_alternative": [
         "G_odd"
@@ -3337,7 +3337,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 112,
+      "line": 113,
       "status": "PROVED",
       "best_alternative": [
         "lem_2_1"
@@ -3355,7 +3355,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 113,
+      "line": 114,
       "status": "PROVED",
       "best_alternative": [
         "lem_2_1_sub"
@@ -3376,7 +3376,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 114,
+      "line": 115,
       "status": "PROVED GIVEN EHR",
       "best_alternative": [
         "lem_2_2"
@@ -3394,7 +3394,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 115,
+      "line": 116,
       "status": "PROVED GIVEN E1, E2",
       "best_alternative": [
         "prop_3_1"
@@ -3412,7 +3412,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 116,
+      "line": 117,
       "status": "PROVED GIVEN E2",
       "best_alternative": [
         "lem_4_1"
@@ -3430,7 +3430,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 117,
+      "line": 118,
       "status": "PROVED GIVEN E2",
       "best_alternative": [
         "recip_m1_dim4"
@@ -3448,7 +3448,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 118,
+      "line": 119,
       "status": "PROVED GIVEN E1",
       "best_alternative": [
         "prop_4_2_g4"
@@ -3466,7 +3466,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 119,
+      "line": 120,
       "status": "PROVED GIVEN E1, E3",
       "best_alternative": [
         "prop_4_2_g3"
@@ -3484,7 +3484,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 120,
+      "line": 121,
       "status": "PROVED GIVEN E2, E3",
       "best_alternative": [
         "prop_4_2_iff"
@@ -3502,7 +3502,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 121,
+      "line": 122,
       "status": "PROVED GIVEN E1, E2, E3",
       "best_alternative": [
         "prop_4_2_g2"
@@ -3520,7 +3520,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 122,
+      "line": 123,
       "status": "PROVED GIVEN E1, E2, E3",
       "best_alternative": [
         "key_equiv"
@@ -3534,7 +3534,7 @@
       "support": [],
       "kind": "FACT BoundaryTriangulation",
       "kind_status": "NOT FORMALIZED (fact BoundaryTriangulation: no triangulations of spheres, f-vectors and facets of polytopes in Lean's library)",
-      "line": 123,
+      "line": 124,
       "status": "NOT FORMALIZED (fact BoundaryTriangulation: no triangulations of spheres, f-vectors and facets of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -3550,7 +3550,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 124,
+      "line": 125,
       "status": "PROVED GIVEN E3",
       "best_alternative": [
         "star_iff"
@@ -3568,7 +3568,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 125,
+      "line": 126,
       "status": "PROVED GIVEN E2, E3, TRI",
       "best_alternative": [
         "lem_4_3"
@@ -3587,7 +3587,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 126,
+      "line": 127,
       "status": "PROVED GIVEN E2, E3, TRI",
       "best_alternative": [
         "lem_4_3_arith",
@@ -3606,7 +3606,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 127,
+      "line": 128,
       "status": "PROVED",
       "best_alternative": [
         "rem_4_4_only"
@@ -3626,7 +3626,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 128,
+      "line": 129,
       "status": "PROVED",
       "best_alternative": [
         "M_finite",
@@ -3646,7 +3646,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 129,
+      "line": 130,
       "status": "PROVED",
       "best_alternative": [
         "case_I"
@@ -3665,7 +3665,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 130,
+      "line": 131,
       "status": "PROVED",
       "best_alternative": [
         "case_II_transfer",
@@ -3686,7 +3686,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 131,
+      "line": 132,
       "status": "PROVED",
       "best_alternative": [
         "case_II_d_le_16"
@@ -3704,7 +3704,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 132,
+      "line": 133,
       "status": "PROVED",
       "best_alternative": [
         "index2_eq_gammaI"
@@ -3723,7 +3723,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 133,
+      "line": 134,
       "status": "PROVED",
       "best_alternative": [
         "gammaI_mem_iff",
@@ -3743,7 +3743,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 134,
+      "line": 135,
       "status": "PROVED",
       "best_alternative": [
         "case_II_index2",
@@ -3763,7 +3763,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 135,
+      "line": 136,
       "status": "PROVED",
       "best_alternative": [
         "frame_D_pos",
@@ -3786,7 +3786,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 136,
+      "line": 137,
       "status": "PROVED GIVEN TILE",
       "best_alternative": [
         "lem_5_1_i",
@@ -3815,7 +3815,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 137,
+      "line": 138,
       "status": "PROVED GIVEN TILE",
       "best_alternative": [
         "lem_5_1_i",
@@ -3836,7 +3836,7 @@
       "support": [],
       "kind": "FACT CrossPolytopeNoTiling",
       "kind_status": "NOT FORMALIZED (fact CrossPolytopeNoTiling: no tilings and facets of polytopes in Lean's library)",
-      "line": 138,
+      "line": 139,
       "status": "NOT FORMALIZED (fact CrossPolytopeNoTiling: no tilings and facets of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -3853,7 +3853,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 139,
+      "line": 140,
       "status": "PROVED",
       "best_alternative": [
         "frameLat_finite",
@@ -3872,7 +3872,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 140,
+      "line": 141,
       "status": "PROVED",
       "best_alternative": [
         "frame_M_transfer"
@@ -3890,7 +3890,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 141,
+      "line": 142,
       "status": "PROVED",
       "best_alternative": [
         "frame_dual"
@@ -3913,7 +3913,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 142,
+      "line": 143,
       "status": "PROVED GIVEN TILE",
       "best_alternative": [
         "lem_5_1_i",
@@ -3937,7 +3937,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 143,
+      "line": 144,
       "status": "PROVED GIVEN TILE, Comp4",
       "best_alternative": [
         "case_III_transfer",
@@ -3946,7 +3946,7 @@
     },
     {
       "id": "F3a",
-      "description": "l.263 (after the proof of Lemma 4.3) + Figure 3 caption (fig_maxg1.tex l.32: the solid line is the bound g_1 <= (3G+7)/12 \"stated after the proof of Lemma 4.3\") + l.330 (\"the bound on g_1 stated after the proof of Lemma 4.3\"): for every P in O^4_Λ, g_1 = (G-1)/2 - sigma/2 (Lemma 4.1 and (E3)) and sigma = (1/6) Σ_F NVol(F) >= (3G-13)/6, so g_1 <= (3G+7)/12 (sigma, NVol over E3's facet data); the figure draws it in the shaded region G <= 29. SUPPORT fig3_bound_gt: RETIRED (v2.30's caption sentence, For G >= 31 this bound exceeds 8, is gone)",
+      "description": "l.263 (after the proof of Lemma 4.3) + Figure 3 caption (fig_maxg1.tex l.35: the solid line is the bound g_1 <= (3G+7)/12 \"stated after the proof of Lemma 4.3\") + l.330 (\"the bound on g_1 stated after the proof of Lemma 4.3\"): for every P in O^4_Λ, g_1 = (G-1)/2 - sigma/2 (Lemma 4.1 and (E3)) and sigma = (1/6) Σ_F NVol(F) >= (3G-13)/6, so g_1 <= (3G+7)/12 (sigma, NVol over E3's facet data); the figure draws it in the shaded region G <= 29. SUPPORT fig3_bound_gt: RETIRED (v2.30's caption sentence, For G >= 31 this bound exceeds 8, is gone)",
       "required": [
         [
           "fig3_g1_bound"
@@ -3958,7 +3958,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 144,
+      "line": 145,
       "status": "PROVED GIVEN E2, E3, TRI",
       "best_alternative": [
         "fig3_g1_bound"
@@ -3966,7 +3966,7 @@
     },
     {
       "id": "F3c",
-      "description": "Figure 3 caption (fig_maxg1.tex l.32) + its 26 grey dots (fig_maxg1.tex l.27) + l.330: the grey dots show, for each odd G >= 31, the largest value of g_1 in Case I (Computation 1) (G is odd: claim S2d)",
+      "description": "Figure 3 caption (fig_maxg1.tex l.35) + its 26 grey dots (fig_maxg1.tex l.30) + l.330: the grey dots show, for each odd G >= 31, the largest value of g_1 in Case I (Computation 1) (G is odd: claim S2d)",
       "required": [],
       "pending": false,
       "support": [
@@ -3974,13 +3974,13 @@
       ],
       "kind": "CHECK Comp1Max",
       "kind_status": "CHECKED BY COMPUTER (Comp1Max), NOT proved in Lean: ./reproduce.sh computation-1",
-      "line": 145,
+      "line": 146,
       "status": "CHECKED BY COMPUTER (Comp1Max), NOT proved in Lean: ./reproduce.sh computation-1",
       "best_alternative": []
     },
     {
       "id": "F3d",
-      "description": "Figure 3 caption (fig_maxg1.tex l.32): \"C_4 belongs to Case I\" (M(C_4) contains the basis e_1, ..., e_4 of Z^4); C_4 is the green dot at G = 81, g_1 = 8 (fig_maxg1.tex l.30; G(C_4) = 81 and g_1(C_4) = 8)",
+      "description": "Figure 3 caption (fig_maxg1.tex l.35): \"C_4 belongs to Case I\" (M(C_4) contains the basis e_1, ..., e_4 of Z^4); C_4 is the green dot at G = 81, g_1 = 8 (fig_maxg1.tex l.33; G(C_4) = 81 and g_1(C_4) = 8)",
       "required": [
         [
           "cube4_case_I",
@@ -3992,7 +3992,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 146,
+      "line": 147,
       "status": "PROVED",
       "best_alternative": [
         "cube4_case_I",
@@ -4002,7 +4002,7 @@
     },
     {
       "id": "F3e",
-      "description": "Figure 3 caption (fig_maxg1.tex l.32, its first sentence and \"The three larger green dots mark the polytopes\" C_4, T and X of Theorem 7.1) + l.330 (\"the three equality cases of Theorem 7.1\") + the green dots (fig_maxg1.tex l.28-30, at G = 49, 33, 81 and g_1 = 8): C_4, T, X are the equality cases of Theorem 7.1, with G = 81, 49, 33; T and X \"belong to Case III\"",
+      "description": "Figure 3 caption (fig_maxg1.tex l.35, its first sentence and \"The three larger green dots mark the polytopes\" C_4, T and X of Theorem 7.1) + l.330 (\"the three equality cases of Theorem 7.1\") + the green dots (fig_maxg1.tex l.31-33, at G = 49, 33, 81 and g_1 = 8): C_4, T, X are the equality cases of Theorem 7.1, with G = 81, 49, 33; T and X \"belong to Case III\"",
       "required": [
         [
           "thm_7_1",
@@ -4016,7 +4016,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 147,
+      "line": 148,
       "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "thm_7_1",
@@ -4028,7 +4028,7 @@
     },
     {
       "id": "F3g",
-      "description": "Figure 3 caption (fig_maxg1.tex l.32): \"For Cases II and III only the largest value of\" g_1 \"over all\" G \"is recorded\": at most 6 in Case II (Computation 3), and at most 8 in Case III, attained only by T and X (Computation 5: equality for exactly two classes, with G = 49 and G = 33; T and X lie in Case III and have these G; Theorem 7.1)",
+      "description": "Figure 3 caption (fig_maxg1.tex l.35): \"For Cases II and III only the largest value of\" g_1 \"over all\" G \"is recorded\": at most 6 in Case II (Computation 3), and at most 8 in Case III, attained only by T and X (Computation 5: equality for exactly two classes, with G = 49 and G = 33; T and X lie in Case III and have these G; Theorem 7.1)",
       "required": [],
       "pending": false,
       "support": [
@@ -4039,7 +4039,7 @@
       ],
       "kind": "CHECK Comp3,Comp5",
       "kind_status": "CHECKED BY COMPUTER (Comp3, Comp5), NOT proved in Lean: ./reproduce.sh computation-3 computation-5",
-      "line": 148,
+      "line": 149,
       "status": "CHECKED BY COMPUTER (Comp3, Comp5), NOT proved in Lean: ./reproduce.sh computation-3 computation-5",
       "best_alternative": []
     },
@@ -4056,7 +4056,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 149,
+      "line": 150,
       "status": "PROVED",
       "best_alternative": [
         "lem_6_1_i",
@@ -4075,7 +4075,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 150,
+      "line": 151,
       "status": "PROVED",
       "best_alternative": [
         "walk_reach"
@@ -4093,7 +4093,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 151,
+      "line": 152,
       "status": "PROVED",
       "best_alternative": [
         "walk_symm"
@@ -4112,7 +4112,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 152,
+      "line": 153,
       "status": "PROVED",
       "best_alternative": [
         "hyperplane_le_27",
@@ -4127,7 +4127,7 @@
       "support": [],
       "kind": "CHECK Comp1,Comp1Count",
       "kind_status": "CHECKED BY COMPUTER (Comp1, Comp1Count), NOT proved in Lean: ./reproduce.sh computation-1",
-      "line": 153,
+      "line": 154,
       "status": "CHECKED BY COMPUTER (Comp1, Comp1Count), NOT proved in Lean: ./reproduce.sh computation-1",
       "best_alternative": []
     },
@@ -4145,7 +4145,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 154,
+      "line": 155,
       "status": "PROVED",
       "best_alternative": [
         "comp2_result"
@@ -4159,7 +4159,7 @@
       "support": [],
       "kind": "CHECK Comp2Count",
       "kind_status": "CHECKED BY COMPUTER (Comp2Count), NOT proved in Lean: ./reproduce.sh computation-2",
-      "line": 155,
+      "line": 156,
       "status": "CHECKED BY COMPUTER (Comp2Count), NOT proved in Lean: ./reproduce.sh computation-2",
       "best_alternative": []
     },
@@ -4175,7 +4175,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 156,
+      "line": 157,
       "status": "PROVED",
       "best_alternative": [
         "comp2_d2_max"
@@ -4194,7 +4194,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 157,
+      "line": 158,
       "status": "PROVED",
       "best_alternative": [
         "gammaI_perm",
@@ -4209,7 +4209,7 @@
       "support": [],
       "kind": "CHECK Comp3,Comp3Count",
       "kind_status": "CHECKED BY COMPUTER (Comp3, Comp3Count), NOT proved in Lean: ./reproduce.sh computation-3",
-      "line": 158,
+      "line": 159,
       "status": "CHECKED BY COMPUTER (Comp3, Comp3Count), NOT proved in Lean: ./reproduce.sh computation-3",
       "best_alternative": []
     },
@@ -4225,7 +4225,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 159,
+      "line": 160,
       "status": "PROVED",
       "best_alternative": [
         "frame_lat_GL"
@@ -4239,7 +4239,7 @@
       "support": [],
       "kind": "CHECK Comp4,Comp4Count",
       "kind_status": "CHECKED BY COMPUTER (Comp4, Comp4Count), NOT proved in Lean: ./reproduce.sh computation-4",
-      "line": 160,
+      "line": 161,
       "status": "CHECKED BY COMPUTER (Comp4, Comp4Count), NOT proved in Lean: ./reproduce.sh computation-4",
       "best_alternative": []
     },
@@ -4251,7 +4251,7 @@
       "support": [],
       "kind": "CHECK Comp5,Comp5Count",
       "kind_status": "CHECKED BY COMPUTER (Comp5, Comp5Count), NOT proved in Lean: ./reproduce.sh computation-5",
-      "line": 161,
+      "line": 162,
       "status": "CHECKED BY COMPUTER (Comp5, Comp5Count), NOT proved in Lean: ./reproduce.sh computation-5",
       "best_alternative": []
     },
@@ -4269,7 +4269,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 162,
+      "line": 163,
       "status": "PROVED",
       "best_alternative": [
         "M_antitone"
@@ -4288,7 +4288,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 163,
+      "line": 164,
       "status": "PROVED",
       "best_alternative": [
         "sandwich_split",
@@ -4307,7 +4307,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 164,
+      "line": 165,
       "status": "PROVED",
       "best_alternative": [
         "sandwich_start"
@@ -4325,7 +4325,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 165,
+      "line": 166,
       "status": "PROVED GIVEN E2",
       "best_alternative": [
         "poly_six_values"
@@ -4344,7 +4344,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 166,
+      "line": 167,
       "status": "PROVED",
       "best_alternative": [
         "sandwich_include_member",
@@ -4363,7 +4363,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 167,
+      "line": 168,
       "status": "PROVED",
       "best_alternative": [
         "sandwich_symm"
@@ -4381,7 +4381,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 168,
+      "line": 169,
       "status": "PROVED",
       "best_alternative": [
         "T_iso"
@@ -4401,7 +4401,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 169,
+      "line": 170,
       "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "thm_7_1"
@@ -4422,7 +4422,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 170,
+      "line": 171,
       "status": "PROVED",
       "best_alternative": [
         "cell24_points",
@@ -4445,7 +4445,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 171,
+      "line": 172,
       "status": "PROVED",
       "best_alternative": [
         "cell24_eq_box"
@@ -4464,7 +4464,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 172,
+      "line": 173,
       "status": "PROVED",
       "best_alternative": [
         "cell24_hyperplanes",
@@ -4483,7 +4483,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 173,
+      "line": 174,
       "status": "PROVED",
       "best_alternative": [
         "D4star_dual"
@@ -4501,7 +4501,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 174,
+      "line": 175,
       "status": "PROVED",
       "best_alternative": [
         "cell24_normals"
@@ -4515,7 +4515,7 @@
       "support": [],
       "kind": "NOT-FORMALIZED faces",
       "kind_status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
-      "line": 175,
+      "line": 176,
       "status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -4532,7 +4532,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 176,
+      "line": 177,
       "status": "PROVED GIVEN E1, E2",
       "best_alternative": [
         "T_vol",
@@ -4553,7 +4553,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 177,
+      "line": 178,
       "status": "PROVED",
       "best_alternative": [
         "X_mem",
@@ -4573,7 +4573,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 178,
+      "line": 179,
       "status": "PROVED",
       "best_alternative": [
         "X_hyperplanes"
@@ -4587,7 +4587,7 @@
       "support": [],
       "kind": "NOT-FORMALIZED faces",
       "kind_status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
-      "line": 179,
+      "line": 180,
       "status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -4603,7 +4603,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 180,
+      "line": 181,
       "status": "PROVED GIVEN E1, E2, E3",
       "best_alternative": [
         "g3_of_dist"
@@ -4621,7 +4621,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 181,
+      "line": 182,
       "status": "PROVED",
       "best_alternative": [
         "cube4_G_vol"
@@ -4639,7 +4639,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 182,
+      "line": 183,
       "status": "PROVED",
       "best_alternative": [
         "cube4_hyperplanes"
@@ -4653,7 +4653,7 @@
       "support": [],
       "kind": "NOT-FORMALIZED faces",
       "kind_status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
-      "line": 183,
+      "line": 184,
       "status": "NOT FORMALIZED (no faces of polytopes in Lean's library)",
       "best_alternative": []
     },
@@ -4671,7 +4671,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 184,
+      "line": 185,
       "status": "PROVED GIVEN EHR, E2",
       "best_alternative": [
         "poly_C4",
@@ -4692,7 +4692,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 185,
+      "line": 186,
       "status": "PROVED",
       "best_alternative": [
         "M_T",
@@ -4714,7 +4714,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 186,
+      "line": 187,
       "status": "PROVED GIVEN E2",
       "best_alternative": [
         "henze_C4",
@@ -4736,7 +4736,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 187,
+      "line": 188,
       "status": "PROVED GIVEN E1, E2",
       "best_alternative": [
         "henze_vieta",
@@ -4762,7 +4762,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 188,
+      "line": 189,
       "status": "PROVED GIVEN E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "thm_7_1"
@@ -4780,7 +4780,7 @@
       "support": [],
       "kind": null,
       "kind_status": null,
-      "line": 189,
+      "line": 190,
       "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "cor_7_2"
@@ -4810,7 +4810,7 @@
       ],
       "kind": null,
       "kind_status": null,
-      "line": 190,
+      "line": 191,
       "status": "PROVED GIVEN E1, E2, E3, TRI, TILE, Comp1, Comp3, Comp4, Comp5",
       "best_alternative": [
         "cor_7_2"

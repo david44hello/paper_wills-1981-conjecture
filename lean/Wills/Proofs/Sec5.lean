@@ -1,5 +1,5 @@
 /-
-Wills/Proofs/Sec5.lean — proofs for Section 5 of "Wills' (1981) conjecture is fully resolved": the set M(P) of integer
+Wills/Proofs/Sec5.lean — proofs for Section 5 of "Wills' (1981) conjecture holds if and only if the dimension is at most 4": the set M(P) of integer
 functionals, the three cases, Cases I and II, the frame of Case III and Lemma 5.1.
 Author: Dave Goel.
 Copyright (C) Dave Goel 2026--now. All rights reserved.

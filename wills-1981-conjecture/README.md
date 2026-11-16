@@ -1,10 +1,10 @@
-# Wills' (1981) conjecture is fully resolved
+# Wills' (1981) conjecture holds if and only if the dimension is at most 4
 
-Supporting materials for the paper "Wills' (1981) conjecture is fully resolved" by Dave Goel.
+Supporting materials for the paper "Wills' (1981) conjecture holds if and only if the dimension is at most 4" by Dave Goel.
 
 Copyright (C) Dave Goel 2026--now. All rights reserved.
 
-## Directions to Reproduce
+## How to verify
 
 Install Python 3.12 with NumPy 1.26.4 and SciPy 1.11.4, Normaliz 3.10.2 and LattE integrale 1.7.6. One way, on Ubuntu 24.04:
 

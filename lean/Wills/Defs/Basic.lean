@@ -1,5 +1,5 @@
 /-
-Wills/Defs/Basic.lean — Basic definitions for "Wills' (1981) conjecture is fully resolved" (Section 2 of the paper).
+Wills/Defs/Basic.lean — Basic definitions for "Wills' (1981) conjecture holds if and only if the dimension is at most 4" (Section 2 of the paper).
 
 Points of `ℝⁿ` are functions `Fin n → ℝ`; `volume` is Lebesgue measure on them. A lattice is given as a set of points
 `Λ`; the lattice `B ℤⁿ` of a real matrix `B` with `det B ≠ 0` is `lat B`, and `det (lat B) = |det B|`.

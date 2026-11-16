@@ -1,5 +1,5 @@
 /-
-Wills/Defs/Cases.lean — Definitions for Sections 2 and 5-7 of "Wills' (1981) conjecture is fully resolved": isomorphic
+Wills/Defs/Cases.lean — Definitions for Sections 2 and 5-7 of "Wills' (1981) conjecture holds if and only if the dimension is at most 4": isomorphic
 pairs, saturated sets, the sublattices Γ_I, the dual lattice, M and r, frame lattices, the families S(Λ) (Lean:
 `InA`), signed permutations, and Wills' conjecture.
 Author: Dave Goel.

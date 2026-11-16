@@ -1,5 +1,5 @@
 /-
-Wills/Defs/Examples.lean — The polytopes of "Wills' (1981) conjecture is fully resolved": W (Table 2), the 24-cell T
+Wills/Defs/Examples.lean — The polytopes of "Wills' (1981) conjecture holds if and only if the dimension is at most 4": W (Table 2), the 24-cell T
 and the cross-polytope X (Section 7).
 Author: Dave Goel.
 Copyright (C) Dave Goel 2026--now. All rights reserved.

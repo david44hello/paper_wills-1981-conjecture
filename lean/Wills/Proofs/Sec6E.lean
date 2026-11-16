@@ -1,5 +1,5 @@
 /-
-Wills/Proofs/Sec6E.lean — proofs for Section 6 of "Wills' (1981) conjecture is fully resolved": Lemma 6.1, the vertex
+Wills/Proofs/Sec6E.lean — proofs for Section 6 of "Wills' (1981) conjecture holds if and only if the dimension is at most 4": Lemma 6.1, the vertex
 walk, and the soundness rows of Computation 5 (M antitone, maximal members, sandwich split and pruning).
 Author: Dave Goel.
 Copyright (C) Dave Goel 2026--now. All rights reserved.

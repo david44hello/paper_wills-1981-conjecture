@@ -1,4 +1,4 @@
-# Lean project for the paper "Wills' (1981) conjecture is fully resolved" (Dave Goel). Lean 4 v4.35.0 + Mathlib.
+# Lean project for the paper "Wills' (1981) conjecture holds if and only if the dimension is at most 4" (Dave Goel). Lean 4 v4.35.0 + Mathlib.
 name = "WillsLean"
 version = "0.1.0"
 defaultTargets = ["Wills"]

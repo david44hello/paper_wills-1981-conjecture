@@ -11,7 +11,7 @@ on:
 
 jobs:
   find-projects:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     outputs:
       projects: ${{ steps.find.outputs.projects }}
     steps:
@@ -23,6 +23,7 @@ jobs:
           [ "$projects" != "[]" ] || { echo "no lean/lakefile.toml found"; exit 1; }
           echo "projects=$projects" >> "$GITHUB_OUTPUT"
 
+  # Pinned to ubuntu-24.04 (the image of this repository's last green run, tag v3.20): ubuntu-latest moved to ubuntu-26.04.
   build:
     needs: find-projects
     strategy:
@@ -30,7 +31,7 @@ jobs:
       matrix:
         project: ${{ fromJSON(needs.find-projects.outputs.projects) }}
     name: ${{ matrix.project }}
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 300
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7.0.1

@@ -1,5 +1,5 @@
 /-
-Wills/Checks/Computations.lean — Computations 1-5 of Section 6 of "Wills' (1981) conjecture is fully resolved", each
+Wills/Checks/Computations.lean — Computations 1-5 of Section 6 of "Wills' (1981) conjecture holds if and only if the dimension is at most 4", each
 stated exactly as printed (input set, property checked, result). Each is a `Prop`; every theorem that uses one takes
 it as an explicit hypothesis. Each is checked by computer, NOT proved in Lean, except `Comp2`, which the row
 `comp2_result` proves (Wills/Proofs/Comp2Proof.lean); the programs, their outputs and one command per claim are in the

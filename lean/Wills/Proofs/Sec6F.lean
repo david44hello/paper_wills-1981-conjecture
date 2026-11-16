@@ -1,5 +1,5 @@
 /-
-Wills/Proofs/Sec6F.lean — Section 6 rows of "Wills' (1981) conjecture is fully resolved": Computation 1 (hyperplanes,
+Wills/Proofs/Sec6F.lean — Section 6 rows of "Wills' (1981) conjecture holds if and only if the dimension is at most 4": Computation 1 (hyperplanes,
 spanning), finiteness of the input families, Computation 2 (d = 2), Computation 3 (permuted Γ_I, membership),
 Computation 4 (frame lattice under GL_4(ℤ)).
 Author: Dave Goel.

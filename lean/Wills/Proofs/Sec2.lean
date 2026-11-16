@@ -1,5 +1,5 @@
 /-
-Wills/Proofs/Sec2.lean — proofs for Section 2 of "Wills' (1981) conjecture is fully resolved": the cube, its corners,
+Wills/Proofs/Sec2.lean — proofs for Section 2 of "Wills' (1981) conjecture holds if and only if the dimension is at most 4": the cube, its corners,
 its lattice-point counts and Ehrhart coefficients, Minkowski's first theorem, Lemmas 2.1 and 2.2.
 Author: Dave Goel.
 Copyright (C) Dave Goel 2026--now. All rights reserved.

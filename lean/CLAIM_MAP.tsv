@@ -1,6 +1,6 @@
-# CLAIM_MAP — Wills' (1981) conjecture: the claims of the paper's TeX source v3.20 (md5 47e41917; its table file tab_witness.tex md5 1f8d76d0; its Figure 3 file fig_maxg1.tex md5 a9f75b6d).
+# CLAIM_MAP — Wills' (1981) conjecture: the claims of the paper's TeX source v3.32 (md5 b19355cc; its table file tab_witness.tex md5 1f8d76d0; its Figure 3 file fig_maxg1.tex md5 b1fe6de9).
 # Columns (TAB, exactly 5 on every data line; "-" = an empty field, since editors strip trailing TABs):
-#   claim id | description (lines of v3.20; "fig_maxg1.tex l.N" = a line of the Figure 3 file) | REQUIRED rows | SUPPORT rows | KIND.
+#   claim id | description (lines of v3.32; "fig_maxg1.tex l.N" = a line of the Figure 3 file) | REQUIRED rows | SUPPORT rows | KIND.
 # KIND "-" = proved rows: status = worst REQUIRED row, hypotheses united (PROVED > PROVED GIVEN <facts/checks> > not
 #   proved yet); every row carries, as explicit binders, every fact and check its proof uses.
 #   FACT <Prop> = a fact the paper USES from an area Mathlib lacks: an explicit hypothesis in
@@ -36,8 +36,8 @@
 #   [BHW07] such a P would be reflexive" (a cited theorem that no proof uses; its last clause, the lattice distances 2
 #   and 3, is claims T7d, X7b).
 #   Route, organization and pointers: abstract l.47 ("combines Ehrhart reciprocity, the lower bound theorem
-#   ... about three million sets": the sum of the printed counts 2,547,694 + 616 + 588,592 = 3,136,902); l.44 "This
-#   paper has an expanded version, with further results" [Goel26]; l.85 its first two sentences (which results are the
+#   ... about three million sets": the sum of the printed counts 2,547,694 + 616 + 588,592 = 3,136,902); l.44 "An expanded
+#   version of this paper, with further results, is" [Goel26]; l.85 its first two sentences (which results are the
 #   main ones; Table 1 and Figure 1 compare them; its third sentence is claim R2h); l.143 "is a computation";
 #   l.151 "and they are enumerated by computer"; l.153 (what the expanded version [Goel26] contains); l.192; l.229
 #   notation; l.266 "this is why the computations ... are needed"; l.271 "By Lemma 4.3 it remains to prove" (star) for
@@ -66,11 +66,12 @@
 #   r(S) <= 3 lies in a maximal member; last printed in v2.80; SUPPORT of C5b). Each sentence was printed in earlier
 #   versions of the paper (last: v2.30 for the two Figure 3 rows, v2.80 for comp5_maximal). v2.30's claim W3c (l.220, int(2W)) left the text;
 #   its row w_int2_all is SUPPORT of W3b.
-#   Remarks about this Lean folder (no mathematical claim): the abstract's last sentence l.47 "The deduction of these
-#   results from the computations and the cited theorems is formalized in Lean 4, and checked with the Lean comparator"
+#   Remarks about this Lean folder (no mathematical claim): the title's footnote l.38 "Additionally, Theorems ... are
+#   derived in Lean 4 from six published results (...) and five computer checks (...), each stated as an explicit
+#   hypothesis, and checked with lake comparator"
 #   ("these results" = Theorems 1.2, 1.3, 7.1 and Corollary 1.4, the claims AB1-AB4; AUDIT.md lists each row's
-#   hypotheses; the comparator words are printed only after `lake comparator` accepts the tagged tree); the footnote
-#   l.38 "Lean 4 formalization:" with its link.
+#   hypotheses; the comparator words are printed only after `lake comparator` accepts the tagged tree); its link
+#   (tree/v3.32) at the end of l.38.
 # ROUTE DIFFERENCES: Cor 1.4 prints "for n <= 3 this is Wills' theorem" and "g_3 <= 32 by [Wil81, Theorem (i)]"; Lean
 #   proves n = 1, 2 by conj_le_two (PROVED GIVEN E1, E3), proves n = 3 from E1, E2, E3 (wills_dim3), and for n = 4 uses Prop
 #   4.2's g_3 <= 2 g_4 <= 32 (PROVED GIVEN E1, E3). Section 7's polynomials: Lean uses L(0), L(1), L(2), L(-1), L(-2)
@@ -78,7 +79,7 @@
 AB1	Abstract l.47 ("In dimension 4 the conjecture holds") + Table 1 l.76-77 + Theorem 1.2 l.93-95: every P in O^4 has g_1(P) <= 8 and g_2(P) <= 24; the abstract: Conjecture 1.1 holds for n = 4	thm_1_2,conj_n4	-	-
 AB2	Abstract l.47 + l.85 (Theorem 7.1 "determines the polytopes" P in O^4 with g_1(P) = 8) + Table 1 l.76 ("with equality exactly for C_4, a 24-cell T and a cross-polytope X, up to unimodular equivalence") + Theorem 7.1 l.383-385: up to unimodular equivalence, g_1(P) = 8 (P in O^4) only for the cube C_4, one explicit 24-cell T and one explicit cross-polytope X	thm_7_1,T_iso	-	-
 AB3	Abstract l.47 + Table 1 l.78: a polytope W in O^5 with 50 vertices in [-1,1]^5 has g_1(W) = 101/10 > 10	thm_1_3_mem,tab2_vertices,w_pts_cube,thm_1_3_g1	-	-
-AB4	Abstract l.47 + Table 1 l.78-79 ("counterexamples in every dimension n >= 5") + Corollary 1.4 l.105-107 + Figure 1 (l.113-140, "After this paper" row and the caption's second sentence: "This paper proves it for n = 4 (Theorem 1.2 and Corollary 1.4)" and disproves it for every n >= 5): Wills' conjecture holds in R^n (n >= 1) iff n <= 4	cor_1_4,conj_n4	thm_1_3_prod	-
+AB4	Title l.38 ("Wills' (1981) conjecture holds if and only if the dimension is at most 4") + Abstract l.47 + Table 1 l.78-79 ("counterexamples in every dimension n >= 5") + Corollary 1.4 l.105-107 + Figure 1 (l.113-140, "After this paper" row and the caption's second sentence: "This paper proves it for n = 4 (Theorem 1.2 and Corollary 1.4)" and disproves it for every n >= 5): Wills' conjecture holds in R^n (n >= 1) iff n <= 4	cor_1_4,conj_n4	thm_1_3_prod	-
 I1	l.52-55 + l.158: Ehrhart's theorem — for a lattice Λ and a polytope P of dimension n with vertices in Λ, L_{P,Λ}(k) = #(kP ∩ Λ) is a polynomial in k >= 0 of degree n	-	-	FACT EhrhartThm
 I2a	l.56 + (E1) l.161: g_0(P) = 1	g0_eq_one	lat_one	-
 I2b	l.56 + (E1) l.161: the leading coefficient g_n(P) is the volume (vol(P)/det Λ)	-	-	FACT EhrhartLeading
@@ -141,11 +142,11 @@ LM	l.326: "a vector" u in Z^4 "lies in" M(P) "if and only if" V^T u "lies in" M(
 LMd	l.326: the two reasons of claim LM ("Since"): <u,Vs> = <V^T u,s>, "and" V^T Z^4 = Λ*, the dual lattice of the frame lattice Λ = V^{-1}Z^4 (V = colMat v)	frame_dual	-	-
 L51r	l.326: "Lemma 5.1 does not use" r(P) <= 3, "so this reduction applies to every" P in O^4: the rows of Lemma 5.1 and of the transfer of M have no hypothesis on r(P) (the rest of the sentence is route: NOT COUNTED)	lem_5_1_i,lem_5_1_ii,lem_5_1_iii,lem_5_1_iv,lem_5_1_v,frame_M_transfer	-	-
 CIIIb	l.326 + l.151 (c) + Figure 2 box Case III: in Case III, (P,Z^4) ≅ (conv S, Λ) for one of the 39 representatives Λ and S in S(Λ) with #S >= 31, r(S) <= 3 (V^{-1}, then a signed permutation); L_{conv S,Λ} = L_P (using Computation 4); in frame coordinates the lattice points of P lie in [-1,1]^4	case_III_transfer,lem_5_1_i	-	-
-F3a	l.263 (after the proof of Lemma 4.3) + Figure 3 caption (fig_maxg1.tex l.32: the solid line is the bound g_1 <= (3G+7)/12 "stated after the proof of Lemma 4.3") + l.330 ("the bound on g_1 stated after the proof of Lemma 4.3"): for every P in O^4_Λ, g_1 = (G-1)/2 - sigma/2 (Lemma 4.1 and (E3)) and sigma = (1/6) Σ_F NVol(F) >= (3G-13)/6, so g_1 <= (3G+7)/12 (sigma, NVol over E3's facet data); the figure draws it in the shaded region G <= 29. SUPPORT fig3_bound_gt: RETIRED (v2.30's caption sentence, For G >= 31 this bound exceeds 8, is gone)	fig3_g1_bound	fig3_bound_gt	-
-F3c	Figure 3 caption (fig_maxg1.tex l.32) + its 26 grey dots (fig_maxg1.tex l.27) + l.330: the grey dots show, for each odd G >= 31, the largest value of g_1 in Case I (Computation 1) (G is odd: claim S2d)	-	G_odd	CHECK Comp1Max
-F3d	Figure 3 caption (fig_maxg1.tex l.32): "C_4 belongs to Case I" (M(C_4) contains the basis e_1, ..., e_4 of Z^4); C_4 is the green dot at G = 81, g_1 = 8 (fig_maxg1.tex l.30; G(C_4) = 81 and g_1(C_4) = 8)	cube4_case_I,cube4_G_vol,cube_g	-	-
-F3e	Figure 3 caption (fig_maxg1.tex l.32, its first sentence and "The three larger green dots mark the polytopes" C_4, T and X of Theorem 7.1) + l.330 ("the three equality cases of Theorem 7.1") + the green dots (fig_maxg1.tex l.28-30, at G = 49, 33, 81 and g_1 = 8): C_4, T, X are the equality cases of Theorem 7.1, with G = 81, 49, 33; T and X "belong to Case III"	thm_7_1,cube4_G_vol,T_G,X_G,fig3_T_X_case_III	-	-
-F3g	Figure 3 caption (fig_maxg1.tex l.32): "For Cases II and III only the largest value of" g_1 "over all" G "is recorded": at most 6 in Case II (Computation 3), and at most 8 in Case III, attained only by T and X (Computation 5: equality for exactly two classes, with G = 49 and G = 33; T and X lie in Case III and have these G; Theorem 7.1)	-	thm_7_1,fig3_T_X_case_III,T_G,X_G	CHECK Comp3,Comp5
+F3a	l.263 (after the proof of Lemma 4.3) + Figure 3 caption (fig_maxg1.tex l.35: the solid line is the bound g_1 <= (3G+7)/12 "stated after the proof of Lemma 4.3") + l.330 ("the bound on g_1 stated after the proof of Lemma 4.3"): for every P in O^4_Λ, g_1 = (G-1)/2 - sigma/2 (Lemma 4.1 and (E3)) and sigma = (1/6) Σ_F NVol(F) >= (3G-13)/6, so g_1 <= (3G+7)/12 (sigma, NVol over E3's facet data); the figure draws it in the shaded region G <= 29. SUPPORT fig3_bound_gt: RETIRED (v2.30's caption sentence, For G >= 31 this bound exceeds 8, is gone)	fig3_g1_bound	fig3_bound_gt	-
+F3c	Figure 3 caption (fig_maxg1.tex l.35) + its 26 grey dots (fig_maxg1.tex l.30) + l.330: the grey dots show, for each odd G >= 31, the largest value of g_1 in Case I (Computation 1) (G is odd: claim S2d)	-	G_odd	CHECK Comp1Max
+F3d	Figure 3 caption (fig_maxg1.tex l.35): "C_4 belongs to Case I" (M(C_4) contains the basis e_1, ..., e_4 of Z^4); C_4 is the green dot at G = 81, g_1 = 8 (fig_maxg1.tex l.33; G(C_4) = 81 and g_1(C_4) = 8)	cube4_case_I,cube4_G_vol,cube_g	-	-
+F3e	Figure 3 caption (fig_maxg1.tex l.35, its first sentence and "The three larger green dots mark the polytopes" C_4, T and X of Theorem 7.1) + l.330 ("the three equality cases of Theorem 7.1") + the green dots (fig_maxg1.tex l.31-33, at G = 49, 33, 81 and g_1 = 8): C_4, T, X are the equality cases of Theorem 7.1, with G = 81, 49, 33; T and X "belong to Case III"	thm_7_1,cube4_G_vol,T_G,X_G,fig3_T_X_case_III	-	-
+F3g	Figure 3 caption (fig_maxg1.tex l.35): "For Cases II and III only the largest value of" g_1 "over all" G "is recorded": at most 6 in Case II (Computation 3), and at most 8 in Case III, attained only by T and X (Computation 5: equality for exactly two classes, with G = 49 and G = 33; T and X lie in Case III and have these G; Theorem 7.1)	-	thm_7_1,fig3_T_X_case_III,T_G,X_G	CHECK Comp3,Comp5
 L61	Lemma 6.1 l.334-344: Q ⊂ Λ finite symmetric saturated; (i) v vertex ⇒ Q \ {±v} symmetric saturated; (ii) S ⊊ Q symmetric saturated ⇒ some vertex v of conv Q not in S, S ⊆ Q \ {±v}	lem_6_1_i,lem_6_1_ii	-	-
 W6b	l.332 "By the next lemma, such a walk reaches every saturated symmetric subset of the full set" + l.346: every saturated symmetric S ⊆ Q is reached from Q through saturated symmetric sets containing S; a search that stops at 31 points misses no set with >= 31 points	walk_reach	-	-
 W6c	l.332: "This loses no class": a symmetry g (a signed permutation that preserves the lattice) maps saturated symmetric sets to saturated symmetric sets and the vertices of conv Q to those of conv gQ, "so the sets obtained from" gQ "by deleting a pair of opposite vertices are the images under" g "of those obtained from" Q	walk_symm	-	-

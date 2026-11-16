@@ -1,11 +1,11 @@
-# Wills' (1981) conjecture is fully resolved — Lean 4 formalization
+# Wills' (1981) conjecture holds if and only if the dimension is at most 4 — Lean 4 formalization
 
-This folder is the Lean folder of the computation repository of the paper "Wills' (1981) conjecture is fully
-resolved" (Dave Goel). It formalizes in Lean 4 the deduction of Theorems 1.2, 1.3 and 7.1 and Corollary 1.4 from the
+This folder is the Lean folder of the computation repository of the paper "Wills' (1981) conjecture holds if and only if the
+dimension is at most 4" (Dave Goel). It formalizes in Lean 4 the deduction of Theorems 1.2, 1.3 and 7.1 and Corollary 1.4 from the
 paper's computations and the cited theorems; it also formalizes most other claims of the paper, and AUDIT.md gives the
 status of every claim.
 
-## Directions to Reproduce
+## How to verify
 
 Memory in individual one-thread runs: the largest sampled resident size was about 7 GiB
 (`Wills/Proofs/Slices/XInt2B.lean`). About 5 GiB was file-backed compiled code; the largest sampled working
@@ -15,7 +15,7 @@ several independent files at the same time, adding working memory for each proce
 Install Git, Lean (https://lean-lang.org/install/), Python 3 and ripgrep, then run:
 
 ```bash
-git clone --branch v3.20 --single-branch https://github.com/david44hello/paper_wills-1981-conjecture.git
+git clone --branch v3.32 --single-branch https://github.com/david44hello/paper_wills-1981-conjecture.git
 cd paper_wills-1981-conjecture/lean
 ./check.sh
 ```

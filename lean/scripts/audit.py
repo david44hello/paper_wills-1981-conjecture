@@ -54,8 +54,8 @@ LEAN_OPTIONS = ["-j1", "-DautoImplicit=false", "-DrelaxedAutoImplicit=false"]
 STANDARD = {"propext", "Classical.choice", "Quot.sound"}
 OPEN_AXIOM = "sorryAx"
 VERSION = "0.71"
-PAPER = "Wills' (1981) conjecture is fully resolved"
-TEXT_LINE = ("Paper text: the paper's TeX source, version 3.20 (md5 47e41917); the pointers l.N in the rows "
+PAPER = "Wills' (1981) conjecture holds if and only if the dimension is at most 4"
+TEXT_LINE = ("Paper text: the paper's TeX source, version 3.32 (md5 b19355cc); the pointers l.N in the rows "
              "are its lines.")
 # Facts the paper uses from areas Lean's library lacks: binder type -> (short name, binder name, area).
 FACTS = {
